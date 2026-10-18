@@ -1,0 +1,13 @@
+# Experimental limitations
+
+1. **Table 1 equivalence:** no result is an exact reproduction until checkpoint, backbone, split, preprocessing and scoring match. The extended paper resolves the shared backbone as ResNet-34, but does not supply a verified executable checkpoint/training/evaluation bundle. Initial R18 and available SCNN R50 experiments are engineering baselines.
+2. **Clean metrics:** official TuSimple scoring and official CULane lane F1 measure different quantities. CULane F1 must not be inserted into Table 1's ACC column. Actual runtime gating can differ from upstream submissions using nominal runtime.
+3. **ASR:** author poisoned checkpoints, exact test triggers, target labels and complete scoring conventions have not been verified. No operational poisoning or stealth optimization is implemented. No ASR is measured or inferred.
+4. **Windows adaptations:** portable NMS and torchvision DCNv1 require original-kernel numerical comparison. The CULane evaluator preserves original metric code but uses newer OpenCV rasterization. Known-answer tests establish basic correctness, not exhaustive cross-version equivalence.
+5. **Sampling:** a 16-image score is a diagnostic and must not be relabelled a full benchmark. A full result requires its completion marker, exact expected split count and dataset integrity report. Robustness on 16 images does not establish population-level resilience.
+6. **Provenance:** SHA256 checks detect local corruption and identify files; they do not prove equality to an unavailable author dataset checksum. TuSimple uses a maintainer-linked mirror. CULane comes from its official research distribution and must not be redistributed.
+7. **Uncertainty:** runs use one seed and public pretrained weights. There are no repeated training runs or uncertainty estimates for DBALD Table 1. Latency is machine-specific and affected by other system activity.
+8. **Demonstrations:** prompted segmentation is not validated against road masks. Clean-feature sensitivity differs from attack-specific losses. Ordinary fixed-mask inpainting is not UltraEdit with DBALD's optimization. Compositing makes outside-mask SSIM trivially perfect.
+9. **Resources:** inference memory measurements do not imply training will fit in 8 GB. Full training, matching all ResNet-34 checkpoints and larger robustness studies need separate resource estimates.
+
+The [extended author paper, Appendix C](https://arxiv.org/html/2508.15778v2#A3), identifies the backbone. The attached CVPR PDF remains the Table 1 reference; extended-version findings are documented separately. No research data, code or results have been pushed or published.

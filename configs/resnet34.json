@@ -1,0 +1,36 @@
+{
+  "seed": 0,
+  "device": "cuda",
+  "batch_size": 1,
+  "temperature_stop_c": 85,
+  "models": [
+    {
+      "name": "LaneATT",
+      "backbone": "resnet34",
+      "checkpoint": "models/checkpoints/laneatt_official/experiments/laneatt_r34_tusimple/models/model_0100.pt"
+    },
+    {
+      "name": "ADNet",
+      "backbone": "resnet34",
+      "checkpoint": "models/checkpoints/adnet_tusimple_res34.pth"
+    },
+    {
+      "name": "RESA",
+      "backbone": "resnet34",
+      "checkpoint": "models/checkpoints/ssd/zhengtu/releasev2/resa_r34_tusimple/resa_r34_tusimple.pth",
+      "config": "third_party/lanedet/configs/resa/resa34_tusimple.py"
+    }
+  ],
+  "robustness": {
+    "images": 16,
+    "labels": "datasets/raw/tusimple_subset/labels.jsonl",
+    "root": "datasets/raw/tusimple_subset",
+    "scope": "fixed smoke subset, not full robustness benchmark"
+  },
+  "full_test": {
+    "images": 2782,
+    "labels": "datasets/raw/tusimple_test/labels.jsonl",
+    "root": "datasets/raw/tusimple_test"
+  },
+  "privacy": "Local only; no pushes, publishing or research uploads. Public downloads allowed."
+}

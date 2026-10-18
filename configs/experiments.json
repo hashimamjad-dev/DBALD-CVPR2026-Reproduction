@@ -1,0 +1,10 @@
+{
+  "scope": "offline clean inference and fixed benign transformations",
+  "seed": 0,
+  "batch_size": 1,
+  "torch_threads": 4,
+  "dataset": "TuSimple fixed 16-image test subset",
+  "transforms": ["clean", "brightness_0.7", "blur_sigma_1.5", "contrast_0.75"],
+  "asr": null,
+  "notes": "Engineering settings, not documented DBALD training hyperparameters. Scripts expose relevant paths and device options."
+}

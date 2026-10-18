@@ -1,0 +1,14 @@
+# Install the matching torch/torchvision pair separately; see README.
+numpy==1.26.4
+scipy==1.15.3
+scikit-image==0.25.2
+opencv-python-headless==4.11.0.86
+PyYAML==6.0.2
+addict==2.4.0
+yapf==0.40.1
+psutil==7.0.0
+scikit-learn==1.6.1
+pytest==8.4.2
+six==1.17.0
+ujson==5.10.0
+requests==2.32.4
