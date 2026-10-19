@@ -1,0 +1,175 @@
+{
+  "_id": "66d19a03b003aeb6d1578a57",
+  "id": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "private": false,
+  "pipeline_tag": "text-to-image",
+  "library_name": "diffusers",
+  "tags": [
+    "diffusers",
+    "stable-diffusion",
+    "stable-diffusion-diffusers",
+    "text-to-image",
+    "arxiv:2207.12598",
+    "arxiv:2112.10752",
+    "arxiv:2103.00020",
+    "arxiv:2205.11487",
+    "arxiv:1910.09700",
+    "license:creativeml-openrail-m",
+    "diffusers:StableDiffusionInpaintPipeline",
+    "region:us"
+  ],
+  "downloads": 196050,
+  "likes": 120,
+  "modelId": "stable-diffusion-v1-5/stable-diffusion-inpainting",
+  "author": "stable-diffusion-v1-5",
+  "sha": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+  "lastModified": "2024-09-06T18:58:07.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {
+    "diffusers": {
+      "_class_name": "StableDiffusionInpaintPipeline"
+    }
+  },
+  "cardData": {
+    "license": "creativeml-openrail-m",
+    "tags": [
+      "stable-diffusion",
+      "stable-diffusion-diffusers",
+      "text-to-image"
+    ],
+    "inference": false,
+    "library_name": "diffusers"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "config.json"
+    },
+    {
+      "rfilename": "feature_extractor/preprocessor_config.json"
+    },
+    {
+      "rfilename": "model_index.json"
+    },
+    {
+      "rfilename": "safety_checker/config.json"
+    },
+    {
+      "rfilename": "safety_checker/model.fp16.safetensors"
+    },
+    {
+      "rfilename": "safety_checker/pytorch_model.bin"
+    },
+    {
+      "rfilename": "safety_checker/pytorch_model.fp16.bin"
+    },
+    {
+      "rfilename": "scheduler/scheduler_config.json"
+    },
+    {
+      "rfilename": "sd-v1-5-inpainting.ckpt"
+    },
+    {
+      "rfilename": "text_encoder/config.json"
+    },
+    {
+      "rfilename": "text_encoder/model.fp16.safetensors"
+    },
+    {
+      "rfilename": "text_encoder/pytorch_model.bin"
+    },
+    {
+      "rfilename": "text_encoder/pytorch_model.fp16.bin"
+    },
+    {
+      "rfilename": "tokenizer/merges.txt"
+    },
+    {
+      "rfilename": "tokenizer/special_tokens_map.json"
+    },
+    {
+      "rfilename": "tokenizer/tokenizer_config.json"
+    },
+    {
+      "rfilename": "tokenizer/vocab.json"
+    },
+    {
+      "rfilename": "unet/config.json"
+    },
+    {
+      "rfilename": "unet/diffusion_pytorch_model.bin"
+    },
+    {
+      "rfilename": "unet/diffusion_pytorch_model.fp16.bin"
+    },
+    {
+      "rfilename": "unet/diffusion_pytorch_model.fp16.safetensors"
+    },
+    {
+      "rfilename": "vae/config.json"
+    },
+    {
+      "rfilename": "vae/diffusion_pytorch_model.bin"
+    },
+    {
+      "rfilename": "vae/diffusion_pytorch_model.fp16.bin"
+    },
+    {
+      "rfilename": "vae/diffusion_pytorch_model.fp16.safetensors"
+    }
+  ],
+  "spaces": [
+    "1aurent/TryOffAnyone",
+    "smartfeed/image2image",
+    "ixarchakos/TryOffAnyone",
+    "MetricMogul/SD15-inpainting-IPAdapter",
+    "wencheng256/DiffusionRAWSpace",
+    "kailashjha123/ai-image-editor",
+    "openmen-gif/reroom-ai",
+    "svjack/LucidDreamer",
+    "Suchinthana/VisualizeGeoMap",
+    "Kainyyy/stable-diffusion-v1-5-stable-diffusion-inpainting",
+    "wencheng256/DiffusionRAWSpaceZeroGPU",
+    "Yatheshr/image-generation-manipuation",
+    "4n0nym05-R3s34rch3r/pandora-removal",
+    "mkhou00000/AI-Media-Studio",
+    "longnt04/swap-face",
+    "tuidcarlos/waska",
+    "tuidcarlos/waskav2",
+    "tuidcarlos/sd-inpainting",
+    "tuidcarlos/waskav4",
+    "tuidcarlos/waskav5",
+    "tuidcarlos/waskav3",
+    "tuidcarlos/waskav7",
+    "tuidcarlos/waskav6",
+    "tuidcarlos/waskarlos",
+    "tuidcarlos/waskav8",
+    "tuidcarlos/waskav9",
+    "tuidcarlos/waskarlosv3",
+    "mustafa334/space10",
+    "amrhisham123/clawset-ghost-mannequin",
+    "Danyal178/landscape-backend",
+    "CyCrawwler/safegen-arena",
+    "Rana095/clothing-bump-adjuster",
+    "LiXiY/Reference-Anomaly-Generation",
+    "Artasam-Khan/OutfitAura-Backend",
+    "skye6/room_remix-demo",
+    "MetricMogul/SD15-Light-Inpaint-CPU",
+    "jangminhyeok/ai-privacy-labs",
+    "TechnoSamurai02/truthshield-ai-backend",
+    "Nisha56/editify-backend",
+    "juras3k/hairstyle-inpainting",
+    "Fernando21Plus/ai-image-editor",
+    "lukebransby/skin-lesion-counterfactual-demo",
+    "hugging-apps/freeinpaint"
+  ],
+  "createdAt": "2024-08-30T10:08:03.000Z",
+  "usedStorage": 15228944928
+}

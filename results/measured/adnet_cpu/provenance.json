@@ -1,0 +1,24 @@
+{
+  "architecture": "ADNet",
+  "implementation": "Sephirex-X/ADNet with Windows inference compatibility",
+  "checkpoint": "models\\checkpoints\\adnet_tusimple_res18.pth",
+  "checkpoint_sha256": "c9b6a8fd7df445ee061d5e671259cabe334e3123609ea2cced943fbd174a1e5e",
+  "device": "cpu",
+  "strict_state_dict": true,
+  "preprocessing": "BGR, crop top 160px, cubic resize 800x320, /255",
+  "compatibility": [
+    "torchvision DCNv1 replaces MMCV DCNv1",
+    "portable lane NMS",
+    "device-neutral anchor_ys",
+    "direct config loading"
+  ],
+  "limitation": "No numerical parity test against original MMCV CUDA/NMS stack yet",
+  "labels_sha256": "ec50481bccaa46dcc5cb634e28b9734536c08f7bee9ef11ce3a10ccd5220f525",
+  "label_file": "D:\\DBALD-CVPR2026-Reproduction\\datasets\\raw\\tusimple_subset\\labels.jsonl",
+  "subset_size": 16,
+  "torch_version": "2.7.1+cpu",
+  "metric_source": "TuSimple/tusimple-benchmark/evaluate/lane.py; unmodified functions, Python2 CLI excluded",
+  "metric_caveat": "Official 200ms gate enabled. Separate ungated score is not official benchmark ACC.",
+  "prediction_conversion": "upstream integer truncation; negative x -> -2; positive out-of-frame x retained",
+  "timing": "one warmup; preprocessing+forward+portable NMS+decode+sampling; input IO excluded"
+}

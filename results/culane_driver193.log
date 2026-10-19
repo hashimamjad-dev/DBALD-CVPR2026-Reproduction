@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\fetch_culane_test.py", line 75, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\fetch_culane_test.py", line 55, in main
+    download(file_id,path)
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\fetch_culane_test.py", line 40, in download
+    raise RuntimeError(f'Download remained unavailable after three bounded attempts: {path.name}')
+RuntimeError: Download remained unavailable after three bounded attempts: driver_193_90frame.tar.gz

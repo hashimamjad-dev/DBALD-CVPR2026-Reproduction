@@ -1,0 +1,57 @@
+{
+  "ADNet": {
+    "url": "https://github.com/Sephirex-X/ADNet.git",
+    "commit": "5b75de0b884f2e86e6411e46f4c4e7fb7d563bab",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  "LaneATT": {
+    "url": "https://github.com/lucastabelini/LaneATT.git",
+    "commit": "2f8583ba14eccba05e6779668bc3a38bc751984a",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  "lanedet": {
+    "url": "https://github.com/Turoad/lanedet.git",
+    "commit": "35665fc9dd8d80df207fa86d2152f9f48618ffe7",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  "resa": {
+    "url": "https://github.com/ZJULearning/resa.git",
+    "commit": "2d4e6312673eedd41ace54166686f4f2e70b50a3",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  "sam2": {
+    "url": "https://github.com/facebookresearch/sam2.git",
+    "commit": "2b90b9f5ceec907a1c18123530e92e794ad901a4",
+    "license_files": [
+      "LICENSE",
+      "LICENSE_cctorch"
+    ]
+  },
+  "SCNN": {
+    "url": "https://github.com/XingangPan/SCNN.git",
+    "commit": "b9bf3b7bb27cf024ad0ce044833ea89459a1f2c9",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  "tusimple-benchmark": {
+    "url": "https://github.com/TuSimple/tusimple-benchmark.git",
+    "commit": "d1f5ef1b6fff78c92c61864abcc07a9714900360",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  "UltraEdit": {
+    "url": "https://github.com/HaozheZhao/UltraEdit.git",
+    "commit": "1af5f0478d56d62cf6f35781a2ab63e03d656b2d",
+    "license_files": []
+  }
+}

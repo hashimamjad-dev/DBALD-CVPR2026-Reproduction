@@ -1,0 +1,17 @@
+[
+  {
+    "architecture": "SCNN",
+    "transformation": "clean",
+    "sample_count": 16,
+    "official_tusimple_acc_percent": 0.0,
+    "official_fp": 0.0,
+    "official_fn": 1.0,
+    "tusimple_acc_without_runtime_gate_percent": 96.87499999999999,
+    "median_ms": 346.83909999148455,
+    "p95_ms": 350.85602500475943,
+    "device": "cpu",
+    "peak_cuda_allocated_bytes": null,
+    "asr": null,
+    "status": "measured_subset_not_Table1_reproduction"
+  }
+]

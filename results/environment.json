@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "ram_total": 16890322944,
+  "ram_available": 2006523904,
+  "cpu_logical": 28,
+  "torch": "2.7.1+cpu",
+  "cuda_build": null,
+  "cuda_available": false,
+  "cuda_arch_list": [],
+  "gpu": [],
+  "nvidia_smi": "name, memory.total [MiB], memory.free [MiB], driver_version\nNVIDIA GeForce RTX 5050 Laptop GPU, 8151 MiB, 7900 MiB, 616.56",
+  "cwd": "D:\\DBALD-CVPR2026-Reproduction",
+  "dataset_roots": [
+    "D:\\DBALD-CVPR2026-Reproduction\\datasets\\raw",
+    "D:\\DBALD-CVPR2026-Reproduction\\datasets\\smoke"
+  ]
+}

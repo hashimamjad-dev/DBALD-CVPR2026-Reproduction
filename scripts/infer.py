@@ -20,7 +20,7 @@ def main():
     p.add_argument('--output',default='results/inference'); p.add_argument('--threads',type=int,default=4)
     args=p.parse_args(); torch.set_num_threads(args.threads)
     if args.model=='LaneATT': model=LaneATTAdapter(args.checkpoint,dataset=args.dataset,backbone=args.backbone,device=args.device)
-    elif args.model=='ADNet': model=ADNetAdapter(args.checkpoint,device=args.device,dataset=args.dataset)
+    elif args.model=='ADNet': model=ADNetAdapter(args.checkpoint,device=args.device,dataset=args.dataset,backbone=args.backbone)
     else:
         if not args.config: p.error('--config required for SCNN/RESA')
         model=SegmentationAdapter(args.model,args.checkpoint,args.config,args.device)

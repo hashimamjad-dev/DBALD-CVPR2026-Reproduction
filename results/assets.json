@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "scnn_r18_tusimple.zip",
+    "url": "https://github.com/Turoad/lanedet/releases/download/1.0/scnn_r18_tusimple.zip",
+    "bytes": 43923874,
+    "sha256": "451ca4ceaef03948705bc17ce28e53af9ab466f7bcfb97d74772884d078bd7e3",
+    "status": "downloaded"
+  },
+  {
+    "filename": "resa_r18_tusimple.zip",
+    "url": "https://github.com/Turoad/lanedet/releases/download/1.0/resa_r18_tusimple.zip",
+    "bytes": 51405797,
+    "sha256": "a695bcd767da823203612199c2176cc428ff88c6331666e3a7b05c065950dfce",
+    "status": "downloaded"
+  },
+  {
+    "filename": "adnet_tusimple_res18.pth",
+    "url": "https://github.com/Sephirex-X/ADNet/releases/download/ckpt/tusimple_res18.pth",
+    "bytes": 142069755,
+    "sha256": "c9b6a8fd7df445ee061d5e671259cabe334e3123609ea2cced943fbd174a1e5e",
+    "status": "downloaded"
+  },
+  {
+    "filename": "sam2.1_hiera_tiny.pt",
+    "url": "https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_tiny.pt",
+    "bytes": 156008466,
+    "sha256": "7402e0d864fa82708a20fbd15bc84245c2f26dff0eb43a4b5b93452deb34be69",
+    "status": "downloaded"
+  }
+]

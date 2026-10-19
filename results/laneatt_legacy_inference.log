@@ -1,0 +1,7 @@
+{
+  "architecture": "LaneATT",
+  "lane_count": 3,
+  "run_time_ms": 253.28600000000012,
+  "peak_cuda_allocated_bytes": null,
+  "status": "real_pretrained_inference_unlabelled_image"
+}

@@ -1,0 +1,30 @@
+{
+  "model": "ADNet",
+  "checkpoint_sha256": "c9b6a8fd7df445ee061d5e671259cabe334e3123609ea2cced943fbd174a1e5e",
+  "labels_sha256": "ec50481bccaa46dcc5cb634e28b9734536c08f7bee9ef11ce3a10ccd5220f525",
+  "root": "D:\\DBALD-CVPR2026-Reproduction\\datasets\\raw\\tusimple_subset",
+  "config_sha256": null,
+  "count": 16,
+  "transformations": [
+    "clean",
+    "brightness_0.7",
+    "blur_sigma_1.5",
+    "contrast_0.75",
+    "rain_seed0",
+    "occlusion_fixed",
+    "jpeg_quality30"
+  ],
+  "seed": 0,
+  "device": "cuda",
+  "torch": "2.7.1+cu128",
+  "source_sha256": {
+    "scripts\\benchmark.py": "4fdf8aa85c438674a25f164b004112ab63b41ed682ccab6aad0791000ef253eb",
+    "src\\lane_repro\\__init__.py": "359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1",
+    "src\\lane_repro\\adnet_compat.py": "cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad",
+    "src\\lane_repro\\data.py": "e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d",
+    "src\\lane_repro\\evaluation.py": "5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636",
+    "src\\lane_repro\\models.py": "366ada6aab246b094309f7bf3ca85bea70262bfe08761592048ffa521516d371",
+    "src\\lane_repro\\nms.py": "98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166",
+    "src\\lane_repro\\prototype.py": "7eec14cbd418f118ac482ab9617c977aad0731ca68c30bfa550d3ca5f8c1acbb"
+  }
+}

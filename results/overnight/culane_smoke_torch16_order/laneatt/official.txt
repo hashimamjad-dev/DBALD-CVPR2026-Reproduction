@@ -1,0 +1,6 @@
+file: D:\DBALD-CVPR2026-Reproduction\results\overnight\culane_smoke_torch16_order\laneatt\official.txt
+tp: 24 fp: 10 fn: 20
+precision: 0.705882
+recall: 0.545455
+Fmeasure: 0.615385
+

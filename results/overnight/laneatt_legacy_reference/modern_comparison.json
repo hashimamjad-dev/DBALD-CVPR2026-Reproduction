@@ -1,0 +1,252 @@
+{
+  "reference": {
+    "python": "3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)]",
+    "torch": "1.6.0+cpu",
+    "torchvision": "0.7.0+cpu",
+    "numpy": "1.18.5",
+    "scipy": "1.4.1",
+    "sklearn": "0.23.2",
+    "opencv": "4.2.0",
+    "device": "cpu",
+    "raw_forward_before_nms": true,
+    "samples": [
+      {
+        "raw_file": "clips/0530/1492626760788443246_0/20.jpg",
+        "seconds": 0.5286550000000005,
+        "artifact": "00.npz"
+      },
+      {
+        "raw_file": "clips/0530/1492626988650418067_0/20.jpg",
+        "seconds": 0.4680631000000002,
+        "artifact": "01.npz"
+      },
+      {
+        "raw_file": "clips/0530/1492628062134609982_0/20.jpg",
+        "seconds": 0.4516175000000011,
+        "artifact": "02.npz"
+      },
+      {
+        "raw_file": "clips/0530/1492630621151269357_0/20.jpg",
+        "seconds": 0.4796566000000002,
+        "artifact": "03.npz"
+      },
+      {
+        "raw_file": "clips/0530/1492631951282846975_0/20.jpg",
+        "seconds": 0.46246049999999883,
+        "artifact": "04.npz"
+      },
+      {
+        "raw_file": "clips/0530/1492635361404995962_0/20.jpg",
+        "seconds": 0.46479489999999757,
+        "artifact": "05.npz"
+      },
+      {
+        "raw_file": "clips/0530/1492638085231891924_0/20.jpg",
+        "seconds": 0.4752344999999991,
+        "artifact": "06.npz"
+      },
+      {
+        "raw_file": "clips/0531/1492627607908463563/20.jpg",
+        "seconds": 0.46433269999999993,
+        "artifact": "07.npz"
+      },
+      {
+        "raw_file": "clips/0531/1492630593673418099/20.jpg",
+        "seconds": 0.4682467000000017,
+        "artifact": "08.npz"
+      },
+      {
+        "raw_file": "clips/0531/1492637609088008439/20.jpg",
+        "seconds": 0.4405190000000019,
+        "artifact": "09.npz"
+      },
+      {
+        "raw_file": "clips/0531/1492726208452280063/20.jpg",
+        "seconds": 0.45576810000000023,
+        "artifact": "10.npz"
+      },
+      {
+        "raw_file": "clips/0601/1494453729502898369/20.jpg",
+        "seconds": 0.43403239999999954,
+        "artifact": "11.npz"
+      },
+      {
+        "raw_file": "clips/0601/1495058869493652396/20.jpg",
+        "seconds": 0.4502290000000002,
+        "artifact": "12.npz"
+      },
+      {
+        "raw_file": "clips/0601/1495492702579432167/20.jpg",
+        "seconds": 0.47789700000000224,
+        "artifact": "13.npz"
+      },
+      {
+        "raw_file": "clips/0601/1494452945846416960/20.jpg",
+        "seconds": 0.4475875000000009,
+        "artifact": "14.npz"
+      },
+      {
+        "raw_file": "clips/0601/1494452577507766671/20.jpg",
+        "seconds": 0.46223939999999786,
+        "artifact": "15.npz"
+      }
+    ],
+    "tusimple_anchor_order_matches": true,
+    "culane_anchor_order_matches": true,
+    "checkpoint_sha256": "ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795"
+  },
+  "modern": {
+    "architecture": "LaneATT",
+    "implementation": "lucastabelini/LaneATT",
+    "checkpoint": "models\\checkpoints\\laneatt_official\\experiments\\laneatt_r34_tusimple\\models\\model_0100.pt",
+    "checkpoint_sha256": "ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795",
+    "device": "cuda",
+    "dataset": "tusimple",
+    "backbone": "resnet34",
+    "preprocessing": "BGR, full-frame 640x360 cubic (imgaug Resize default), float32 /255, no mean/std",
+    "compatibility": [
+      "np.bool -> np.bool_ in source module at import",
+      "portable NumPy lane-distance NMS",
+      "explicit anchor ordering"
+    ],
+    "anchor_order": "pytorch16",
+    "anchor_order_sha256": "fd7fab30cfddb95d028aa169336ae3a7624532868ad7dd1423ed2c7cf857e3f3",
+    "strict_state_dict": true,
+    "conf_threshold": 0.2,
+    "nms_thres": 45.0,
+    "max_lanes": 5
+  },
+  "checks": [
+    {
+      "raw_file": "clips/0530/1492626760788443246_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 7.62939453125e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492626988650418067_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.58306884765625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492628062134609982_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 9.5367431640625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492630621151269357_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.106231689453125e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492631951282846975_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.106231689453125e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492635361404995962_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 6.4373016357421875e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492638085231891924_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 1.049041748046875e-05,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492627607908463563/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 6.67572021484375e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492630593673418099/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 1.049041748046875e-05,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492637609088008439/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 6.198883056640625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492726208452280063/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.58306884765625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1494453729502898369/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.344650268554688e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1495058869493652396/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 8.58306884765625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1495492702579432167/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 7.62939453125e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1494452945846416960/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 5.9604644775390625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1494452577507766671/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 6.4373016357421875e-06,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "tolerance": "rtol 1e-4, atol 0.05; predeclared numerical compatibility tolerance, not bitwise equality",
+  "limitation": "CPU original forward vs modern CUDA forward; original CUDA NMS not tested"
+}

@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "images": 16,
+  "predictions": 112,
+  "invocation_wall_seconds": 7.137459993362427,
+  "timing": "serial batch size 1; one warmup; preprocessing/forward/NMS/decode/sampling; IO and transforms excluded"
+}

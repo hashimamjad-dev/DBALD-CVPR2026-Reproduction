@@ -1,0 +1,65 @@
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+{
+  "sample": "clips/0530/1492626760788443246_0/20.jpg",
+  "sam2_version": "SAM2.1 tiny (engineering choice, not paper-specified)",
+  "prompts": [
+    [
+      640,
+      600
+    ],
+    [
+      450,
+      520
+    ],
+    [
+      1000,
+      500
+    ],
+    [
+      640,
+      100
+    ],
+    [
+      100,
+      250
+    ]
+  ],
+  "prompt_labels": [
+    1,
+    1,
+    1,
+    0,
+    0
+  ],
+  "sam2_mask_score": 0.9406262040138245,
+  "road_pixels": 354066,
+  "window_count": 49,
+  "window_stride": 80,
+  "inpaint_region": [
+    600,
+    550,
+    40,
+    40
+  ],
+  "inpainting": "OpenCV Telea radius 3; fixed region",
+  "sensitivity_objective": "clean backbone feature squared mean, not DBALD attack losses",
+  "lane_consistency": {
+    "masked_array_mse": 0.0,
+    "selected_pixel_mse": 0.0,
+    "masked_array_ssim": 1.0,
+    "masked_array_ssim_dissimilarity": 0.0,
+    "selected_pixels": 16957
+  },
+  "environment_consistency": {
+    "masked_array_mse": 0.0,
+    "selected_pixel_mse": 0.0,
+    "masked_array_ssim": 1.0,
+    "masked_array_ssim_dissimilarity": 0.0,
+    "selected_pixels": 920000
+  },
+  "asr": null,
+  "optimization_steps": 0
+}

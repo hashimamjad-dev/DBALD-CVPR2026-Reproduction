@@ -1,0 +1,2 @@
+architecture,transformation,sample_count,official_tusimple_acc_percent,official_fp,official_fn,tusimple_acc_without_runtime_gate_percent,median_ms,p95_ms,device,peak_cuda_allocated_bytes,asr,status
+RESA,clean,16,96.43787202380952,0.03125,0.0625,96.43787202380952,33.84949998871889,38.11679998761974,cuda,152942592,,measured_subset_not_Table1_reproduction

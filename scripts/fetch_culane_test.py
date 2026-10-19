@@ -19,6 +19,12 @@ ARCHIVES=[('list.tar.gz','18alVEPAMBA9Hpr3RDAAchqSj5IxZNRKd'),
  ('driver_193_90frame.tar.gz','1daWl7XVzH06GwcZtF4WD8Xpvci5SZiUV')]
 
 def download(file_id,path):
+    def reject_quota_page():
+        if path.exists() and path.stat().st_size<10000 and b'Quota exceeded' in path.read_bytes():
+            error=ROOT/'results'/f'{path.name}.{time.time_ns()}.quota.html'
+            path.rename(error)
+            raise PermissionError('Google Drive quota exceeded; error page preserved separately, not treated as an archive')
+    reject_quota_page()
     url=f'https://drive.usercontent.google.com/download?id={file_id}&export=download&confirm=t'
     with requests.get(url+'&metadata_probe=1',headers={'Range':'bytes=0-0'},stream=True,timeout=60) as response:
         response.raise_for_status()
@@ -36,14 +42,20 @@ def download(file_id,path):
             if time.monotonic()-changed>120 or shutil.disk_usage(path.parent).free<2*1024**3:
                 child.terminate(); child.wait(); print(f'Resuming stalled download: {path.name}, attempt {attempt+1}',flush=True); break
             time.sleep(5)
+        reject_quota_page()
         if child.returncode==0 and path.stat().st_size==expected: return
     raise RuntimeError(f'Download remained unavailable after three bounded attempts: {path.name}')
 
 def main():
+    import argparse
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--archives',nargs='*',choices=[name for name,_ in ARCHIVES])
+    args=parser.parse_args()
     DEST.mkdir(parents=True,exist_ok=True)
     manifest=ROOT/'results/culane_download.json'
     records=json.loads(manifest.read_text()) if manifest.exists() else []
     for name,file_id in ARCHIVES:
+        if args.archives and name not in args.archives: continue
         if any(r['archive']==name and r.get('status')=='extracted' for r in records): continue
         if shutil.disk_usage(DEST).free<8*1024**3: raise RuntimeError('Need 8 GiB free before another archive')
         path=DEST/name

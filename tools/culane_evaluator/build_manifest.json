@@ -1,0 +1,30 @@
+{
+  "source": "XingangPan/SCNN/tools/lane_evaluation",
+  "changes": [
+    "Removed optional GUI visualization only"
+  ],
+  "opencv": "4.13.0 (upstream used 2.4.x; rasterization version is a documented compatibility difference)",
+  "command": [
+    "C:/msys64/ucrt64/bin/g++.exe",
+    "-O2",
+    "-std=c++17",
+    "-fopenmp",
+    "-ID:\\DBALD-CVPR2026-Reproduction\\third_party\\SCNN\\tools\\lane_evaluation\\include",
+    "-ID:\\DBALD-CVPR2026-Reproduction\\tools\\culane_runtime\\ucrt64\\include\\opencv4",
+    "D:\\DBALD-CVPR2026-Reproduction\\tools\\culane_evaluator\\evaluate_headless.cpp",
+    "D:\\DBALD-CVPR2026-Reproduction\\third_party\\SCNN\\tools\\lane_evaluation\\src\\counter.cpp",
+    "D:\\DBALD-CVPR2026-Reproduction\\third_party\\SCNN\\tools\\lane_evaluation\\src\\lane_compare.cpp",
+    "D:\\DBALD-CVPR2026-Reproduction\\third_party\\SCNN\\tools\\lane_evaluation\\src\\spline.cpp",
+    "-LD:\\DBALD-CVPR2026-Reproduction\\tools\\culane_runtime\\ucrt64\\lib",
+    "-lopencv_core",
+    "-lopencv_imgproc",
+    "-o",
+    "D:\\DBALD-CVPR2026-Reproduction\\tools\\culane_evaluator\\evaluate.exe"
+  ],
+  "source_hashes": {
+    "third_party\\SCNN\\tools\\lane_evaluation\\src\\counter.cpp": "0cdf115c635067c9ea9369e411ef80e76048724765b13f4ae6a4e5bb6c50c9df",
+    "third_party\\SCNN\\tools\\lane_evaluation\\src\\evaluate.cpp": "1b5563a95dc27af18d9553ded92606cae24986f1c7cf9901b2db15d5fa3f7234",
+    "third_party\\SCNN\\tools\\lane_evaluation\\src\\lane_compare.cpp": "a8e43b36a235cb554e77927afc8a51d7ab59eafeb4e155b064a97f1be332c663",
+    "third_party\\SCNN\\tools\\lane_evaluation\\src\\spline.cpp": "79398d3d9e8dd512c1bb477041dbc704cebcdc761072166c620cc88b169443af"
+  }
+}

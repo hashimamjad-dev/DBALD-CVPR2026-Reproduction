@@ -1,0 +1,35 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading pipeline components...:  14%|#4        | 1/7 [00:00<00:00,  8.72it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  57%|#####7    | 4/7 [00:00<00:00, 16.35it/s]
+Loading pipeline components...:  86%|########5 | 6/7 [00:00<00:00, 13.81it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00, 15.19it/s]
+
+  0%|          | 0/20 [00:00<?, ?it/s]
+  5%|5         | 1/20 [00:00<00:06,  2.82it/s]
+ 10%|#         | 2/20 [00:00<00:04,  4.21it/s]
+ 15%|#5        | 3/20 [00:00<00:03,  4.99it/s]
+ 20%|##        | 4/20 [00:00<00:02,  5.48it/s]
+ 25%|##5       | 5/20 [00:00<00:02,  5.78it/s]
+ 30%|###       | 6/20 [00:01<00:02,  5.95it/s]
+ 35%|###5      | 7/20 [00:01<00:02,  6.03it/s]
+ 40%|####      | 8/20 [00:01<00:01,  6.08it/s]
+ 45%|####5     | 9/20 [00:01<00:01,  6.10it/s]
+ 50%|#####     | 10/20 [00:01<00:01,  6.11it/s]
+ 55%|#####5    | 11/20 [00:01<00:01,  6.14it/s]
+ 60%|######    | 12/20 [00:02<00:01,  6.15it/s]
+ 65%|######5   | 13/20 [00:02<00:01,  6.15it/s]
+ 70%|#######   | 14/20 [00:02<00:00,  6.15it/s]
+ 75%|#######5  | 15/20 [00:02<00:00,  6.14it/s]
+ 80%|########  | 16/20 [00:02<00:00,  6.14it/s]
+ 85%|########5 | 17/20 [00:02<00:00,  6.13it/s]
+ 90%|######### | 18/20 [00:03<00:00,  6.14it/s]
+ 95%|#########5| 19/20 [00:03<00:00,  6.14it/s]
+100%|##########| 20/20 [00:03<00:00,  6.14it/s]
+100%|##########| 20/20 [00:03<00:00,  5.86it/s]
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+{"sample": "clips/0530/1492626760788443246_0/20.jpg", "model": "stable-diffusion-v1-5/stable-diffusion-inpainting", "revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb", "seed": 0, "prompt": "A realistic road surface with ordinary gray asphalt, consistent daylight and texture.", "crop": [384, 208, 512, 512], "mask": [600, 550, 40, 40], "steps": 20, "guidance_scale": 7.5, "seconds": 4.809324500005459, "peak_cuda_allocated_bytes": 3414917120, "lane_consistency": {"masked_array_mse": 0.0, "selected_pixel_mse": 0.0, "masked_array_ssim": 1.0, "masked_array_ssim_dissimilarity": 0.0, "selected_pixels": 16957}, "environment_consistency": {"masked_array_mse": 0.0, "selected_pixel_mse": 0.0, "masked_array_ssim": 1.0, "masked_array_ssim_dissimilarity": 0.0, "selected_pixels": 920000}, "edit_consistency": {"masked_array_mse": 6.364628276873568e-07, "selected_pixel_mse": 0.00036660258874791755, "masked_array_ssim": 0.9997307184026049, "masked_array_ssim_dissimilarity": 0.00026928159739514346, "selected_pixels": 1600}, "caveat": "Outside-mask identity is guaranteed by compositing; SSIM=1 there does not establish realism or stealth.", "methodology": "Ordinary fixed-mask diffusion, no attack objective, no trigger selection, no poisoning, no optimization of consistency metrics", "asr": null}

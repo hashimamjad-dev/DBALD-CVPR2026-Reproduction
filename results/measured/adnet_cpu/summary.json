@@ -1,0 +1,17 @@
+[
+  {
+    "architecture": "ADNet",
+    "transformation": "clean",
+    "sample_count": 16,
+    "official_tusimple_acc_percent": 95.6938244047619,
+    "official_fp": 0.03125,
+    "official_fn": 0.078125,
+    "tusimple_acc_without_runtime_gate_percent": 95.6938244047619,
+    "median_ms": 105.36950000096112,
+    "p95_ms": 110.21682498540031,
+    "device": "cpu",
+    "peak_cuda_allocated_bytes": null,
+    "asr": null,
+    "status": "measured_subset_not_Table1_reproduction"
+  }
+]

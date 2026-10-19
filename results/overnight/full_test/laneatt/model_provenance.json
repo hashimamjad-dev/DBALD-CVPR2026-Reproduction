@@ -1,0 +1,18 @@
+{
+  "architecture": "LaneATT",
+  "implementation": "lucastabelini/LaneATT",
+  "checkpoint": "models\\checkpoints\\laneatt_official\\experiments\\laneatt_r18_tusimple\\models\\model_0100.pt",
+  "checkpoint_sha256": "c36f79be814628b0f7cecdb4bfa224cf3fddf038bd4071de9bb8135b826f73ed",
+  "device": "cuda",
+  "dataset": "tusimple",
+  "backbone": "resnet18",
+  "preprocessing": "BGR, full-frame 640x360 cubic (imgaug Resize default), float32 /255, no mean/std",
+  "compatibility": [
+    "np.bool -> np.bool_ in source module at import",
+    "portable NumPy lane-distance NMS"
+  ],
+  "strict_state_dict": true,
+  "conf_threshold": 0.2,
+  "nms_thres": 45.0,
+  "max_lanes": 5
+}

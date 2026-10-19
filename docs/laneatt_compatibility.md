@@ -1,0 +1,13 @@
+# LaneATT compatibility investigation
+
+The public LaneATT repository states that its checkpoints were trained and evaluated with PyTorch 1.6. Its model rebuilds anchors from a frequency file using descending `torch.argsort`. The anchors themselves are not checkpoint buffers. Equal-frequency ties therefore make strict checkpoint loading insufficient to guarantee identical anchor semantics.
+
+An independently compiled extraction of PyTorch v1.6.0's original `quicksortdescend` function gives a different order from Windows PyTorch 2.7.1. Of the first 1,000 anchors, 533 positions differ on TuSimple and 51 on CULane. Membership differs by 11 and 1 anchors respectively. The sorted frequency values remain identical. This affects attention indices as well as feature sampling.
+
+`scripts/diagnose_laneatt_order.py` compiles the original sorting body and saves its permutations and coordinate comparisons. `configs/laneatt_anchor_order.json` records the permutations, frequency-file hashes and source hash. The adapter now uses this original order, verifies the frequency hash, and rebuilds the feature indices before inference. It retains an explicit `current` option for diagnostics. No confidence thresholds, labels, or test-set metric optimization were used to select the correction.
+
+Earlier runs remain intact. The report builder marks them `superseded_anchor_order` and excludes them from current baseline tables. Fresh full-test and robustness runs use separate directories. The Python 3.8.10 / PyTorch 1.6 CPU reference has now executed original source on 16 real images. Both dataset anchor permutations exactly match the actual old runtime. Compared with modern CUDA, preprocessing tensors are identical and the largest pre-NMS proposal difference is 0.0003662109375 (all 16 pass the predeclared tolerance). Evidence is in `results/overnight/laneatt_legacy_reference/modern_comparison.json`. This does not establish original CUDA NMS parity or exact DBALD Table 1 equivalence.
+
+Sources: [LaneATT prerequisites](https://github.com/lucastabelini/LaneATT#1-prerequisites), [PyTorch 1.6 sorting source](https://github.com/pytorch/pytorch/blob/v1.6.0/aten/src/TH/generic/THTensorMoreMath.cpp). Original downloaded source and license are preserved under `tools/pytorch16_sort/`.
+
+The corrected full TuSimple runs measured ACC 95.5710% (ResNet-18) and 95.6348% (ResNet-34), matching the upstream README's 95.57% and 95.63% after rounding. The README's 96.71% and 96.77% values are **F1**, not ACC. The ResNet-18 timing interval partly overlapped the short robustness run, so its latency should not be treated as an isolated performance measurement. No image exceeded the official 200 ms gate. The sequential ResNet-34 run had no concurrent model evaluation.

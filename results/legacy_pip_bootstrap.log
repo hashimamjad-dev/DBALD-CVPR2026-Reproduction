@@ -1,0 +1,7 @@
+Collecting pip==24.0
+  Downloading pip-24.0-py3-none-any.whl.metadata (3.6 kB)
+Downloading pip-24.0-py3-none-any.whl (2.1 MB)
+   ---------------------------------------- 2.1/2.1 MB 108.3 kB/s eta 0:00:00
+Installing collected packages: pip
+Successfully installed pip-24.0
+WARNING: Target directory D:\DBALD-CVPR2026-Reproduction\tools\python38\Lib\site-packages\pip already exists. Specify --upgrade to force replacement.

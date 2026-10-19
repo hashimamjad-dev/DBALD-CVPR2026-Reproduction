@@ -1,0 +1,5 @@
+architecture,transformation,sample_count,official_tusimple_acc_percent,official_fp,official_fn,tusimple_acc_without_runtime_gate_percent,median_ms,p95_ms,device,peak_cuda_allocated_bytes,asr,status
+LaneATT,clean,16,95.67522321428572,0.15937500000000002,0.03125,95.67522321428572,97.29515000071842,103.9582499943208,cpu,,,measured_subset_not_Table1_reproduction
+LaneATT,brightness_0.7,16,95.80543154761905,0.14375000000000002,0.03125,95.80543154761905,95.14104999834672,97.43144998356001,cpu,,,measured_subset_not_Table1_reproduction
+LaneATT,blur_sigma_1.5,16,95.51711309523809,0.15,0.015625,95.51711309523809,95.04444999038242,98.73639999568695,cpu,,,measured_subset_not_Table1_reproduction
+LaneATT,contrast_0.75,16,96.14955357142856,0.171875,0.03125,96.14955357142856,97.74335000838619,106.86312500183703,cpu,,,measured_subset_not_Table1_reproduction

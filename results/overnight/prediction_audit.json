@@ -1,0 +1,1014 @@
+[
+  {
+    "directory": "results\\overnight\\full_test\\adnet",
+    "transformation": "clean",
+    "images": 2782,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9623434878983874,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.029073807812125683,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.03280014378145216,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\full_test\\laneatt",
+    "transformation": "clean",
+    "images": 2782,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9512389382424394,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.126138269829857,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.034567457464653714,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\full_test\\resa",
+    "transformation": "clean",
+    "images": 2782,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.96695915066242,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03062544931703823,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.029774742391564826,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\full_test\\scnn",
+    "transformation": "clean",
+    "images": 2782,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9608425550306362,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.042343637670740585,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.04367361610352259,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\full_test_r34\\adnet",
+    "transformation": "clean",
+    "images": 2782,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9659824210057795,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.028318955188114166,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.025311526479750816,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\full_test_r34\\laneatt",
+    "transformation": "clean",
+    "images": 2782,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.954373994385672,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.1961538461538458,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0329199616582794,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\full_test_r34\\resa",
+    "transformation": "clean",
+    "images": 2782,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9681894235048389,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.07987059669302585,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.024772346034028305,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\full_test_r34_torch16_order\\laneatt",
+    "transformation": "clean",
+    "images": 2782,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.956347779945905,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03526240115025178,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.029235561945842318,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\full_test_torch16_order\\laneatt",
+    "transformation": "clean",
+    "images": 2782,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9557101776727851,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03570572729451249,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.03019410496046009,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\adnet",
+    "transformation": "clean",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.956938244047619,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.078125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\adnet",
+    "transformation": "brightness_0.7",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.955171130952381,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.078125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\adnet",
+    "transformation": "blur_sigma_1.5",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9571242559523809,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.015625,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\adnet",
+    "transformation": "contrast_0.75",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.958705357142857,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.078125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\adnet",
+    "transformation": "rain_seed0",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9520089285714288,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.078125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\adnet",
+    "transformation": "occlusion_fixed",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9561941964285713,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.078125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\adnet",
+    "transformation": "jpeg_quality30",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.954985119047619,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.015625,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\laneatt",
+    "transformation": "clean",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9567522321428572,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.15937500000000002,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.03125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\laneatt",
+    "transformation": "brightness_0.7",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9580543154761905,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.14375000000000002,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.03125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\laneatt",
+    "transformation": "blur_sigma_1.5",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9551711309523808,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.15,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.015625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\laneatt",
+    "transformation": "contrast_0.75",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9614955357142856,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.171875,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.03125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\laneatt",
+    "transformation": "rain_seed0",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9580543154761906,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.05,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.03125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\laneatt",
+    "transformation": "occlusion_fixed",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9601004464285715,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.09375,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.015625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\laneatt",
+    "transformation": "jpeg_quality30",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.956845238095238,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.13125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.03125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\resa",
+    "transformation": "clean",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9643787202380952,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\resa",
+    "transformation": "brightness_0.7",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9637276785714285,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\resa",
+    "transformation": "blur_sigma_1.5",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9613095238095238,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\resa",
+    "transformation": "contrast_0.75",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9662388392857142,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\resa",
+    "transformation": "rain_seed0",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9663318452380953,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.046875,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\resa",
+    "transformation": "occlusion_fixed",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9641927083333333,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\resa",
+    "transformation": "jpeg_quality30",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9666108630952382,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.015625,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.046875,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\scnn",
+    "transformation": "clean",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9687499999999999,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.046875,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\scnn",
+    "transformation": "brightness_0.7",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9660528273809523,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.040625,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\scnn",
+    "transformation": "blur_sigma_1.5",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9661458333333334,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.015625,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.046875,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\scnn",
+    "transformation": "contrast_0.75",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9656808035714284,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.0625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\scnn",
+    "transformation": "rain_seed0",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9607514880952379,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.07291666666666666,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.08333333333333333,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\scnn",
+    "transformation": "occlusion_fixed",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.968656994047619,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.046875,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness\\scnn",
+    "transformation": "jpeg_quality30",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9652157738095238,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.046875,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness_torch16_order\\laneatt",
+    "transformation": "clean",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9672619047619048,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.025,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.015625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness_torch16_order\\laneatt",
+    "transformation": "brightness_0.7",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9672619047619048,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.025,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.015625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness_torch16_order\\laneatt",
+    "transformation": "blur_sigma_1.5",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9604724702380952,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.03125,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.015625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness_torch16_order\\laneatt",
+    "transformation": "contrast_0.75",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.966517857142857,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.037500000000000006,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.015625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness_torch16_order\\laneatt",
+    "transformation": "rain_seed0",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9630766369047619,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.025,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.03125,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness_torch16_order\\laneatt",
+    "transformation": "occlusion_fixed",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9668898809523809,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.025,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.015625,
+        "order": "asc"
+      }
+    ]
+  },
+  {
+    "directory": "results\\overnight\\robustness_torch16_order\\laneatt",
+    "transformation": "jpeg_quality30",
+    "images": 16,
+    "aggregation_matches": true,
+    "official_metrics": [
+      {
+        "name": "Accuracy",
+        "value": 0.9623325892857143,
+        "order": "desc"
+      },
+      {
+        "name": "FP",
+        "value": 0.025,
+        "order": "asc"
+      },
+      {
+        "name": "FN",
+        "value": 0.03125,
+        "order": "asc"
+      }
+    ]
+  }
+]

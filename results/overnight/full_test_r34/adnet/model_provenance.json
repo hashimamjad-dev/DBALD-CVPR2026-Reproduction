@@ -1,0 +1,19 @@
+{
+  "architecture": "ADNet",
+  "implementation": "Sephirex-X/ADNet with Windows inference compatibility",
+  "checkpoint": "models\\checkpoints\\adnet_tusimple_res34.pth",
+  "checkpoint_sha256": "0e3fc00abbe4aad7975c517a776b757d4d56d1cac8d5ae0c536d3d3a1dcd6885",
+  "device": "cuda",
+  "strict_state_dict": true,
+  "dataset": "tusimple",
+  "backbone": "resnet34",
+  "config": "D:\\DBALD-CVPR2026-Reproduction\\third_party\\ADNet\\configs\\adnet\\tusimple\\resnet34_tusimple.py",
+  "preprocessing": "BGR, crop top 160px, cubic resize 800x320, /255",
+  "compatibility": [
+    "torchvision DCNv1 replaces MMCV DCNv1",
+    "portable lane NMS",
+    "device-neutral anchor_ys",
+    "direct config loading"
+  ],
+  "limitation": "No numerical parity test against original MMCV CUDA/NMS stack yet"
+}

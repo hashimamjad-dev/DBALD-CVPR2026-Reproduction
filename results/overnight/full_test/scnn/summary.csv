@@ -1,0 +1,2 @@
+model,backbone,dataset,split,transformation,images,metric,acc_percent,ungated_acc_percent,fp,fn,median_ms,p95_ms,runtime_failures,peak_cuda_allocated_bytes,device,seed,asr,table1_comparable,scope,checkpoint_sha256
+SCNN,resnet18,TuSimple,test,clean,2782,official TuSimple ACC; actual 200ms runtime gate,96.08425550306391,96.08425550306391,0.04234363767074047,0.04367361610352264,79.63049999671057,84.43771499441937,0,183856128,cuda,0,,False,full_test,6eaf98565acf2cb1528ce54447623f593883b1ef9556406d1270b16d9aaa7a15

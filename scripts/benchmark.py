@@ -61,6 +61,7 @@ def main():
         root=str(Path(args.root).resolve()),config_sha256=digest(args.config) if args.config else None,
         count=len(samples),transformations=names,seed=0,device=args.device,torch=torch.__version__,
         source_sha256={str(f.relative_to(ROOT)):digest(f) for f in [Path(__file__).resolve(),*sorted((ROOT/'src/lane_repro').glob('*.py'))]})
+    if args.model=='LaneATT': spec['anchor_order_sha256']=digest(ROOT/'configs/laneatt_anchor_order.json')
     specpath=out/'run_config.json'
     if specpath.exists() and json.loads(specpath.read_text())!=spec: raise ValueError('Configuration changed; use a new output directory')
     specpath.write_text(json.dumps(spec,indent=2))

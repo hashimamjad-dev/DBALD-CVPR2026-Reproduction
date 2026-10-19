@@ -1,0 +1,25 @@
+[
+  {
+    "model": "ADNet",
+    "backbone": "resnet18",
+    "dataset": "TuSimple",
+    "split": "test",
+    "transformation": "clean",
+    "images": 2782,
+    "metric": "official TuSimple ACC; actual 200ms runtime gate",
+    "acc_percent": 96.23434878983943,
+    "ungated_acc_percent": 96.23434878983943,
+    "fp": 0.029073807812125565,
+    "fn": 0.03280014378145219,
+    "median_ms": 19.065550004597753,
+    "p95_ms": 21.553150005638596,
+    "runtime_failures": 0,
+    "peak_cuda_allocated_bytes": 118587392,
+    "device": "cuda",
+    "seed": 0,
+    "asr": null,
+    "table1_comparable": false,
+    "scope": "full_test",
+    "checkpoint_sha256": "c9b6a8fd7df445ee061d5e671259cabe334e3123609ea2cced943fbd174a1e5e"
+  }
+]

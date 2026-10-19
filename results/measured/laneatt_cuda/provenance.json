@@ -1,0 +1,26 @@
+{
+  "architecture": "LaneATT",
+  "implementation": "lucastabelini/LaneATT",
+  "checkpoint": "models\\checkpoints\\laneatt_official\\experiments\\laneatt_r18_tusimple\\models\\model_0100.pt",
+  "checkpoint_sha256": "c36f79be814628b0f7cecdb4bfa224cf3fddf038bd4071de9bb8135b826f73ed",
+  "device": "cuda",
+  "dataset": "tusimple",
+  "backbone": "resnet18",
+  "preprocessing": "BGR, full-frame 640x360 cubic (imgaug Resize default), float32 /255, no mean/std",
+  "compatibility": [
+    "np.bool -> np.bool_ in source module at import",
+    "portable NumPy lane-distance NMS"
+  ],
+  "strict_state_dict": true,
+  "conf_threshold": 0.2,
+  "nms_thres": 45.0,
+  "max_lanes": 5,
+  "labels_sha256": "ec50481bccaa46dcc5cb634e28b9734536c08f7bee9ef11ce3a10ccd5220f525",
+  "label_file": "D:\\DBALD-CVPR2026-Reproduction\\datasets\\raw\\tusimple_subset\\labels.jsonl",
+  "subset_size": 16,
+  "torch_version": "2.7.1+cu128",
+  "metric_source": "TuSimple/tusimple-benchmark/evaluate/lane.py; unmodified functions, Python2 CLI excluded",
+  "metric_caveat": "Official 200ms gate enabled. Separate ungated score is not official benchmark ACC.",
+  "prediction_conversion": "upstream integer truncation; negative x -> -2; positive out-of-frame x retained",
+  "timing": "one warmup; preprocessing+forward+portable NMS+decode+sampling; input IO excluded"
+}

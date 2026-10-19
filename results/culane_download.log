@@ -1,0 +1,44 @@
+{"archive": "list.tar.gz", "id": "18alVEPAMBA9Hpr3RDAAchqSj5IxZNRKd", "sha256": "d8c2b6928937c29fbea25493cb0eebda520cd03f28127037c226044e123153d4", "files": 14, "extracted_bytes": 19857997, "status": "extracted", "source": "https://xingangpan.github.io/projects/CULane.html", "license": "non-commercial; no redistribution"}
+{"archive": "driver_37_30frame.tar.gz", "id": "1Z6a463FQ3pfP54HMwF3QS5h9p2Ch3An7", "sha256": "3fdf11d77b965039c32d423ff0d1242f1e2d029c52be2acbd991504c9fd8d64f", "files": 6714, "extracted_bytes": 1119683932, "status": "extracted", "source": "https://xingangpan.github.io/projects/CULane.html", "license": "non-commercial; no redistribution"}
+D:\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\gdown\__main__.py:140: FutureWarning: Option `--id` was deprecated in version 4.3.1 and will be removed in 5.0. You don't need to pass it anymore to use a file ID.
+  warnings.warn(
+Traceback (most recent call last):
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\fetch_culane_test.py", line 58, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\fetch_culane_test.py", line 50, in main
+    archive.extract(member,DEST,filter='data'); count+=1; size+=member.size
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tarfile.py", line 2413, in extract
+    self._extract_one(tarinfo, path, set_attrs, numeric_owner,
+  File "C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tarfile.py", line 2456, in _extract_one
+    self._extract_member(tarinfo, os.path.join(path, tarinfo.name),
+  File "C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tarfile.py", line 2545, in _extract_member
+    self.makefile(tarinfo, targetpath)
+  File "C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tarfile.py", line 2602, in makefile
+    copyfileobj(source, target, tarinfo.size, ReadError, bufsize)
+  File "C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\tarfile.py", line 251, in copyfileobj
+    buf = src.read(bufsize)
+          ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\gzip.py", line 338, in read
+    return self._buffer.read(size)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\_compression.py", line 68, in readinto
+    data = self.read(len(byte_view))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\gzip.py", line 564, in read
+    raise EOFError("Compressed file ended before the "
+EOFError: Compressed file ended before the end-of-stream marker was reached
+curl: (33) HTTP server does not seem to support byte ranges. Cannot resume.
+curl: (33) HTTP server does not seem to support byte ranges. Cannot resume.
+curl: (33) HTTP server does not seem to support byte ranges. Cannot resume.
+curl: (33) HTTP server does not seem to support byte ranges. Cannot resume.
+Traceback (most recent call last):
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\fetch_culane_test.py", line 70, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\fetch_culane_test.py", line 50, in main
+    download(file_id,path)
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\fetch_culane_test.py", line 40, in download
+    raise RuntimeError(f'Download remained unavailable after three bounded attempts: {path.name}')
+RuntimeError: Download remained unavailable after three bounded attempts: driver_100_30frame.tar.gz

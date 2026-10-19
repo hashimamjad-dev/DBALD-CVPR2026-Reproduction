@@ -1,0 +1,18 @@
+{
+  "architecture": "RESA",
+  "implementation": "Turoad/lanedet",
+  "checkpoint": "models\\checkpoints\\ssd\\zhengtu\\releasev2\\resa_r18_tusimple\\resa_r18_tusimple.pth",
+  "checkpoint_sha256": "167d5ccefc4531d85c2d8793834eb7078bd8a8835335391b1a5095bc8a5cb4fe",
+  "device": "cpu",
+  "strict_state_dict": true,
+  "config": "third_party/lanedet/configs/resa/resa18_tusimple.py",
+  "preprocessing": "BGR, configured crop/resize/mean/std",
+  "labels_sha256": "ec50481bccaa46dcc5cb634e28b9734536c08f7bee9ef11ce3a10ccd5220f525",
+  "label_file": "D:\\DBALD-CVPR2026-Reproduction\\datasets\\raw\\tusimple_subset\\labels.jsonl",
+  "subset_size": 16,
+  "torch_version": "2.7.1+cpu",
+  "metric_source": "TuSimple/tusimple-benchmark/evaluate/lane.py; unmodified functions, Python2 CLI excluded",
+  "metric_caveat": "Official 200ms gate enabled. Separate ungated score is not official benchmark ACC.",
+  "prediction_conversion": "upstream integer truncation; negative x -> -2; positive out-of-frame x retained",
+  "timing": "one warmup; preprocessing+forward+portable NMS+decode+sampling; input IO excluded"
+}

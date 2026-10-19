@@ -1,6 +1,8 @@
 """Thin adapters over pinned upstream source, with explicit compatibility changes."""
 import hashlib
+import json
 import importlib
+import inspect
 import sys
 import types
 import runpy
@@ -10,25 +12,30 @@ import numpy as np
 import torch
 
 ROOT=Path(__file__).resolve().parents[2]
+inference_mode=getattr(torch,'inference_mode',torch.no_grad)
 
 def package(name, path):
     if name not in sys.modules:
         mod=types.ModuleType(name); mod.__path__=[str(path)]; sys.modules[name]=mod
 
 def state_dict(path):
-    data=torch.load(path,map_location='cpu',weights_only=True)
+    options={'weights_only':True} if 'weights_only' in inspect.signature(torch.load).parameters else {}
+    data=torch.load(path,map_location='cpu',**options)
     for key in ('model','net','state_dict'):
         if isinstance(data,dict) and key in data:
             data=data[key]; break
     if not isinstance(data,dict): raise ValueError('Expected checkpoint state dictionary')
-    return {k.removeprefix('module.'):v for k,v in data.items()}
+    return {k[7:] if k.startswith('module.') else k:v for k,v in data.items()}
 
 def checkpoint_hash(path):
-    with Path(path).open('rb') as f: return hashlib.file_digest(f,'sha256').hexdigest()
+    checksum=hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for chunk in iter(lambda:f.read(1024*1024),b''): checksum.update(chunk)
+    return checksum.hexdigest()
 
 class LaneATTAdapter:
     name='LaneATT'
-    def __init__(self, checkpoint, dataset='tusimple', backbone='resnet18', device='cpu'):
+    def __init__(self, checkpoint, dataset='tusimple', backbone='resnet18', device='cpu', anchor_order='pytorch16'):
         if dataset not in ('tusimple','culane'): raise ValueError(dataset)
         self.device=torch.device(device); self.dataset=dataset; self.backbone=backbone
         self.checkpoint=Path(checkpoint)
@@ -49,6 +56,25 @@ class LaneATTAdapter:
         self.model=model_class(backbone=backbone,pretrained_backbone=False,
             S=72,img_w=640,img_h=360,topk_anchors=1000,
             anchors_freq_path=str(repo/f'data/{dataset}_anchors_freq.pt'))
+        self.anchor_order=anchor_order
+        self.anchor_order_sha256=None
+        if anchor_order=='pytorch16':
+            # Attention weights depend on the exact anchor index order. Equal
+            # frequencies sort differently in modern torch, despite strict
+            # checkpoint loading. Restore the training-era order before use.
+            order_path=ROOT/'configs/laneatt_anchor_order.json'
+            record=json.loads(order_path.read_text())['datasets'][dataset]
+            if checkpoint_hash(repo/f'data/{dataset}_anchors_freq.pt')!=record['frequency_sha256']:
+                raise ValueError('Anchor frequency file changed; regenerate and verify legacy ordering')
+            ids=record['indices']
+            anchors,cuts=self.model.generate_anchors(lateral_n=72,bottom_n=128)
+            if sorted(ids)!=list(range(len(anchors))): raise ValueError('Invalid anchor permutation')
+            indices=torch.tensor(ids[:1000],dtype=torch.long)
+            self.model.anchors=anchors[indices]; self.model.anchors_cut=cuts[indices]
+            self.model.cut_zs,self.model.cut_ys,self.model.cut_xs,self.model.invalid_mask=self.model.compute_anchor_cut_indices(
+                self.model.anchor_feat_channels,self.model.fmap_w,self.model.fmap_h)
+            self.anchor_order_sha256=checkpoint_hash(order_path)
+        elif anchor_order!='current': raise ValueError('Unknown anchor ordering')
         # A strict load prevents silently evaluating a partly initialized model.
         self.model.load_state_dict(state_dict(checkpoint),strict=True)
         self.model=self.model.to(self.device).eval()
@@ -67,7 +93,7 @@ class LaneATTAdapter:
         return torch.from_numpy(np.ascontiguousarray(image.transpose(2,0,1))).float().unsqueeze(0).div(255).to(self.device)
 
     def predict(self,rgb):
-        with torch.inference_mode():
+        with inference_mode():
             output=self.model(self.preprocess(rgb),conf_threshold=self.conf_threshold,
                 nms_thres=self.nms_thres,nms_topk=self.max_lanes)
             lanes=self.model.decode(output,as_lanes=True)[0]
@@ -77,7 +103,8 @@ class LaneATTAdapter:
         return dict(architecture=self.name,implementation='lucastabelini/LaneATT',checkpoint=str(self.checkpoint),
                     checkpoint_sha256=self.sha256,device=str(self.device),dataset=self.dataset,backbone=self.backbone,
                     preprocessing='BGR, full-frame 640x360 cubic (imgaug Resize default), float32 /255, no mean/std',
-                    compatibility=['np.bool -> np.bool_ in source module at import','portable NumPy lane-distance NMS'],
+                    compatibility=['np.bool -> np.bool_ in source module at import','portable NumPy lane-distance NMS','explicit anchor ordering'],
+                    anchor_order=self.anchor_order,anchor_order_sha256=self.anchor_order_sha256,
                     strict_state_dict=True,conf_threshold=self.conf_threshold,nms_thres=self.nms_thres,max_lanes=self.max_lanes)
 
 class SegmentationAdapter:
@@ -114,7 +141,7 @@ class SegmentationAdapter:
         return torch.from_numpy(x.transpose(2,0,1).copy()).unsqueeze(0).to(self.device)
 
     def predict(self,rgb):
-        with torch.inference_mode(): return self.model.get_lanes(self.model({'img':self.preprocess(rgb)}))[0]
+        with inference_mode(): return self.model.get_lanes(self.model({'img':self.preprocess(rgb)}))[0]
 
     def provenance(self):
         return dict(architecture=self.name,implementation='Turoad/lanedet',checkpoint=str(self.checkpoint),
@@ -184,7 +211,7 @@ class ADNetAdapter:
         return torch.from_numpy(image.transpose(2,0,1).copy()).unsqueeze(0).to(self.device)
 
     def predict(self,rgb):
-        with torch.inference_mode(): return self.model.get_lanes(self.model({'img':self.preprocess(rgb)}))[0]
+        with inference_mode(): return self.model.get_lanes(self.model({'img':self.preprocess(rgb)}))[0]
 
     def provenance(self):
         return dict(architecture=self.name,implementation='Sephirex-X/ADNet with Windows inference compatibility',

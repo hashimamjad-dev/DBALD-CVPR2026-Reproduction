@@ -1,0 +1,22 @@
+[
+  {
+    "archive": "list.tar.gz",
+    "id": "18alVEPAMBA9Hpr3RDAAchqSj5IxZNRKd",
+    "sha256": "d8c2b6928937c29fbea25493cb0eebda520cd03f28127037c226044e123153d4",
+    "files": 14,
+    "extracted_bytes": 19857997,
+    "status": "extracted",
+    "source": "https://xingangpan.github.io/projects/CULane.html",
+    "license": "non-commercial; no redistribution"
+  },
+  {
+    "archive": "driver_37_30frame.tar.gz",
+    "id": "1Z6a463FQ3pfP54HMwF3QS5h9p2Ch3An7",
+    "sha256": "3fdf11d77b965039c32d423ff0d1242f1e2d029c52be2acbd991504c9fd8d64f",
+    "files": 6714,
+    "extracted_bytes": 1119683932,
+    "status": "extracted",
+    "source": "https://xingangpan.github.io/projects/CULane.html",
+    "license": "non-commercial; no redistribution"
+  }
+]

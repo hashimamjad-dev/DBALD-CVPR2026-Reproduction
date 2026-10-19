@@ -1,0 +1,26 @@
+[
+  {
+    "file": "models\\checkpoints\\adnet_culane_res18.pth",
+    "url": "https://github.com/Sephirex-X/ADNet/releases/download/ckpt/culane_res18.pth",
+    "sha256": "3420d4ad5a4a1c41714814b853a65d06c446cefc210986d79689797772429e79",
+    "bytes": 142069755
+  },
+  {
+    "file": "models\\checkpoints\\scnn_r50_culane.zip",
+    "url": "https://github.com/Turoad/lanedet/releases/download/1.0/scnn_r50_culane.zip",
+    "sha256": "6cba06a1d8753bca0ff412244a8a6182de10e1b565e710d1a5dcb911f3549655",
+    "bytes": 36720231,
+    "members": [
+      "ssd/zhengtu/releasev2/scnn_r50_culane/scnn_r50_culane.pth"
+    ]
+  },
+  {
+    "file": "models\\checkpoints\\resa_r34_culane.zip",
+    "url": "https://github.com/Turoad/lanedet/releases/download/1.0/resa_r34_culane.zip",
+    "sha256": "f96e1ce32fa1fcf92997df173f658a60895ac52a7942d017e0988f0c7ff0d846",
+    "bytes": 82882388,
+    "members": [
+      "ssd/zhengtu/releasev2/resa_r34_culane/resa_r34_culane.pth"
+    ]
+  }
+]

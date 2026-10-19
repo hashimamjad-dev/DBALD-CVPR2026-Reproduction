@@ -1,0 +1,18 @@
+[
+  {
+    "dataset": "tusimple",
+    "anchors": 2784,
+    "changed_top1000_positions": 533,
+    "changed_top1000_members": 11,
+    "reference": "PyTorch v1.6.0 THTensorMoreMath.cpp quicksortdescend",
+    "frequency_values_identical": true
+  },
+  {
+    "dataset": "culane",
+    "anchors": 2784,
+    "changed_top1000_positions": 51,
+    "changed_top1000_members": 1,
+    "reference": "PyTorch v1.6.0 THTensorMoreMath.cpp quicksortdescend",
+    "frequency_values_identical": true
+  }
+]

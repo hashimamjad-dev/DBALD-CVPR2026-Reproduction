@@ -1,0 +1,40 @@
+Looking in links: https://download.pytorch.org/whl/torch_stable.html
+Collecting torch==1.8.0+cpu
+  Downloading https://download.pytorch.org/whl/cpu/torch-1.8.0%2Bcpu-cp38-cp38-win_amd64.whl (190.4 MB)
+Collecting torchvision==0.9.0+cpu
+  Downloading https://download.pytorch.org/whl/cpu/torchvision-0.9.0%2Bcpu-cp38-cp38-win_amd64.whl (845 kB)
+Collecting numpy==1.19.5
+  Downloading numpy-1.19.5-cp38-cp38-win_amd64.whl (13.3 MB)
+Collecting scipy==1.6.3
+  Downloading scipy-1.6.3-cp38-cp38-win_amd64.whl (32.7 MB)
+Collecting opencv-python==4.5.1.48
+  Downloading opencv_python-4.5.1.48-cp38-cp38-win_amd64.whl (34.9 MB)
+Collecting Pillow==8.2.0
+  Downloading Pillow-8.2.0-cp38-cp38-win_amd64.whl (2.2 MB)
+Collecting addict==2.4.0
+  Using cached addict-2.4.0-py3-none-any.whl (3.8 kB)
+Collecting yapf==0.31.0
+  Downloading yapf-0.31.0-py2.py3-none-any.whl (185 kB)
+Collecting mmcv==1.2.5
+  Downloading mmcv-1.2.5.tar.gz (222 kB)
+Collecting scikit-learn==0.24.2
+  Downloading scikit_learn-0.24.2-cp38-cp38-win_amd64.whl (6.9 MB)
+Collecting ujson==1.35
+  Using cached ujson-1.35-cp38-cp38-win_amd64.whl
+Collecting typing-extensions
+  Using cached typing_extensions-4.13.2-py3-none-any.whl (45 kB)
+Collecting pyyaml
+  Downloading PyYAML-6.0.3-cp38-cp38-win_amd64.whl (160 kB)
+Collecting regex
+  Downloading regex-2024.11.6-cp38-cp38-win_amd64.whl (274 kB)
+Collecting threadpoolctl>=2.0.0
+  Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Collecting joblib>=0.11
+  Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+Using legacy 'setup.py install' for mmcv, since package 'wheel' is not installed.
+Installing collected packages: typing-extensions, numpy, yapf, torch, threadpoolctl, scipy, regex, pyyaml, Pillow, opencv-python, joblib, addict, ujson, torchvision, scikit-learn, mmcv
+    Running setup.py install for mmcv: started
+    Running setup.py install for mmcv: finished with status 'done'
+Successfully installed Pillow-8.2.0 addict-2.4.0 joblib-1.4.2 mmcv-1.2.5 numpy-1.19.5 opencv-python-4.5.1.48 pyyaml-6.0.3 regex-2024.11.6 scikit-learn-0.24.2 scipy-1.6.3 threadpoolctl-3.5.0 torch-1.8.0+cpu torchvision-0.9.0+cpu typing-extensions-4.13.2 ujson-1.35 yapf-0.31.0
+No broken requirements found.
+LaneDet reference ready: D:\DBALD-CVPR2026-Reproduction\tools\reference_envs\lanedet\python.exe

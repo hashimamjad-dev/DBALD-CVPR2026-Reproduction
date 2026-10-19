@@ -28,9 +28,14 @@ def main():
     rows=[]
     for summary in sorted((results/'overnight').glob('*/*/summary.json')):
         if not (summary.parent/'completed.json').exists(): continue
+        provenance=json.loads((summary.parent/'model_provenance.json').read_text())
         for item in json.loads(summary.read_text()):
-            rows.append({k:v for k,v in item.items() if k not in ('command','stdout','stderr')}|{'evidence':str(summary.relative_to(ROOT))})
+            status='superseded_anchor_order' if item['model']=='LaneATT' and provenance.get('anchor_order')!='pytorch16' else 'current'
+            rows.append({k:v for k,v in item.items() if k not in ('command','stdout','stderr')}|{'evidence':str(summary.relative_to(ROOT)),
+                'validation_status':status,'anchor_order':provenance.get('anchor_order','current_torch' if item['model']=='LaneATT' else '')})
     if rows: csv_write(results/'measured_results.csv',rows)
+    archived=sum(r['validation_status']!='current' for r in rows)
+    rows=[r for r in rows if r['validation_status']=='current']
     matrix=[]
     for reference_row in csv.DictReader(reference.open()):
         for dataset,prefix in [('TuSimple','tusimple'),('CULane','culane')]:
@@ -46,7 +51,7 @@ def main():
                 missing_details='Author checkpoints, repeat seeds, full training configuration, exact ASR targets/matching/aggregation',
                 status='no exact Table 1 reproduction claimed'))
     csv_write(results/'table1_reproducibility.csv',matrix)
-    robust=[r for r in rows if '/robustness/' in r['evidence'].replace('\\','/')]
+    robust=[r for r in rows if '/robustness' in r['evidence'].replace('\\','/')]
     if robust:
         names=list(dict.fromkeys(r['transformation'] for r in robust)); models=['LaneATT','ADNet','SCNN','RESA']
         fig,ax=plt.subplots(figsize=(11,5))
@@ -90,6 +95,8 @@ Generated from completed artifacts at {current}. No incomplete run is counted as
 {table}
 The 16-image experiments are subsets. Only rows marked full_test cover the complete split. CULane lane F1 is not Table 1 ACC. All ASR fields remain null. These public checkpoints do not establish exact Table 1 equivalence.
 
+Earlier LaneATT runs affected by modern PyTorch anchor tie ordering are preserved, marked superseded_anchor_order in measured_results.csv, and excluded from this table and current plots ({archived} archived measurement rows). See laneatt_compatibility.md for the source-based correction and its validation.
+
 Tests: {testtext}. Two-image tensor-batch validation passed for {sum(bool(r['passed']) for r in batch)} of {len(batch)} models. Independently audited TuSimple model/condition submissions: {len(audits)}.
 
 {diffusiontext}
@@ -102,7 +109,7 @@ Evidence: measured_results.csv, table1_reproducibility.csv, per-run predictions/
 
 The infrastructure establishes executable public-checkpoint baselines, metric validity checks and provenance. The clean TuSimple metric is a useful benchmark comparison, but exact paper equivalence remains unresolved even when a backbone matches. CULane results use the dataset's official lane F1 and cannot numerically reproduce the paper's point ACC. Poisoned-model clean ACC and all attack-specific ASRs remain unmeasured.
 
-See methodology.md for preprocessing, timing and metric definitions, experimental_limitations.md for gaps, and overnight_execution_log.md plus machine logs for execution evidence. Earlier verified baseline directories remain intact.
+See methodology.md for preprocessing, timing and metric definitions, experimental_limitations.md for gaps, package_compatibility.md and laneatt_compatibility.md for original-version validation, and overnight_execution_log.md plus machine logs for execution evidence. Earlier baseline directories remain intact, with ordering-affected LaneATT runs explicitly superseded.
 
 ## Three next research actions
 

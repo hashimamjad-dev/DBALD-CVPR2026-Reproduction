@@ -1,0 +1,21 @@
+{
+  "model": "LaneATT",
+  "checkpoint_sha256": "fada2fde1d07a76fd06cce8f1e8d16283126bb4b1760b6b8d5c5088198606c2d",
+  "list_sha256": "4667f89fa2f31e1e86e14bfb4dafe5dead1ffcf242077e9ca6f81770a1956bfb",
+  "seed": 0,
+  "config_sha256": null,
+  "images": 16,
+  "device": "cuda",
+  "torch": "2.7.1+cu128",
+  "source_sha256": {
+    "scripts\\benchmark_culane.py": "846c275123913a4abadd3893d57249e14d016559dbd384f7326d443ac920a15f",
+    "src\\lane_repro\\__init__.py": "359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1",
+    "src\\lane_repro\\adnet_compat.py": "cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad",
+    "src\\lane_repro\\culane_official.py": "bcb56e2d60a8007a6bf4f2ed7b1842e739c4b4136420da6d3ee493ce55c22107",
+    "src\\lane_repro\\data.py": "e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d",
+    "src\\lane_repro\\evaluation.py": "5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636",
+    "src\\lane_repro\\models.py": "366ada6aab246b094309f7bf3ca85bea70262bfe08761592048ffa521516d371",
+    "src\\lane_repro\\nms.py": "98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166",
+    "src\\lane_repro\\prototype.py": "623cf1612a2a65be90d5decdc3734fc2c6eb63d9b2fdda29ed08be973b88e0ca"
+  }
+}

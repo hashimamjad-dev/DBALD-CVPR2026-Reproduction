@@ -1,0 +1,44 @@
+Looking in links: https://download.pytorch.org/whl/torch_stable.html
+Collecting torch==1.12.1+cpu
+  Downloading https://download.pytorch.org/whl/cpu/torch-1.12.1%2Bcpu-cp38-cp38-win_amd64.whl (161.4 MB)
+Collecting torchvision==0.13.1+cpu
+  Downloading https://download.pytorch.org/whl/cpu/torchvision-0.13.1%2Bcpu-cp38-cp38-win_amd64.whl (1.1 MB)
+Collecting numpy==1.23.4
+  Downloading numpy-1.23.4-cp38-cp38-win_amd64.whl (14.7 MB)
+WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))': /simple/timm/
+Collecting timm==0.4.12
+  Downloading timm-0.4.12-py3-none-any.whl (376 kB)
+Collecting scipy==1.9.3
+  Downloading scipy-1.9.3-cp38-cp38-win_amd64.whl (39.8 MB)
+Collecting opencv-python==4.6.0.66
+  Downloading opencv_python-4.6.0.66-cp36-abi3-win_amd64.whl (35.6 MB)
+Collecting Pillow==9.2.0
+  Downloading Pillow-9.2.0-cp38-cp38-win_amd64.whl (3.3 MB)
+Collecting addict==2.4.0
+  Downloading addict-2.4.0-py3-none-any.whl (3.8 kB)
+Collecting yapf==0.32.0
+  Downloading yapf-0.32.0-py2.py3-none-any.whl (190 kB)
+Collecting scikit-learn==1.1.3
+  Downloading scikit_learn-1.1.3-cp38-cp38-win_amd64.whl (7.5 MB)
+Collecting ujson==1.35
+  Using cached ujson-1.35-cp38-cp38-win_amd64.whl
+Collecting typing-extensions
+  Downloading typing_extensions-4.13.2-py3-none-any.whl (45 kB)
+Collecting requests
+  Downloading requests-2.32.4-py3-none-any.whl (64 kB)
+Collecting joblib>=1.0.0
+  Downloading joblib-1.4.2-py3-none-any.whl (301 kB)
+Collecting threadpoolctl>=2.0.0
+  Downloading threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Collecting certifi>=2017.4.17
+  Downloading certifi-2026.10.18-py3-none-any.whl (134 kB)
+Collecting charset_normalizer<4,>=2
+  Downloading charset_normalizer-3.5.2-cp37-abi3-win_amd64.whl (200 kB)
+Collecting idna<4,>=2.5
+  Downloading idna-3.15-py3-none-any.whl (72 kB)
+Collecting urllib3<3,>=1.21.1
+  Downloading urllib3-2.2.3-py3-none-any.whl (126 kB)
+Installing collected packages: urllib3, typing-extensions, idna, charset-normalizer, certifi, torch, requests, Pillow, numpy, torchvision, threadpoolctl, scipy, joblib, yapf, ujson, timm, scikit-learn, opencv-python, addict
+Successfully installed Pillow-9.2.0 addict-2.4.0 certifi-2026.10.18 charset-normalizer-3.5.2 idna-3.15 joblib-1.4.2 numpy-1.23.4 opencv-python-4.6.0.66 requests-2.32.4 scikit-learn-1.1.3 scipy-1.9.3 threadpoolctl-3.5.0 timm-0.4.12 torch-1.12.1+cpu torchvision-0.13.1+cpu typing-extensions-4.13.2 ujson-1.35 urllib3-2.2.3 yapf-0.32.0
+No broken requirements found.
+ADNet reference ready: D:\DBALD-CVPR2026-Reproduction\tools\reference_envs\adnet\python.exe

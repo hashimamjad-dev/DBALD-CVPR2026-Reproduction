@@ -1,0 +1,137 @@
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+{
+  "checks": [
+    {
+      "raw_file": "clips/0530/1492626760788443246_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 7.62939453125e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492626988650418067_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.58306884765625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492628062134609982_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 9.5367431640625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492630621151269357_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.106231689453125e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492631951282846975_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.106231689453125e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492635361404995962_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 6.4373016357421875e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492638085231891924_0/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 1.049041748046875e-05,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492627607908463563/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 6.67572021484375e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492630593673418099/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 1.049041748046875e-05,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492637609088008439/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 6.198883056640625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492726208452280063/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.58306884765625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1494453729502898369/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 8.344650268554688e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1495058869493652396/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 8.58306884765625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1495492702579432167/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 7.62939453125e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1494452945846416960/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.000244140625,
+      "offset_max_difference": 0.000244140625,
+      "logits_max_difference": 5.9604644775390625e-06,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1494452577507766671/20.jpg",
+      "input_max_difference": 0.0,
+      "proposal_max_difference": 0.0003662109375,
+      "offset_max_difference": 0.0003662109375,
+      "logits_max_difference": 6.4373016357421875e-06,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

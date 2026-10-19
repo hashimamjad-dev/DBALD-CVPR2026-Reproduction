@@ -1,0 +1,18 @@
+{
+  "architecture": "LaneATT",
+  "implementation": "lucastabelini/LaneATT",
+  "checkpoint": "models\\checkpoints\\laneatt_official\\experiments\\laneatt_r18_culane\\models\\model_0015.pt",
+  "checkpoint_sha256": "fada2fde1d07a76fd06cce8f1e8d16283126bb4b1760b6b8d5c5088198606c2d",
+  "device": "cuda",
+  "dataset": "culane",
+  "backbone": "resnet18",
+  "preprocessing": "BGR, full-frame 640x360 cubic (imgaug Resize default), float32 /255, no mean/std",
+  "compatibility": [
+    "np.bool -> np.bool_ in source module at import",
+    "portable NumPy lane-distance NMS"
+  ],
+  "strict_state_dict": true,
+  "conf_threshold": 0.5,
+  "nms_thres": 50.0,
+  "max_lanes": 4
+}

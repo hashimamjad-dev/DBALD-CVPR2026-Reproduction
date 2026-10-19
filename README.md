@@ -1,12 +1,14 @@
 # DBALD lane detection reproducibility project
 
-Executable Windows research project targeting the evidence behind Table 1 of the supplied CVPR 2026 paper. **Current results are independent clean-model/subset measurements, not reproduction of the backdoor experiments.** No ASR has been measured. Operational poisoning and stealth optimization are not implemented.
+Executable Windows research project targeting the evidence behind Table 1 of the supplied CVPR 2026 paper. **Current results are independent clean-model benchmarks, with full splits and subsets labelled separately, not reproduction of the backdoor experiments.** No ASR has been measured. Operational poisoning and stealth optimization are not implemented.
 
 ## Overnight research execution
 
 The latest completed measurements are in [results/experiment_summary.md](results/experiment_summary.md); full-split and subset rows are explicitly separated. [docs/reproduction_report.md](docs/reproduction_report.md), [docs/professor_briefing.md](docs/professor_briefing.md), [docs/methodology.md](docs/methodology.md), and [docs/experimental_limitations.md](docs/experimental_limitations.md) explain the evidence and limits. The author's extended Appendix C identifies **ResNet-34 for all four models**; earlier R18 engineering baselines remain preserved. R34 runs are stored separately. SCNN's available CULane checkpoint is R50, not the required R34.
 
 All research stays local. Do not push, publish, or upload code, results, datasets or papers to remote version control without explicit approval. Public dataset/model downloads do not upload research inputs.
+
+Original package versions are preferred; see [package compatibility](docs/package_compatibility.md). LaneATT's original PyTorch 1.6 anchor ordering is restored and checked against extracted original sorting code. Corrected full TuSimple accuracy matches the upstream rounded ACC: R18 95.57%, R34 95.63%. Earlier ordering-affected runs remain preserved but are excluded from current tables. See [compatibility evidence](docs/laneatt_compatibility.md). CULane's remaining official downloads currently return a quota-exceeded page; resume after the server resets.
 
 ```powershell
 # Download/resume evaluation data; integrity manifests state completion.
@@ -20,6 +22,15 @@ All research stays local. Do not push, publish, or upload code, results, dataset
 .\scripts\run_gpu.ps1 scripts/run_suite.py --mode full_test --config configs/resnet34.json --output-category full_test_r34
 .\scripts\run_gpu.ps1 scripts/run_culane_suite.py
 .\scripts\run_gpu.ps1 scripts/run_suite.py --mode robustness
+
+# Corrected LaneATT runs have separate artifacts; choose a fresh category when source changes.
+.\scripts\run_gpu.ps1 scripts/run_suite.py --mode full_test --models LaneATT --output-category laneatt_verified
+.\scripts\run_gpu.ps1 scripts/run_suite.py --mode full_test --models LaneATT --config configs/resnet34.json --output-category laneatt_r34_verified
+
+# Actual original-version forward reference, followed by numerical comparison.
+.\.venv\Scripts\python.exe scripts/setup_reference_environment.py LaneATT
+.\tools\python38\python.exe scripts/legacy_laneatt_reference.py
+.\scripts\run_gpu.ps1 scripts/compare_legacy_laneatt.py
 
 # Validation and refreshed deliverables.
 .\scripts\run_gpu.ps1 scripts/validate_models.py

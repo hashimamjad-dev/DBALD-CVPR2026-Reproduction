@@ -1,0 +1,138 @@
+{
+  "checkpoint_sha256": "c36f79be814628b0f7cecdb4bfa224cf3fddf038bd4071de9bb8135b826f73ed",
+  "torch_version": "2.7.1+cu128",
+  "tolerance_px": 0.1,
+  "comparison": "same decoded lane order, validity and floating pixel coordinates",
+  "limitation": "Tests CPU/CUDA adapter agreement, not parity with original CUDA NMS extension",
+  "passed": true,
+  "images": [
+    {
+      "raw_file": "clips/0530/1492626760788443246_0/20.jpg",
+      "cpu_lanes": 5,
+      "cuda_lanes": 5,
+      "same_validity": true,
+      "max_pixel_difference": 0.01572124246331441,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492626988650418067_0/20.jpg",
+      "cpu_lanes": 5,
+      "cuda_lanes": 5,
+      "same_validity": true,
+      "max_pixel_difference": 0.0188037336763216,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492628062134609982_0/20.jpg",
+      "cpu_lanes": 3,
+      "cuda_lanes": 3,
+      "same_validity": true,
+      "max_pixel_difference": 0.007652085401559816,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492630621151269357_0/20.jpg",
+      "cpu_lanes": 3,
+      "cuda_lanes": 3,
+      "same_validity": true,
+      "max_pixel_difference": 0.004281087289427887,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492631951282846975_0/20.jpg",
+      "cpu_lanes": 3,
+      "cuda_lanes": 3,
+      "same_validity": true,
+      "max_pixel_difference": 0.0074081128113903105,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492635361404995962_0/20.jpg",
+      "cpu_lanes": 3,
+      "cuda_lanes": 3,
+      "same_validity": true,
+      "max_pixel_difference": 0.011869920043523052,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0530/1492638085231891924_0/20.jpg",
+      "cpu_lanes": 5,
+      "cuda_lanes": 5,
+      "same_validity": true,
+      "max_pixel_difference": 0.008930910785011292,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492627607908463563/20.jpg",
+      "cpu_lanes": 5,
+      "cuda_lanes": 5,
+      "same_validity": true,
+      "max_pixel_difference": 0.010378756607678952,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492630593673418099/20.jpg",
+      "cpu_lanes": 3,
+      "cuda_lanes": 3,
+      "same_validity": true,
+      "max_pixel_difference": 0.010299290735702016,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492637609088008439/20.jpg",
+      "cpu_lanes": 3,
+      "cuda_lanes": 3,
+      "same_validity": true,
+      "max_pixel_difference": 0.009153100139201342,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0531/1492726208452280063/20.jpg",
+      "cpu_lanes": 4,
+      "cuda_lanes": 4,
+      "same_validity": true,
+      "max_pixel_difference": 0.02404432116395583,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1494453729502898369/20.jpg",
+      "cpu_lanes": 4,
+      "cuda_lanes": 4,
+      "same_validity": true,
+      "max_pixel_difference": 0.03030305079039408,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1495058869493652396/20.jpg",
+      "cpu_lanes": 4,
+      "cuda_lanes": 4,
+      "same_validity": true,
+      "max_pixel_difference": 0.0067537429140429595,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1495492702579432167/20.jpg",
+      "cpu_lanes": 4,
+      "cuda_lanes": 4,
+      "same_validity": true,
+      "max_pixel_difference": 0.04619117889861801,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1494452945846416960/20.jpg",
+      "cpu_lanes": 5,
+      "cuda_lanes": 5,
+      "same_validity": true,
+      "max_pixel_difference": 0.020020125176287706,
+      "passed": true
+    },
+    {
+      "raw_file": "clips/0601/1494452577507766671/20.jpg",
+      "cpu_lanes": 5,
+      "cuda_lanes": 5,
+      "same_validity": true,
+      "max_pixel_difference": 0.029760550978483735,
+      "passed": true
+    }
+  ]
+}

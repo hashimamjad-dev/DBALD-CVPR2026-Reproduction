@@ -1,0 +1,62 @@
+[
+  {
+    "architecture": "LaneATT",
+    "transformation": "clean",
+    "sample_count": 16,
+    "official_tusimple_acc_percent": 95.67522321428572,
+    "official_fp": 0.15937500000000002,
+    "official_fn": 0.03125,
+    "tusimple_acc_without_runtime_gate_percent": 95.67522321428572,
+    "median_ms": 97.29515000071842,
+    "p95_ms": 103.9582499943208,
+    "device": "cpu",
+    "peak_cuda_allocated_bytes": null,
+    "asr": null,
+    "status": "measured_subset_not_Table1_reproduction"
+  },
+  {
+    "architecture": "LaneATT",
+    "transformation": "brightness_0.7",
+    "sample_count": 16,
+    "official_tusimple_acc_percent": 95.80543154761905,
+    "official_fp": 0.14375000000000002,
+    "official_fn": 0.03125,
+    "tusimple_acc_without_runtime_gate_percent": 95.80543154761905,
+    "median_ms": 95.14104999834672,
+    "p95_ms": 97.43144998356001,
+    "device": "cpu",
+    "peak_cuda_allocated_bytes": null,
+    "asr": null,
+    "status": "measured_subset_not_Table1_reproduction"
+  },
+  {
+    "architecture": "LaneATT",
+    "transformation": "blur_sigma_1.5",
+    "sample_count": 16,
+    "official_tusimple_acc_percent": 95.51711309523809,
+    "official_fp": 0.15,
+    "official_fn": 0.015625,
+    "tusimple_acc_without_runtime_gate_percent": 95.51711309523809,
+    "median_ms": 95.04444999038242,
+    "p95_ms": 98.73639999568695,
+    "device": "cpu",
+    "peak_cuda_allocated_bytes": null,
+    "asr": null,
+    "status": "measured_subset_not_Table1_reproduction"
+  },
+  {
+    "architecture": "LaneATT",
+    "transformation": "contrast_0.75",
+    "sample_count": 16,
+    "official_tusimple_acc_percent": 96.14955357142856,
+    "official_fp": 0.171875,
+    "official_fn": 0.03125,
+    "tusimple_acc_without_runtime_gate_percent": 96.14955357142856,
+    "median_ms": 97.74335000838619,
+    "p95_ms": 106.86312500183703,
+    "device": "cpu",
+    "peak_cuda_allocated_bytes": null,
+    "asr": null,
+    "status": "measured_subset_not_Table1_reproduction"
+  }
+]

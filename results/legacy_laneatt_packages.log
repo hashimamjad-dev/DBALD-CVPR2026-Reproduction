@@ -1,0 +1,119 @@
+Looking in links: https://download.pytorch.org/whl/torch_stable.html
+Collecting torch==1.6.0+cpu (from -r requirements-laneatt-legacy.txt (line 3))
+  Downloading https://download.pytorch.org/whl/cpu/torch-1.6.0%2Bcpu-cp38-cp38-win_amd64.whl (167.7 MB)
+     -------------------------------------- 167.7/167.7 MB 3.4 MB/s eta 0:00:00
+Collecting torchvision==0.7.0+cpu (from -r requirements-laneatt-legacy.txt (line 4))
+  Downloading https://download.pytorch.org/whl/cpu/torchvision-0.7.0%2Bcpu-cp38-cp38-win_amd64.whl (362 kB)
+Collecting opencv-python==4.2.0.32 (from -r requirements-laneatt-legacy.txt (line 5))
+  Downloading opencv_python-4.2.0.32-cp38-cp38-win_amd64.whl.metadata (11 kB)
+Collecting scipy==1.4.1 (from -r requirements-laneatt-legacy.txt (line 6))
+  Downloading scipy-1.4.1-cp38-cp38-win_amd64.whl.metadata (2.0 kB)
+Collecting scikit-learn==0.23.2 (from -r requirements-laneatt-legacy.txt (line 7))
+  Downloading scikit_learn-0.23.2-cp38-cp38-win_amd64.whl.metadata (7.3 kB)
+Collecting imgaug==0.4.0 (from -r requirements-laneatt-legacy.txt (line 8))
+  Using cached imgaug-0.4.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting Shapely==1.7.0 (from -r requirements-laneatt-legacy.txt (line 9))
+  Downloading Shapely-1.7.0-cp38-cp38-win_amd64.whl.metadata (33 kB)
+Collecting ujson==1.35 (from -r requirements-laneatt-legacy.txt (line 10))
+  Downloading ujson-1.35.tar.gz (192 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting matplotlib==3.1.3 (from -r requirements-laneatt-legacy.txt (line 11))
+  Downloading matplotlib-3.1.3-cp38-cp38-win_amd64.whl.metadata (1.4 kB)
+Collecting numpy==1.18.5 (from -r requirements-laneatt-legacy.txt (line 13))
+  Downloading numpy-1.18.5-cp38-cp38-win_amd64.whl.metadata (2.1 kB)
+Collecting Pillow==7.2.0 (from -r requirements-laneatt-legacy.txt (line 14))
+  Downloading Pillow-7.2.0-cp38-cp38-win_amd64.whl.metadata (6.0 kB)
+Collecting scikit-image==0.17.2 (from -r requirements-laneatt-legacy.txt (line 15))
+  Downloading scikit_image-0.17.2-cp38-cp38-win_amd64.whl.metadata (7.5 kB)
+Collecting imageio==2.9.0 (from -r requirements-laneatt-legacy.txt (line 16))
+  Downloading imageio-2.9.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting joblib==0.16.0 (from -r requirements-laneatt-legacy.txt (line 17))
+  Downloading joblib-0.16.0-py3-none-any.whl.metadata (4.5 kB)
+Collecting threadpoolctl==2.1.0 (from -r requirements-laneatt-legacy.txt (line 18))
+  Downloading threadpoolctl-2.1.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting future (from torch==1.6.0+cpu->-r requirements-laneatt-legacy.txt (line 3))
+  Downloading future-1.0.0-py3-none-any.whl.metadata (4.0 kB)
+Collecting six (from imgaug==0.4.0->-r requirements-laneatt-legacy.txt (line 8))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting cycler>=0.10 (from matplotlib==3.1.3->-r requirements-laneatt-legacy.txt (line 11))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting kiwisolver>=1.0.1 (from matplotlib==3.1.3->-r requirements-laneatt-legacy.txt (line 11))
+  Downloading kiwisolver-1.4.7-cp38-cp38-win_amd64.whl.metadata (6.4 kB)
+Collecting pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 (from matplotlib==3.1.3->-r requirements-laneatt-legacy.txt (line 11))
+  Downloading pyparsing-3.1.4-py3-none-any.whl.metadata (5.1 kB)
+Collecting python-dateutil>=2.1 (from matplotlib==3.1.3->-r requirements-laneatt-legacy.txt (line 11))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting networkx>=2.0 (from scikit-image==0.17.2->-r requirements-laneatt-legacy.txt (line 15))
+  Downloading https://download.pytorch.org/whl/networkx-3.2.1-py3-none-any.whl (1.6 MB)
+     ---------------------------------------- 1.6/1.6 MB 6.8 MB/s eta 0:00:00
+Collecting tifffile>=2019.7.26 (from scikit-image==0.17.2->-r requirements-laneatt-legacy.txt (line 15))
+  Downloading tifffile-2023.7.10-py3-none-any.whl.metadata (31 kB)
+Collecting PyWavelets>=1.1.1 (from scikit-image==0.17.2->-r requirements-laneatt-legacy.txt (line 15))
+  Downloading PyWavelets-1.4.1-cp38-cp38-win_amd64.whl.metadata (1.9 kB)
+INFO: pip is looking at multiple versions of networkx to determine which version is compatible with other requirements. This could take a while.
+Collecting networkx>=2.0 (from scikit-image==0.17.2->-r requirements-laneatt-legacy.txt (line 15))
+  Downloading networkx-3.1-py3-none-any.whl.metadata (5.3 kB)
+Downloading opencv_python-4.2.0.32-cp38-cp38-win_amd64.whl (33.1 MB)
+   ---------------------------------------- 33.1/33.1 MB 301.1 kB/s eta 0:00:00
+Downloading scipy-1.4.1-cp38-cp38-win_amd64.whl (31.0 MB)
+   ---------------------------------------- 31.0/31.0 MB 470.4 kB/s eta 0:00:00
+Downloading scikit_learn-0.23.2-cp38-cp38-win_amd64.whl (6.8 MB)
+   ---------------------------------------- 6.8/6.8 MB 4.4 MB/s eta 0:00:00
+Using cached imgaug-0.4.0-py2.py3-none-any.whl (948 kB)
+Downloading Shapely-1.7.0-cp38-cp38-win_amd64.whl (1.0 MB)
+   ---------------------------------------- 1.0/1.0 MB 2.2 MB/s eta 0:00:00
+Downloading matplotlib-3.1.3-cp38-cp38-win_amd64.whl (9.1 MB)
+   ---------------------------------------- 9.1/9.1 MB 2.1 MB/s eta 0:00:00
+Downloading numpy-1.18.5-cp38-cp38-win_amd64.whl (12.8 MB)
+   ---------------------------------------- 12.8/12.8 MB 523.8 kB/s eta 0:00:00
+Downloading Pillow-7.2.0-cp38-cp38-win_amd64.whl (2.1 MB)
+   ---------------------------------------- 2.1/2.1 MB 247.0 kB/s eta 0:00:00
+Downloading scikit_image-0.17.2-cp38-cp38-win_amd64.whl (11.7 MB)
+   ---------------------------------------- 11.7/11.7 MB 270.4 kB/s eta 0:00:00
+Downloading imageio-2.9.0-py3-none-any.whl (3.3 MB)
+   ---------------------------------------- 3.3/3.3 MB 322.2 kB/s eta 0:00:00
+Downloading joblib-0.16.0-py3-none-any.whl (300 kB)
+Downloading threadpoolctl-2.1.0-py3-none-any.whl (12 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading kiwisolver-1.4.7-cp38-cp38-win_amd64.whl (55 kB)
+Downloading networkx-3.1-py3-none-any.whl (2.1 MB)
+   ---------------------------------------- 2.1/2.1 MB 136.1 kB/s eta 0:00:00
+Downloading pyparsing-3.1.4-py3-none-any.whl (104 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading PyWavelets-1.4.1-cp38-cp38-win_amd64.whl (4.2 MB)
+   ---------------------------------------- 4.2/4.2 MB 172.5 kB/s eta 0:00:00
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading tifffile-2023.7.10-py3-none-any.whl (220 kB)
+Downloading future-1.0.0-py3-none-any.whl (491 kB)
+Building wheels for collected packages: ujson
+  Building wheel for ujson (setup.py): started
+  Building wheel for ujson (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  python setup.py bdist_wheel did not run successfully.
+  exit code: 1
+  
+  [15 lines of output]
+  Warning: 'classifiers' should be a list, got type 'filter'
+  running bdist_wheel
+  running build
+  running build_ext
+  building 'ujson' extension
+  creating build\temp.win-amd64-cpython-38\Release\lib
+  creating build\temp.win-amd64-cpython-38\Release\python
+  "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX86\x64\cl.exe" /c /nologo /O2 /W3 /GL /DNDEBUG /MD -I./python -I./lib -ID:\DBALD-CVPR2026-Reproduction\tools\python38\include -ID:\DBALD-CVPR2026-Reproduction\tools\python38\Include "-IC:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\include" "-IC:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\ATLMFC\include" "-IC:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\VS\include" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" /Tc./lib/ultrajsondec.c /Fobuild\temp.win-amd64-cpython-38\Release\./lib/ultrajsondec.obj -D_GNU_SOURCE
+  ultrajsondec.c
+  "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX86\x64\cl.exe" /c /nologo /O2 /W3 /GL /DNDEBUG /MD -I./python -I./lib -ID:\DBALD-CVPR2026-Reproduction\tools\python38\include -ID:\DBALD-CVPR2026-Reproduction\tools\python38\Include "-IC:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\include" "-IC:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\ATLMFC\include" "-IC:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\VS\include" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" /Tc./lib/ultrajsonenc.c /Fobuild\temp.win-amd64-cpython-38\Release\./lib/ultrajsonenc.obj -D_GNU_SOURCE
+  ultrajsonenc.c
+  "C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\bin\HostX86\x64\cl.exe" /c /nologo /O2 /W3 /GL /DNDEBUG /MD -I./python -I./lib -ID:\DBALD-CVPR2026-Reproduction\tools\python38\include -ID:\DBALD-CVPR2026-Reproduction\tools\python38\Include "-IC:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\include" "-IC:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231\ATLMFC\include" "-IC:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\VS\include" "-IC:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt" "-IC:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt" /Tc./python/JSONtoObj.c /Fobuild\temp.win-amd64-cpython-38\Release\./python/JSONtoObj.obj -D_GNU_SOURCE
+  JSONtoObj.c
+  C:\Users\Hashim Amjad\AppData\Local\Temp\pip-install-covbl6oe\ujson_7590e43a77a642958718e8e277e3cefd\python\py_defines.h(39): fatal error C1083: Cannot open include file: 'Python.h': No such file or directory
+  error: command 'C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX86\\x64\\cl.exe' failed with exit code 2
+  [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for ujson
+  Running setup.py clean for ujson
+Failed to build ujson
+ERROR: Failed to build installable wheels for some pyproject.toml based projects (ujson)

@@ -26,6 +26,7 @@ def main():
     spec=dict(model=args.model,backbone=args.backbone,checkpoint_sha256=digest(args.checkpoint),list_sha256=digest(args.list),seed=0,
         config_sha256=digest(args.config) if args.config else None,images=len(samples),device='cuda',torch=torch.__version__,
         source_sha256={str(p.relative_to(ROOT)):digest(p) for p in [Path(__file__).resolve(),*sorted((ROOT/'src/lane_repro').glob('*.py'))]})
+    if args.model=='LaneATT': spec['anchor_order_sha256']=digest(ROOT/'configs/laneatt_anchor_order.json')
     config=out/'run_config.json'
     if config.exists() and json.loads(config.read_text())!=spec: raise ValueError('Changed run configuration')
     config.write_text(json.dumps(spec,indent=2))

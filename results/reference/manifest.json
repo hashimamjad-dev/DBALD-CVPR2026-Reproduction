@@ -1,0 +1,9 @@
+{
+  "source": "User-supplied CVPR 2026 PDF, page 7, Table 1",
+  "units": "percent",
+  "status": "published_reference_not_measured",
+  "rows": 20,
+  "numeric_values_in_expanded_csv": 220,
+  "sha256": "052cbbc97cf3d5823d465e1fa200b1dc7aac270bf6472dd58c8d5acb679bf683",
+  "note": "Merged benign cells expanded. Published averages and method capitalization retained. No TuSimple LRA reported."
+}

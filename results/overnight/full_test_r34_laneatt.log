@@ -1,0 +1,33 @@
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+LaneATT clean 0/2782
+LaneATT clean 100/2782
+LaneATT clean 200/2782
+LaneATT clean 300/2782
+LaneATT clean 400/2782
+LaneATT clean 500/2782
+LaneATT clean 600/2782
+LaneATT clean 700/2782
+LaneATT clean 800/2782
+LaneATT clean 900/2782
+LaneATT clean 1000/2782
+LaneATT clean 1100/2782
+LaneATT clean 1200/2782
+LaneATT clean 1300/2782
+LaneATT clean 1400/2782
+LaneATT clean 1500/2782
+LaneATT clean 1600/2782
+LaneATT clean 1700/2782
+LaneATT clean 1800/2782
+LaneATT clean 1900/2782
+LaneATT clean 2000/2782
+LaneATT clean 2100/2782
+LaneATT clean 2200/2782
+LaneATT clean 2300/2782
+LaneATT clean 2400/2782
+LaneATT clean 2500/2782
+LaneATT clean 2600/2782
+LaneATT clean 2700/2782
+{"model": "LaneATT", "backbone": "resnet34", "dataset": "TuSimple", "split": "test", "transformation": "clean", "images": 2782, "metric": "official TuSimple ACC; actual 200ms runtime gate", "acc_percent": 95.43739943856767, "ungated_acc_percent": 95.43739943856767, "fp": 0.19615384615384618, "fn": 0.03291996165827941, "median_ms": 20.93530001002364, "p95_ms": 23.7957000019378, "runtime_failures": 0, "peak_cuda_allocated_bytes": 192433664, "device": "cuda", "seed": 0, "asr": null, "table1_comparable": false, "scope": "full_test", "checkpoint_sha256": "ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795"}

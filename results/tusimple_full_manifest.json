@@ -1,0 +1,10 @@
+{
+  "source": "https://github.com/TuSimple/tusimple-benchmark/issues/3",
+  "mirror": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/",
+  "split": "test",
+  "expected": 2782,
+  "verified": 2782,
+  "failures": 0,
+  "labels_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+  "note": "Only labelled final frames downloaded; context frames are not inputs to these single-frame models"
+}
