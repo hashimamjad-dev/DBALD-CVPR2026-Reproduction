@@ -1,0 +1,164 @@
+[
+  {
+    "dataset": "TuSimple",
+    "method": "control_global_1000",
+    "n": 16,
+    "masked_mae": 20.746366712782116,
+    "masked_ssim": 0.681730069374173,
+    "local_lpips": 0.2629252849146724,
+    "boundary_error": 11.054501488095239
+  },
+  {
+    "dataset": "TuSimple",
+    "method": "control_global_500",
+    "n": 16,
+    "masked_mae": 21.51301744249132,
+    "masked_ssim": 0.6771324558066811,
+    "local_lpips": 0.2632399667054415,
+    "boundary_error": 12.911225818452381
+  },
+  {
+    "dataset": "TuSimple",
+    "method": "mask_diverse_1000",
+    "n": 16,
+    "masked_mae": 14.88357883029514,
+    "masked_ssim": 0.7531137002994592,
+    "local_lpips": 0.17371015530079603,
+    "boundary_error": 8.138578869047619
+  },
+  {
+    "dataset": "TuSimple",
+    "method": "mask_diverse_500",
+    "n": 16,
+    "masked_mae": 16.218399047851562,
+    "masked_ssim": 0.759708649250855,
+    "local_lpips": 0.17042162455618382,
+    "boundary_error": 9.601795014880953
+  },
+  {
+    "dataset": "TuSimple",
+    "method": "mask_single_1000",
+    "n": 16,
+    "masked_mae": 24.006561279296875,
+    "masked_ssim": 0.6478691273410346,
+    "local_lpips": 0.2777003711089492,
+    "boundary_error": 13.406156994047619
+  },
+  {
+    "dataset": "TuSimple",
+    "method": "mask_single_500",
+    "n": 16,
+    "masked_mae": 21.118564181857636,
+    "masked_ssim": 0.6631676971939708,
+    "local_lpips": 0.26601535407826304,
+    "boundary_error": 12.035667782738095
+  },
+  {
+    "dataset": "TuSimple",
+    "method": "student_v1",
+    "n": 16,
+    "masked_mae": 23.12765842013889,
+    "masked_ssim": 0.6821637070623092,
+    "local_lpips": 0.26227877801284194,
+    "boundary_error": 12.006231398809524
+  },
+  {
+    "dataset": "TuSimple",
+    "method": "teacher20",
+    "n": 16,
+    "masked_mae": 0.0,
+    "masked_ssim": 1.0,
+    "local_lpips": 0.0,
+    "boundary_error": 0.0
+  },
+  {
+    "dataset": "TuSimple",
+    "method": "teacher4",
+    "n": 16,
+    "masked_mae": 3.069476657443577,
+    "masked_ssim": 0.8940818047571588,
+    "local_lpips": 0.06180886388756335,
+    "boundary_error": 2.7842726934523805
+  },
+  {
+    "dataset": "CULane",
+    "method": "control_global_1000",
+    "n": 8,
+    "masked_mae": 18.744904048859127,
+    "masked_ssim": 0.5888613660614072,
+    "local_lpips": 0.2867187652736902,
+    "boundary_error": 17.525324708159964
+  },
+  {
+    "dataset": "CULane",
+    "method": "control_global_500",
+    "n": 8,
+    "masked_mae": 19.257890004960316,
+    "masked_ssim": 0.5965654016625184,
+    "local_lpips": 0.27898748219013214,
+    "boundary_error": 18.714247789528432
+  },
+  {
+    "dataset": "CULane",
+    "method": "mask_diverse_1000",
+    "n": 8,
+    "masked_mae": 15.749596974206348,
+    "masked_ssim": 0.6118203525050345,
+    "local_lpips": 0.23822150938212872,
+    "boundary_error": 14.119414225034674
+  },
+  {
+    "dataset": "CULane",
+    "method": "mask_diverse_500",
+    "n": 8,
+    "masked_mae": 16.49976360987103,
+    "masked_ssim": 0.5983582444106599,
+    "local_lpips": 0.24710506573319435,
+    "boundary_error": 15.106173066920944
+  },
+  {
+    "dataset": "CULane",
+    "method": "mask_single_1000",
+    "n": 8,
+    "masked_mae": 19.850671192956348,
+    "masked_ssim": 0.5587562015160399,
+    "local_lpips": 0.2946173567324877,
+    "boundary_error": 18.22286393319464
+  },
+  {
+    "dataset": "CULane",
+    "method": "mask_single_500",
+    "n": 8,
+    "masked_mae": 19.5157218812004,
+    "masked_ssim": 0.556767123122089,
+    "local_lpips": 0.28299473598599434,
+    "boundary_error": 18.237407174641703
+  },
+  {
+    "dataset": "CULane",
+    "method": "student_v1",
+    "n": 8,
+    "masked_mae": 17.382607111855158,
+    "masked_ssim": 0.6097850307563397,
+    "local_lpips": 0.26404512487351894,
+    "boundary_error": 15.853292591308367
+  },
+  {
+    "dataset": "CULane",
+    "method": "teacher20",
+    "n": 8,
+    "masked_mae": 0.0,
+    "masked_ssim": 1.0,
+    "local_lpips": 0.0,
+    "boundary_error": 0.0
+  },
+  {
+    "dataset": "CULane",
+    "method": "teacher4",
+    "n": 8,
+    "masked_mae": 2.249484592013889,
+    "masked_ssim": 0.9455345759760039,
+    "local_lpips": 0.026543831452727318,
+    "boundary_error": 2.5744842233009706
+  }
+]

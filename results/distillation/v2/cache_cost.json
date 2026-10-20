@@ -1,0 +1,6 @@
+{
+  "additional_training_trajectories": 64,
+  "additional_training_seeds": 64,
+  "measured_encode_and_trajectory_seconds": 211.0389005000252,
+  "scope": "VAE encode + 20-step teacher sampling with trajectory transfers; excludes model loading, cooling and file writes; excludes validation-reference cache"
+}

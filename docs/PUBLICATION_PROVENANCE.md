@@ -25,3 +25,6 @@ V2 entry points: v2_prepare.py, v2_train.py, v2_evaluate.py, v2_lanes.py,
 v2_audit.py, v2_report.py. The completed protocols describe order and exclusions.
 These commands document reproduction; no training was performed during publication.
 
+Comparison report: V1_V2_Research_Comparison.md. Its PDF is under output/pdf/.
+Representative paired figures are under docs/figures/. Full generated image collections
+and checkpoints remain local; stored artifact hashes identify them.

@@ -1,0 +1,32 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  57%|#####7    | 4/7 [00:00<00:00, 28.44it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00, 12.86it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00, 14.19it/s]
+Setting up [LPIPS] perceptual loss: trunk [squeeze], v[0.1], spatial [off]
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=SqueezeNet1_1_Weights.IMAGENET1K_V1`. You can also use `weights=SqueezeNet1_1_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: D:\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\lpips\weights\v0.1\squeeze.pth
+mask_single update 100 0.007357520516961813
+Cooling 78, 2474
+mask_single update 200 0.00817545410245657
+Cooling 78, 2474
+mask_single update 300 0.0030185971409082413
+Cooling 79, 2474
+mask_single update 400 0.003169227158650756
+Cooling 79, 2474
+mask_single update 500 0.0019066506065428257
+decoded validation mask_single 500 0.2716751480475068
+mask_single update 600 0.005854757037013769
+Cooling 79, 2474
+mask_single update 700 0.004814588464796543
+Cooling 78, 2474
+mask_single update 800 0.003234617877751589
+Cooling 78, 2474
+mask_single update 900 0.002243418712168932
+Cooling 78, 2474
+mask_single update 1000 0.001807576511055231
+decoded validation mask_single 1000 0.28333936631679535

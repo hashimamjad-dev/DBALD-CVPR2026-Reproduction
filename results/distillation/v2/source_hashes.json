@@ -1,0 +1,15 @@
+{
+  "scripts\\v2_audit.py": "29e84bae22eb1955cbccc4bc37781b8a1e09f4dee5a8b38019b65b37099a68e5",
+  "scripts\\v2_common.py": "16bb1e383a4444bec5d3f9c971db7cd1c6f454c98872ea7ccedf4b83a2f7100e",
+  "scripts\\v2_evaluate.py": "ae130ec294f5c516e2f7025ac8673727d24f1debeea22be20229c38e32e68c65",
+  "scripts\\v2_gallery.py": "1d858d690acceccf7fe7d5053cba6fda4af0ceec4d8f853774422aa363075d36",
+  "scripts\\v2_lanes.py": "477ac6f371927f5a4bfdf8ab6e97e0eff9ef566dd38e45d24885ee396e80689f",
+  "scripts\\v2_prepare.py": "d41bdda8627b20b2c0241023d3ea7d554416f35c2f3d709d44ace89f8ebceb07",
+  "scripts\\v2_report.py": "3ce97d88473eb6a65a880b9f08405b6032f2c73560e652f359672383b7fcc107",
+  "scripts\\v2_train.py": "fe2ff4434d2850f01f78c8cdde74afd334d40eb23b5bc548fcee0bd9106f7521",
+  "src\\lane_repro\\distillation.py": "4fc2dc6048566387bd9f78e29aa81b45060504a495ad2f96b69d32b292242a07",
+  "src\\lane_repro\\road_teacher.py": "4c4891d7f679a44f6914fcfcc529dd98ff3949ab73d596a48f7f6c23ef258ce4",
+  "tests\\test_distillation_v2.py": "1cdd42ed832da1a208da3145b9da3b0e4ab4e7eb3f01b8f3ed866fb8bb901d6e",
+  "docs\\distillation_v2_protocol.md": "3062b9db0b16f7c96c772181b409159f4c70c3be54ef943f8a49cb3b442b6c2d",
+  "docs\\distillation_v2_timing_protocol.md": "10b1bbf993abf64a71ffd87aff7466a51d45cd4277be8ba035345fa572f3f0b5"
+}

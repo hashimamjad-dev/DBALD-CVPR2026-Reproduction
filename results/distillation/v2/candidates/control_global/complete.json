@@ -1,0 +1,10 @@
+{
+  "candidate": "control_global",
+  "updates": 1000,
+  "examples": 64,
+  "seconds": 117.54215160000604,
+  "time_scope": "training + checkpoint validation + cooling; excludes teacher-cache generation and model setup",
+  "peak_bytes": 2038150656,
+  "parameters": 2381044,
+  "initialized_from": "3b5a9991060369ab4085e5abb8387dedda570b13515dc15ae84e81ca80440057"
+}

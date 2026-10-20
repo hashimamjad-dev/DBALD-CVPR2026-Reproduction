@@ -1,0 +1,176 @@
+{
+  "reviewer": "Assistant visual engineering inspection; non-blinded, not an independent human panel",
+  "selected_sha256": "025378cdd5f5b558c314498d74145d63f96c144f3fe236f1eac92367cda2fb21",
+  "scope": "All 24 validation raw edit crops and matching composite crops in six saved contact sheets. No numerical realism probability inferred.",
+  "summary": "The dark TuSimple seed-17 blotches become less severe, but visible discolored rectangles and texture mismatch remain. CULane strips remain conspicuous. All 24 inspected selected-student cases fail the strict no-conspicuous-artifact criterion; the required 90% acceptance is not met. Teacher composites can also show seams, so teacher fidelity is not itself proof of seamless realism.",
+  "cases": [
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Mottled dark/green texture and rectangular edit remain visible in raw and composite."
+    },
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Dark blotch is reduced relative to v1, but a mottled, discolored rectangular edit remains in raw and composite."
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Mottled dark/green texture and rectangular edit remain visible in raw and composite."
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Dark blotch is reduced relative to v1, but a mottled, discolored rectangular edit remains in raw and composite."
+    },
+    {
+      "id": "scene_066",
+      "dataset": "TuSimple",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Mottled dark/green texture and rectangular edit remain visible in raw and composite."
+    },
+    {
+      "id": "scene_066",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Dark blotch is reduced relative to v1, but a mottled, discolored rectangular edit remains in raw and composite."
+    },
+    {
+      "id": "scene_067",
+      "dataset": "TuSimple",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Mottled dark/green texture and rectangular edit remain visible in raw and composite."
+    },
+    {
+      "id": "scene_067",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Dark blotch is reduced relative to v1, but a mottled, discolored rectangular edit remains in raw and composite."
+    },
+    {
+      "id": "scene_068",
+      "dataset": "TuSimple",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Mottled dark/green texture and rectangular edit remain visible in raw and composite."
+    },
+    {
+      "id": "scene_068",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Dark blotch is reduced relative to v1, but a mottled, discolored rectangular edit remains in raw and composite."
+    },
+    {
+      "id": "scene_069",
+      "dataset": "TuSimple",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Mottled dark/green texture and rectangular edit remain visible in raw and composite."
+    },
+    {
+      "id": "scene_069",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Dark blotch is reduced relative to v1, but a mottled, discolored rectangular edit remains in raw and composite."
+    },
+    {
+      "id": "scene_070",
+      "dataset": "TuSimple",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Mottled dark/green texture and rectangular edit remain visible in raw and composite."
+    },
+    {
+      "id": "scene_070",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Dark blotch is reduced relative to v1, but a mottled, discolored rectangular edit remains in raw and composite."
+    },
+    {
+      "id": "scene_071",
+      "dataset": "TuSimple",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Mottled dark/green texture and rectangular edit remain visible in raw and composite."
+    },
+    {
+      "id": "scene_071",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Dark blotch is reduced relative to v1, but a mottled, discolored rectangular edit remains in raw and composite."
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Green-gray rectangular strip and conspicuous color/boundary mismatch remain in raw and composite."
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Green-gray rectangular strip and conspicuous color/boundary mismatch remain in raw and composite."
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Green-gray rectangular strip and conspicuous color/boundary mismatch remain in raw and composite."
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Green-gray rectangular strip and conspicuous color/boundary mismatch remain in raw and composite."
+    },
+    {
+      "id": "culane_val_02",
+      "dataset": "CULane",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Green-gray rectangular strip and conspicuous color/boundary mismatch remain in raw and composite."
+    },
+    {
+      "id": "culane_val_02",
+      "dataset": "CULane",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Green-gray rectangular strip and conspicuous color/boundary mismatch remain in raw and composite."
+    },
+    {
+      "id": "culane_val_03",
+      "dataset": "CULane",
+      "seed": 0,
+      "acceptable": false,
+      "observation": "Green-gray rectangular strip and conspicuous color/boundary mismatch remain in raw and composite."
+    },
+    {
+      "id": "culane_val_03",
+      "dataset": "CULane",
+      "seed": 17,
+      "acceptable": false,
+      "observation": "Green-gray rectangular strip and conspicuous color/boundary mismatch remain in raw and composite."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  29%|##8       | 2/7 [00:00<00:00, 10.15it/s]
+Loading pipeline components...:  57%|#####7    | 4/7 [00:00<00:00,  8.09it/s]
+Loading pipeline components...:  71%|#######1  | 5/7 [00:00<00:00,  5.38it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00,  7.68it/s]
+Setting up [LPIPS] perceptual loss: trunk [squeeze], v[0.1], spatial [off]
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=SqueezeNet1_1_Weights.IMAGENET1K_V1`. You can also use `weights=SqueezeNet1_1_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: D:\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\lpips\weights\v0.1\squeeze.pth
+final scene_080 100
+final scene_080 101
+final scene_081 100
+final scene_081 101
+final scene_082 100
+final scene_082 101
+final scene_083 100
+final scene_083 101
+final scene_084 100
+final scene_084 101
+final scene_085 100
+final scene_085 101
+final scene_086 100
+final scene_086 101
+final scene_087 100
+final scene_087 101
+final scene_088 100
+final scene_088 101
+final scene_089 100
+final scene_089 101
+final scene_090 100
+final scene_090 101
+final scene_091 100
+final scene_091 101
+final scene_092 100
+final scene_092 101
+final scene_093 100
+final scene_093 101
+final scene_094 100
+final scene_094 101
+final scene_095 100
+final scene_095 101

@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "teacher4",
+      "seconds": 0.9416115999993053,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "teacher4",
+      "seconds": 1.01079220000247,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "teacher4",
+      "seconds": 0.9490196999977343,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "teacher4",
+      "seconds": 0.9533959000036702,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "teacher4",
+      "seconds": 0.9636678999959258,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "teacher4",
+      "seconds": 0.9679328000056557,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "teacher4",
+      "seconds": 0.9904655999998795,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "teacher4",
+      "seconds": 0.9870991999996477,
+      "peak_bytes": 3414446080
+    }
+  ],
+  "median_seconds": 0.9658003500007908,
+  "peak_bytes": 3414446080,
+  "scope": "Four fixed validation scenes (first two per dataset), seed17, two repetitions, one warmup. Includes VAE encode, noise, denoising, VAE decode, safety check, composite; excludes loading, disk I/O and cooling. Student denoiser timing uses shared VAE/checker without teacher UNet."
+}

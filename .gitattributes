@@ -1,0 +1,5 @@
+# Keep v2 source/protocol checksums stable across Windows checkouts.
+scripts/v2_*.py text eol=lf
+tests/test_distillation_v2.py text eol=lf
+docs/distillation_v2_protocol.md text eol=lf
+docs/distillation_v2_timing_protocol.md text eol=lf

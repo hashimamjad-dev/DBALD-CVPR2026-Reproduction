@@ -1,0 +1,20 @@
+dataset,criterion,value,threshold,passed
+TuSimple,SSIM,0.7531137002994592,0.85,False
+TuSimple,MAE,14.88357883029514,6.604214986165365,False
+TuSimple,LPIPS,0.17371015530079603,0.09726107985945419,False
+TuSimple,Boundary,8.138578869047619,4.7842726934523805,False
+CULane,SSIM,0.6118203525050345,0.85,False
+CULane,MAE,15.749596974206348,5.374226888020833,False
+CULane,LPIPS,0.23822150938212872,0.05317978931590915,False
+CULane,Boundary,14.119414225034674,4.574484223300971,False
+TuSimple,Clean metric drop pp,0.0372023809523796,0.5,True
+TuSimple,Lane displacement px,0.08561194883072999,1.0,True
+TuSimple,Lane coverage,0.9994318181818181,0.99,True
+CULane,Clean metric drop pp,0.0,2.0,True
+CULane,Lane displacement px,0.587341272656843,1.0,True
+CULane,Lane coverage,0.9945161867174054,0.99,True
+Timing sample,Latency seconds,0.3261486000046716,0.6,True
+Timing sample,Speedup,11.038177229481805,3.0,True
+Timing sample,Peak MiB,1373.42041015625,7168,True
+TuSimple,Visual acceptable fraction,0,0.9,False
+CULane,Visual acceptable fraction,0,0.9,False

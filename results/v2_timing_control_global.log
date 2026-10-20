@@ -1,0 +1,14 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]
+Loading pipeline components...:  43%|####2     | 3/7 [00:00<00:00, 22.39it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  86%|########5 | 6/7 [00:00<00:00,  6.44it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00,  7.74it/s]
+control_global scene_064 0 0.31045560000347905
+control_global scene_064 1 0.3151161999994656
+control_global scene_065 0 0.32027560000278754
+control_global scene_065 1 0.3186151999980211
+control_global culane_val_00 0 0.323263099999167
+control_global culane_val_00 1 0.3167833000043174
+control_global culane_val_01 0 0.3165681999962544
+control_global culane_val_01 1 0.317568400001619

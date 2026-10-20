@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "mask_single",
+      "seconds": 0.3581893000009586,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "mask_single",
+      "seconds": 0.3353380000044126,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "mask_single",
+      "seconds": 0.32235299999592826,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "mask_single",
+      "seconds": 0.3203598999971291,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "mask_single",
+      "seconds": 0.3516280999974697,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "mask_single",
+      "seconds": 0.339069899993774,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "mask_single",
+      "seconds": 0.29653939999843715,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "mask_single",
+      "seconds": 0.3342874000009033,
+      "peak_bytes": 1440135680
+    }
+  ],
+  "median_seconds": 0.33481270000265795,
+  "peak_bytes": 1440135680,
+  "scope": "Four fixed validation scenes (first two per dataset), seed17, two repetitions, one warmup. Includes VAE encode, noise, denoising, VAE decode, safety check, composite; excludes loading, disk I/O and cooling. Student denoiser timing uses shared VAE/checker without teacher UNet."
+}

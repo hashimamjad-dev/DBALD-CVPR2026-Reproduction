@@ -1,0 +1,34 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  14%|#4        | 1/7 [00:00<00:00,  6.01it/s]
+Loading pipeline components...:  43%|####2     | 3/7 [00:00<00:00,  4.87it/s]
+Loading pipeline components...:  71%|#######1  | 5/7 [00:00<00:00,  7.39it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:01<00:00,  6.91it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:01<00:00,  6.61it/s]
+Setting up [LPIPS] perceptual loss: trunk [squeeze], v[0.1], spatial [off]
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=SqueezeNet1_1_Weights.IMAGENET1K_V1`. You can also use `weights=SqueezeNet1_1_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: D:\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\lpips\weights\v0.1\squeeze.pth
+mask_diverse update 100 0.005441530141979456
+mask_diverse update 200 0.014008274301886559
+Cooling 78, 2496
+mask_diverse update 300 0.003427189541980624
+Cooling 78, 2496
+mask_diverse update 400 0.005489403381943703
+Cooling 78, 2496
+mask_diverse update 500 0.003173395060002804
+decoded validation mask_diverse 500 0.19598277161518732
+mask_diverse update 600 0.00877991784363985
+Cooling 78, 2496
+mask_diverse update 700 0.007693111896514893
+Cooling 78, 2496
+mask_diverse update 800 0.0057235280983150005
+Cooling 78, 2496
+Cooling 78, 2496
+mask_diverse update 900 0.0036321240477263927
+Cooling 78, 2496
+mask_diverse update 1000 0.002698799828067422
+decoded validation mask_diverse 1000 0.1952139399945736

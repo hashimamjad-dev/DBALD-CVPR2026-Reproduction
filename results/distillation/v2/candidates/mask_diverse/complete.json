@@ -1,0 +1,10 @@
+{
+  "candidate": "mask_diverse",
+  "updates": 1000,
+  "examples": 128,
+  "seconds": 134.1040056999991,
+  "time_scope": "training + checkpoint validation + cooling; excludes teacher-cache generation and model setup",
+  "peak_bytes": 2079012352,
+  "parameters": 2381044,
+  "initialized_from": "3b5a9991060369ab4085e5abb8387dedda570b13515dc15ae84e81ca80440057"
+}

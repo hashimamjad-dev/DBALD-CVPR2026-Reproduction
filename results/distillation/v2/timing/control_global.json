@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "control_global",
+      "seconds": 0.31045560000347905,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "control_global",
+      "seconds": 0.3151161999994656,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "control_global",
+      "seconds": 0.32027560000278754,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "control_global",
+      "seconds": 0.3186151999980211,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "control_global",
+      "seconds": 0.323263099999167,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "control_global",
+      "seconds": 0.3167833000043174,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "control_global",
+      "seconds": 0.3165681999962544,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "control_global",
+      "seconds": 0.317568400001619,
+      "peak_bytes": 1440135680
+    }
+  ],
+  "median_seconds": 0.3171758500029682,
+  "peak_bytes": 1440135680,
+  "scope": "Four fixed validation scenes (first two per dataset), seed17, two repetitions, one warmup. Includes VAE encode, noise, denoising, VAE decode, safety check, composite; excludes loading, disk I/O and cooling. Student denoiser timing uses shared VAE/checker without teacher UNet."
+}
