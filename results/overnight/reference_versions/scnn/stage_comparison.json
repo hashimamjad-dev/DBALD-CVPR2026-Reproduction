@@ -1,0 +1,46 @@
+{
+  "modern_cpu": {
+    "input": {
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "reference_max_abs": 151.06100463867188
+    },
+    "backbone": {
+      "max_abs": 2.384185791015625e-06,
+      "mean_abs": 1.7146504660559003e-07,
+      "reference_max_abs": 7.328662395477295
+    },
+    "aggregator": {
+      "max_abs": 19.770593643188477,
+      "mean_abs": 1.5190653800964355,
+      "reference_max_abs": 15.41751480102539
+    },
+    "logits": {
+      "max_abs": 20.04828453063965,
+      "mean_abs": 3.5325677394866943,
+      "reference_max_abs": 22.111923217773438
+    }
+  },
+  "modern_cuda": {
+    "input": {
+      "max_abs": 0.0,
+      "mean_abs": 0.0,
+      "reference_max_abs": 151.06100463867188
+    },
+    "backbone": {
+      "max_abs": 1.3709068298339844e-05,
+      "mean_abs": 1.167518348665908e-06,
+      "reference_max_abs": 7.328662395477295
+    },
+    "aggregator": {
+      "max_abs": 19.77058982849121,
+      "mean_abs": 1.5190653800964355,
+      "reference_max_abs": 15.41751480102539
+    },
+    "logits": {
+      "max_abs": 20.048295974731445,
+      "mean_abs": 3.532566785812378,
+      "reference_max_abs": 22.111923217773438
+    }
+  }
+}

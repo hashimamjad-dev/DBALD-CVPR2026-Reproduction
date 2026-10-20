@@ -1,0 +1,23 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  29%|##8       | 2/7 [00:00<00:00, 13.12it/s]
+Loading pipeline components...:  57%|#####7    | 4/7 [00:00<00:00, 11.30it/s]
+Loading pipeline components...:  86%|########5 | 6/7 [00:00<00:00, 10.36it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00, 11.99it/s]
+cache 1 79 scene_001 3.861
+cache 2 79 scene_002 3.318
+cache 3 79 scene_003 3.315
+cache 4 79 scene_004 3.308
+cache 5 79 scene_005 3.293
+cache 6 79 scene_006 3.291
+Traceback (most recent call last):
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\distill_road.py", line 157, in <module>
+    if args.stage=='cache': cache(records,args.limit)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\distill_road.py", line 45, in cache
+    thermal_guard()
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\distill_road.py", line 18, in thermal_guard
+    if temperature>=85: raise RuntimeError('Thermal stop at 85 C; cached results preserved. Resume after cooling.')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Thermal stop at 85 C; cached results preserved. Resume after cooling.

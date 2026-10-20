@@ -46,3 +46,7 @@ results/**/predictions.jsonl
 # Temporary experiment files
 results/**/*.tmp
 results/**/*.part
+# Confidential source material and transient test files
+/docs/sources/thesis*
+**/Thesis.pdf
+results/test_tmp*/

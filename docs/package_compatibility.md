@@ -19,3 +19,11 @@ The RTX 5050 requires a newer CUDA stack than the original detector releases. Th
 `scripts/setup_reference_environment.py LaneDet` and `ADNet` build separate pinned CPU environments for those implementations. Their numerical-library pins not specified upstream are explicitly contemporary choices. ADNet uses MMCV 1.7.0's Python modules plus the existing torchvision DCNv1 adapter, not an unverified claim that MMCV-full's old CUDA kernel ran. Environment freezes and comparison artifacts distinguish installation from executed validation.
 
 Sources: pinned local repository requirements and README files, [PyTorch previous versions](https://pytorch.org/get-started/previous-versions/). No existing environment is downgraded in place.
+
+## Executed checks, 20 October 2026
+
+Both LaneDet and ADNet reference environments pass `pip check`, with refreshed installed freezes. The same adapters were executed on 16 fixed images in old CPU and modern CUDA runtimes. ADNet and RESA passed all 16 preprocessing/decoded-coordinate comparisons at 0.2-pixel tolerance. This validates those samples, not original MMCV-full CUDA kernels or all inputs.
+
+SCNN failed all 16 decoded-coordinate comparisons despite exactly identical preprocessed inputs. A one-image stage diagnostic (`scripts/diagnose_scnn_runtime.py`) localized the divergence: old versus modern CPU backbone maximum difference was 0.000002384, but aggregation differed by 19.7706 and output logits by 20.0483. Modern CPU and modern CUDA show the same large divergence from the old CPU aggregation, so this is not explained solely by switching CPU to GPU. The cause remains unresolved; no compatibility patch or replacement full baseline is claimed. Invalid-point/count mismatches are part of the failed comparison; large coordinate differences involving the -2 invalid sentinel are not physical lane displacements.
+
+Artifacts: `results/overnight/reference_versions/{scnn,resa,adnet}/comparison.json`, and SCNN `stage_comparison.json`. Existing modern-environment clean measurements remain measurements of that declared environment; they are not upgraded to original-runtime-equivalent results.

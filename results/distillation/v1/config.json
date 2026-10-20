@@ -1,0 +1,13 @@
+{
+  "protocol": "road-restoration-distillation-v1",
+  "manifest_sha256": "0d7bebc76ae76ef0b3b1798c3c2e899e106d0a35c16bd1a7a707880c4d684016",
+  "teacher": "SD1.5-inpainting proxy",
+  "teacher_revision": "8a4288a76071f7280aedbdb3253bdb9e9d5d84bb",
+  "torch": "2.7.1+cu128",
+  "seed": 1729,
+  "width": 48,
+  "training_updates": 2000,
+  "batch_size": 8,
+  "learning_rate": 0.0002,
+  "note": "Not DBALD attack reproduction; fixed ordinary asphalt restoration"
+}

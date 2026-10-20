@@ -1,0 +1,40 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  14%|#4        | 1/7 [00:00<00:00,  6.61it/s]
+Loading pipeline components...:  29%|##8       | 2/7 [00:00<00:00,  8.18it/s]
+Loading pipeline components...:  43%|####2     | 3/7 [00:00<00:00,  4.91it/s]
+Loading pipeline components...:  86%|########5 | 6/7 [00:00<00:00, 10.34it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00,  7.26it/s]
+Traceback (most recent call last):
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\distill_road.py", line 148, in <module>
+    if args.stage=='cache': cache(records,args.limit)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DBALD-CVPR2026-Reproduction\scripts\distill_road.py", line 43, in cache
+    teacher=RoadTeacher(ROOT/'models/checkpoints/sd_inpainting')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DBALD-CVPR2026-Reproduction\src\lane_repro\road_teacher.py", line 13, in __init__
+    variant='fp16',use_safetensors=True,local_files_only=True).to('cuda')
+                                                               ^^^^^^^^^^
+  File "D:\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\diffusers\pipelines\pipeline_utils.py", line 541, in to
+    module.to(device, dtype)
+  File "D:\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\diffusers\models\modeling_utils.py", line 1424, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torch\nn\modules\module.py", line 1355, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torch\nn\modules\module.py", line 915, in _apply
+    module._apply(fn)
+  File "C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torch\nn\modules\module.py", line 915, in _apply
+    module._apply(fn)
+  File "C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torch\nn\modules\module.py", line 915, in _apply
+    module._apply(fn)
+  [Previous line repeated 2 more times]
+  File "C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torch\nn\modules\module.py", line 942, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torch\nn\modules\module.py", line 1341, in convert
+    return t.to(
+           ^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 12.00 MiB. GPU 0 has a total capacity of 7.93 GiB of which 4.68 GiB is free. Of the allocated memory 2.17 GiB is allocated by PyTorch, and 58.02 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,6 @@
+{
+  "scenes": 80,
+  "measured_encode_and_trajectory_seconds": 269.5276877999986,
+  "peak_allocated_bytes": 3181367808,
+  "limitation": "Cache timing excludes model setup, cooldown and disk writes; first trajectory predates pause and is not part of held-out benchmark"
+}

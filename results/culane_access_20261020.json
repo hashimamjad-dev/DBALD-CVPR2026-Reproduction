@@ -1,0 +1,9 @@
+{
+  "status": 206,
+  "content_type": "application/octet-stream",
+  "content_range": "bytes 0-0/5099277019",
+  "quota_exceeded": false,
+  "checked_local_date": "2026-10-20",
+  "full_range_resume": "Rejected: Google Drive quota exceeded",
+  "evidence": "results/culane_resume_20261020.log"
+}
