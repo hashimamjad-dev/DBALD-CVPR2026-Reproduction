@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "v1_files_unchanged": 394,
+  "source_images_verified": 92,
+  "final_quality_rows": 128,
+  "composites_exact": 32,
+  "lane_pixel_preservation": "imposed, verified exact",
+  "candidate_checkpoints": 6,
+  "timing_rows": 48,
+  "asr_measured": false
+}

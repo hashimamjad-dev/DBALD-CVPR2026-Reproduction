@@ -1,0 +1,15 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  14%|#4        | 1/7 [00:00<00:02,  2.95it/s]
+Loading pipeline components...:  43%|####2     | 3/7 [00:00<00:00,  6.59it/s]
+Loading pipeline components...:  86%|########5 | 6/7 [00:00<00:00, 10.70it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00,  7.68it/s]
+mask_diverse scene_064 0 0.3251996000035433
+mask_diverse scene_064 1 0.3225375999973039
+mask_diverse scene_065 0 0.34493519999523414
+mask_diverse scene_065 1 0.3206124999996973
+mask_diverse culane_val_00 0 0.3032332000002498
+mask_diverse culane_val_00 1 0.3270976000057999
+mask_diverse culane_val_01 0 0.33565079999971204
+mask_diverse culane_val_01 1 0.33580220000294503

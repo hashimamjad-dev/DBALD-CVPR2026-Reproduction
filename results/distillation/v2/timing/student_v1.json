@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "student_v1",
+      "seconds": 0.33497919999354053,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "student_v1",
+      "seconds": 0.3192775999996229,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "student_v1",
+      "seconds": 0.3435633000044618,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "student_v1",
+      "seconds": 0.3184737999981735,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "student_v1",
+      "seconds": 0.32816200000524987,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "student_v1",
+      "seconds": 0.32639889999700245,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "student_v1",
+      "seconds": 0.31917450000037206,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "student_v1",
+      "seconds": 0.31857200000376906,
+      "peak_bytes": 1440135680
+    }
+  ],
+  "median_seconds": 0.3228382499983127,
+  "peak_bytes": 1440135680,
+  "scope": "Four fixed validation scenes (first two per dataset), seed17, two repetitions, one warmup. Includes VAE encode, noise, denoising, VAE decode, safety check, composite; excludes loading, disk I/O and cooling. Student denoiser timing uses shared VAE/checker without teacher UNet."
+}

@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "mask_diverse",
+      "seconds": 0.3251996000035433,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "mask_diverse",
+      "seconds": 0.3225375999973039,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "mask_diverse",
+      "seconds": 0.34493519999523414,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "mask_diverse",
+      "seconds": 0.3206124999996973,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "mask_diverse",
+      "seconds": 0.3032332000002498,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "mask_diverse",
+      "seconds": 0.3270976000057999,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "mask_diverse",
+      "seconds": 0.33565079999971204,
+      "peak_bytes": 1440135680
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "mask_diverse",
+      "seconds": 0.33580220000294503,
+      "peak_bytes": 1440135680
+    }
+  ],
+  "median_seconds": 0.3261486000046716,
+  "peak_bytes": 1440135680,
+  "scope": "Four fixed validation scenes (first two per dataset), seed17, two repetitions, one warmup. Includes VAE encode, noise, denoising, VAE decode, safety check, composite; excludes loading, disk I/O and cooling. Student denoiser timing uses shared VAE/checker without teacher UNet."
+}

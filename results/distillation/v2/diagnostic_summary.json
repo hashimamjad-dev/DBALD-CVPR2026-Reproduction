@@ -1,0 +1,82 @@
+[
+  {
+    "dataset": "TuSimple",
+    "seed": 0,
+    "method": "teacher4",
+    "n": 8,
+    "masked_mae": 3.0312601725260415,
+    "masked_ssim": 0.8932038041218215,
+    "local_lpips": 0.060156144201755524,
+    "boundary_error": 2.697079613095238
+  },
+  {
+    "dataset": "TuSimple",
+    "seed": 0,
+    "method": "student_v1",
+    "n": 8,
+    "masked_mae": 15.708716498480904,
+    "masked_ssim": 0.7663192599054891,
+    "local_lpips": 0.12592442240566015,
+    "boundary_error": 7.845982142857142
+  },
+  {
+    "dataset": "TuSimple",
+    "seed": 17,
+    "method": "teacher4",
+    "n": 8,
+    "masked_mae": 3.107693142361111,
+    "masked_ssim": 0.894959805392496,
+    "local_lpips": 0.06346158357337117,
+    "boundary_error": 2.8714657738095237
+  },
+  {
+    "dataset": "TuSimple",
+    "seed": 17,
+    "method": "student_v1",
+    "n": 8,
+    "masked_mae": 30.546600341796875,
+    "masked_ssim": 0.5980081542191296,
+    "local_lpips": 0.3986331336200237,
+    "boundary_error": 16.166480654761905
+  },
+  {
+    "dataset": "CULane",
+    "seed": 0,
+    "method": "teacher4",
+    "n": 4,
+    "masked_mae": 2.3231026785714284,
+    "masked_ssim": 0.9437236872495168,
+    "local_lpips": 0.0284000001847744,
+    "boundary_error": 2.9317932269995377
+  },
+  {
+    "dataset": "CULane",
+    "seed": 0,
+    "method": "student_v1",
+    "n": 4,
+    "masked_mae": 16.94721137152778,
+    "masked_ssim": 0.597856373749001,
+    "local_lpips": 0.26945430785417557,
+    "boundary_error": 15.375599572353213
+  },
+  {
+    "dataset": "CULane",
+    "seed": 17,
+    "method": "teacher4",
+    "n": 4,
+    "masked_mae": 2.1758665054563493,
+    "masked_ssim": 0.947345464702491,
+    "local_lpips": 0.024687662720680237,
+    "boundary_error": 2.217175219602404
+  },
+  {
+    "dataset": "CULane",
+    "seed": 17,
+    "method": "student_v1",
+    "n": 4,
+    "masked_mae": 17.81800285218254,
+    "masked_ssim": 0.6217136877636783,
+    "local_lpips": 0.2586359418928623,
+    "boundary_error": 16.33098561026352
+  }
+]

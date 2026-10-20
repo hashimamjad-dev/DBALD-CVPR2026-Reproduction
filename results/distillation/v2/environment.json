@@ -1,0 +1,21 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "torch": "2.7.1+cu128",
+    "torchvision": "0.22.1+cu128",
+    "diffusers": "0.35.1",
+    "transformers": "4.56.2",
+    "accelerate": "1.10.1",
+    "safetensors": "0.6.2",
+    "lpips": "0.1.4",
+    "numpy": "1.26.4",
+    "scikit-image": "0.25.2",
+    "Pillow": "12.3.0"
+  },
+  "cuda_build": "12.8",
+  "metric_weight_sha256": {
+    "models\\metrics\\torch\\hub\\checkpoints\\squeezenet1_1-b8a52dc0.pth": "b8a52dc049b60e4b6ab68ad0df457362afab8b6304b2febdc1650a5dab4d7e7b",
+    ".venv\\Lib\\site-packages\\lpips\\weights\\v0.1\\squeeze.pth": "4a5350f23600cb79923ce65bb07cbf57dca461329894153e05a1346bd531cf76"
+  },
+  "network_policy": "Local model inference, no research uploads; official public metric weight downloaded once"
+}

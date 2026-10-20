@@ -1,0 +1,722 @@
+[
+  {
+    "id": "scene_064",
+    "dataset": "TuSimple",
+    "seed": 0,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.006240679882466793,
+        "background_mse": 0.0032923610415309668
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.003789932234212756,
+        "background_mse": 0.0011382405646145344
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.006762535776942968,
+        "background_mse": 0.0019837762229144573
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.018344588577747345,
+        "background_mse": 0.0035383824724704027
+      }
+    ],
+    "rollout_edit_mse": 0.0477583147585392,
+    "rollout_background_mse": 0.005811368115246296
+  },
+  {
+    "id": "scene_064",
+    "dataset": "TuSimple",
+    "seed": 17,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.013391760177910328,
+        "background_mse": 0.004453467205166817
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.011199401691555977,
+        "background_mse": 0.0019327932968735695
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.015657782554626465,
+        "background_mse": 0.003264534752815962
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.04129514843225479,
+        "background_mse": 0.006969064939767122
+      }
+    ],
+    "rollout_edit_mse": 0.18669648468494415,
+    "rollout_background_mse": 0.012200405821204185
+  },
+  {
+    "id": "scene_065",
+    "dataset": "TuSimple",
+    "seed": 0,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.006299497094005346,
+        "background_mse": 0.005403360351920128
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.005239368416368961,
+        "background_mse": 0.001709627453237772
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.00798147451132536,
+        "background_mse": 0.0034041779581457376
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.018671974539756775,
+        "background_mse": 0.0063939872197806835
+      }
+    ],
+    "rollout_edit_mse": 0.050375521183013916,
+    "rollout_background_mse": 0.012183149345219135
+  },
+  {
+    "id": "scene_065",
+    "dataset": "TuSimple",
+    "seed": 17,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.011585667729377747,
+        "background_mse": 0.006574767176061869
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.01018686406314373,
+        "background_mse": 0.0024516647681593895
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.014233159832656384,
+        "background_mse": 0.0047630262561142445
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.036181095987558365,
+        "background_mse": 0.00948148313909769
+      }
+    ],
+    "rollout_edit_mse": 0.13326528668403625,
+    "rollout_background_mse": 0.018873590975999832
+  },
+  {
+    "id": "scene_066",
+    "dataset": "TuSimple",
+    "seed": 0,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.006514957640320063,
+        "background_mse": 0.003047507954761386
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.003474649740383029,
+        "background_mse": 0.0009750555618666112
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.006474061869084835,
+        "background_mse": 0.0016886976081877947
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.020281372591853142,
+        "background_mse": 0.0032785425428301096
+      }
+    ],
+    "rollout_edit_mse": 0.0501602403819561,
+    "rollout_background_mse": 0.005099303089082241
+  },
+  {
+    "id": "scene_066",
+    "dataset": "TuSimple",
+    "seed": 17,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.014312652871012688,
+        "background_mse": 0.004362497944384813
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.011670242063701153,
+        "background_mse": 0.001787994522601366
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.014989763498306274,
+        "background_mse": 0.002972373738884926
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.042549945414066315,
+        "background_mse": 0.0062030828557908535
+      }
+    ],
+    "rollout_edit_mse": 0.19917859137058258,
+    "rollout_background_mse": 0.010911211371421814
+  },
+  {
+    "id": "scene_067",
+    "dataset": "TuSimple",
+    "seed": 0,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.0103478217497468,
+        "background_mse": 0.005385993979871273
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.010798117145895958,
+        "background_mse": 0.00176451716106385
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.016691336408257484,
+        "background_mse": 0.003545435843989253
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.03849064186215401,
+        "background_mse": 0.0067690410651266575
+      }
+    ],
+    "rollout_edit_mse": 0.11935050785541534,
+    "rollout_background_mse": 0.013538499362766743
+  },
+  {
+    "id": "scene_067",
+    "dataset": "TuSimple",
+    "seed": 17,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.01873822696506977,
+        "background_mse": 0.00644167885184288
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.017871703952550888,
+        "background_mse": 0.0026032940950244665
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.024911930784583092,
+        "background_mse": 0.0049675400368869305
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.054971467703580856,
+        "background_mse": 0.00981163140386343
+      }
+    ],
+    "rollout_edit_mse": 0.2513865530490875,
+    "rollout_background_mse": 0.01977880485355854
+  },
+  {
+    "id": "scene_068",
+    "dataset": "TuSimple",
+    "seed": 0,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.006494779139757156,
+        "background_mse": 0.003087500808760524
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.004022888373583555,
+        "background_mse": 0.0011356641771271825
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.0069819726049900055,
+        "background_mse": 0.0022301441058516502
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.01896953582763672,
+        "background_mse": 0.0038693577516824007
+      }
+    ],
+    "rollout_edit_mse": 0.04781083017587662,
+    "rollout_background_mse": 0.006921811494976282
+  },
+  {
+    "id": "scene_068",
+    "dataset": "TuSimple",
+    "seed": 17,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.013776732608675957,
+        "background_mse": 0.004300406202673912
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.011423639953136444,
+        "background_mse": 0.0019944757223129272
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.015369825065135956,
+        "background_mse": 0.003568058367818594
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.04153355956077576,
+        "background_mse": 0.006892979145050049
+      }
+    ],
+    "rollout_edit_mse": 0.18265032768249512,
+    "rollout_background_mse": 0.013304520398378372
+  },
+  {
+    "id": "scene_069",
+    "dataset": "TuSimple",
+    "seed": 0,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.008551615290343761,
+        "background_mse": 0.005016017705202103
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.00813005305826664,
+        "background_mse": 0.0015272746095433831
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.012742814607918262,
+        "background_mse": 0.0030619408935308456
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.03189312666654587,
+        "background_mse": 0.005989764351397753
+      }
+    ],
+    "rollout_edit_mse": 0.0865185484290123,
+    "rollout_background_mse": 0.011539802886545658
+  },
+  {
+    "id": "scene_069",
+    "dataset": "TuSimple",
+    "seed": 17,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.014455534517765045,
+        "background_mse": 0.0062455846928060055
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.013686898164451122,
+        "background_mse": 0.002320966450497508
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.02027648687362671,
+        "background_mse": 0.00444386200979352
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.04769457131624222,
+        "background_mse": 0.008923477493226528
+      }
+    ],
+    "rollout_edit_mse": 0.19577611982822418,
+    "rollout_background_mse": 0.017709530889987946
+  },
+  {
+    "id": "scene_070",
+    "dataset": "TuSimple",
+    "seed": 0,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.011205903254449368,
+        "background_mse": 0.004271543584764004
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.011734225787222385,
+        "background_mse": 0.0014823480742052197
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.0171985924243927,
+        "background_mse": 0.0029009513091295958
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.036329276859760284,
+        "background_mse": 0.005315045360475779
+      }
+    ],
+    "rollout_edit_mse": 0.12891022861003876,
+    "rollout_background_mse": 0.01049028430134058
+  },
+  {
+    "id": "scene_070",
+    "dataset": "TuSimple",
+    "seed": 17,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.01931573636829853,
+        "background_mse": 0.005533170886337757
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.020083807408809662,
+        "background_mse": 0.0022890816908329725
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.02726541832089424,
+        "background_mse": 0.004221308510750532
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.058126259595155716,
+        "background_mse": 0.008151672780513763
+      }
+    ],
+    "rollout_edit_mse": 0.28888794779777527,
+    "rollout_background_mse": 0.016515150666236877
+  },
+  {
+    "id": "scene_071",
+    "dataset": "TuSimple",
+    "seed": 0,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.008673170581459999,
+        "background_mse": 0.005561472848057747
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.005741104483604431,
+        "background_mse": 0.001473557436838746
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.010222545824944973,
+        "background_mse": 0.0025889247190207243
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.0332069993019104,
+        "background_mse": 0.004862023983150721
+      }
+    ],
+    "rollout_edit_mse": 0.08752686530351639,
+    "rollout_background_mse": 0.00816762913018465
+  },
+  {
+    "id": "scene_071",
+    "dataset": "TuSimple",
+    "seed": 17,
+    "mask_fraction": 0.078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.016244133934378624,
+        "background_mse": 0.006748901680111885
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.013141338713467121,
+        "background_mse": 0.0022381176240742207
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.01819506101310253,
+        "background_mse": 0.003859523218125105
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.05031714588403702,
+        "background_mse": 0.007854371331632137
+      }
+    ],
+    "rollout_edit_mse": 0.21435555815696716,
+    "rollout_background_mse": 0.013927354477345943
+  },
+  {
+    "id": "culane_val_00",
+    "dataset": "CULane",
+    "seed": 0,
+    "mask_fraction": 0.0205078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.009566129185259342,
+        "background_mse": 0.006048080511391163
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.009180922992527485,
+        "background_mse": 0.0019685961306095123
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.0178599301725626,
+        "background_mse": 0.00385364331305027
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.04476127028465271,
+        "background_mse": 0.0063074626959860325
+      }
+    ],
+    "rollout_edit_mse": 0.08157392591238022,
+    "rollout_background_mse": 0.012648539617657661
+  },
+  {
+    "id": "culane_val_00",
+    "dataset": "CULane",
+    "seed": 17,
+    "mask_fraction": 0.0205078125,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.010058167390525341,
+        "background_mse": 0.007060003466904163
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.009991668164730072,
+        "background_mse": 0.0026986924931406975
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.022616952657699585,
+        "background_mse": 0.005074597895145416
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.07003547996282578,
+        "background_mse": 0.008762969635426998
+      }
+    ],
+    "rollout_edit_mse": 0.11630753427743912,
+    "rollout_background_mse": 0.018604593351483345
+  },
+  {
+    "id": "culane_val_01",
+    "dataset": "CULane",
+    "seed": 0,
+    "mask_fraction": 0.0234375,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.009897638112306595,
+        "background_mse": 0.006378287449479103
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.008774121291935444,
+        "background_mse": 0.002220753114670515
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.01975228451192379,
+        "background_mse": 0.004068060778081417
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.06030534207820892,
+        "background_mse": 0.007428112905472517
+      }
+    ],
+    "rollout_edit_mse": 0.09635156393051147,
+    "rollout_background_mse": 0.013606303371489048
+  },
+  {
+    "id": "culane_val_01",
+    "dataset": "CULane",
+    "seed": 17,
+    "mask_fraction": 0.0234375,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.011200993321835995,
+        "background_mse": 0.007353472523391247
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.009360574185848236,
+        "background_mse": 0.002973036840558052
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.021061116829514503,
+        "background_mse": 0.005307240877300501
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.06641289591789246,
+        "background_mse": 0.009696031920611858
+      }
+    ],
+    "rollout_edit_mse": 0.10295786708593369,
+    "rollout_background_mse": 0.018989821895956993
+  },
+  {
+    "id": "culane_val_02",
+    "dataset": "CULane",
+    "seed": 0,
+    "mask_fraction": 0.0234375,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.015052174217998981,
+        "background_mse": 0.006665709428489208
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.01744099147617817,
+        "background_mse": 0.0019965048413723707
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.035660456866025925,
+        "background_mse": 0.004178478382527828
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.0920199379324913,
+        "background_mse": 0.007140748202800751
+      }
+    ],
+    "rollout_edit_mse": 0.15962335467338562,
+    "rollout_background_mse": 0.015092172659933567
+  },
+  {
+    "id": "culane_val_02",
+    "dataset": "CULane",
+    "seed": 17,
+    "mask_fraction": 0.0234375,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.015871791169047356,
+        "background_mse": 0.0077284895814955235
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.018986612558364868,
+        "background_mse": 0.002725430531427264
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.038649123162031174,
+        "background_mse": 0.005442327819764614
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.09240534901618958,
+        "background_mse": 0.009963814169168472
+      }
+    ],
+    "rollout_edit_mse": 0.1642903834581375,
+    "rollout_background_mse": 0.021749792620539665
+  },
+  {
+    "id": "culane_val_03",
+    "dataset": "CULane",
+    "seed": 0,
+    "mask_fraction": 0.0234375,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.012158622033894062,
+        "background_mse": 0.006877236999571323
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.014953133650124073,
+        "background_mse": 0.0020863981917500496
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.030245179310441017,
+        "background_mse": 0.004411244299262762
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.0772952064871788,
+        "background_mse": 0.008009735494852066
+      }
+    ],
+    "rollout_edit_mse": 0.13695766031742096,
+    "rollout_background_mse": 0.016208607703447342
+  },
+  {
+    "id": "culane_val_03",
+    "dataset": "CULane",
+    "seed": 17,
+    "mask_fraction": 0.0234375,
+    "teacher_forced": [
+      {
+        "step": 0,
+        "edit_mse": 0.01353015098720789,
+        "background_mse": 0.007900149561464787
+      },
+      {
+        "step": 1,
+        "edit_mse": 0.017955968156456947,
+        "background_mse": 0.0028359065763652325
+      },
+      {
+        "step": 2,
+        "edit_mse": 0.04037785157561302,
+        "background_mse": 0.005772193893790245
+      },
+      {
+        "step": 3,
+        "edit_mse": 0.11592356115579605,
+        "background_mse": 0.01144223939627409
+      }
+    ],
+    "rollout_edit_mse": 0.19704031944274902,
+    "rollout_background_mse": 0.023738425225019455
+  }
+]

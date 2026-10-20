@@ -1,0 +1,32 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  57%|#####7    | 4/7 [00:00<00:00, 14.88it/s]
+Loading pipeline components...:  86%|########5 | 6/7 [00:00<00:00, 10.46it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00, 11.14it/s]
+Setting up [LPIPS] perceptual loss: trunk [squeeze], v[0.1], spatial [off]
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=SqueezeNet1_1_Weights.IMAGENET1K_V1`. You can also use `weights=SqueezeNet1_1_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: D:\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\lpips\weights\v0.1\squeeze.pth
+control_global update 100 0.0025335263926535845
+Cooling 78, 2474
+control_global update 200 0.00288626691326499
+Cooling 78, 2474
+control_global update 300 0.001629839651286602
+Cooling 78, 2474
+control_global update 400 0.0015431748470291495
+control_global update 500 0.0011384645476937294
+decoded validation control_global 500 0.2684891385336717
+control_global update 600 0.0034694792702794075
+Cooling 78, 2474
+control_global update 700 0.0032960178796201944
+Cooling 78, 2474
+control_global update 800 0.0017047866713255644
+Cooling 78, 2474
+control_global update 900 0.0012342766858637333
+Cooling 78, 2474
+control_global update 1000 0.0011084293946623802
+Cooling 78, 2474
+decoded validation control_global 1000 0.270856445034345

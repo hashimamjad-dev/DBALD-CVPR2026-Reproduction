@@ -1,0 +1,43 @@
+{
+  "selected": {
+    "method": "mask_diverse",
+    "step": 1000,
+    "path": "results\\distillation\\v2\\candidates\\mask_diverse\\step_1000.pt",
+    "sha256": "025378cdd5f5b558c314498d74145d63f96c144f3fe236f1eac92367cda2fb21",
+    "local_lpips": 0.1952139399945736,
+    "masked_mae": 15.172251544932209,
+    "eligible": true
+  },
+  "candidates": {
+    "control_global": {
+      "method": "control_global",
+      "step": 500,
+      "path": "results\\distillation\\v2\\candidates\\control_global\\step_500.pt",
+      "sha256": "3475da2235065810fa9eebf1f2b7337f3ac6bd02e6c971f46db9e41f3a704d45",
+      "local_lpips": 0.2684891385336717,
+      "masked_mae": 20.761308296647652,
+      "eligible": false
+    },
+    "mask_single": {
+      "method": "mask_single",
+      "step": 500,
+      "path": "results\\distillation\\v2\\candidates\\mask_single\\step_500.pt",
+      "sha256": "0c573d7c4383506e0962c4e6c8fc7b38685ea10276e97757d83856f556248fc7",
+      "local_lpips": 0.2716751480475068,
+      "masked_mae": 20.584283414971893,
+      "eligible": false
+    },
+    "mask_diverse": {
+      "method": "mask_diverse",
+      "step": 1000,
+      "path": "results\\distillation\\v2\\candidates\\mask_diverse\\step_1000.pt",
+      "sha256": "025378cdd5f5b558c314498d74145d63f96c144f3fe236f1eac92367cda2fb21",
+      "local_lpips": 0.1952139399945736,
+      "masked_mae": 15.172251544932209,
+      "eligible": true
+    }
+  },
+  "policy": "Decoded validation LPIPS, boundary no worse than v1 on each dataset, MAE tie-break; test not read",
+  "locked_at": "2026-10-20T07:45:00+0500",
+  "protocol_sha256": "3062b9db0b16f7c96c772181b409159f4c70c3be54ef943f8a49cb3b442b6c2d"
+}

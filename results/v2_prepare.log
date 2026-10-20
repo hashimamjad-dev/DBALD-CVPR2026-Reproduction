@@ -1,0 +1,51 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  14%|#4        | 1/7 [00:00<00:01,  5.71it/s]
+Loading pipeline components...:  57%|#####7    | 4/7 [00:00<00:00, 10.06it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00, 15.59it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00, 13.43it/s]
+Setting up [LPIPS] perceptual loss: trunk [squeeze], v[0.1], spatial [off]
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+C:\Users\Hashim Amjad\.cache\lane-repro-cuda\Lib\site-packages\torchvision\models\_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=SqueezeNet1_1_Weights.IMAGENET1K_V1`. You can also use `weights=SqueezeNet1_1_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Loading model from: D:\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\lpips\weights\v0.1\squeeze.pth
+validation scene_064 0 0.10194899141788483
+validation scene_064 17 0.43278756737709045
+validation scene_065 0 0.11529037356376648
+Cooling 80, 3892
+validation scene_065 17 0.3345339298248291
+validation scene_066 0 0.08736532926559448
+Cooling 80, 3892
+validation scene_066 17 0.44544991850852966
+validation scene_067 0 0.15357300639152527
+Cooling 81, 3892
+validation scene_067 17 0.36319872736930847
+validation scene_068 0 0.09250514954328537
+Cooling 81, 3892
+validation scene_068 17 0.4455602765083313
+validation scene_069 0 0.16135305166244507
+Cooling 83, 3892
+validation scene_069 17 0.36537930369377136
+validation scene_070 0 0.15701070427894592
+Cooling 82, 3892
+validation scene_070 17 0.41387414932250977
+validation scene_071 0 0.1383487731218338
+Cooling 80, 3892
+validation scene_071 17 0.3882811963558197
+Cooling 83, 3892
+validation culane_val_00 0 0.21729014813899994
+Cooling 80, 3892
+validation culane_val_00 17 0.19791390001773834
+Cooling 83, 3892
+validation culane_val_01 0 0.16793100535869598
+Cooling 80, 3892
+validation culane_val_01 17 0.18104618787765503
+Cooling 80, 3892
+validation culane_val_02 0 0.36285287141799927
+Cooling 83, 3892
+validation culane_val_02 17 0.3530801832675934
+validation culane_val_03 0 0.3297432065010071
+Cooling 82, 3892
+validation culane_val_03 17 0.3025034964084625

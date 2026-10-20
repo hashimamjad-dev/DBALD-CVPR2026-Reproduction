@@ -1,0 +1,79 @@
+{
+  "rows": [
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "teacher20",
+      "seconds": 3.573752299998887,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "scene_064",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "teacher20",
+      "seconds": 3.5974428999979864,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 0,
+      "method": "teacher20",
+      "seconds": 3.6098484999965876,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "scene_065",
+      "dataset": "TuSimple",
+      "seed": 17,
+      "repeat": 1,
+      "method": "teacher20",
+      "seconds": 3.551643500002683,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "teacher20",
+      "seconds": 3.6262776000003214,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "culane_val_00",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "teacher20",
+      "seconds": 3.592880199998035,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 0,
+      "method": "teacher20",
+      "seconds": 3.60454590000154,
+      "peak_bytes": 3414446080
+    },
+    {
+      "id": "culane_val_01",
+      "dataset": "CULane",
+      "seed": 17,
+      "repeat": 1,
+      "method": "teacher20",
+      "seconds": 3.602729199999885,
+      "peak_bytes": 3414446080
+    }
+  ],
+  "median_seconds": 3.6000860499989358,
+  "peak_bytes": 3414446080,
+  "scope": "Four fixed validation scenes (first two per dataset), seed17, two repetitions, one warmup. Includes VAE encode, noise, denoising, VAE decode, safety check, composite; excludes loading, disk I/O and cooling. Student denoiser timing uses shared VAE/checker without teacher UNet."
+}
