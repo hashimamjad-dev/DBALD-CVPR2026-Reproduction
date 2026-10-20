@@ -1,0 +1,15 @@
+{
+  "scenes": 16,
+  "seeds": [
+    100,
+    101
+  ],
+  "timing_repeats": 2,
+  "warmup_per_method": 1,
+  "timing": "encode + denoise + VAE decode + safety checker + native composite; excludes loading, cached prompt encoding, disk IO",
+  "quality": "SSIM and MAE measure teacher fidelity, not validated perceptual realism; raw lane MAE before compositing",
+  "teacher_denoiser_parameters": 859535364,
+  "shared_vae_safety_parameters": 387635451,
+  "student_parameters": 2381044,
+  "checkpoint_step": 1700
+}

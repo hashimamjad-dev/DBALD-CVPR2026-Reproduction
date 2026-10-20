@@ -7,7 +7,7 @@ The scientific target remains all four architectures, both datasets, clean ACC a
 | Published reference | Exact Table 1 CSV with checksum; TuSimple LRA is not reported |
 | Clean models | Author LaneATT archive and ADNet checkpoint; LaneDet SCNN/RESA checkpoints; strict loading required |
 | Model equivalence | Extended arXiv v2 Appendix C specifies ResNet-34 for all models. Earlier R18/R50 engineering baselines are not equivalent. Exact commits, checkpoints and seeds remain unresolved; upstream clean R34 weights alone do not establish equivalence |
-| Dataset equivalence | Small fixed TuSimple test subset obtained; full test sets and exact training splits still required for benchmark claims |
+| Dataset equivalence | Full TuSimple 2,782-image clean evaluations completed. CULane remains incomplete: 3,357 driver_37 test images available; other official archives encountered quotas. Exact DBALD poisoned training/test subsets unavailable |
 | ACC protocol | Official TuSimple implementation available; paper's CULane point-ACC conversion and matching not fully specified |
 | ASR model state | No author-released poisoned checkpoints verified; clean models cannot supply equivalent ASR |
 | ASR inputs | Exact test images, trigger instances, poisoned subset indices and target annotations unavailable |

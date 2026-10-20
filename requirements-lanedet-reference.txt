@@ -10,3 +10,4 @@ yapf==0.31.0
 mmcv==1.2.5
 scikit-learn==0.24.2
 ujson==1.35
+six==1.15.0

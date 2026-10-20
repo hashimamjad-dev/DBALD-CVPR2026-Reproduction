@@ -1,0 +1,13 @@
+{
+  "updates": 2000,
+  "seconds": 155.3249605000019,
+  "parameters": 2381044,
+  "peak_bytes": 1256547328,
+  "initial_validation": {
+    "validation_epsilon_mse": 0.2379133403301239,
+    "validation_rollout_mse": 0.6552920900285244
+  },
+  "best_validation_rollout_mse": 0.014240924501791596,
+  "session_first_step": 1,
+  "checkpoint_selected_on": "validation rollout latent MSE; no evaluation scenes used"
+}

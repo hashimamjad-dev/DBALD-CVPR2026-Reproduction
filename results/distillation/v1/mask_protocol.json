@@ -1,0 +1,17 @@
+{
+  "tusimple_yx": [
+    352,
+    448,
+    192,
+    320
+  ],
+  "culane_yx": [
+    312,
+    328,
+    256,
+    352
+  ],
+  "reason": "Input-only camera/hood inspection before any held-out generation; no detector feedback",
+  "lane_protection": "Ground-truth lane raster 5px, dilated with 25x25 kernel; oracle condition",
+  "selected_before_evaluation": true
+}

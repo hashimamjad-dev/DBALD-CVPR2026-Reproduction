@@ -46,7 +46,7 @@ def main():
         print('{} {} {}/{}'.format(args.model,args.device,i+1,len(labels)),flush=True)
     report=dict(model=model.provenance(),python=sys.version,torch=torch.__version__,torchvision=torchvision.__version__,
         numpy=np.__version__,opencv=cv2.__version__,samples=rows,
-        installed_packages={name:importlib.metadata.version(name) for name in ('torch','torchvision','numpy','scipy','opencv-python','addict','yapf')},
+        installed_packages={name:importlib.metadata.version(name) for name in ('torch','torchvision','numpy','scipy','addict','yapf')},
         limitation='Same documented adapters; this isolates runtime/dependency differences, not original MMCV/CUDA NMS equivalence')
     if args.compare: report.update(passed=all(r['passed'] for r in rows),tolerance_px=.2)
     (folder/('comparison.json' if args.compare else 'reference.json')).write_text(json.dumps(report,indent=2))

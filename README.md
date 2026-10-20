@@ -99,6 +99,17 @@ ADNet uses `--model ADNet --checkpoint models/checkpoints/adnet_tusimple_res18.p
 
 ## Evidence
 
+The thesis-directed, offline road-restoration distillation experiment is documented in
+`docs/distillation_methodology.md`. It trains a compact student from cached SD1.5
+teacher trajectories, with separate training, validation and held-out scenes. Run
+`scripts/validate_distillation_inputs.py`, then `scripts/distill_road.py cache`,
+`scripts/distill_road.py train`, `scripts/distill_road.py evaluate`,
+`scripts/evaluate_edit_lanes.py`, and `scripts/report_distillation.py` through the
+documented GPU Python environment. Generated evidence stays in
+`results/distillation/v1/`; the report builder requires complete measured artifacts.
+This is ordinary road restoration within the security research context, not
+operational backdoor poisoning. Published ASR remains a separate reference.
+
 - `results/verified_baseline.md`: verified GPU measurements, CPU/CUDA agreement and remaining limitations.
 - `results/reference/table1.csv` / `docs/table1.md`: immutable published reference, with manifest checksum.
 - `results/measured/`: actual per-image predictions, summaries and provenance.

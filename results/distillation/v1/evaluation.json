@@ -1,0 +1,1826 @@
+[
+  {
+    "id": "scene_080",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "76, 100",
+    "seconds": [
+      3.489973600000667,
+      3.474930000000313
+    ],
+    "median_seconds": 3.48245180000049,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.422922605849434
+  },
+  {
+    "id": "scene_080",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "67, 0",
+    "seconds": [
+      3.483737499998824,
+      3.4634866999986116
+    ],
+    "median_seconds": 3.473612099998718,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.382166613873931
+  },
+  {
+    "id": "scene_081",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.498818600000959,
+      3.4642294000004767
+    ],
+    "median_seconds": 3.481524000000718,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.5722996887126355
+  },
+  {
+    "id": "scene_081",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.481510099998559,
+      3.4646441000004415
+    ],
+    "median_seconds": 3.4730770999995,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.3792162381135125
+  },
+  {
+    "id": "scene_082",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "65, 0",
+    "seconds": [
+      3.494858400001249,
+      3.464823400001478
+    ],
+    "median_seconds": 3.4798409000013635,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 8.58295739348371
+  },
+  {
+    "id": "scene_082",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "65, 0",
+    "seconds": [
+      3.5095046999995247,
+      3.456380599996919
+    ],
+    "median_seconds": 3.482942649998222,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 8.701897601145722
+  },
+  {
+    "id": "scene_083",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "65, 0",
+    "seconds": [
+      3.4954517999976815,
+      3.466554400001769
+    ],
+    "median_seconds": 3.4810030999997252,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.290507679927225
+  },
+  {
+    "id": "scene_083",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.5000508000011905,
+      3.5057957999997598
+    ],
+    "median_seconds": 3.502923300000475,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.2360659179174975
+  },
+  {
+    "id": "scene_084",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "73, 100",
+    "seconds": [
+      3.498999899999035,
+      3.460716499997943
+    ],
+    "median_seconds": 3.479858199998489,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 7.404174340085943
+  },
+  {
+    "id": "scene_084",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "59, 0",
+    "seconds": [
+      3.4598335000009683,
+      3.5067940000008093
+    ],
+    "median_seconds": 3.483313750000889,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 7.403499079189687
+  },
+  {
+    "id": "scene_085",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "59, 0",
+    "seconds": [
+      3.4532369999978982,
+      3.4761844999993627
+    ],
+    "median_seconds": 3.4647107499986305,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.561904761904763
+  },
+  {
+    "id": "scene_085",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "59, 0",
+    "seconds": [
+      3.462998900002276,
+      3.5068466999982775
+    ],
+    "median_seconds": 3.4849228000002768,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.331893147502903
+  },
+  {
+    "id": "scene_086",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "59, 0",
+    "seconds": [
+      3.462057000000641,
+      3.4635055999970064
+    ],
+    "median_seconds": 3.4627812999988237,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 7.647169167803547
+  },
+  {
+    "id": "scene_086",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "63, 0",
+    "seconds": [
+      3.4938547999990988,
+      3.4647345000012137
+    ],
+    "median_seconds": 3.4792946500001563,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 7.494656662119144
+  },
+  {
+    "id": "scene_087",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "64, 0",
+    "seconds": [
+      3.5049603000006755,
+      3.469438700001774
+    ],
+    "median_seconds": 3.487199500001225,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 5.456445245451425
+  },
+  {
+    "id": "scene_087",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "64, 0",
+    "seconds": [
+      3.4866798000002746,
+      3.4762841000010667
+    ],
+    "median_seconds": 3.4814819500006706,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 5.561405767250258
+  },
+  {
+    "id": "scene_088",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "64, 0",
+    "seconds": [
+      3.505281500001729,
+      3.468507400000817
+    ],
+    "median_seconds": 3.486894450001273,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1402,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 12.599873677561977
+  },
+  {
+    "id": "scene_088",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "65, 0",
+    "seconds": [
+      3.479987300001085,
+      3.4704676999972435
+    ],
+    "median_seconds": 3.475227499999164,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1402,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 12.427917258803092
+  },
+  {
+    "id": "scene_089",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "64, 0",
+    "seconds": [
+      3.498561399999744,
+      3.46570839999913
+    ],
+    "median_seconds": 3.482134899999437,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 8.67313596491228
+  },
+  {
+    "id": "scene_089",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "65, 0",
+    "seconds": [
+      3.4661613999996916,
+      3.470407699998759
+    ],
+    "median_seconds": 3.4682845499992254,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 8.624342105263159
+  },
+  {
+    "id": "scene_090",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "64, 0",
+    "seconds": [
+      3.5135905999995884,
+      3.464424900001177
+    ],
+    "median_seconds": 3.4890077500003827,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.528973585595466
+  },
+  {
+    "id": "scene_090",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "65, 0",
+    "seconds": [
+      3.5009486000017205,
+      3.4641889999984414
+    ],
+    "median_seconds": 3.482568800000081,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.72059226761722
+  },
+  {
+    "id": "scene_091",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.50258759999997,
+      3.4700456999999005
+    ],
+    "median_seconds": 3.486316649999935,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 12.708713165147339
+  },
+  {
+    "id": "scene_091",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.509218700000929,
+      3.462802300000476
+    ],
+    "median_seconds": 3.4860105000007025,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 12.49190869903187
+  },
+  {
+    "id": "scene_092",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.50457870000173,
+      3.475336299998162
+    ],
+    "median_seconds": 3.489957499999946,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 5.987585102122547
+  },
+  {
+    "id": "scene_092",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.495234600002732,
+      3.4629265000003215
+    ],
+    "median_seconds": 3.4790805500015267,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 6.073821919636898
+  },
+  {
+    "id": "scene_093",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "65, 0",
+    "seconds": [
+      3.4852844000015466,
+      3.46460119999756
+    ],
+    "median_seconds": 3.4749427999995532,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 8.40410605591664
+  },
+  {
+    "id": "scene_093",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.4941676999987976,
+      3.461238299998513
+    ],
+    "median_seconds": 3.4777029999986553,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 8.384968533993604
+  },
+  {
+    "id": "scene_094",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "65, 0",
+    "seconds": [
+      3.4930008000010275,
+      3.4558400999994774
+    ],
+    "median_seconds": 3.4744204500002525,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": null
+  },
+  {
+    "id": "scene_094",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.4995196999989275,
+      3.459718799997063
+    ],
+    "median_seconds": 3.479619249997995,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": null
+  },
+  {
+    "id": "scene_095",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "65, 0",
+    "seconds": [
+      3.462476799999422,
+      3.469420600002195
+    ],
+    "median_seconds": 3.4659487000008085,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 8.886171262398088
+  },
+  {
+    "id": "scene_095",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher20",
+    "steps": 20,
+    "hardware_before": "66, 0",
+    "seconds": [
+      3.5134757999985595,
+      3.4631087999987358
+    ],
+    "median_seconds": 3.4882922999986476,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.0,
+    "masked_teacher_ssim": 1.0,
+    "raw_lane_mae": 8.798047463260113
+  },
+  {
+    "id": "scene_080",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "59, 0",
+    "seconds": [
+      0.8793894999980694,
+      0.9189822000007553
+    ],
+    "median_seconds": 0.8991858499994123,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 4.333034939236111,
+    "masked_teacher_ssim": 0.8285409669053895,
+    "raw_lane_mae": 6.438866012036744
+  },
+  {
+    "id": "scene_080",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "58, 0",
+    "seconds": [
+      0.8757021999990684,
+      0.8929497999997693
+    ],
+    "median_seconds": 0.8843259999994189,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 4.588650173611111,
+    "masked_teacher_ssim": 0.8149368444549148,
+    "raw_lane_mae": 6.34589800443459
+  },
+  {
+    "id": "scene_081",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "65, 0",
+    "seconds": [
+      0.9188401999999769,
+      0.9160891999999876
+    ],
+    "median_seconds": 0.9174646999999823,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 2.964219835069444,
+    "masked_teacher_ssim": 0.8824858071950121,
+    "raw_lane_mae": 6.582832288601765
+  },
+  {
+    "id": "scene_081",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "63, 0",
+    "seconds": [
+      0.9043170000004466,
+      0.8847509000006539
+    ],
+    "median_seconds": 0.8945339500005502,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 2.937255859375,
+    "masked_teacher_ssim": 0.8835971377241526,
+    "raw_lane_mae": 6.371370090827683
+  },
+  {
+    "id": "scene_082",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "77, 100",
+    "seconds": [
+      0.9278267999980017,
+      0.8982620999995561
+    ],
+    "median_seconds": 0.9130444499987789,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 1.1453993055555556,
+    "masked_teacher_ssim": 0.9784754998887388,
+    "raw_lane_mae": 8.591514500537057
+  },
+  {
+    "id": "scene_082",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "66, 1",
+    "seconds": [
+      0.9162651000006008,
+      0.9178070000016305
+    ],
+    "median_seconds": 0.9170360500011157,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 1.252197265625,
+    "masked_teacher_ssim": 0.9753115381082117,
+    "raw_lane_mae": 8.70014321518081
+  },
+  {
+    "id": "scene_083",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "64, 0",
+    "seconds": [
+      0.9038694000009855,
+      0.88225120000061
+    ],
+    "median_seconds": 0.8930603000007977,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 3.8546820746527772,
+    "masked_teacher_ssim": 0.8600198988131394,
+    "raw_lane_mae": 6.284384731115077
+  },
+  {
+    "id": "scene_083",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "77, 100",
+    "seconds": [
+      0.9349292000006244,
+      0.8911622999985411
+    ],
+    "median_seconds": 0.9130457499995828,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 4.397135416666667,
+    "masked_teacher_ssim": 0.8647614068357735,
+    "raw_lane_mae": 6.223190231272524
+  },
+  {
+    "id": "scene_084",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "66, 0",
+    "seconds": [
+      0.8903676000009,
+      0.9138805999973556
+    ],
+    "median_seconds": 0.9021240999991278,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 1.760281032986111,
+    "masked_teacher_ssim": 0.9665339254494237,
+    "raw_lane_mae": 7.590055248618785
+  },
+  {
+    "id": "scene_084",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "58, 0",
+    "seconds": [
+      0.8744150999991689,
+      0.8761472000005597
+    ],
+    "median_seconds": 0.8752811499998643,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 1.8165961371527777,
+    "masked_teacher_ssim": 0.9725336297917296,
+    "raw_lane_mae": 7.523449969306322
+  },
+  {
+    "id": "scene_085",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "75, 100",
+    "seconds": [
+      0.930526900003315,
+      0.8887009999998554
+    ],
+    "median_seconds": 0.9096139500015852,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 1.887939453125,
+    "masked_teacher_ssim": 0.9442912318279184,
+    "raw_lane_mae": 6.6500813008130075
+  },
+  {
+    "id": "scene_085",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "65, 0",
+    "seconds": [
+      0.9210141000003205,
+      0.9205981999984942
+    ],
+    "median_seconds": 0.9208061499994074,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 1.9088541666666667,
+    "masked_teacher_ssim": 0.9440505799067482,
+    "raw_lane_mae": 6.351173054587689
+  },
+  {
+    "id": "scene_086",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "63, 0",
+    "seconds": [
+      0.9034829999982321,
+      0.8766391999997722
+    ],
+    "median_seconds": 0.8900610999990022,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 1.8147243923611114,
+    "masked_teacher_ssim": 0.9470151069096439,
+    "raw_lane_mae": 7.648021828103683
+  },
+  {
+    "id": "scene_086",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "57, 0",
+    "seconds": [
+      0.8759604999977455,
+      0.8861400000023423
+    ],
+    "median_seconds": 0.8810502500000439,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 1.890842013888889,
+    "masked_teacher_ssim": 0.9423166514540903,
+    "raw_lane_mae": 7.469929513415188
+  },
+  {
+    "id": "scene_087",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "64, 0",
+    "seconds": [
+      0.9122368999996979,
+      0.9145028999992064
+    ],
+    "median_seconds": 0.9133698999994522,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 3.2408582899305554,
+    "masked_teacher_ssim": 0.8755040929140439,
+    "raw_lane_mae": 5.43353072433917
+  },
+  {
+    "id": "scene_087",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "76, 97",
+    "seconds": [
+      0.9114576000029047,
+      0.8819063000009919
+    ],
+    "median_seconds": 0.8966819500019483,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 3.429416232638889,
+    "masked_teacher_ssim": 0.8700178543733385,
+    "raw_lane_mae": 5.52081187778922
+  },
+  {
+    "id": "scene_088",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "75, 92",
+    "seconds": [
+      0.9254068000009283,
+      0.8895296000009694
+    ],
+    "median_seconds": 0.9074682000009489,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1402,
+    "masked_teacher_mae": 2.364241559676653,
+    "masked_teacher_ssim": 0.9333956040051423,
+    "raw_lane_mae": 12.562766461392705
+  },
+  {
+    "id": "scene_088",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "66, 0",
+    "seconds": [
+      0.9173057999978482,
+      0.8754279000022507
+    ],
+    "median_seconds": 0.8963668500000495,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1402,
+    "masked_teacher_mae": 3.314075130765573,
+    "masked_teacher_ssim": 0.894001824569918,
+    "raw_lane_mae": 12.378967314069161
+  },
+  {
+    "id": "scene_089",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "61, 0",
+    "seconds": [
+      0.88912160000109,
+      0.8903890999972646
+    ],
+    "median_seconds": 0.8897553499991773,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 2.241102430555556,
+    "masked_teacher_ssim": 0.9370547484704862,
+    "raw_lane_mae": 8.70219298245614
+  },
+  {
+    "id": "scene_089",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "58, 0",
+    "seconds": [
+      0.8782572999989497,
+      0.8868294999992941
+    ],
+    "median_seconds": 0.8825433999991219,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 3.583116319444444,
+    "masked_teacher_ssim": 0.8802541811551757,
+    "raw_lane_mae": 8.625877192982456
+  },
+  {
+    "id": "scene_090",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "64, 0",
+    "seconds": [
+      0.892505900003016,
+      0.892762399998901
+    ],
+    "median_seconds": 0.8926341500009585,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 1.6866319444444444,
+    "masked_teacher_ssim": 0.9621200983885307,
+    "raw_lane_mae": 6.509185632026323
+  },
+  {
+    "id": "scene_090",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "77, 98",
+    "seconds": [
+      0.9275751000022865,
+      0.889057699998375
+    ],
+    "median_seconds": 0.9083164000003308,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 2.4264322916666665,
+    "masked_teacher_ssim": 0.9312725009043588,
+    "raw_lane_mae": 6.715382506169455
+  },
+  {
+    "id": "scene_091",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "71, 10",
+    "seconds": [
+      0.9073108999982651,
+      0.8769261999987066
+    ],
+    "median_seconds": 0.8921185499984858,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 2.4967447916666665,
+    "masked_teacher_ssim": 0.934302568358469,
+    "raw_lane_mae": 12.703625185499257
+  },
+  {
+    "id": "scene_091",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "61, 0",
+    "seconds": [
+      0.9267392000001564,
+      0.8880816000018967
+    ],
+    "median_seconds": 0.9074104000010266,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 2.9184027777777772,
+    "masked_teacher_ssim": 0.9239550607686215,
+    "raw_lane_mae": 12.49565401738393
+  },
+  {
+    "id": "scene_092",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "75, 100",
+    "seconds": [
+      0.9057327000009536,
+      0.8765572000011161
+    ],
+    "median_seconds": 0.8911449500010349,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 2.9967447916666665,
+    "masked_teacher_ssim": 0.9062563009462478,
+    "raw_lane_mae": 5.962822053130424
+  },
+  {
+    "id": "scene_092",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "63, 11",
+    "seconds": [
+      0.9251824000020861,
+      0.8881915999991179
+    ],
+    "median_seconds": 0.906687000000602,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 3.791015625,
+    "masked_teacher_ssim": 0.870696230075485,
+    "raw_lane_mae": 6.0300360432519025
+  },
+  {
+    "id": "scene_093",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "62, 0",
+    "seconds": [
+      0.9080757000010635,
+      0.9149330000000191
+    ],
+    "median_seconds": 0.9115043500005413,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 1.439670138888889,
+    "masked_teacher_ssim": 0.9769219863258405,
+    "raw_lane_mae": 8.375941401011039
+  },
+  {
+    "id": "scene_093",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "76, 100",
+    "seconds": [
+      0.9071230000008654,
+      0.883830200000375
+    ],
+    "median_seconds": 0.8954766000006202,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 1.4602864583333333,
+    "masked_teacher_ssim": 0.9710906600381694,
+    "raw_lane_mae": 8.365676261219438
+  },
+  {
+    "id": "scene_094",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "65, 0",
+    "seconds": [
+      0.9043817999991006,
+      0.8787881999996898
+    ],
+    "median_seconds": 0.8915849999993952,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 1.828125,
+    "masked_teacher_ssim": 0.9488703805991276,
+    "raw_lane_mae": null
+  },
+  {
+    "id": "scene_094",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "77, 98",
+    "seconds": [
+      0.9205970000002708,
+      0.8974129000016546
+    ],
+    "median_seconds": 0.9090049500009627,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 2.108506944444444,
+    "masked_teacher_ssim": 0.9318839266362983,
+    "raw_lane_mae": null
+  },
+  {
+    "id": "scene_095",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "67, 60",
+    "seconds": [
+      0.9109858999981952,
+      0.8756437000010919
+    ],
+    "median_seconds": 0.8933147999996436,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 0.7521701388888888,
+    "masked_teacher_ssim": 0.9894364896392781,
+    "raw_lane_mae": 8.87350054525627
+  },
+  {
+    "id": "scene_095",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "teacher4",
+    "steps": 4,
+    "hardware_before": "61, 0",
+    "seconds": [
+      0.9456567000015639,
+      0.8812760999971943
+    ],
+    "median_seconds": 0.9134663999993791,
+    "peak_allocated_bytes": 3414446080,
+    "peak_reserved_bytes": 3800039424,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 1.398871527777778,
+    "masked_teacher_ssim": 0.9838535124264594,
+    "raw_lane_mae": 8.80562912187776
+  },
+  {
+    "id": "scene_080",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "66, 1",
+    "seconds": [
+      0.3264872999970976,
+      0.2727458999979717
+    ],
+    "median_seconds": 0.29961659999753465,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 20.613661024305557,
+    "masked_teacher_ssim": 0.5331002352562447,
+    "raw_lane_mae": 8.801024179072959
+  },
+  {
+    "id": "scene_080",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "60, 0",
+    "seconds": [
+      0.3217590999993263,
+      0.3260111000017787
+    ],
+    "median_seconds": 0.3238851000005525,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 17.718912760416668,
+    "masked_teacher_ssim": 0.5284934151470676,
+    "raw_lane_mae": 8.838559814169571
+  },
+  {
+    "id": "scene_081",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "61, 0",
+    "seconds": [
+      0.3195769999983895,
+      0.3199581000008038
+    ],
+    "median_seconds": 0.31976754999959667,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 17.59955512152778,
+    "masked_teacher_ssim": 0.6148509237203584,
+    "raw_lane_mae": 8.017099484030531
+  },
+  {
+    "id": "scene_081",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "64, 79",
+    "seconds": [
+      0.3208950999978697,
+      0.3192371999975876
+    ],
+    "median_seconds": 0.32006614999772864,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 17.913330078124996,
+    "masked_teacher_ssim": 0.604132219866601,
+    "raw_lane_mae": 8.060594430941112
+  },
+  {
+    "id": "scene_082",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "73, 84",
+    "seconds": [
+      0.31640560000232654,
+      0.30240779999803635
+    ],
+    "median_seconds": 0.30940670000018144,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 32.71636284722222,
+    "masked_teacher_ssim": 0.6131964589080326,
+    "raw_lane_mae": 9.62953813104189
+  },
+  {
+    "id": "scene_082",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "61, 0",
+    "seconds": [
+      0.3133640000014566,
+      0.30700419999993755
+    ],
+    "median_seconds": 0.31018410000069707,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 26.617268880208332,
+    "masked_teacher_ssim": 0.6548362495266576,
+    "raw_lane_mae": 9.942678123881132
+  },
+  {
+    "id": "scene_083",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "62, 0",
+    "seconds": [
+      0.31159910000133095,
+      0.29102030000285595
+    ],
+    "median_seconds": 0.30130970000209345,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 19.45119900173611,
+    "masked_teacher_ssim": 0.5842023280306886,
+    "raw_lane_mae": 7.816171582519856
+  },
+  {
+    "id": "scene_083",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "64, 39",
+    "seconds": [
+      0.30992350000087754,
+      0.32131329999901936
+    ],
+    "median_seconds": 0.31561839999994845,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 21.830349392361114,
+    "masked_teacher_ssim": 0.5841487838359715,
+    "raw_lane_mae": 7.626954970085022
+  },
+  {
+    "id": "scene_084",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "71, 100",
+    "seconds": [
+      0.31381230000260985,
+      0.28345379999882425
+    ],
+    "median_seconds": 0.29863305000071705,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 16.46188693576389,
+    "masked_teacher_ssim": 0.7537217181943013,
+    "raw_lane_mae": 9.284346224677716
+  },
+  {
+    "id": "scene_084",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "77, 91",
+    "seconds": [
+      0.3143841000019165,
+      0.3066197000007378
+    ],
+    "median_seconds": 0.31050190000132716,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 18.42572699652778,
+    "masked_teacher_ssim": 0.7271815520739003,
+    "raw_lane_mae": 9.049232658072436
+  },
+  {
+    "id": "scene_085",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "62, 0",
+    "seconds": [
+      0.3159254000020155,
+      0.310289200002444
+    ],
+    "median_seconds": 0.31310730000222975,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 18.917697482638886,
+    "masked_teacher_ssim": 0.7160590991680839,
+    "raw_lane_mae": 7.964134727061557
+  },
+  {
+    "id": "scene_085",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "64, 10",
+    "seconds": [
+      0.3163557000007131,
+      0.2980481000013242
+    ],
+    "median_seconds": 0.30720190000101866,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 16.419569227430557,
+    "masked_teacher_ssim": 0.7174638942522961,
+    "raw_lane_mae": 7.96492450638792
+  },
+  {
+    "id": "scene_086",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "69, 100",
+    "seconds": [
+      0.31039400000008754,
+      0.30936870000005
+    ],
+    "median_seconds": 0.3098813500000688,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 18.527316623263886,
+    "masked_teacher_ssim": 0.7026156001439509,
+    "raw_lane_mae": 10.106582537517053
+  },
+  {
+    "id": "scene_086",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "76, 89",
+    "seconds": [
+      0.3130356000001484,
+      0.2952788000002329
+    ],
+    "median_seconds": 0.30415720000019064,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 21.159315321180554,
+    "masked_teacher_ssim": 0.6935326136954284,
+    "raw_lane_mae": 9.340779899954525
+  },
+  {
+    "id": "scene_087",
+    "dataset": "TuSimple",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "63, 0",
+    "seconds": [
+      0.3085977999980969,
+      0.29958299999998417
+    ],
+    "median_seconds": 0.30409039999904053,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 19.15521918402778,
+    "masked_teacher_ssim": 0.5979257369993513,
+    "raw_lane_mae": 7.1208805355303815
+  },
+  {
+    "id": "scene_087",
+    "dataset": "TuSimple",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "64, 2",
+    "seconds": [
+      0.31059779999850434,
+      0.29442139999810024
+    ],
+    "median_seconds": 0.3025095999983023,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 12288,
+    "masked_teacher_mae": 22.98654513888889,
+    "masked_teacher_ssim": 0.6076659639452532,
+    "raw_lane_mae": 7.597408170271199
+  },
+  {
+    "id": "scene_088",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "67, 71",
+    "seconds": [
+      0.3200832000002265,
+      0.3098214999990887
+    ],
+    "median_seconds": 0.3149523499996576,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1402,
+    "masked_teacher_mae": 11.171421778411792,
+    "masked_teacher_ssim": 0.6243850000599979,
+    "raw_lane_mae": 16.625190799515764
+  },
+  {
+    "id": "scene_088",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "77, 97",
+    "seconds": [
+      0.3076580000015383,
+      0.3014492000002065
+    ],
+    "median_seconds": 0.3045536000008724,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1402,
+    "masked_teacher_mae": 19.649310508796958,
+    "masked_teacher_ssim": 0.5195650304940646,
+    "raw_lane_mae": 15.86120322122217
+  },
+  {
+    "id": "scene_089",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "59, 0",
+    "seconds": [
+      0.28348250000271946,
+      0.2742299000019557
+    ],
+    "median_seconds": 0.2788562000023376,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 12.244791666666666,
+    "masked_teacher_ssim": 0.648396099114792,
+    "raw_lane_mae": 12.959320175438595
+  },
+  {
+    "id": "scene_089",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "61, 0",
+    "seconds": [
+      0.2722305999996024,
+      0.27030659999945783
+    ],
+    "median_seconds": 0.2712685999995301,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 14.740451388888888,
+    "masked_teacher_ssim": 0.528287903988539,
+    "raw_lane_mae": 13.12313596491228
+  },
+  {
+    "id": "scene_090",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "62, 0",
+    "seconds": [
+      0.30195219999950496,
+      0.3069187000000966
+    ],
+    "median_seconds": 0.30443544999980077,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 11.519748263888891,
+    "masked_teacher_ssim": 0.6049733836022587,
+    "raw_lane_mae": 11.044648569600586
+  },
+  {
+    "id": "scene_090",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "63, 4",
+    "seconds": [
+      0.316387399998348,
+      0.3059978000019328
+    ],
+    "median_seconds": 0.3111926000001404,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 20.87651909722222,
+    "masked_teacher_ssim": 0.5480818256450687,
+    "raw_lane_mae": 10.868019376656614
+  },
+  {
+    "id": "scene_091",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "66, 69",
+    "seconds": [
+      0.3097854000006919,
+      0.2975389000021096
+    ],
+    "median_seconds": 0.30366215000140073,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 9.639105902777779,
+    "masked_teacher_ssim": 0.7046318387913257,
+    "raw_lane_mae": 16.169811320754718
+  },
+  {
+    "id": "scene_091",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "74, 100",
+    "seconds": [
+      0.3074928000023647,
+      0.3084368000018003
+    ],
+    "median_seconds": 0.3079648000020825,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 17.20334201388889,
+    "masked_teacher_ssim": 0.609230602377998,
+    "raw_lane_mae": 16.850823263373616
+  },
+  {
+    "id": "scene_092",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "77, 87",
+    "seconds": [
+      0.318300699997053,
+      0.293529500002478
+    ],
+    "median_seconds": 0.3059150999997655,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 22.793836805555557,
+    "masked_teacher_ssim": 0.5174599188962387,
+    "raw_lane_mae": 9.632692564410627
+  },
+  {
+    "id": "scene_092",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "63, 0",
+    "seconds": [
+      0.31540209999729996,
+      0.29135649999807356
+    ],
+    "median_seconds": 0.30337929999768676,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 15.855034722222221,
+    "masked_teacher_ssim": 0.49841059719287667,
+    "raw_lane_mae": 9.07589106928314
+  },
+  {
+    "id": "scene_093",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "64, 0",
+    "seconds": [
+      0.2793098000001919,
+      0.2785641000009491
+    ],
+    "median_seconds": 0.2789369500005705,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 9.05859375,
+    "masked_teacher_ssim": 0.7331797032662379,
+    "raw_lane_mae": 10.622407923243578
+  },
+  {
+    "id": "scene_093",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "65, 5",
+    "seconds": [
+      0.274777599999652,
+      0.2803496999986237
+    ],
+    "median_seconds": 0.27756364999913785,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 14.990885416666666,
+    "masked_teacher_ssim": 0.6638787011508774,
+    "raw_lane_mae": 10.693954400082532
+  },
+  {
+    "id": "scene_094",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "66, 100",
+    "seconds": [
+      0.31388580000202637,
+      0.29679200000100536
+    ],
+    "median_seconds": 0.30533890000151587,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 45.93901909722223,
+    "masked_teacher_ssim": 0.43222566210641644,
+    "raw_lane_mae": null
+  },
+  {
+    "id": "scene_094",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "76, 90",
+    "seconds": [
+      0.33038979999764706,
+      0.3122817000003124
+    ],
+    "median_seconds": 0.32133574999897974,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 26.954644097222218,
+    "masked_teacher_ssim": 0.3932697802339212,
+    "raw_lane_mae": null
+  },
+  {
+    "id": "scene_095",
+    "dataset": "CULane",
+    "seed": 100,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "61, 0",
+    "seconds": [
+      0.3161688999971375,
+      0.28942969999843626
+    ],
+    "median_seconds": 0.3027992999977869,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 13.296006944444443,
+    "masked_teacher_ssim": 0.8605572961389614,
+    "raw_lane_mae": 11.709975593290753
+  },
+  {
+    "id": "scene_095",
+    "dataset": "CULane",
+    "seed": 101,
+    "method": "student4",
+    "steps": 4,
+    "hardware_before": "63, 0",
+    "seconds": [
+      0.3228028000012273,
+      0.31145050000122865
+    ],
+    "median_seconds": 0.31712665000122797,
+    "peak_allocated_bytes": 1440135680,
+    "peak_reserved_bytes": 2042626048,
+    "mask_pixels": 1536,
+    "masked_teacher_mae": 9.050998263888888,
+    "masked_teacher_ssim": 0.811994510126552,
+    "raw_lane_mae": 11.87116373266864
+  }
+]

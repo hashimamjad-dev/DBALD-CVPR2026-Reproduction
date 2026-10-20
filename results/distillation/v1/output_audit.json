@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "source_images_verified": 96,
+  "outputs_verified": 96,
+  "maximum_masked_mae_recalculation_error": 0.0,
+  "outside_mask_and_annotated_lane_pixels": "Exactly copied as designed; not evidence of learned preservation",
+  "checkpoint_selection": "Matches minimum validation rollout error"
+}

@@ -1,0 +1,150 @@
+
+Loading pipeline components...:   0%|          | 0/7 [00:00<?, ?it/s]`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading pipeline components...:  71%|#######1  | 5/7 [00:00<00:00, 22.54it/s]
+Loading pipeline components...: 100%|##########| 7/7 [00:00<00:00, 19.59it/s]
+teacher20 scene_080 100 3.482
+Cooling GPU from 82.0 C
+teacher20 scene_080 101 3.474
+Cooling GPU from 82.0 C
+teacher20 scene_081 100 3.482
+Cooling GPU from 81.0 C
+teacher20 scene_081 101 3.473
+Cooling GPU from 81.0 C
+teacher20 scene_082 100 3.48
+Cooling GPU from 81.0 C
+teacher20 scene_082 101 3.483
+Cooling GPU from 80.0 C
+teacher20 scene_083 100 3.481
+teacher20 scene_083 101 3.503
+Cooling GPU from 82.0 C
+teacher20 scene_084 100 3.48
+Cooling GPU from 82.0 C
+teacher20 scene_084 101 3.483
+Cooling GPU from 81.0 C
+teacher20 scene_085 100 3.465
+Cooling GPU from 80.0 C
+teacher20 scene_085 101 3.485
+Cooling GPU from 82.0 C
+Cooling GPU from 78.0 C
+teacher20 scene_086 100 3.463
+Cooling GPU from 82.0 C
+teacher20 scene_086 101 3.479
+Cooling GPU from 84.0 C
+teacher20 scene_087 100 3.487
+Cooling GPU from 82.0 C
+teacher20 scene_087 101 3.481
+Cooling GPU from 81.0 C
+teacher20 scene_088 100 3.487
+Cooling GPU from 84.0 C
+teacher20 scene_088 101 3.475
+Cooling GPU from 80.0 C
+teacher20 scene_089 100 3.482
+Cooling GPU from 83.0 C
+teacher20 scene_089 101 3.468
+Cooling GPU from 81.0 C
+teacher20 scene_090 100 3.489
+Cooling GPU from 81.0 C
+teacher20 scene_090 101 3.483
+Cooling GPU from 82.0 C
+teacher20 scene_091 100 3.486
+Cooling GPU from 81.0 C
+teacher20 scene_091 101 3.486
+Cooling GPU from 82.0 C
+teacher20 scene_092 100 3.49
+Cooling GPU from 81.0 C
+teacher20 scene_092 101 3.479
+Cooling GPU from 82.0 C
+teacher20 scene_093 100 3.475
+Cooling GPU from 82.0 C
+teacher20 scene_093 101 3.478
+Cooling GPU from 81.0 C
+teacher20 scene_094 100 3.474
+Cooling GPU from 81.0 C
+teacher20 scene_094 101 3.48
+Cooling GPU from 82.0 C
+teacher20 scene_095 100 3.466
+Cooling GPU from 82.0 C
+teacher20 scene_095 101 3.488
+Cooling GPU from 80.0 C
+teacher4 scene_080 100 0.899
+Cooling GPU from 80.0 C
+teacher4 scene_080 101 0.884
+teacher4 scene_081 100 0.917
+Cooling GPU from 79.0 C
+teacher4 scene_081 101 0.895
+teacher4 scene_082 100 0.913
+teacher4 scene_082 101 0.917
+Cooling GPU from 80.0 C
+teacher4 scene_083 100 0.893
+teacher4 scene_083 101 0.913
+teacher4 scene_084 100 0.902
+Cooling GPU from 79.0 C
+Cooling GPU from 78.0 C
+teacher4 scene_084 101 0.875
+teacher4 scene_085 100 0.91
+teacher4 scene_085 101 0.921
+Cooling GPU from 80.0 C
+teacher4 scene_086 100 0.89
+Cooling GPU from 78.0 C
+teacher4 scene_086 101 0.881
+teacher4 scene_087 100 0.913
+Cooling GPU from 81.0 C
+teacher4 scene_087 101 0.897
+teacher4 scene_088 100 0.907
+Cooling GPU from 78.0 C
+teacher4 scene_088 101 0.896
+teacher4 scene_089 100 0.89
+Cooling GPU from 79.0 C
+teacher4 scene_089 101 0.883
+teacher4 scene_090 100 0.893
+teacher4 scene_090 101 0.908
+Cooling GPU from 78.0 C
+teacher4 scene_091 100 0.892
+teacher4 scene_091 101 0.907
+Cooling GPU from 78.0 C
+teacher4 scene_092 100 0.891
+teacher4 scene_092 101 0.907
+teacher4 scene_093 100 0.912
+teacher4 scene_093 101 0.895
+Cooling GPU from 83.0 C
+teacher4 scene_094 100 0.892
+teacher4 scene_094 101 0.909
+Cooling GPU from 78.0 C
+teacher4 scene_095 100 0.893
+Cooling GPU from 79.0 C
+teacher4 scene_095 101 0.913
+student4 scene_080 100 0.3
+student4 scene_080 101 0.324
+student4 scene_081 100 0.32
+student4 scene_081 101 0.32
+student4 scene_082 100 0.309
+student4 scene_082 101 0.31
+student4 scene_083 100 0.301
+student4 scene_083 101 0.316
+student4 scene_084 100 0.299
+student4 scene_084 101 0.311
+student4 scene_085 100 0.313
+student4 scene_085 101 0.307
+student4 scene_086 100 0.31
+student4 scene_086 101 0.304
+student4 scene_087 100 0.304
+student4 scene_087 101 0.303
+student4 scene_088 100 0.315
+student4 scene_088 101 0.305
+Cooling GPU from 78.0 C
+student4 scene_089 100 0.279
+student4 scene_089 101 0.271
+student4 scene_090 100 0.304
+student4 scene_090 101 0.311
+student4 scene_091 100 0.304
+student4 scene_091 101 0.308
+student4 scene_092 100 0.306
+student4 scene_092 101 0.303
+student4 scene_093 100 0.279
+Cooling GPU from 79.0 C
+student4 scene_093 101 0.278
+student4 scene_094 100 0.305
+student4 scene_094 101 0.321
+student4 scene_095 100 0.303
+student4 scene_095 101 0.317
