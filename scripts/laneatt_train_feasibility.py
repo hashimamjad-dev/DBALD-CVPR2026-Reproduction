@@ -4,22 +4,15 @@ Uses a surrogate loss (mean of every differentiable proposal tensor), so activat
 memory match real training but the label-matching loss, data loading and augmentation are NOT included.
 Treat results as a lower bound and confirm with a short real run. Writes results/feasibility/ only.
 """
-import argparse,json,subprocess,sys,time
+import argparse,json,sys,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 import numpy as np,torch
 from lane_repro.models import LaneATTAdapter
 from lane_repro.training_budget import budget
+from lane_repro.gpu_guard import cool
 
-def hot():
-    try: return float(subprocess.check_output(['nvidia-smi','--query-gpu=temperature.gpu','--format=csv,noheader,nounits'],text=True).strip())
-    except Exception: return 0.0
-def cool():
-    start=time.perf_counter()
-    while hot()>=78:
-        if time.perf_counter()-start>180: raise RuntimeError('Cooling timeout')
-        time.sleep(5)
 
 def tensors(value):
     if torch.is_tensor(value):

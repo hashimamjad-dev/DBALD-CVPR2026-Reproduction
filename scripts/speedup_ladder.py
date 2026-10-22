@@ -3,24 +3,16 @@
 Actions: quality (fidelity against teacher20 on 12 validation scenes x seeds 0/17), timing (common protocol of v2_evaluate).
 Writes only results/speedup/. The V1/V2 artifacts and the test set are never read.
 """
-import argparse,json,subprocess,time
+import argparse,json,time
 from v2_common import ROOT,setup,write,sync,Quality,conditions,np,torch
 from lane_repro.fast_teacher import FastTeacher
 from lane_repro.crop_geometry import tight_box,paste
+from lane_repro.gpu_guard import cool
 OUT=ROOT/'results/speedup'
 # name: (steps, guidance, window); window 512 = the existing teacher crop
 METHODS={'teacher20':(20,7.5,512),'teacher4':(4,7.5,512),'teacher4_nocfg':(4,1.0,512),
     'teacher4_win256':(4,7.5,256),'teacher4_win256_nocfg':(4,1.0,256),'teacher2_win256_nocfg':(2,1.0,256)}
 
-def hot():
-    try: return float(subprocess.check_output(['nvidia-smi','--query-gpu=temperature.gpu','--format=csv,noheader,nounits'],text=True).strip())
-    except Exception: return 0.0
-def cool():
-    start=time.perf_counter()
-    if hot()>=78:
-        while hot()>70:
-            if time.perf_counter()-start>180: raise RuntimeError('Cooling timeout')
-            time.sleep(5)
 
 def generate(teacher,c,seed,method):
     """Raw 512x512 uint8 crop: window result pasted into the original crop (VAE-decoded in full for 512)."""
