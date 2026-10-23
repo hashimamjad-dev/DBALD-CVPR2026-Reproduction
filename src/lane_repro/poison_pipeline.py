@@ -8,11 +8,11 @@ the real implementation without touching the rest of this pipeline:
 - Trigger realism: paste_placeholder_trigger draws a flat-colour rectangle, not DBALD's diffusion-
   rendered mud/cone. Swapping in a real render is a one-function change at its call site in
   poison_sample, once a diffusion teacher is available (GPU-only; not done here).
-- Trigger placement scoring: DBALD ranks candidates with a gradient attention map from a real
-  detector's loss (trigger_placement.gradient_attention_map). That needs a trained detector's own
-  anchor-matching/target-construction code wired up, which is not done here; place_trigger_window
-  falls back to a uniform attention map (every candidate scores equally, so selection is just
-  trigger_placement.select_optimal_window's deterministic tie-break) unless a real one is passed in.
+- Trigger placement scoring: place_trigger_window falls back to a uniform attention map (every
+  candidate scores equally, so selection is just trigger_placement.select_optimal_window's
+  deterministic tie-break) unless a real one is passed in via attention_map. laneatt_heatmap.py's
+  laneatt_attention_map computes a real one from an actual LaneATTAdapter and ground-truth lanes
+  (verified end-to-end against a real checkpoint and image; see its own module docstring and tests).
 
 Road-region constraint: DBALD segments the road with SAM2 (checkpoint already downloaded at
 models/checkpoints/sam2.1_hiera_tiny.pt, not wired in here). road_region_mask instead derives a
