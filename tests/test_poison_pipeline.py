@@ -99,3 +99,23 @@ def test_write_poisoned_sample_rejects_overlapping_output_root(tmp_path):
     result=poison_sample(sample,'LOA',trigger_size=8,stride=4)
     with pytest.raises(ValueError): write_poisoned_sample(result,tmp_path/'clean',tmp_path/'clean')
     with pytest.raises(ValueError): write_poisoned_sample(result,tmp_path/'clean'/'nested',tmp_path/'clean')
+
+def test_poison_sample_render_trigger_swap_is_used_instead_of_placeholder(tmp_path):
+    """Covers the ultraedit_trigger.py integration point without needing a GPU: any callable
+    matching (image, y0, x0, size, prompt) -> image can replace paste_placeholder_trigger."""
+    sample=make_sample(tmp_path,straight_lane())
+    calls=[]
+    def fake_renderer(image,y0,x0,size,prompt):
+        calls.append((y0,x0,size,prompt))
+        out=image.copy(); out[y0:y0+size,x0:x0+size]=(1,2,3); return out
+    result=poison_sample(sample,'LOA',trigger_size=8,stride=4,
+        render_trigger=fake_renderer,trigger_prompt='Add a small and sparse brown mud')
+    y0,x0,size=result['trigger_window'].values()
+    assert calls==[(y0,x0,size,'Add a small and sparse brown mud')]
+    assert tuple(result['poisoned_image'][y0,x0])==(1,2,3)
+    assert result['placeholder_trigger'] is False
+
+def test_poison_sample_render_trigger_requires_prompt(tmp_path):
+    sample=make_sample(tmp_path,straight_lane())
+    with pytest.raises(ValueError):
+        poison_sample(sample,'LOA',trigger_size=8,stride=4,render_trigger=lambda *a:None)

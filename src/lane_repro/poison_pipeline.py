@@ -6,8 +6,10 @@ Two things are explicitly placeholders, each isolated behind one function so the
 the real implementation without touching the rest of this pipeline:
 
 - Trigger realism: paste_placeholder_trigger draws a flat-colour rectangle, not DBALD's diffusion-
-  rendered mud/cone. Swapping in a real render is a one-function change at its call site in
-  poison_sample, once a diffusion teacher is available (GPU-only; not done here).
+  rendered mud/cone, and remains poison_sample's default (render_trigger=None). Pass render_trigger
+  (and trigger_prompt) for the real one: ultraedit_trigger.UltraEditTrigger wraps DBALD's actual
+  generator (UltraEdit/SD3), GPU-only; see that module's own docstring for an 8 GB VRAM caveat and
+  its feasibility_check() to run before any real batch.
 - Trigger placement scoring: place_trigger_window falls back to a uniform attention map (every
   candidate scores equally, so selection is just trigger_placement.select_optimal_window's
   deterministic tie-break) unless a real one is passed in via attention_map. laneatt_heatmap.py's
@@ -88,16 +90,25 @@ def points_to_xs(points,h_samples):
     return [by_y.get(y,-2.) for y in h_samples]
 
 def poison_sample(sample,attack,trigger_size=40,stride=20,color=(101,67,33),
-        beta=60.,alpha_degrees=9.,split_fraction=.5,attention_map=None):
+        beta=60.,alpha_degrees=9.,split_fraction=.5,attention_map=None,
+        render_trigger=None,trigger_prompt=None):
     """sample: a lane_repro.data.Sample (TuSimple). Returns a dict with the poisoned image array,
     poisoned per-lane x-lists (TuSimple format, same h_samples grid), the chosen trigger window, and
     provenance. Raises if no valid trigger window exists (road_region_mask too small for trigger_size
-    at the given stride)."""
+    at the given stride).
+
+    render_trigger: None (default) uses paste_placeholder_trigger (the flat-colour placeholder).
+    Pass a callable (image, y0, x0, size, prompt) -> image for the real renderer -- e.g.
+    ultraedit_trigger.UltraEditTrigger's instance, called with trigger_prompt (required if
+    render_trigger is given; e.g. ultraedit_trigger.MUD_PROMPT or CONE_PROMPT)."""
+    if render_trigger is not None and trigger_prompt is None:
+        raise ValueError('trigger_prompt is required when render_trigger is given')
     image=sample.read()
     existence=[sum(1 for x in xs if x>=0)>=2 for xs in sample.lanes]
     mask=road_region_mask(sample.lanes,sample.h_samples,sample.width,sample.height)
     (y0,x0),scored=place_trigger_window(mask,trigger_size,stride,attention_map)
-    poisoned_image=paste_placeholder_trigger(image,y0,x0,trigger_size,color)
+    if render_trigger is None: poisoned_image=paste_placeholder_trigger(image,y0,x0,trigger_size,color)
+    else: poisoned_image=render_trigger(image,y0,x0,trigger_size,trigger_prompt)
     points=[list(zip(xs,sample.h_samples)) for xs in sample.lanes]
     poisoned_points,poisoned_existence=apply_attack(points,existence,attack,
         beta=beta,alpha_degrees=alpha_degrees,split_fraction=split_fraction)
@@ -105,7 +116,7 @@ def poison_sample(sample,attack,trigger_size=40,stride=20,color=(101,67,33),
     return dict(raw_file=sample.key,h_samples=sample.h_samples,original_lanes=sample.lanes,
         original_existence=existence,poisoned_lanes=poisoned_xs,poisoned_existence=poisoned_existence,
         attack=attack,trigger_window=dict(y0=y0,x0=x0,size=trigger_size),trigger_candidates=len(scored),
-        placeholder_trigger=True,placeholder_road_mask=True,poisoned_image=poisoned_image)
+        placeholder_trigger=render_trigger is None,placeholder_road_mask=True,poisoned_image=poisoned_image)
 
 def write_poisoned_sample(result,out_root,source_root):
     """Writes the poisoned image under out_root (must differ from source_root) and returns the
