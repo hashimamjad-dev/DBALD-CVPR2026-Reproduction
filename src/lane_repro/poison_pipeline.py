@@ -19,6 +19,14 @@ models/checkpoints/sam2.1_hiera_tiny.pt, not wired in here). road_region_mask in
 drivable-area proxy directly from the lane geometry: the horizontal band spanning the valid lane
 x-extent at each labelled row, with the lane markings themselves excluded. This is a documented
 approximation, not a claim of using SAM2.
+
+TuSimple-format only, not yet CULane: this module assumes sample.lanes is a list of per-lane x
+coordinates aligned 1:1 with a shared sample.h_samples grid (TuSimple's native layout, as
+lane_repro.data.tusimple() yields it). lane_repro.data.culane() instead yields samples with
+h_samples=None and lanes as lists of already-paired (x,y) points on no shared grid, which this
+module cannot consume as-is. Extending to CULane needs its own road_region_mask (no fixed grid to
+interpolate a band over) and its own points_to_xs equivalent (CULane has no fixed grid to snap
+back onto); not attempted in this session.
 """
 from pathlib import Path
 import cv2

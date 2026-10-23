@@ -28,6 +28,16 @@ of the thesis (Sections 2.9-2.11): trigger placement, label poisoning, and ASR m
   and ASR with the real official evaluator. This is a proof of mechanism, not a Table 1 result --
   see its own docstring and the Open questions section below for scale limits.
 
+## A real limitation, not yet addressed
+
+The whole poisoning pipeline (`poison_pipeline.py`, `laneatt_heatmap.py`, `build_poisoned_dataset.py`,
+`sanity_poisoned_training.py`) is **TuSimple-format only**. It assumes a lane is a list of x
+coordinates aligned to a shared `h_samples` row grid, which is TuSimple's native layout but not
+CULane's (`lane_repro.data.culane()` yields `h_samples=None` and lanes as already-paired `(x,y)`
+points with no shared grid). Extending to CULane needs its own road-region mask construction (no
+fixed grid to interpolate a band over) and its own point-to-label conversion; not attempted this
+session, and worth scoping before claiming any CULane result.
+
 ## What is still a placeholder
 
 - **Trigger realism**: `poison_pipeline.paste_placeholder_trigger` draws a flat-colour rectangle, not
