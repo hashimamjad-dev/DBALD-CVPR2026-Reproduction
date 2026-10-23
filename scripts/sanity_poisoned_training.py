@@ -57,6 +57,12 @@ def main():
     p.add_argument('--beta',type=float,default=60.)
     p.add_argument('--alpha-degrees',type=float,default=9.)
     p.add_argument('--use-real-heatmap',action='store_true')
+    p.add_argument('--render-trigger',choices=['placeholder','ultraedit'],default='placeholder')
+    p.add_argument('--trigger-kind',choices=['mud','cone'],default='mud',help='Only used with --render-trigger ultraedit')
+    p.add_argument('--ultraedit-checkpoint',default='BleachNick/SD3_UltraEdit_w_mask')
+    p.add_argument('--ultraedit-device',default='cuda')
+    p.add_argument('--full-t5',action='store_true',help='See ultraedit_trigger.py for the VRAM risk this avoids by default')
+    p.add_argument('--cpu-offload',action='store_true')
     args=p.parse_args()
     if not 0<args.poison_fraction<=1: raise ValueError('--poison-fraction must be in (0, 1]')
 
@@ -68,12 +74,19 @@ def main():
     adapter=LaneATTAdapter(args.checkpoint,backbone=args.backbone,device='cpu')
     poison_adapter=adapter if args.use_real_heatmap else None
 
+    render_trigger=trigger_prompt=None
+    if args.render_trigger=='ultraedit':
+        from lane_repro.ultraedit_trigger import UltraEditTrigger,MUD_PROMPT,CONE_PROMPT
+        render_trigger=UltraEditTrigger(args.ultraedit_checkpoint,args.ultraedit_device,drop_t5=not args.full_t5,cpu_offload=args.cpu_offload)
+        trigger_prompt=MUD_PROMPT if args.trigger_kind=='mud' else CONE_PROMPT
+
     poisoned_images,poisoned_targets_xs,poisoned_samples,train_targets=[],[],[],[]
     for i,s in enumerate(train_samples):
         if i<poison_count:
             lanes_xy=[list(zip(xs,s.h_samples)) for xs in s.lanes] if poison_adapter else None
             attention=laneatt_attention_map(poison_adapter,s.read(),lanes_xy,args.attack) if poison_adapter else None
-            result=poison_sample(s,args.attack,beta=args.beta,alpha_degrees=args.alpha_degrees,attention_map=attention)
+            result=poison_sample(s,args.attack,beta=args.beta,alpha_degrees=args.alpha_degrees,attention_map=attention,
+                render_trigger=render_trigger,trigger_prompt=trigger_prompt)
             poisoned_images.append(result['poisoned_image']); poisoned_targets_xs.append(result['poisoned_lanes'])
             poisoned_samples.append(s)
             target_points=[list(zip(xs,s.h_samples)) for xs in result['poisoned_lanes']]
@@ -110,6 +123,7 @@ def main():
         checkpoint=args.checkpoint,attack=args.attack,train_count=args.train_count,poison_count=poison_count,
         held_out_count=len(held_out),epochs=args.epochs,lr=args.lr,
         attention_source='real' if args.use_real_heatmap else 'uniform placeholder',
+        render_trigger=args.render_trigger,trigger_kind=args.trigger_kind if render_trigger else None,
         before=dict(clean_acc=before_acc,asr=before_asr),after=dict(clean_acc=after_acc,asr=after_asr),
         loss_history=history),indent=2))
     print('Wrote',out)
