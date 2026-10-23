@@ -1,0 +1,29 @@
+{
+  "architecture": "LaneATT",
+  "implementation": "lucastabelini/LaneATT",
+  "checkpoint": "models\\checkpoints\\laneatt_official\\experiments\\laneatt_r18_tusimple\\models\\model_0100.pt",
+  "checkpoint_sha256": "c36f79be814628b0f7cecdb4bfa224cf3fddf038bd4071de9bb8135b826f73ed",
+  "device": "cpu",
+  "dataset": "tusimple",
+  "backbone": "resnet18",
+  "preprocessing": "BGR, full-frame 640x360 cubic (imgaug Resize default), float32 /255, no mean/std",
+  "compatibility": [
+    "np.bool -> np.bool_ in source module at import",
+    "portable NumPy lane-distance NMS",
+    "explicit anchor ordering"
+  ],
+  "anchor_order": "pytorch16",
+  "anchor_order_sha256": "fd7fab30cfddb95d028aa169336ae3a7624532868ad7dd1423ed2c7cf857e3f3",
+  "strict_state_dict": true,
+  "conf_threshold": 0.2,
+  "nms_thres": 45.0,
+  "max_lanes": 5,
+  "labels_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+  "label_file": "E:\\Projects 2026\\DBALD-CVPR2026-Reproduction\\datasets\\raw\\tusimple_test\\labels.jsonl",
+  "subset_size": 2782,
+  "torch_version": "2.14.1+cpu",
+  "metric_source": "TuSimple/tusimple-benchmark/evaluate/lane.py; unmodified functions, Python2 CLI excluded",
+  "metric_caveat": "Official 200ms gate enabled. Separate ungated score is not official benchmark ACC.",
+  "prediction_conversion": "upstream integer truncation; negative x -> -2; positive out-of-frame x retained",
+  "timing": "one warmup; preprocessing+forward+portable NMS+decode+sampling; input IO excluded"
+}
