@@ -1,0 +1,17 @@
+[
+  {
+    "architecture": "LaneATT",
+    "transformation": "clean",
+    "sample_count": 2782,
+    "official_tusimple_acc_percent": 0.0,
+    "official_fp": 0.0,
+    "official_fn": 1.0,
+    "tusimple_acc_without_runtime_gate_percent": 95.57572489815387,
+    "median_ms": 280.9349500166718,
+    "p95_ms": 437.34032501670293,
+    "device": "cpu",
+    "peak_cuda_allocated_bytes": null,
+    "asr": null,
+    "status": "measured_subset_not_Table1_reproduction"
+  }
+]

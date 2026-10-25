@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/TuSimple/tusimple-benchmark/issues/3",
+  "mirror_status": "Kaggle mirror returned HTTP 404 on 2026-10-23; used the Hugging Face fallback",
+  "fallback_mirror": "https://huggingface.co/datasets/dhbloo/TuSimple",
+  "label_files": [
+    "label_data_0313.json",
+    "label_data_0531.json",
+    "label_data_0601.json"
+  ],
+  "expected": 3626,
+  "verified": 3626,
+  "failures": 0,
+  "labels_sha256": "ad792ba58bb3871dc96d902d3f37715b83466c2b1e04f39b74322b9943b5915c"
+}

@@ -1,6 +1,8 @@
 {
   "source": "https://github.com/TuSimple/tusimple-benchmark/issues/3",
   "mirror": "https://www.kaggle.com/datasets/manideep1108/tusimple",
+  "mirror_status": "Kaggle mirror returned HTTP 404 on 2026-10-23; downloads used the Hugging Face fallback below",
+  "fallback_mirror": "https://huggingface.co/datasets/dhbloo/TuSimple",
   "status": "16-image smoke subset, not full benchmark",
   "full_test_label_count": 2782,
   "indices": [
@@ -25,83 +27,67 @@
   "samples": [
     {
       "raw_file": "clips/0530/1492626760788443246_0/20.jpg",
-      "sha256": "7023e2d9767856a24c0e97951cde2563aef808cd742dbcfbdc2edab47dfc2dca",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0530%2F1492626760788443246_0%2F20.jpg"
+      "sha256": "7023e2d9767856a24c0e97951cde2563aef808cd742dbcfbdc2edab47dfc2dca"
     },
     {
       "raw_file": "clips/0530/1492626988650418067_0/20.jpg",
-      "sha256": "4d30e6ed10ed0f9fe8ea0c461df6cf2d1621e89fdb479235b9ad81e11d8bfa25",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0530%2F1492626988650418067_0%2F20.jpg"
+      "sha256": "4d30e6ed10ed0f9fe8ea0c461df6cf2d1621e89fdb479235b9ad81e11d8bfa25"
     },
     {
       "raw_file": "clips/0530/1492628062134609982_0/20.jpg",
-      "sha256": "fed1d89659457c9f1e0c3dfa33a461dd1dd38ed130f0d7698140bd086154b37d",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0530%2F1492628062134609982_0%2F20.jpg"
+      "sha256": "fed1d89659457c9f1e0c3dfa33a461dd1dd38ed130f0d7698140bd086154b37d"
     },
     {
       "raw_file": "clips/0530/1492630621151269357_0/20.jpg",
-      "sha256": "6b9ee9f5221f4caa286ba2a325f601008b1e4eb9fe3846efdc4ddccb17c892e3",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0530%2F1492630621151269357_0%2F20.jpg"
+      "sha256": "6b9ee9f5221f4caa286ba2a325f601008b1e4eb9fe3846efdc4ddccb17c892e3"
     },
     {
       "raw_file": "clips/0530/1492631951282846975_0/20.jpg",
-      "sha256": "341efe4f416f2d886de0df1f3fea182eba10e0e1c6eb89a66874fabb1f0a0cba",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0530%2F1492631951282846975_0%2F20.jpg"
+      "sha256": "341efe4f416f2d886de0df1f3fea182eba10e0e1c6eb89a66874fabb1f0a0cba"
     },
     {
       "raw_file": "clips/0530/1492635361404995962_0/20.jpg",
-      "sha256": "6a1940902e09009a95203918bf86cd5c3a1cb26686c53703874fcbac66357597",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0530%2F1492635361404995962_0%2F20.jpg"
+      "sha256": "6a1940902e09009a95203918bf86cd5c3a1cb26686c53703874fcbac66357597"
     },
     {
       "raw_file": "clips/0530/1492638085231891924_0/20.jpg",
-      "sha256": "57bcc38f1ad2b4316caed8b7ee68a47909653a961158d2f9c247043be0515306",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0530%2F1492638085231891924_0%2F20.jpg"
+      "sha256": "57bcc38f1ad2b4316caed8b7ee68a47909653a961158d2f9c247043be0515306"
     },
     {
       "raw_file": "clips/0531/1492627607908463563/20.jpg",
-      "sha256": "cb203b39d323d573a269ec7ea3761440dd9a0b4a98dc7727affe730a047f13e4",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0531%2F1492627607908463563%2F20.jpg"
+      "sha256": "cb203b39d323d573a269ec7ea3761440dd9a0b4a98dc7727affe730a047f13e4"
     },
     {
       "raw_file": "clips/0531/1492630593673418099/20.jpg",
-      "sha256": "307d3f7afda0c4e93089f77e3666f57df926b70ececf0312dfe770ac52202350",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0531%2F1492630593673418099%2F20.jpg"
+      "sha256": "307d3f7afda0c4e93089f77e3666f57df926b70ececf0312dfe770ac52202350"
     },
     {
       "raw_file": "clips/0531/1492637609088008439/20.jpg",
-      "sha256": "fa680099cfa05797e5854412a3bc98b57c98dde0b7d45a85ac2be61c4d02b849",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0531%2F1492637609088008439%2F20.jpg"
+      "sha256": "fa680099cfa05797e5854412a3bc98b57c98dde0b7d45a85ac2be61c4d02b849"
     },
     {
       "raw_file": "clips/0531/1492726208452280063/20.jpg",
-      "sha256": "a4c0efefa7e17889b3762e33ddefa6cbf90307e0ea40177e6f01f647591207e9",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0531%2F1492726208452280063%2F20.jpg"
+      "sha256": "a4c0efefa7e17889b3762e33ddefa6cbf90307e0ea40177e6f01f647591207e9"
     },
     {
       "raw_file": "clips/0601/1494453729502898369/20.jpg",
-      "sha256": "62cdd47353436fe1790c37f991fdeaa82e5b48e71ebb23d3f275a65fce809510",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0601%2F1494453729502898369%2F20.jpg"
+      "sha256": "62cdd47353436fe1790c37f991fdeaa82e5b48e71ebb23d3f275a65fce809510"
     },
     {
       "raw_file": "clips/0601/1495058869493652396/20.jpg",
-      "sha256": "2f784f2265263fc53a6a93cf906deeb23efbbed7fb3f4e99010916c0300dde5b",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0601%2F1495058869493652396%2F20.jpg"
+      "sha256": "2f784f2265263fc53a6a93cf906deeb23efbbed7fb3f4e99010916c0300dde5b"
     },
     {
       "raw_file": "clips/0601/1495492702579432167/20.jpg",
-      "sha256": "b10e8725180b8fca5cc16426b109fd3e6f391ce24871fa8c5f564097e29100e0",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0601%2F1495492702579432167%2F20.jpg"
+      "sha256": "b10e8725180b8fca5cc16426b109fd3e6f391ce24871fa8c5f564097e29100e0"
     },
     {
       "raw_file": "clips/0601/1494452945846416960/20.jpg",
-      "sha256": "4918033aa60b03a943669a40d1bf367d8dc4727e475f10018ea873ad739396b2",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0601%2F1494452945846416960%2F20.jpg"
+      "sha256": "4918033aa60b03a943669a40d1bf367d8dc4727e475f10018ea873ad739396b2"
     },
     {
       "raw_file": "clips/0601/1494452577507766671/20.jpg",
-      "sha256": "dd154033a210f018889569e3967a71c1d42e5dbedf7d41076565ce8b2bf186f6",
-      "url": "https://www.kaggle.com/api/v1/datasets/download/manideep1108/tusimple/TUSimple%2Ftest_set%2Fclips%2F0601%2F1494452577507766671%2F20.jpg"
+      "sha256": "dd154033a210f018889569e3967a71c1d42e5dbedf7d41076565ce8b2bf186f6"
     }
   ]
 }
