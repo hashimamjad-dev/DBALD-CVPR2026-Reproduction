@@ -26,7 +26,7 @@ def check(key):
             issues.append('invalid_image')
         # OpenCV may return a plausible image while warning about truncated JPEGs.
         with image.open('rb') as stream:
-            stream.seek(-2,2)
+            stream.seek(max(0,image.stat().st_size-2))
             if stream.read(2) != b'\xff\xd9': issues.append('missing_jpeg_end_marker')
     if not annotation.is_file():
         issues.append('missing_annotation')
