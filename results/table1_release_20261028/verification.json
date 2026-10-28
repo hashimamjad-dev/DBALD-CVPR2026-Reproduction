@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "reference_sha256": "052cbbc97cf3d5823d465e1fa200b1dc7aac270bf6472dd58c8d5acb679bf683",
+  "manifest_sha256": "f8dd075848b23f3a14a4bd7b1198f6b448b47932ab508de615e4ba9016d6c86e",
+  "verified": [
+    {
+      "id": "clean_adnet_resnet18",
+      "model": "ADNet",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test\\adnet",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl",
+      "checkpoint_sha256": "c9b6a8fd7df445ee061d5e671259cabe334e3123609ea2cced943fbd174a1e5e",
+      "config_sha256": "6815fc9cda66026eb87d80d3871516e9a18e73c2ac388b896b207e636a102fdf",
+      "source_drift": [
+        "scripts\\benchmark.py",
+        "src\\lane_repro\\models.py"
+      ],
+      "source_provenance": {
+        "scripts\\benchmark.py": "bc97028af9b2eb880afc25818e1e51431dd4a0831fe2c4fc235940dab88de4b1",
+        "src\\lane_repro\\__init__.py": "359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1",
+        "src\\lane_repro\\adnet_compat.py": "cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad",
+        "src\\lane_repro\\culane_official.py": "2eef64671a2a6357e53cd21651398b6cdf4d616f6aef79ece318a2ba1d935e6b",
+        "src\\lane_repro\\data.py": "e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d",
+        "src\\lane_repro\\evaluation.py": "5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636",
+        "src\\lane_repro\\models.py": "147c1bd08e61fa0bfd5f0452920a171ccd1d3f4c370353c3b623da7e6bbdfdd6",
+        "src\\lane_repro\\nms.py": "98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166",
+        "src\\lane_repro\\prototype.py": "623cf1612a2a65be90d5decdc3734fc2c6eb63d9b2fdda29ed08be973b88e0ca"
+      },
+      "provenance_sha256": "508bd14958a503297d8b13b2d71b3951030c9e47708f5bd7ff9b73c097662b43",
+      "summary_sha256": "23e82d702c743d40debffba8ed22c11db868f7a12b665eab982915c5fc0c3299",
+      "status": "VERIFIED",
+      "table1_status": "NOT COMPARABLE",
+      "reason": "Exact paper checkpoint/configuration equivalence is not established",
+      "images": 2782,
+      "value_percent": 96.23434878983875,
+      "metric_definition": "Official TuSimple ACC, 200 ms gate enabled",
+      "predictions_sha256": "e79a2a26bc43dc025dae4e101ad0dba6847c780a1988089d078003c5bb38765a",
+      "annotations_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+      "scorer_sha256": "02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2",
+      "official_metrics": {
+        "Accuracy": 0.9623434878983874,
+        "FP": 0.029073807812125683,
+        "FN": 0.03280014378145216
+      }
+    },
+    {
+      "id": "clean_resa_resnet18",
+      "model": "RESA",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test\\resa",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl",
+      "checkpoint_sha256": "167d5ccefc4531d85c2d8793834eb7078bd8a8835335391b1a5095bc8a5cb4fe",
+      "config_sha256": "9f32680d92be9b26e0e7ea106a726ad72bb30bda79d2b73ca8d8a795256c70c2",
+      "source_drift": [
+        "scripts\\benchmark.py",
+        "src\\lane_repro\\models.py"
+      ],
+      "source_provenance": {
+        "scripts\\benchmark.py": "bc97028af9b2eb880afc25818e1e51431dd4a0831fe2c4fc235940dab88de4b1",
+        "src\\lane_repro\\__init__.py": "359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1",
+        "src\\lane_repro\\adnet_compat.py": "cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad",
+        "src\\lane_repro\\culane_official.py": "2eef64671a2a6357e53cd21651398b6cdf4d616f6aef79ece318a2ba1d935e6b",
+        "src\\lane_repro\\data.py": "e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d",
+        "src\\lane_repro\\evaluation.py": "5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636",
+        "src\\lane_repro\\models.py": "147c1bd08e61fa0bfd5f0452920a171ccd1d3f4c370353c3b623da7e6bbdfdd6",
+        "src\\lane_repro\\nms.py": "98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166",
+        "src\\lane_repro\\prototype.py": "623cf1612a2a65be90d5decdc3734fc2c6eb63d9b2fdda29ed08be973b88e0ca"
+      },
+      "provenance_sha256": "f7c56e587c0b704c0b6eb32eaf64760d805aad45aed37f7edd1fa33df49a3fb3",
+      "summary_sha256": "edcb7e14c0f98584a25391981d3ffe123356067ba507e6d64bcd60869e17a5bf",
+      "status": "VERIFIED",
+      "table1_status": "NOT COMPARABLE",
+      "reason": "Exact paper checkpoint/configuration equivalence is not established",
+      "images": 2782,
+      "value_percent": 96.695915066242,
+      "metric_definition": "Official TuSimple ACC, 200 ms gate enabled",
+      "predictions_sha256": "f83dfcb9b9dacb40a71d70c544827caca046297bc206929cbd1fb2c4a9e983b1",
+      "annotations_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+      "scorer_sha256": "02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2",
+      "official_metrics": {
+        "Accuracy": 0.96695915066242,
+        "FP": 0.03062544931703823,
+        "FN": 0.029774742391564826
+      }
+    },
+    {
+      "id": "clean_scnn_resnet18",
+      "model": "SCNN",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test\\scnn",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl",
+      "checkpoint_sha256": "6eaf98565acf2cb1528ce54447623f593883b1ef9556406d1270b16d9aaa7a15",
+      "config_sha256": "542143bd6eb4e4e4dce5ec6a3c79e63be9a8cc697056c4b84232d3887ec3303a",
+      "source_drift": [
+        "scripts\\benchmark.py",
+        "src\\lane_repro\\models.py"
+      ],
+      "source_provenance": {
+        "scripts\\benchmark.py": "bc97028af9b2eb880afc25818e1e51431dd4a0831fe2c4fc235940dab88de4b1",
+        "src\\lane_repro\\__init__.py": "359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1",
+        "src\\lane_repro\\adnet_compat.py": "cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad",
+        "src\\lane_repro\\culane_official.py": "2eef64671a2a6357e53cd21651398b6cdf4d616f6aef79ece318a2ba1d935e6b",
+        "src\\lane_repro\\data.py": "e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d",
+        "src\\lane_repro\\evaluation.py": "5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636",
+        "src\\lane_repro\\models.py": "147c1bd08e61fa0bfd5f0452920a171ccd1d3f4c370353c3b623da7e6bbdfdd6",
+        "src\\lane_repro\\nms.py": "98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166",
+        "src\\lane_repro\\prototype.py": "623cf1612a2a65be90d5decdc3734fc2c6eb63d9b2fdda29ed08be973b88e0ca"
+      },
+      "provenance_sha256": "ed976002aa43576ae763c396767a4276b93d411a6891a2859bdac7d53b30a055",
+      "summary_sha256": "3c66f8feda73c9f9fa3a4c527e25709333ce45da00ff0f1d93d4621ad69a0129",
+      "status": "VERIFIED",
+      "table1_status": "NOT COMPARABLE",
+      "reason": "Exact paper checkpoint/configuration equivalence is not established",
+      "images": 2782,
+      "value_percent": 96.08425550306362,
+      "metric_definition": "Official TuSimple ACC, 200 ms gate enabled",
+      "predictions_sha256": "afb599a803b10f3be30f0834dcdbe407931857f399054a0bc904762fbeb4ab9d",
+      "annotations_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+      "scorer_sha256": "02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2",
+      "official_metrics": {
+        "Accuracy": 0.9608425550306362,
+        "FP": 0.042343637670740585,
+        "FN": 0.04367361610352259
+      }
+    },
+    {
+      "id": "clean_adnet_resnet34",
+      "model": "ADNet",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test_r34\\adnet",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl",
+      "checkpoint_sha256": "0e3fc00abbe4aad7975c517a776b757d4d56d1cac8d5ae0c536d3d3a1dcd6885",
+      "config_sha256": "ad3753383ca0cc953d493d9b2356de05a28d427922246c57a610d741b73f0e9c",
+      "source_drift": [
+        "scripts\\benchmark.py",
+        "src\\lane_repro\\models.py"
+      ],
+      "source_provenance": {
+        "scripts\\benchmark.py": "bc97028af9b2eb880afc25818e1e51431dd4a0831fe2c4fc235940dab88de4b1",
+        "src\\lane_repro\\__init__.py": "359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1",
+        "src\\lane_repro\\adnet_compat.py": "cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad",
+        "src\\lane_repro\\culane_official.py": "2eef64671a2a6357e53cd21651398b6cdf4d616f6aef79ece318a2ba1d935e6b",
+        "src\\lane_repro\\data.py": "e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d",
+        "src\\lane_repro\\evaluation.py": "5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636",
+        "src\\lane_repro\\models.py": "147c1bd08e61fa0bfd5f0452920a171ccd1d3f4c370353c3b623da7e6bbdfdd6",
+        "src\\lane_repro\\nms.py": "98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166",
+        "src\\lane_repro\\prototype.py": "623cf1612a2a65be90d5decdc3734fc2c6eb63d9b2fdda29ed08be973b88e0ca"
+      },
+      "provenance_sha256": "19829e78d49fc19c9a0e75dba4a9a7a8467fe904f452e73bbd6ab9018c54cc5c",
+      "summary_sha256": "52c50ded664f0f94de6db89be8ab2f101c9c7bd102068d8ef1e15e23bbc20593",
+      "status": "VERIFIED",
+      "table1_status": "NOT COMPARABLE",
+      "reason": "Exact paper checkpoint/configuration equivalence is not established",
+      "images": 2782,
+      "value_percent": 96.59824210057795,
+      "metric_definition": "Official TuSimple ACC, 200 ms gate enabled",
+      "predictions_sha256": "c9fc50e9aa8bbf1f091ed01169cb34244baf3178bf2bc48fe659b173b033254a",
+      "annotations_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+      "scorer_sha256": "02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2",
+      "official_metrics": {
+        "Accuracy": 0.9659824210057795,
+        "FP": 0.028318955188114166,
+        "FN": 0.025311526479750816
+      }
+    },
+    {
+      "id": "clean_resa_resnet34",
+      "model": "RESA",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test_r34\\resa",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl",
+      "checkpoint_sha256": "edbec02639cd764fed0ca413c8312b0feb0cf925237d20d844c61d57b02681a2",
+      "config_sha256": "69d3fbe5cecad967e5b926ea57aecc3a5ca3cfcbbc9454efe6128829946b55e6",
+      "source_drift": [
+        "scripts\\benchmark.py",
+        "src\\lane_repro\\models.py"
+      ],
+      "source_provenance": {
+        "scripts\\benchmark.py": "bc97028af9b2eb880afc25818e1e51431dd4a0831fe2c4fc235940dab88de4b1",
+        "src\\lane_repro\\__init__.py": "359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1",
+        "src\\lane_repro\\adnet_compat.py": "cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad",
+        "src\\lane_repro\\culane_official.py": "2eef64671a2a6357e53cd21651398b6cdf4d616f6aef79ece318a2ba1d935e6b",
+        "src\\lane_repro\\data.py": "e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d",
+        "src\\lane_repro\\evaluation.py": "5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636",
+        "src\\lane_repro\\models.py": "147c1bd08e61fa0bfd5f0452920a171ccd1d3f4c370353c3b623da7e6bbdfdd6",
+        "src\\lane_repro\\nms.py": "98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166",
+        "src\\lane_repro\\prototype.py": "623cf1612a2a65be90d5decdc3734fc2c6eb63d9b2fdda29ed08be973b88e0ca"
+      },
+      "provenance_sha256": "cd3c66bfe8132117a643bfe33e64d120469e13bdaa031ed517e8e8772f799959",
+      "summary_sha256": "673e65ad411ea1dcb3f69cef0db9a324d8ea2892733e4c12aa4a4b70d3588252",
+      "status": "VERIFIED",
+      "table1_status": "NOT COMPARABLE",
+      "reason": "Exact paper checkpoint/configuration equivalence is not established",
+      "images": 2782,
+      "value_percent": 96.8189423504839,
+      "metric_definition": "Official TuSimple ACC, 200 ms gate enabled",
+      "predictions_sha256": "8f9ea51ca5b0e2dfcf481595adaed2b57f5a67da949e5d7cf691d52c997b3572",
+      "annotations_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+      "scorer_sha256": "02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2",
+      "official_metrics": {
+        "Accuracy": 0.9681894235048389,
+        "FP": 0.07987059669302585,
+        "FN": 0.024772346034028305
+      }
+    },
+    {
+      "id": "clean_laneatt_resnet34",
+      "model": "LaneATT",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test_r34_torch16_order\\laneatt",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl",
+      "checkpoint_sha256": "ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795",
+      "config_sha256": "f76a2c4c96bdb3d6e060dd983ea939532b56ee3180ad3fe8d10fc7c8e69682f2",
+      "source_drift": [
+        "scripts\\benchmark.py",
+        "src\\lane_repro\\models.py"
+      ],
+      "source_provenance": {
+        "scripts\\benchmark.py": "bc97028af9b2eb880afc25818e1e51431dd4a0831fe2c4fc235940dab88de4b1",
+        "src\\lane_repro\\__init__.py": "359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1",
+        "src\\lane_repro\\adnet_compat.py": "cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad",
+        "src\\lane_repro\\culane_official.py": "2eef64671a2a6357e53cd21651398b6cdf4d616f6aef79ece318a2ba1d935e6b",
+        "src\\lane_repro\\data.py": "e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d",
+        "src\\lane_repro\\evaluation.py": "5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636",
+        "src\\lane_repro\\models.py": "93129ce69b93ec8c14ffd76df2f52740eea1a4ab56effc6083870c52ed27e9ee",
+        "src\\lane_repro\\nms.py": "98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166",
+        "src\\lane_repro\\prototype.py": "623cf1612a2a65be90d5decdc3734fc2c6eb63d9b2fdda29ed08be973b88e0ca"
+      },
+      "provenance_sha256": "ab499781856ffd035e780a24e30383f832874d12730599b8c0dbc691196b6b1b",
+      "summary_sha256": "efb49ba879529cbf1996effdd60d81bc52b33abda96c499a5543b75c0dbe3e81",
+      "status": "VERIFIED",
+      "table1_status": "NOT COMPARABLE",
+      "reason": "Exact paper checkpoint/configuration equivalence is not established",
+      "images": 2782,
+      "value_percent": 95.63477799459051,
+      "metric_definition": "Official TuSimple ACC, 200 ms gate enabled",
+      "predictions_sha256": "14bc2fdf65b23c00d574b59ef6bc003a7c6576b8a36fcc0732906316e732e7f4",
+      "annotations_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+      "scorer_sha256": "02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2",
+      "official_metrics": {
+        "Accuracy": 0.956347779945905,
+        "FP": 0.03526240115025178,
+        "FN": 0.029235561945842318
+      }
+    },
+    {
+      "id": "clean_laneatt_resnet18",
+      "model": "LaneATT",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test_torch16_order\\laneatt",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl",
+      "checkpoint_sha256": "c36f79be814628b0f7cecdb4bfa224cf3fddf038bd4071de9bb8135b826f73ed",
+      "config_sha256": "5a04310a77ca8cf1d385541e1aa7e4a1ed18b92c8050f3a403077c3bfc7761fe",
+      "source_drift": [
+        "scripts\\benchmark.py",
+        "src\\lane_repro\\models.py"
+      ],
+      "source_provenance": {
+        "scripts\\benchmark.py": "bc97028af9b2eb880afc25818e1e51431dd4a0831fe2c4fc235940dab88de4b1",
+        "src\\lane_repro\\__init__.py": "359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1",
+        "src\\lane_repro\\adnet_compat.py": "cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad",
+        "src\\lane_repro\\culane_official.py": "2eef64671a2a6357e53cd21651398b6cdf4d616f6aef79ece318a2ba1d935e6b",
+        "src\\lane_repro\\data.py": "e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d",
+        "src\\lane_repro\\evaluation.py": "5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636",
+        "src\\lane_repro\\models.py": "93129ce69b93ec8c14ffd76df2f52740eea1a4ab56effc6083870c52ed27e9ee",
+        "src\\lane_repro\\nms.py": "98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166",
+        "src\\lane_repro\\prototype.py": "623cf1612a2a65be90d5decdc3734fc2c6eb63d9b2fdda29ed08be973b88e0ca"
+      },
+      "provenance_sha256": "7e558bed2fcb2ab4ba8c31b737c87af85aba27e127f7134eb18f820b5553d782",
+      "summary_sha256": "cb241e885fcb7c8ebdb5eee45092e1f6aa195411abafa9f51b12efbc6e33d0c3",
+      "status": "VERIFIED",
+      "table1_status": "NOT COMPARABLE",
+      "reason": "Exact paper checkpoint/configuration equivalence is not established",
+      "images": 2782,
+      "value_percent": 95.5710177672785,
+      "metric_definition": "Official TuSimple ACC, 200 ms gate enabled",
+      "predictions_sha256": "2c382e5bc54ff269c229a5dc3a76a86a5e7aa280f70e136cd1823df8386995d5",
+      "annotations_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+      "scorer_sha256": "02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2",
+      "official_metrics": {
+        "Accuracy": 0.9557101776727851,
+        "FP": 0.03570572729451249,
+        "FN": 0.03019410496046009
+      }
+    }
+  ],
+  "rejected": [],
+  "phase1_complete": false
+}

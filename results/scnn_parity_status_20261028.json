@@ -1,0 +1,10 @@
+{
+  "source": "results/overnight/reference_versions/scnn/comparison.json",
+  "passed": false,
+  "tolerance_px": 0.2,
+  "samples": 16,
+  "failed": 16,
+  "input_max_difference": 0.0,
+  "validity_mismatches": 16,
+  "conclusion": "Identical preprocessed inputs; output validity differs. Root cause not isolated; do not claim legacy runtime equivalence."
+}
