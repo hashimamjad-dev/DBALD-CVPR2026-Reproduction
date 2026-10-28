@@ -19,3 +19,15 @@ Tests: 28 passed; final recovery-specific rerun 5 passed. The seven full TuSimpl
 CULane recovery uses the existing `download` function with `transport='curl'`, `chunk_size=262144`, and known official archive totals checked against every accepted Content-Range. Driver_100 uses four workers, driver_193 sixteen. Both partial archives remain resumable. Complete archive CRC validation and dataset integrity checks are still required before full evaluation.
 
 Official source checks on 28 October 2026: https://xingangpan.github.io/projects/CULane.html links Google Drive and https://pan.baidu.com/s/1KUtzC24cH20n6BtU5D0oyw . The latter could not be opened by the web tool. https://sites.google.com/view/dbald/overview exposed no code link in the retrieved page. The CVF paper landing page returned HTTP 403. These checks do not prove that no author code exists elsewhere, nor resolve the missing exact CULane point-ACC protocol.
+
+## Completed driver_100 recovery and full-run safeguards
+
+The driver_100 archive completed at 5,099,277,019 bytes and passed the full gzip CRC read. SHA256: `0c892fe9f7b8b24eed5b5158f9c5cf546ab5b6e31c9251b55b36a19c460309b2`. Extraction added 21,641 files and confirmed 14,817 existing files byte-identical. One pre-existing truncated JPEG was moved intact into `datasets/raw/culane/recovery_preserved/` before restoring the correct archive copy. Its original hash and path are saved in `results/culane_recovered_truncated_image.json`. No evidence was deleted.
+
+All **17,702 driver_100 test image/annotation pairs pass** decoding, dimensions, JPEG end-marker and annotation validation (`results/culane_driver100_validated.json`). Driver_193 is still transferring; this is not full CULane completion.
+
+Appendix C of https://arxiv.org/html/2508.15778v2#A3 explicitly specifies ResNet-34 for all four detectors. `configs/table1_author_protocol.json` records this verified requirement. The full clean launcher now records backbone matches separately from checkpoint equivalence. Our SCNN CULane R50 checkpoint does not match this requirement; it remains a supporting clean baseline only.
+
+`scripts/benchmark_culane.py` now checks every resumed prediction key, finite runtime and exported-file hash before accepting saved work, and requires exact full coverage before scoring. Duplicate, unknown and corrupted resume records are rejected. The final relevant regression suite passed **50 tests** (`results/culane_recovery_final_regression.xml`). No full TuSimple accuracy run was repeated.
+
+Full transfer/validation/evaluation continuation is logged to `results/culane_completion_pipeline.log`. It waits for the exact driver_193 size, runs `scripts/extract_culane_missing.py driver_193_90frame.tar.gz`, then `scripts/run_culane_full.py --output results/full_culane_recovered_20261028 --execute`. The latter refuses inference until the complete split passes integrity checks. Its metric is official CULane F1, not an asserted DBALD point-ACC reproduction.

@@ -1,0 +1,11 @@
+{
+  "source": "https://arxiv.org/html/2508.15778v2#A3",
+  "source_version": "2508.15778v2, 25 March 2026, Appendix C",
+  "required_backbone": "resnet34",
+  "models": ["LaneATT", "ADNet", "SCNN", "RESA"],
+  "culane_test_count": 34680,
+  "tusimple_test_count": 2782,
+  "exact_author_checkpoint_hashes": null,
+  "culane_point_sampling_and_matching": null,
+  "note": "Appendix specifies the unified backbone; matching it alone does not establish checkpoint or metric equivalence."
+}
