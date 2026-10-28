@@ -24,11 +24,17 @@ def main():
     with ThreadPoolExecutor(max_workers=4) as pool:
         issues = [r for r in pool.map(check, keys) if not r['ready']]
     commands = []
+    lineage=[]
+    protocol=json.loads((ROOT/'configs/table1_author_protocol.json').read_text())
     for model, folder in [('LaneATT','culane_smoke_torch16_order/laneatt'), ('ADNet','culane_smoke_r34/adnet'),
                           ('SCNN','culane_smoke_r34/scnn'), ('RESA','culane_smoke_r34/resa')]:
         source = ROOT/'results/overnight'/folder
         config = json.loads((source/'run_config.json').read_text())
         provenance = json.loads((source/'model_provenance.json').read_text())
+        lineage.append(dict(model=model,checkpoint=provenance['checkpoint'],backbone=config['backbone'],
+                            required_backbone=protocol['required_backbone'],
+                            backbone_matches_paper=config['backbone']==protocol['required_backbone'],
+                            exact_checkpoint_equivalence=False))
         command = [sys.executable, str(ROOT/'scripts/benchmark_culane.py'), '--model',model,
                    '--backbone',config['backbone'], '--checkpoint',provenance['checkpoint'],
                    '--expected-count','34680','--output',str(out/model.lower())]
@@ -36,7 +42,7 @@ def main():
             command += ['--config',provenance['config']]
         commands.append(command)
     report = dict(expected=34680, ready=34680-len(issues), blocked=len(issues)>0, commands=commands,
-                  metric='Official CULane IoU/F1; NOT Table 1 ACC', executions=[])
+                  metric='Official CULane IoU/F1; NOT Table 1 ACC', lineage=lineage, executions=[])
     (out/'readiness.json').write_text(json.dumps(report,indent=2))
     (out/'missing.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in issues))
     if issues:
