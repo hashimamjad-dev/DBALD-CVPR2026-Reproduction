@@ -3,6 +3,7 @@ import argparse
 import json
 from pathlib import Path
 import time
+import math
 import numpy as np
 import torch
 from benchmark import ROOT,digest,hardware,overlay
@@ -10,6 +11,22 @@ from lane_repro.data import culane
 from lane_repro.models import LaneATTAdapter,ADNetAdapter,SegmentationAdapter,sample_predictions
 from lane_repro.culane_official import prediction_text,score
 import cv2
+
+def resume_records(recordfile,prediction_root,keys):
+    """Reject incomplete or mismatched saved exports before resumed inference."""
+    records={}
+    if not recordfile.exists(): return records
+    allowed=set(keys)
+    for line in recordfile.read_text().splitlines():
+        row=json.loads(line); key=row['raw_file']
+        if key not in allowed or key in records: raise ValueError('Unexpected or duplicate saved prediction')
+        elapsed=row['run_time_ms']
+        if not math.isfinite(elapsed) or elapsed<0: raise ValueError('Invalid saved runtime')
+        path=(prediction_root/key).with_suffix('.lines.txt').resolve()
+        if not path.is_relative_to(prediction_root.resolve()): raise ValueError('Unsafe prediction path')
+        if not path.is_file() or digest(path)!=row['prediction_sha256']: raise ValueError('Saved prediction export hash mismatch')
+        records[key]=row
+    return records
 
 def main():
     p=argparse.ArgumentParser(); p.add_argument('--model',required=True,choices=['LaneATT','ADNet','SCNN','RESA'])
@@ -35,10 +52,9 @@ def main():
     else: model=SegmentationAdapter(args.model,args.checkpoint,args.config,'cuda')
     (out/'model_provenance.json').write_text(json.dumps(model.provenance(),indent=2))
     ys=list(range(590)) if args.model=='LaneATT' else list(model.cfg.sample_y)
-    model.predict(samples[0].read()); records={}; recordfile=out/'predictions.jsonl'
-    if recordfile.exists():
-        for line in recordfile.read_text().splitlines():
-            r=json.loads(line); records[r['raw_file']]=r
+    recordfile=out/'predictions.jsonl'
+    records=resume_records(recordfile,out/'lanes',[s.key for s in samples])
+    model.predict(samples[0].read())
     with recordfile.open('a') as log,(out/'hardware.jsonl').open('a') as hw:
         for i,s in enumerate(samples):
             dest=(out/'lanes'/s.key).with_suffix('.lines.txt')
@@ -59,6 +75,7 @@ def main():
             if i<3:
                 vis=out/'visualizations'; vis.mkdir(exist_ok=True)
                 cv2.imwrite(str(vis/f'{i}_prediction.png'),overlay(image,sample_predictions(lanes,ys,1640,590),ys))
+    if set(records)!={s.key for s in samples}: raise ValueError('Incomplete prediction coverage')
     result=score(out/'lanes',args.root,args.list,out/'official.txt')
     result.update(model=args.model,backbone=args.backbone,dataset='CULane',split='test',scope='full_test' if len(samples)==34680 else 'subset',
         median_ms=float(np.median([r['run_time_ms'] for r in records.values()])),p95_ms=float(np.percentile([r['run_time_ms'] for r in records.values()],95)),

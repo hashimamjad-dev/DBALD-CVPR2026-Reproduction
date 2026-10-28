@@ -1,19 +1,15 @@
 {
   "expected": 34680,
-  "ready": 10332,
-  "issues": {
-    "missing_image": 24318,
-    "missing_annotation": 24320,
-    "missing_jpeg_end_marker": 1
-  },
+  "ready": 34680,
+  "issues": {},
   "groups": {
     "driver_100_30frame": {
       "listed": 17702,
-      "ready": 6975
+      "ready": 17702
     },
     "driver_193_90frame": {
       "listed": 13621,
-      "ready": 0
+      "ready": 13621
     },
     "driver_37_30frame": {
       "listed": 3357,
