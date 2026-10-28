@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-28",
+  "archive": "driver_100_30frame.tar.gz",
+  "source": "official CULane Google Drive archive referenced by scripts/fetch_culane_test.py",
+  "http_probe_status": 206,
+  "expected_bytes": 5099277019,
+  "initial_contiguous_bytes": 3590807552,
+  "last_observed_contiguous_bytes": 3825688576,
+  "last_observed_progress_local": "2026-10-28T11:42:22+05:00",
+  "stall_observation_local": "2026-10-28T11:44:47+05:00",
+  "status": "interrupted_after_more_than_two_minutes_without_contiguous_progress",
+  "downloaded_bytes_preserved": true,
+  "extraction_attempted": false,
+  "remaining_driver_193_archive_bytes_from_probe": 4507915856,
+  "note": "Archive completion and CRC integrity are not established. Source accepts a byte probe, but this bounded execution did not finish the resumed transfer. No partial archive was extracted."
+}
