@@ -1,0 +1,11 @@
+{
+  "legacy_torch": "1.8.0+cpu",
+  "legacy_threads": 1,
+  "modern_torch": "2.7.1+cu128",
+  "modern_device": "cuda",
+  "images": 16,
+  "passed": true,
+  "max_pixel_difference": 0.0,
+  "checkpoint_sha256": "6eaf98565acf2cb1528ce54447623f593883b1ef9556406d1270b16d9aaa7a15",
+  "scope": "16-image runtime parity diagnostic; not full-test paper equivalence"
+}

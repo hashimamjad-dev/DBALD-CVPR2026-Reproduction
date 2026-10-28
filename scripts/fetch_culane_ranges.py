@@ -21,7 +21,9 @@ def curl_range(url,lo,hi,expected,dest):
     part.rename(dest)
 
 
-def download(file_id,path,transport='requests',expected_size=None):
+def download(file_id,path,transport='requests',expected_size=None,chunk_size=8*1024*1024,workers=4):
+    if transport not in ('requests','curl') or chunk_size <= 0 or not 1<=workers<=16:
+        raise ValueError('Invalid transport or chunk size')
     base=f'https://drive.usercontent.google.com/download?id={file_id}&export=download&confirm=t'
     if expected_size is not None:
         expected=expected_size  # Every accepted response must confirm this total.
@@ -32,7 +34,6 @@ def download(file_id,path,transport='requests',expected_size=None):
     if start>expected: raise ValueError('Existing archive larger than server object')
     if start==expected: return
     chunkdir=path.parent/(path.name+'.chunks'); chunkdir.mkdir(exist_ok=True)
-    chunk_size=8*1024*1024
     ranges=[(lo,min(lo+chunk_size,expected)-1) for lo in range(start,expected,chunk_size)]
     def get(interval):
         lo,hi=interval; dest=chunkdir/f'{lo}-{hi}.chunk'
@@ -57,8 +58,8 @@ def download(file_id,path,transport='requests',expected_size=None):
                 if attempt==2: raise
                 time.sleep(2**attempt)
     ready={}; next_byte=start
-    with path.open('ab') as output,ThreadPoolExecutor(max_workers=4) as pool:
-        pending=iter(ranges); futures={pool.submit(get,x) for x in [next(pending,None) for _ in range(min(4,len(ranges)))] if x is not None}; n=0
+    with path.open('ab') as output,ThreadPoolExecutor(max_workers=workers) as pool:
+        pending=iter(ranges); futures={pool.submit(get,x) for x in [next(pending,None) for _ in range(min(workers,len(ranges)))] if x is not None}; n=0
         while futures:
             done,futures=wait(futures,return_when=FIRST_COMPLETED)
             for future in done:

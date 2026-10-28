@@ -19,3 +19,17 @@ def test_curl_checks_range_before_accepting(tmp_path,monkeypatch,range_header,ac
         with pytest.raises(ValueError): recovery.curl_range('https://example.invalid',0,3,10,dest)
         assert not dest.exists()
         assert list(tmp_path.glob('*.part'))
+
+
+def test_small_ranges_resume_without_replacing_prefix(tmp_path,monkeypatch):
+    archive=tmp_path/'archive.gz'; archive.write_bytes(bytes(range(3)))
+    def transfer(url,lo,hi,expected,dest):
+        dest.write_bytes(bytes(range(lo,hi+1)))
+    monkeypatch.setattr(recovery,'curl_range',transfer)
+    recovery.download('fixture',archive,transport='curl',expected_size=10,chunk_size=4)
+    assert archive.read_bytes()==bytes(range(10))
+
+
+def test_invalid_chunk_size_fails_before_network(tmp_path):
+    with pytest.raises(ValueError):
+        recovery.download('fixture',tmp_path/'archive',chunk_size=0)
