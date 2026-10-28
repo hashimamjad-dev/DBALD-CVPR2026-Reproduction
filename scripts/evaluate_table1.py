@@ -42,7 +42,13 @@ def verified_average(values, expected_count):
 def verify(record, output):
     require(record['model'] in MODELS, 'Unknown model')
     require(record['dataset'] in ('TuSimple', 'CULane'), 'Unknown dataset')
-    require(record['metric'] == 'benign_acc', 'No independently validated importer for this metric; leave NOT MEASURED')
+    require(record['metric'] in ('benign_acc','poisoned_acc'), 'No independently validated importer for this metric; leave NOT MEASURED')
+    if record['metric'] == 'poisoned_acc':
+        require(record.get('method') in METHODS, 'Poisoned-model evidence needs a named method')
+        provenance_file = ROOT/record['experiment_provenance']
+        require(sha(provenance_file) == record['experiment_provenance_sha256'], 'Experiment provenance hash mismatch')
+        experiment = read(provenance_file)
+        require(experiment['evaluation_input'] == 'clean', 'P-ACC requires clean evaluation inputs')
     folder = ROOT / record['evidence']
     spec = read(folder/'run_config.json')
     provenance = read(folder/'model_provenance.json')
@@ -52,6 +58,8 @@ def verify(record, output):
     checkpoint = ROOT / provenance['checkpoint']
     digest = sha(checkpoint)
     require(digest == spec['checkpoint_sha256'] == provenance['checkpoint_sha256'], 'Checkpoint hash mismatch')
+    if record['metric'] == 'poisoned_acc':
+        require(experiment['checkpoint_sha256'] == digest, 'Experiment/checkpoint mismatch')
     require(provenance.get('strict_state_dict') is True, 'Strict checkpoint loading not established')
     config = provenance.get('config')
     if spec.get('config_sha256'):
@@ -115,7 +123,8 @@ def cells(reference, records):
         for dataset in ('CULane', 'TuSimple'):
             metrics = ['benign_acc','poisoned_acc','lda_asr'] + (['lra_asr'] if dataset == 'CULane' else []) + ['loa_asr','avg_asr']
             for metric in metrics:
-                supporting = [r for r in records if r['model'] == row['model'] and r['dataset'] == dataset and r['metric'] == metric]
+                supporting = [r for r in records if r['model'] == row['model'] and r['dataset'] == dataset and r['metric'] == metric
+                              and (metric == 'benign_acc' or r.get('method','').lower() == row['attack'].lower())]
                 value = float(row[dataset.lower()+'_'+metric])
                 require(math.isfinite(value) and 0 <= value <= 100, 'Invalid reference value')
                 result.append(dict(dataset=dataset, model=row['model'], method=row['attack'], metric=metric,
