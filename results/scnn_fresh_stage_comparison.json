@@ -1,0 +1,38 @@
+{
+  "legacy_cpu vs milestone_legacy_cpu": {
+    "input": {
+      "max_abs": 0.0,
+      "mean_abs": 0.0
+    },
+    "backbone": {
+      "max_abs": 0.0,
+      "mean_abs": 0.0
+    },
+    "aggregator": {
+      "max_abs": 3.3394181728363037,
+      "mean_abs": 0.12374421954154968
+    },
+    "logits": {
+      "max_abs": 1.0262012481689453,
+      "mean_abs": 0.21857425570487976
+    }
+  },
+  "milestone_legacy_cpu vs milestone_modern_cpu": {
+    "input": {
+      "max_abs": 0.0,
+      "mean_abs": 0.0
+    },
+    "backbone": {
+      "max_abs": 2.384185791015625e-06,
+      "mean_abs": 1.7157309173398971e-07
+    },
+    "aggregator": {
+      "max_abs": 19.685020446777344,
+      "mean_abs": 1.516213297843933
+    },
+    "logits": {
+      "max_abs": 20.480836868286133,
+      "mean_abs": 3.6559743881225586
+    }
+  }
+}

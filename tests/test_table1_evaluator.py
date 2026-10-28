@@ -38,3 +38,10 @@ def test_clean_evidence_never_fills_poisoned_cells():
     rows = cells(list(csv.DictReader((ROOT/'results/reference/table1.csv').open())), records)
     assert sum(r['status'] == 'NOT COMPARABLE' for r in rows) == 5
     assert all(r['status'] == 'NOT MEASURED' for r in rows if r['metric'] != 'benign_acc')
+
+
+def test_poisoned_accuracy_is_method_specific():
+    record=dict(model='LaneATT',dataset='TuSimple',metric='poisoned_acc',method='DBALD',id='fixture',value_percent=90,reason='Unresolved lineage')
+    rows=cells(list(csv.DictReader((ROOT/'results/reference/table1.csv').open())),[record])
+    supporting=[r for r in rows if r['status']=='NOT COMPARABLE']
+    assert len(supporting)==1 and supporting[0]['method']=='DBALD'

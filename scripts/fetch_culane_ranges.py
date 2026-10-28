@@ -4,17 +4,36 @@ from pathlib import Path
 import shutil
 import time
 import requests
+import subprocess
+import re
 import fetch_culane_test as official
 
-def download(file_id,path):
+def curl_range(url,lo,hi,expected,dest):
+    """Hard deadline fallback; validate HTTP range before accepting any bytes."""
+    part=dest.with_name(dest.name+f'.curl-{time.time_ns()}.part')
+    headers=part.with_suffix('.headers')
+    subprocess.run(['C:/Windows/System32/curl.exe','--location','--fail','--silent','--show-error',
+        '--connect-timeout','15','--max-time','90','--range',f'{lo}-{hi}',
+        '--dump-header',str(headers),'--output',str(part),url],check=True,timeout=100)
+    ranges=re.findall(r'(?im)^content-range:\s*bytes\s+(\d+)-(\d+)/(\d+)\s*$',headers.read_text())
+    if not ranges or tuple(map(int,ranges[-1]))!=(lo,hi,expected) or part.stat().st_size!=hi-lo+1:
+        raise ValueError('curl response range/size mismatch; partial evidence retained')
+    part.rename(dest)
+
+
+def download(file_id,path,transport='requests',expected_size=None,chunk_size=8*1024*1024,workers=4):
+    if transport not in ('requests','curl') or chunk_size <= 0 or not 1<=workers<=16:
+        raise ValueError('Invalid transport or chunk size')
     base=f'https://drive.usercontent.google.com/download?id={file_id}&export=download&confirm=t'
-    with requests.get(base+'&size_probe=bounded',headers={'Range':'bytes=0-0'},stream=True,timeout=60) as r:
-        r.raise_for_status(); expected=int(r.headers['Content-Range'].split('/')[-1])
+    if expected_size is not None:
+        expected=expected_size  # Every accepted response must confirm this total.
+    else:
+        with requests.get(base+'&size_probe=bounded',headers={'Range':'bytes=0-0'},stream=True,timeout=60) as r:
+            r.raise_for_status(); expected=int(r.headers['Content-Range'].split('/')[-1])
     start=path.stat().st_size if path.exists() else 0
     if start>expected: raise ValueError('Existing archive larger than server object')
     if start==expected: return
     chunkdir=path.parent/(path.name+'.chunks'); chunkdir.mkdir(exist_ok=True)
-    chunk_size=8*1024*1024
     ranges=[(lo,min(lo+chunk_size,expected)-1) for lo in range(start,expected,chunk_size)]
     def get(interval):
         lo,hi=interval; dest=chunkdir/f'{lo}-{hi}.chunk'
@@ -22,6 +41,9 @@ def download(file_id,path):
         for attempt in range(3):
             try:
                 if shutil.disk_usage(path.parent).free<2*1024**3: raise RuntimeError('Low disk space')
+                if transport=='curl':
+                    curl_range(base+f'&bounded_range={lo}-{hi}&attempt={attempt}&nonce={time.time_ns()}',lo,hi,expected,dest)
+                    return lo,hi,dest
                 response=requests.get(base+f'&bounded_range={lo}-{hi}&attempt={attempt}&request_nonce={time.time_ns()}',headers={'Range':f'bytes={lo}-{hi}'},timeout=(30,90))
                 response.raise_for_status()
                 if 'text/html' in response.headers.get('Content-Type','') and 'Quota exceeded' in response.text:
@@ -36,8 +58,8 @@ def download(file_id,path):
                 if attempt==2: raise
                 time.sleep(2**attempt)
     ready={}; next_byte=start
-    with path.open('ab') as output,ThreadPoolExecutor(max_workers=4) as pool:
-        pending=iter(ranges); futures={pool.submit(get,x) for x in [next(pending,None) for _ in range(min(4,len(ranges)))] if x is not None}; n=0
+    with path.open('ab') as output,ThreadPoolExecutor(max_workers=workers) as pool:
+        pending=iter(ranges); futures={pool.submit(get,x) for x in [next(pending,None) for _ in range(min(workers,len(ranges)))] if x is not None}; n=0
         while futures:
             done,futures=wait(futures,return_when=FIRST_COMPLETED)
             for future in done:
