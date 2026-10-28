@@ -1,0 +1,25 @@
+{
+  "expected": 34680,
+  "ready": 10332,
+  "issues": {
+    "missing_image": 24318,
+    "missing_annotation": 24320,
+    "missing_jpeg_end_marker": 1
+  },
+  "groups": {
+    "driver_100_30frame": {
+      "listed": 17702,
+      "ready": 6975
+    },
+    "driver_193_90frame": {
+      "listed": 13621,
+      "ready": 0
+    },
+    "driver_37_30frame": {
+      "listed": 3357,
+      "ready": 3357
+    }
+  },
+  "test_list_sha256": "31180e019fe40cc5e8785e9c456b5b5ac242fe4e35a9d0d38d6d5e06e31b3ea9",
+  "validation": "Decode present images at 1640x590; validate finite paired annotation coordinates. Does not establish Table 1 metric equivalence."
+}

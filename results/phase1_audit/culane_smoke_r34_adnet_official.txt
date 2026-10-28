@@ -1,0 +1,6 @@
+file: D:\DBALD-CVPR2026-Reproduction\results\phase1_audit\culane_smoke_r34_adnet_official.txt
+tp: 27 fp: 9 fn: 17
+precision: 0.75
+recall: 0.613636
+Fmeasure: 0.675
+
