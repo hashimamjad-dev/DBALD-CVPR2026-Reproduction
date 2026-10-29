@@ -1,0 +1,10 @@
+{
+  "architecture": "SCNN",
+  "implementation": "Turoad/lanedet",
+  "checkpoint": "models\\checkpoints\\ssd\\zhengtu\\releasev2\\scnn_r50_culane\\scnn_r50_culane.pth",
+  "checkpoint_sha256": "3507dc1ce7128c11f2a404115c579a1a29679efa94cf55930adb5f3216234ec8",
+  "device": "cuda",
+  "strict_state_dict": true,
+  "config": "third_party/lanedet/configs/scnn/resnet50_culane.py",
+  "preprocessing": "BGR, configured crop/resize/mean/std"
+}

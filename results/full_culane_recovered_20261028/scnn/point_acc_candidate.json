@@ -1,0 +1,25 @@
+{
+  "protocol": {
+    "id": "culane_annotation_vertices_linear_assignment_v1",
+    "threshold_px": 20,
+    "comparison": "strict_less_than",
+    "sampling": "annotation_vertices",
+    "interpolation": "linear_no_extrapolation",
+    "matching": "one_to_one_max_correct_points",
+    "aggregation": "pooled_points",
+    "runtime_gate": false,
+    "extra_prediction_penalty": false,
+    "author_verified": false,
+    "table1_comparable": false
+  },
+  "images": 34680,
+  "full_test": true,
+  "correct": 1828532,
+  "total": 2680050,
+  "candidate_acc_percent": 68.2275330684129,
+  "predictions_tree_sha256": "201d1cd1354bdbeb9d7fd991c9c65d4c5a50be7e4d04c9f2a1f71fb5ccd96ac3",
+  "annotations_tree_sha256": "af6f734de99c2b83b06f3274daa41fd708d6f99418639d02158e8cf09995ebe4",
+  "list_sha256": "31180e019fe40cc5e8785e9c456b5b5ac242fe4e35a9d0d38d6d5e06e31b3ea9",
+  "status": "NOT COMPARABLE",
+  "reason": "Author sampling/matching/aggregation conventions not independently established"
+}

@@ -1,0 +1,6 @@
+file: D:\DBALD-CVPR2026-Reproduction\results\culane_independent_completed\culane_laneatt.official.txt
+tp: 74697 fp: 15260 fn: 30189
+precision: 0.830363
+recall: 0.712173
+Fmeasure: 0.76674
+

@@ -45,3 +45,13 @@ def test_poisoned_accuracy_is_method_specific():
     rows=cells(list(csv.DictReader((ROOT/'results/reference/table1.csv').open())),[record])
     supporting=[r for r in rows if r['status']=='NOT COMPARABLE']
     assert len(supporting)==1 and supporting[0]['method']=='DBALD'
+
+
+def test_independent_r34_baseline_does_not_require_private_author_weights():
+    record=dict(model='LaneATT',dataset='TuSimple',metric='benign_acc',backbone='resnet34',
+                comparison_basis='official_tusimple',status='VERIFIED',images=2782,id='independent',
+                value_percent=95.6,reason='Independent checkpoint')
+    rows=cells(list(csv.DictReader((ROOT/'results/reference/table1.csv').open())),[record])
+    measured=[r for r in rows if r['status']=='MEASURED INDEPENDENT BASELINE']
+    assert len(measured)==5 and all(r['local_equivalent_percent']==95.6 for r in measured)
+    assert all(r['local_equivalent_percent']=='' for r in rows if r['metric']!='benign_acc')

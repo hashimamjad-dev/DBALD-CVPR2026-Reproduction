@@ -1,0 +1,6 @@
+file: D:\DBALD-CVPR2026-Reproduction\results\full_culane_recovered_20261028\adnet\official.txt
+tp: 77359 fp: 13688 fn: 27527
+precision: 0.84966
+recall: 0.737553
+Fmeasure: 0.789647
+
