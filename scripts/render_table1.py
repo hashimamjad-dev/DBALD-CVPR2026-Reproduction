@@ -10,6 +10,7 @@ import json
 import math
 from pathlib import Path
 import sys
+import argparse
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT/'src'))
@@ -17,13 +18,39 @@ from lane_repro.evaluation import official_tusimple
 
 
 def main():
-    out = ROOT/'results/phase1_audit'
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',default='results/phase1_audit')
+    parser.add_argument('--evidence',default='results/phase1_audit/clean_rescore.json')
+    parser.add_argument('--additional-evidence',action='append',default=[])
+    args=parser.parse_args()
+    out = (ROOT/args.output).resolve()
+    if not out.is_relative_to(ROOT/'results') or out.is_relative_to(ROOT/'results/reference'):
+        raise ValueError('Use a results output directory outside immutable reference')
+    out.mkdir(parents=True,exist_ok=True)
     reference = ROOT/'results/reference/table1.csv'
     manifest = json.loads((reference.parent/'manifest.json').read_text())
     assert hashlib.sha256(reference.read_bytes()).hexdigest() == manifest['sha256']
     rows = list(csv.DictReader(reference.open()))
     assert len(rows) == 20
-    evidence = json.loads((out/'clean_rescore.json').read_text())['verified']
+    evidence = json.loads((ROOT/args.evidence).read_text())['verified']
+    if args.additional_evidence:
+        evidence=[r for r in evidence if r['dataset']=='TuSimple']
+        for source in args.additional_evidence:
+            for r in json.loads((ROOT/source).read_text())['verified']:
+                if r['status']!='VERIFIED' or r['dataset']!='CULane' or r['images']!=34680:
+                    raise ValueError('Additional evidence must be verified full CULane output')
+                spec=json.loads((ROOT/r['evidence']/'run_config.json').read_text())
+                evidence.append(dict(r,backbone=spec['backbone'],metric=r['metric_definition']))
+                candidate_path=ROOT/r['evidence']/'point_acc_candidate.json'
+                if candidate_path.exists():
+                    candidate=json.loads(candidate_path.read_text())
+                    if candidate['images']!=34680 or not candidate['full_test'] or candidate['total']<=0:
+                        raise ValueError('Candidate point ACC lacks full coverage')
+                    value=100*candidate['correct']/candidate['total']
+                    if not 0<=value<=100 or abs(value-candidate['candidate_acc_percent'])>1e-9 or candidate['protocol']['table1_comparable']:
+                        raise ValueError('Invalid candidate point ACC or equivalence claim')
+                    evidence.append(dict(r,backbone=spec['backbone'],value_percent=value,
+                                         metric='UNCONFIRMED pooled 20px point ACC; see protocol file'))
     fresh = out/'laneatt_full_cuda_verified'
     verification = None
     if (fresh/'completed.json').exists():
@@ -68,7 +95,7 @@ def main():
                f"LaneATT ResNet-34, full TuSimple test split: {verification['images']} images, official ACC **{verification['acc_percent']:.6f}%**, runtime-gate failures {verification['runtime_failures']}. Independently re-scored with the official submission entry point.",
                '', 'Evidence: `laneatt_full_cuda_verified/` and `fresh_clean_verification.json`.']
     md += ['', '## Reproduction status','',
-           'All local poisoned-model clean ACC and attack ASR cells remain unmeasured in this audit. Full CULane evaluation, exact paper configurations/checkpoints, and SCNN cross-version parity remain unresolved. Phase 1 is incomplete.',
+           'All local poisoned-model clean ACC and attack ASR cells remain unmeasured in this audit. Full CULane F1 evidence, where shown, does not establish paper point-ACC equivalence. Exact training/configuration equivalence remains unresolved. Phase 1 is incomplete.',
            '', 'Code: `scripts/render_table1.py` renders this comparison; `scripts/audit_table1.py` validates prior clean evidence and generates the 220-cell status CSV. No poisoning or training is performed by either script.']
     (out/'Table1_Comparison.md').write_text('\n'.join(md)+'\n',encoding='utf-8')
     def table(headers, records):
@@ -78,8 +105,15 @@ def main():
     page += table(['Dataset','Model','Backbone','Images','Clean result %','Metric'],clean)
     if verification:
         page += f'<h2>Fresh GPU evaluation</h2><p>LaneATT ResNet-34: {verification["images"]} TuSimple test images; official ACC {verification["acc_percent"]:.6f}%. Independently re-scored.</p>'
-    page += '<h2>Phase 1 remains incomplete</h2><p>Poisoned-model ACC and ASR remain unmeasured in this audit. Full CULane evaluation and implementation equivalence remain unresolved.</p></html>'
+    page += '<h2>Phase 1 remains incomplete</h2><p>Poisoned-model ACC and ASR remain unmeasured. Full CULane F1 is not established as paper point ACC; exact training/configuration equivalence remains unresolved.</p></html>'
     (out/'Table1_Comparison.html').write_text(page,encoding='utf-8')
+    from evaluate_table1 import cells
+    supporting=[dict(r,id=r['model']+'_'+r['backbone']+' ['+r['metric']+']',metric='benign_acc',status='VERIFIED',
+                     comparison_basis='official_tusimple' if r['dataset']=='TuSimple' and r['metric']=='official TuSimple ACC' else 'unconfirmed',
+                     reason='Verified clean baseline; paper training/metric equivalence unconfirmed') for r in evidence]
+    status=cells(rows,supporting)
+    with (out/'table1_status.csv').open('w',newline='',encoding='utf-8') as stream:
+        writer=csv.DictWriter(stream,fieldnames=list(status[0])); writer.writeheader(); writer.writerows(status)
     print(json.dumps(dict(published_rows=len(rows),verified_prior_runs=len(evidence),fresh_clean=verification)))
 
 

@@ -71,11 +71,11 @@ def verify(record, output):
     summary = next(s for s in summaries if s['transformation'] == 'clean')
     source_drift = [path for path, expected in spec['source_sha256'].items()
                     if not (ROOT/path).is_file() or sha(ROOT/path) != expected]
-    result = dict(record, checkpoint_sha256=digest, config_sha256=sha(folder/'run_config.json'),
+    result = dict(record, backbone=spec['backbone'],checkpoint_sha256=digest, config_sha256=sha(folder/'run_config.json'),
                   source_drift=source_drift, source_provenance=spec['source_sha256'],
                   provenance_sha256=sha(folder/'model_provenance.json'), summary_sha256=sha(folder/'summary.json'),
                   status='VERIFIED', table1_status='NOT COMPARABLE',
-                  reason='Exact paper checkpoint/configuration equivalence is not established')
+                  reason='Independent implementation; metric/backbone and training differences must be distinguished')
     if record['dataset'] == 'TuSimple':
         labels = ROOT/record['annotations']
         require(sha(labels) == spec['labels_sha256'], 'Label hash mismatch')
@@ -94,7 +94,7 @@ def verify(record, output):
         metrics = {m['name']: m['value'] for m in json.loads(official_tusimple().bench_one_submit(str(submission), str(labels)))}
         for name, key, scale in [('Accuracy','acc_percent',100), ('FP','fp',1), ('FN','fn',1)]:
             require(math.isfinite(summary[key]) and abs(metrics[name]*scale-summary[key]) < 1e-9, 'Saved result mismatch: '+key)
-        result.update(images=2782, value_percent=metrics['Accuracy']*100, metric_definition='Official TuSimple ACC, 200 ms gate enabled',
+        result.update(images=2782, comparison_basis='official_tusimple',value_percent=metrics['Accuracy']*100, metric_definition='Official TuSimple ACC, 200 ms gate enabled',
                       predictions_sha256=sha(folder/'predictions.jsonl'), annotations_sha256=sha(labels),
                       scorer_sha256=sha(ROOT/'third_party/tusimple-benchmark/evaluate/lane.py'), official_metrics=metrics)
     else:
@@ -127,10 +127,16 @@ def cells(reference, records):
                               and (metric == 'benign_acc' or r.get('method','').lower() == row['attack'].lower())]
                 value = float(row[dataset.lower()+'_'+metric])
                 require(math.isfinite(value) and 0 <= value <= 100, 'Invalid reference value')
+                comparable=[r for r in supporting if dataset=='TuSimple' and metric=='benign_acc'
+                            and r.get('comparison_basis')=='official_tusimple' and r.get('backbone')=='resnet34'
+                            and r.get('images')==2782 and r.get('status')=='VERIFIED']
+                require(len(comparable)<=1, 'Ambiguous independent baseline selection')
                 result.append(dict(dataset=dataset, model=row['model'], method=row['attack'], metric=metric,
-                    published_percent=value, local_equivalent_percent='', status='NOT COMPARABLE' if supporting else 'NOT MEASURED',
+                    published_percent=value, local_equivalent_percent=comparable[0]['value_percent'] if comparable else '',
+                    status='MEASURED INDEPENDENT BASELINE' if comparable else 'NOT COMPARABLE' if supporting else 'NOT MEASURED',
                     supporting_measurements='; '.join(f"{r['id']}: {r['value_percent']:.9f}%" for r in supporting),
-                    reason='; '.join(sorted({r['reason'] for r in supporting})) if supporting else 'No independently verified equivalent measurement'))
+                    reason='Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction' if comparable else
+                    '; '.join(sorted({r['reason'] for r in supporting})) if supporting else 'No independently verified equivalent measurement'))
     return result
 
 

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "records": [
+    {"id": "culane_laneatt", "model": "LaneATT", "dataset": "CULane", "metric": "benign_acc", "evidence": "results/full_culane_recovered_20261028/laneatt", "annotations": "datasets/raw/culane/list/test.txt", "data_root": "datasets/raw/culane"},
+    {"id": "culane_adnet", "model": "ADNet", "dataset": "CULane", "metric": "benign_acc", "evidence": "results/full_culane_recovered_20261028/adnet", "annotations": "datasets/raw/culane/list/test.txt", "data_root": "datasets/raw/culane"},
+    {"id": "culane_scnn", "model": "SCNN", "dataset": "CULane", "metric": "benign_acc", "evidence": "results/full_culane_recovered_20261028/scnn", "annotations": "datasets/raw/culane/list/test.txt", "data_root": "datasets/raw/culane"},
+    {"id": "culane_resa", "model": "RESA", "dataset": "CULane", "metric": "benign_acc", "evidence": "results/full_culane_recovered_20261028/resa", "annotations": "datasets/raw/culane/list/test.txt", "data_root": "datasets/raw/culane"}
+  ]
+}
