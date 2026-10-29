@@ -1,0 +1,10 @@
+{
+  "architecture": "RESA",
+  "implementation": "Turoad/lanedet",
+  "checkpoint": "models\\checkpoints\\ssd\\zhengtu\\releasev2\\resa_r34_culane\\resa_r34_culane.pth",
+  "checkpoint_sha256": "07de30f92d5da56e44f282258447af4126a6b425669c017e958fb0b16e3fee98",
+  "device": "cuda",
+  "strict_state_dict": true,
+  "config": "third_party/lanedet/configs/resa/resa34_culane.py",
+  "preprocessing": "BGR, configured crop/resize/mean/std"
+}

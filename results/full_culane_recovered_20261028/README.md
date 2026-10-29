@@ -12,6 +12,8 @@ directory before extraction of its valid archive copy.
 |---|---|---:|---:|---:|
 | LaneATT | ResNet-34 | 34680 | 76.67404012461316 | 65.03822689875189 |
 | ADNet | ResNet-34 | 34680 | 78.9647481537056 | 67.3748250965467 |
+| SCNN | ResNet-50 | 34680 | 74.7785144614202 | 68.2275330684129 |
+| RESA | ResNet-34 | 34680 | 75.84875083091943 | Pending |
 
 F1 uses the public CULane C++ scorer, lane width 30 and IoU threshold 0.5.
 The evaluator is built with OpenCV 4.13 rather than the original 2.4.
@@ -20,13 +22,15 @@ interpolation, one-to-one matching protocol. It is **NOT COMPARABLE** to Table 1
 until the paper's ambiguous sampling, matching and aggregation choices are
 resolved. Neither number is ASR or poisoned-model clean accuracy.
 
-The native scorer produced the above F1 values during each benchmark. A separate
-verification process is checking every exported prediction hash and rerunning
-the scorer; its completion must be established from
-`results/culane_independent_completed/verification.json`, not inferred from this
-document. SCNN R50 has completed inference and is scoring; RESA R34 is queued.
-Check each model's `completed.json` and `summary.json` for final completion.
-Do not interpret this snapshot as four completed runs.
+The native scorer produced the above F1 values during each benchmark. All four
+full benchmark runs completed. LaneATT and ADNet additionally passed independent
+prediction-hash checks and native rescoring, saved in
+`results/culane_independent_completed/verification.json`.
+Independent SCNN and RESA verification is running and saves completed records to
+`results/culane_independent_remaining/verification.json`; do not infer completion
+until those records exist. RESA candidate point scoring is also running.
+The current rendered comparison is `results/table1_full_clean_20261029`, using
+the seven cached TuSimple runs and the two independently rescored CULane runs.
 
 ## Execution and reproducibility
 
@@ -62,6 +66,12 @@ after all four runs finish, the existing evaluator accepts the supplied manifest
 These last two commands are documented replay commands, **not claimed as executed**
 in this checkpoint. Choose unused output directories. The renderer reuses the
 seven verified TuSimple records without scoring them again.
+
+CUDA smoke test on October 29 passed: `torch.cuda.is_available()` is `True`,
+device is NVIDIA GeForce RTX 5050 Laptop GPU, and an eight-element CUDA tensor
+summed to 8.0. The clean benchmark entry points already select CUDA; no device
+change or environment rebuild was necessary. CPU legacy reference and scorer
+implementations were left unchanged. No restricted training was accelerated.
 
 Regression command actually executed: 18 passed.
 

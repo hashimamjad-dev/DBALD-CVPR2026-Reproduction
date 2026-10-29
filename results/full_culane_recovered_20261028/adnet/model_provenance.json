@@ -1,0 +1,19 @@
+{
+  "architecture": "ADNet",
+  "implementation": "Sephirex-X/ADNet with Windows inference compatibility",
+  "checkpoint": "models\\checkpoints\\adnet_culane_res34.pth",
+  "checkpoint_sha256": "31e0ed1c19d92e46f9d519ed39b81ef64cf4371cc936142d78942852cb0e99f4",
+  "device": "cuda",
+  "strict_state_dict": true,
+  "dataset": "culane",
+  "backbone": "resnet34",
+  "config": "D:\\DBALD-CVPR2026-Reproduction\\third_party\\ADNet\\configs\\adnet\\culane\\resnet34_culane.py",
+  "preprocessing": "BGR, crop top 270px, cubic resize 800x320, /255",
+  "compatibility": [
+    "torchvision DCNv1 replaces MMCV DCNv1",
+    "portable lane NMS",
+    "device-neutral anchor_ys",
+    "direct config loading"
+  ],
+  "limitation": "No numerical parity test against original MMCV CUDA/NMS stack yet"
+}
