@@ -13,7 +13,7 @@ directory before extraction of its valid archive copy.
 | LaneATT | ResNet-34 | 34680 | 76.67404012461316 | 65.03822689875189 |
 | ADNet | ResNet-34 | 34680 | 78.9647481537056 | 67.3748250965467 |
 | SCNN | ResNet-50 | 34680 | 74.7785144614202 | 68.2275330684129 |
-| RESA | ResNet-34 | 34680 | 75.84875083091943 | Pending |
+| RESA | ResNet-34 | 34680 | 75.84875083091943 | 68.32085222290628 |
 
 F1 uses the public CULane C++ scorer, lane width 30 and IoU threshold 0.5.
 The evaluator is built with OpenCV 4.13 rather than the original 2.4.
@@ -28,7 +28,7 @@ prediction-hash checks and native rescoring, saved in
 `results/culane_independent_completed/verification.json`.
 Independent SCNN and RESA verification is running and saves completed records to
 `results/culane_independent_remaining/verification.json`; do not infer completion
-until those records exist. RESA candidate point scoring is also running.
+until those records exist. RESA candidate point scoring completed on October 29.
 The current rendered comparison is `results/table1_full_clean_20261029`, using
 the seven cached TuSimple runs and the two independently rescored CULane runs.
 

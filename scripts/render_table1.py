@@ -17,6 +17,46 @@ sys.path.insert(0, str(ROOT/'src'))
 from lane_repro.evaluation import official_tusimple
 
 
+def export_page7(reference, statuses, records, output):
+    """Two explicitly separate 20-row tables with the original column ordering."""
+    columns=list(reference[0])
+    indexed={(r['model'],r['method'],r['dataset'],r['metric']):r for r in statuses}
+    local=[]
+    for reference_row in reference:
+        row={'model':reference_row['model'],'attack':reference_row['attack']}
+        for column in columns[2:]:
+            dataset,metric=column.split('_',1)
+            status=indexed[(row['model'],row['attack'],'TuSimple' if dataset=='tusimple' else 'CULane',metric)]
+            row[column]=status['local_equivalent_percent'] if status['local_equivalent_percent']!='' else status['status']
+        local.append(row)
+    with (output/'table1.csv').open('w',newline='',encoding='utf-8') as stream:
+        writer=csv.DictWriter(stream,fieldnames=['source']+columns); writer.writeheader()
+        for label,rows in [('published_reference',reference),('independent_results',local)]:
+            writer.writerows(dict(source=label,**row) for row in rows)
+    headers=['Model','Method','CULane B ACC','CULane P ACC','LDA','LRA','LOA','Average',
+             'TuSimple B ACC','TuSimple P ACC','LDA','LOA','Average']
+    markdown=['# Original DBALD Table 1','',
+        'Phase 1 scientifically complete: NO. Published references and independent results are separate. NOT COMPARABLE is not zero. See table1_status.csv and verification.json for provenance and reasons.','']
+    page=['<!doctype html><meta charset="utf-8"><title>DBALD Table 1</title><style>body{font:14px system-ui;margin:24px}table{border-collapse:collapse;font-size:11px;margin-bottom:24px}td,th{border:1px solid #aaa;padding:5px}th{background:#eee}</style><h1>Original DBALD Table 1</h1><p>Phase 1 scientifically complete: NO. Published references and independently measured results are separate.</p>']
+    for title, rows in [('Published reference — not local measurements',reference),('Independent results — unresolved protocols remain NOT COMPARABLE',local)]:
+        markdown += ['## '+title,'','| '+' | '.join(headers)+' |','|'+'|'.join(['---']*len(headers))+'|']
+        page += ['<h2>'+html.escape(title)+'</h2><table><tr>'+''.join('<th>'+html.escape(h)+'</th>' for h in headers)+'</tr>']
+        for row in rows:
+            values=[str(row[k]) for k in columns]
+            markdown.append('| '+' | '.join(values)+' |')
+            page.append('<tr>'+''.join('<td>'+html.escape(v)+'</td>' for v in values)+'</tr>')
+        markdown.append(''); page.append('</table>')
+    markdown += ['## Supporting measurements','', '| Model | Backbone | Dataset | Images | Metric | Value % | Protocol / qualification |','|---|---|---|---:|---|---:|---|']
+    page.append('<h2>Supporting measurements (not automatically paper-equivalent)</h2><table><tr><th>Model</th><th>Backbone</th><th>Dataset</th><th>Images</th><th>Metric</th><th>Value %</th><th>Protocol / qualification</th></tr>')
+    for record in records:
+        values=[record['model'],record.get('backbone','unconfirmed'),record['dataset'],str(record['images']),record['metric'],f"{record['value_percent']:.9f}",record.get('metric_definition',record['reason'])]
+        markdown.append('| '+' | '.join(v.replace('|','\\|') for v in values)+' |')
+        page.append('<tr>'+''.join('<td>'+html.escape(v)+'</td>' for v in values)+'</tr>')
+    page.append('</table>')
+    (output/'table1.md').write_text('\n'.join(markdown)+'\n',encoding='utf-8')
+    (output/'table1.html').write_text('\n'.join(page),encoding='utf-8')
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',default='results/phase1_audit')

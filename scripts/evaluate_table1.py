@@ -150,23 +150,46 @@ def main():
     require(not output.exists(), 'Output exists; choose a new directory to preserve evidence')
     manifest = read(args.manifest)
     require(manifest['schema_version'] == 1, 'Unsupported schema')
-    ids = [r['id'] for r in manifest['records']]
+    ids = [r['id'] for r in manifest.get('records', []) + manifest.get('external_records', [])]
     require(len(ids) == len(set(ids)) and all(i.replace('_','').isalnum() for i in ids), 'Invalid/duplicate record ID')
     reference = ROOT/'results/reference/table1.csv'
     require(sha(reference) == read(reference.parent/'manifest.json')['sha256'], 'Published reference hash mismatch')
     output.mkdir(parents=True)
     records = []
     errors = []
-    for record in manifest['records']:
+    from table1_evidence import import_cache, import_external, derive_averages, import_point_candidate
+    for cached in manifest.get('verified_caches', []):
+        records.extend(import_cache(cached))
+    for candidate in manifest.get('point_candidates', []):
+        records.append(import_point_candidate(candidate))
+    for record in manifest.get('records', []):
         try:
             records.append(verify(record, output))
             print('Verified '+record['id'], flush=True)
         except (ValueError, KeyError, OSError, StopIteration) as error:
             errors.append(dict(id=record['id'], error=str(error)))
+    for record in manifest.get('external_records', []):
+        try:
+            records.append(import_external(record))
+        except (ValueError, KeyError, OSError, TypeError) as error:
+            errors.append(dict(id=record['id'], error=str(error)))
+    records.extend(derive_averages(records))
+    require(len({r['id'] for r in records})==len(records), 'Duplicate imported evidence IDs')
     rows = cells(list(csv.DictReader(reference.open())), records)
     report = dict(schema_version=1, reference_sha256=sha(reference), manifest_sha256=sha(args.manifest),
                   verified=records, rejected=errors, phase1_complete=False)
     (output/'verification.json').write_text(json.dumps(report, indent=2))
+    inventory=dict(phase1_complete=False,
+        supported=['official TuSimple clean/P-ACC replay','official CULane F1 replay',
+                   'pinned prior clean verification','pinned CULane candidate point scoring',
+                   'static TuSimple target accuracy','static fixed-slot LDA candidate',
+                   'static CULane point-accuracy candidate','complete-series arithmetic averages'],
+        unsupported=['operational backdoor training or target generation',
+                     'authentication of externally claimed training history',
+                     'confirmed original-paper CULane ACC/ASR protocol',
+                     'trained SCNN ResNet-34 checkpoint'],
+        unresolved_cells=[r for r in rows if r['status']!='MEASURED INDEPENDENT BASELINE'])
+    (output/'inventory.json').write_text(json.dumps(inventory,indent=2))
     with (output/'table1.csv').open('w', newline='', encoding='utf-8') as stream:
         writer = csv.DictWriter(stream, fieldnames=list(rows[0])); writer.writeheader(); writer.writerows(rows)
     headings = list(rows[0])
@@ -177,6 +200,10 @@ def main():
     page += ''.join('<th>'+html.escape(k)+'</th>' for k in headings)+'</tr>'
     page += ''.join('<tr>'+''.join('<td>'+html.escape(str(r[k]))+'</td>' for k in headings)+'</tr>' for r in rows)+'</table>'
     (output/'table1.html').write_text(page, encoding='utf-8')
+    # Retain the detailed machine-readable status, then export the page-7 layout.
+    (output/'table1.csv').rename(output/'table1_status.csv')
+    from render_table1 import export_page7
+    export_page7(list(csv.DictReader(reference.open())), rows, records, output)
     print(json.dumps(dict(verified=len(records), rejected=errors, cells=len(rows))))
     return 1 if errors else 0
 
