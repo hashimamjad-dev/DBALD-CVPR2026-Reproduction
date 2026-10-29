@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "records": [],
+  "external_records": [],
+  "verified_caches": [
+    {
+      "path": "results/phase1_audit/clean_rescore.json",
+      "sha256": "b159dc92ee5b627cb920756f7aa08de895af15799175bd5cbfc5f07ea66e0f69",
+      "dataset": "TuSimple"
+    },
+    {
+      "path": "results/culane_independent_completed/verification.json",
+      "sha256": "c0a13733cd41bf304d95398c0430d2477064e57df317dea17fa826f674309f0a",
+      "dataset": "CULane"
+    }
+  ],
+  "point_candidates": [
+    {
+      "path": "results/full_culane_recovered_20261028/laneatt/point_acc_candidate.json",
+      "sha256": "4610a5c793a978f85abe226ac6e4bfe12242f0f1976784e0a221cbff763a3887"
+    },
+    {
+      "path": "results/full_culane_recovered_20261028/adnet/point_acc_candidate.json",
+      "sha256": "a70d97c52a529226cfb3700e8ab92e1837fb446dcfd92ee88282e8d8099600a0"
+    },
+    {
+      "path": "results/full_culane_recovered_20261028/scnn/point_acc_candidate.json",
+      "sha256": "a2ddc1ebb4e50e7f379ad6414e58c50ae482a7549d41a0cbc142ba618efaf8bf"
+    }
+  ]
+}
