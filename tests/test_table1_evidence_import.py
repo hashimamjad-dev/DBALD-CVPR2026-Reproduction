@@ -16,6 +16,10 @@ def bundle(tmp_path, monkeypatch, metric='loa_asr', dataset='TuSimple'):
     count=2782 if dataset=='TuSimple' else 34680
     keys=[f'clips/{i}.jpg' for i in range(count)]
     annotations=[dict(raw_file=k,h_samples=[1,2,3,4],lanes=[[10,10,10,10],[30,30,30,30]]) for k in keys]
+    official=tmp_path/('datasets/raw/tusimple_test/labels.jsonl' if dataset=='TuSimple' else 'datasets/raw/culane/list/test.txt')
+    official.parent.mkdir(parents=True)
+    official.write_text(''.join(json.dumps(r)+'\n' for r in annotations) if dataset=='TuSimple' else '\n'.join('/'+k for k in keys))
+    monkeypatch.setattr(evidence,'official_culane_points',lambda key: [[(10,y) for y in [1,2,3,4]],[(30,y) for y in [1,2,3,4]]])
     predictions=[dict(r,run_time=10) for r in annotations]
     protocol='fixed_slot_disappearance_v1' if metric=='lda_asr' else 'tusimple_official_runtime_v1'
     if metric=='lda_asr':
@@ -87,11 +91,12 @@ def test_candidate_receipt_rejects_wrong_protocol(tmp_path,monkeypatch):
         evidence.import_point_candidate(dict(path='candidate.json',sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
 
 
-@pytest.mark.parametrize('failure',['hash','coverage','runtime','provenance','claim','protocol'])
+@pytest.mark.parametrize('failure',['hash','coverage','runtime','provenance','claim','protocol','official_split'])
 def test_invalid_external_evidence_rejected(failure,tmp_path,monkeypatch):
     record=bundle(tmp_path,monkeypatch)
     if failure=='claim': record['claimed_percent']=99
     elif failure=='protocol': record['protocol']='unsupported'
+    elif failure=='official_split': (tmp_path/'datasets/raw/tusimple_test/labels.jsonl').write_text('')
     else:
         name={'hash':'checkpoint','coverage':'split','runtime':'predictions','provenance':'provenance'}[failure]
         p=tmp_path/record['artifacts'][name]['path']

@@ -20,6 +20,12 @@ def artifact(spec):
     return path
 
 
+def official_culane_points(key):
+    from lane_repro.culane_point_acc import parse_lanes
+    path=(ROOT/'datasets/raw/culane'/key).with_suffix('.lines.txt')
+    return sorted(sorted(map(tuple,lane.tolist())) for lane in parse_lanes(path.read_text()))
+
+
 def import_cache(spec):
     """Reuse a pinned local verification receipt, not an arbitrary numeric record.
 
@@ -39,6 +45,8 @@ def import_cache(spec):
             check(sha(folder/'predictions.jsonl') == row['predictions_sha256'], 'Cached prediction drift')
         run = read(folder/'run_config.json')
         provenance = read(folder/'model_provenance.json')
+        check(run.get('model',row['model'])==row['model'], 'Cached model drift')
+        check(not row.get('backbone') or row['backbone']==run['backbone'], 'Cached backbone drift')
         check(sha(ROOT/provenance['checkpoint']) == row['checkpoint_sha256'] == run['checkpoint_sha256'], 'Cached checkpoint drift')
         metric = row.get('metric_definition', row['metric'])
         check(math.isfinite(row['value_percent']) and 0 <= row['value_percent'] <= 100, 'Invalid cached value')
@@ -77,6 +85,14 @@ def import_external(record):
     keys = read(files['split'])
     expected = 2782 if record['dataset']=='TuSimple' else 34680
     check(isinstance(keys,list) and len(keys)==len(set(keys))==expected, 'Full unique split required')
+    official_truth=None
+    if record['dataset']=='TuSimple':
+        official_rows=jsonlines(ROOT/'datasets/raw/tusimple_test/labels.jsonl')
+        official_truth={r['raw_file']:r for r in official_rows}
+        check(len(official_rows)==len(official_truth)==expected and set(keys)==set(official_truth), 'Official split mismatch')
+    else:
+        official_keys=[line.split()[0].lstrip('/') for line in (ROOT/'datasets/raw/culane/list/test.txt').read_text().splitlines() if line.strip()]
+        check(len(official_keys)==len(set(official_keys))==expected and set(keys)==set(official_keys), 'Official split mismatch')
     predictions, annotations = jsonlines(files['predictions']), jsonlines(files['annotations'])
     for rows in (predictions, annotations):
         ids = [row['raw_file'] for row in rows]
@@ -87,6 +103,14 @@ def import_external(record):
     for prediction in predictions:
         target = truth[prediction['raw_file']]
         ys = target['h_samples']
+        if official_truth is not None:
+            official=official_truth[prediction['raw_file']]
+            check(ys==official['h_samples'], 'Official sampling grid mismatch')
+            if metric.endswith('acc'):
+                check(target['lanes']==official['lanes'], 'Clean annotations differ from official labels')
+        elif metric.endswith('acc'):
+            supplied=sorted(sorted((x,y) for x,y in zip(lane,ys) if x>=0) for lane in target['lanes'])
+            check(supplied==official_culane_points(prediction['raw_file']), 'Clean annotations differ from official CULane vertices')
         check(len(ys)>1 and all(math.isfinite(y) for y in ys) and all(a<b for a,b in zip(ys,ys[1:])), 'Invalid sampling grid')
         check(prediction['h_samples']==ys, 'Sampling grid mismatch')
         for lanes in (prediction['lanes'],target['lanes']):
@@ -139,6 +163,8 @@ def import_point_candidate(spec):
     check(0<=row['correct']<=row['total'] and row['total']>0, 'Invalid candidate counts')
     check(abs(100*row['correct']/row['total']-row['candidate_acc_percent'])<1e-9, 'Candidate arithmetic mismatch')
     folder=path.parent
+    check(sha(folder/'run_config.json')==spec['run_config_sha256'], 'Candidate configuration drift')
+    check(sha(folder/'predictions.jsonl')==spec['predictions_sha256'], 'Candidate prediction index drift')
     config=read(folder/'run_config.json')
     check(config['list_sha256']==row['list_sha256'], 'Candidate split mismatch')
     predictions=jsonlines(folder/'predictions.jsonl')
@@ -176,6 +202,7 @@ def derive_averages(records):
         row = dict(next(iter(group.values())))
         row.update(id='average_'+row['id'],metric='avg_asr',
             value_percent=sum(r['value_percent'] for r in group.values())/len(group),
+            metric_definition='Arithmetic mean of '+', '.join(sorted(needed)),
             derived_from=[group[k]['id'] for k in sorted(needed)],
             reason='Arithmetic mean of all verified scenarios in one declared experiment series; paper equivalence unconfirmed')
         derived.append(row)

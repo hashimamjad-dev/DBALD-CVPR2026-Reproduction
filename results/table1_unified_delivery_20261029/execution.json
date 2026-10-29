@@ -1,0 +1,28 @@
+{
+  "entry_point": ".venv/Scripts/python.exe scripts/evaluate_table1.py --manifest configs/table1_unified.json --output results/table1_unified_delivery_20261029",
+  "exit_code": 0,
+  "verified_records": 13,
+  "rejected_records": 0,
+  "table_cells": 220,
+  "published_rows": 20,
+  "local_rows": 20,
+  "inference_repeated": false,
+  "cuda_diagnostics_repeated": false,
+  "new_measurement": {
+    "model": "RESA",
+    "dataset": "CULane",
+    "images": 34680,
+    "metric": "unconfirmed candidate point ACC",
+    "value_percent": 68.32085222290628,
+    "paper_equivalent": false
+  },
+  "tests": [
+    {"log": "results/table1_unified_final_tests.xml", "passed": 31},
+    {"log": "results/table1_unified_entry_tests.xml", "passed": 2},
+    {"log": "results/table1_bound_split_tests.xml", "passed": 23},
+    {"log": "results/table1_culane_labels_tests.xml", "passed": 4}
+  ],
+  "test_note": "Later focused suites overlap earlier suites; do not sum these as unique tests.",
+  "pending": ["Independent SCNN CULane native rescoring", "Independent RESA CULane native rescoring"],
+  "phase1_complete": false
+}

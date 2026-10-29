@@ -46,10 +46,10 @@ def export_page7(reference, statuses, records, output):
             markdown.append('| '+' | '.join(values)+' |')
             page.append('<tr>'+''.join('<td>'+html.escape(v)+'</td>' for v in values)+'</tr>')
         markdown.append(''); page.append('</table>')
-    markdown += ['## Supporting measurements','', '| Model | Dataset | Metric | Value % | Protocol / qualification |','|---|---|---|---:|---|']
-    page.append('<h2>Supporting measurements (not automatically paper-equivalent)</h2><table><tr><th>Model</th><th>Dataset</th><th>Metric</th><th>Value %</th><th>Protocol / qualification</th></tr>')
+    markdown += ['## Supporting measurements','', '| Model | Backbone | Dataset | Images | Metric | Value % | Protocol / qualification |','|---|---|---|---:|---|---:|---|']
+    page.append('<h2>Supporting measurements (not automatically paper-equivalent)</h2><table><tr><th>Model</th><th>Backbone</th><th>Dataset</th><th>Images</th><th>Metric</th><th>Value %</th><th>Protocol / qualification</th></tr>')
     for record in records:
-        values=[record['model'],record['dataset'],record['metric'],f"{record['value_percent']:.9f}",record.get('metric_definition',record['reason'])]
+        values=[record['model'],record.get('backbone','unconfirmed'),record['dataset'],str(record['images']),record['metric'],f"{record['value_percent']:.9f}",record.get('metric_definition',record['reason'])]
         markdown.append('| '+' | '.join(v.replace('|','\\|') for v in values)+' |')
         page.append('<tr>'+''.join('<td>'+html.escape(v)+'</td>' for v in values)+'</tr>')
     page.append('</table>')

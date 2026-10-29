@@ -17,15 +17,27 @@
   "point_candidates": [
     {
       "path": "results/full_culane_recovered_20261028/laneatt/point_acc_candidate.json",
-      "sha256": "4610a5c793a978f85abe226ac6e4bfe12242f0f1976784e0a221cbff763a3887"
+      "sha256": "4610a5c793a978f85abe226ac6e4bfe12242f0f1976784e0a221cbff763a3887",
+      "run_config_sha256": "fe140ebba5d1a03e88e3993d79d847795b63c387d4a2fd76705a7c9fb8766dd0",
+      "predictions_sha256": "fcb975135766ffb36e0ad3d8c1db074b894fce6f6ba2f3bb377ef5e65ce935ec"
     },
     {
       "path": "results/full_culane_recovered_20261028/adnet/point_acc_candidate.json",
-      "sha256": "a70d97c52a529226cfb3700e8ab92e1837fb446dcfd92ee88282e8d8099600a0"
+      "sha256": "a70d97c52a529226cfb3700e8ab92e1837fb446dcfd92ee88282e8d8099600a0",
+      "run_config_sha256": "6451dd929aaa280a37060a8c299fc6a8f9ffefb4c5a7ef3067c2400fd73700db",
+      "predictions_sha256": "d6714722f503969f5dde0dbd5ce74ed563a9a77e6e5571cb836c81d0a970ca52"
     },
     {
       "path": "results/full_culane_recovered_20261028/scnn/point_acc_candidate.json",
-      "sha256": "a2ddc1ebb4e50e7f379ad6414e58c50ae482a7549d41a0cbc142ba618efaf8bf"
+      "sha256": "a2ddc1ebb4e50e7f379ad6414e58c50ae482a7549d41a0cbc142ba618efaf8bf",
+      "run_config_sha256": "4f3498f816f04d6a62fb7a9b6552aa8bbf6d665c21759cee432449a8b9cbf74d",
+      "predictions_sha256": "dae9f71f15d237b687e9836f95c3811d68db031ed9ab6a571d431818f1ccecae"
+    },
+    {
+      "path": "results/full_culane_recovered_20261028/resa/point_acc_candidate.json",
+      "sha256": "9f18d4277ebce76ac3d3f9150389a9181f3dc5543bf30adbc14118a6f4583fc7",
+      "run_config_sha256": "8e5d4c0bd0de356453137a8a7874b38cbfb3d17d1ecdd5162ae5c85813146596",
+      "predictions_sha256": "e1cd39e542fe81fa6490e8125fe3ac24e53fd38c214ca13f894816065a6efbd8"
     }
   ]
 }
