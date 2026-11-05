@@ -1,0 +1,35 @@
+{
+  "accepted_milestone": "1f1c3977863eed3f0b74fa2ae7f1333333f9f214",
+  "clean_records": 11,
+  "supporting_records": 15,
+  "accepted_receipts": [
+    {
+      "path": "results\\table1_clean_20261106\\verified_clean_replay\\verification.json",
+      "sha256": "97a620039d0f805490bf7e8126ea7827f1a962b6731a9bfec6e80de0b8bef421"
+    },
+    {
+      "path": "results\\table1_clean_20261106\\unified\\verification.json",
+      "sha256": "3c24bf764e3dd20c7cc0e51ba7fe0f4fe24b98d3711d13f2e09bd14807161afd"
+    },
+    {
+      "path": "results\\table1_clean_20261106\\dataset_integrity_retry\\culane_reconciled_integrity_manifest.json",
+      "sha256": "4cabcf98102f5d2f6b7bbdae233c5b302675a7e6e0a465db59e3d6affbbfb583"
+    }
+  ],
+  "new_scnn_checkpoints": [
+    {
+      "dataset": "tusimple",
+      "checkpoint": "models/checkpoints/scnn_r34_autodrive/resnet34_scnn_tusimple_20210424.pt",
+      "sha256": "d8eccc17019a8a0d96c63897059f8a581eb2f60a60346e710f2e38034c359b6a",
+      "status": "STRICT CPU LOAD AND NATIVE/CROSS-VERSION PARITY VERIFIED; FULL TEST MEASUREMENT MISSING"
+    },
+    {
+      "dataset": "culane",
+      "checkpoint": "models/checkpoints/scnn_r34_autodrive/resnet34_scnn_culane_20210220.pt",
+      "sha256": "0dc808f53c84b1164236c5ee18d76add5f50a7137d3a2e786489b980c057f3e6",
+      "status": "STRICT CPU LOAD AND NATIVE/CROSS-VERSION PARITY VERIFIED; FULL TEST MEASUREMENT MISSING"
+    }
+  ],
+  "prior_checkpoints_replaced": false,
+  "prior_results_modified": false
+}

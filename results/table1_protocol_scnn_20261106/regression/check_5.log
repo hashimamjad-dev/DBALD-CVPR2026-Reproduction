@@ -1,0 +1,4 @@
+torch 2.7.1+cu128 threads 1 mkldnn True
+.....                                                                    [100%]
+- generated xml file: D:\DBALD-CVPR2026-Reproduction\results\table1_protocol_scnn_20261106\regression\tests_5.xml -
+5 passed in 1.78s

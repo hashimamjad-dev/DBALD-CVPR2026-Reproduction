@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "nodeid": "tests/test_core.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_overnight.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_table1_evaluator.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_table1_cached_render.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_table1_evidence_import.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_culane_resume.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_clean_replay.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_dataset_integrity_retry.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_isolated_cpu_checks.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_culane_protocol.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_table1_readiness.py",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_native_export_preserves_gaps_and_rejects_dataset_mismatch",
+      "mkldnn": "on"
+    }
+  ]
+}

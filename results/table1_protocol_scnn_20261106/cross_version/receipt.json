@@ -1,0 +1,147 @@
+{
+  "scope": "isolated CPU validation; no GPU allocation or training",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "source_sha256": "fbd183824fb913ced84f401148e9d14e33f28193e1fd251340974ac07d225841",
+  "spec_sha256": "da146540f165cf5d2a95655c0da5ffc823534320dcffceb77befd012e8488aab",
+  "bounds": {
+    "max_process_mib": 2048,
+    "min_available_mib": 2048,
+    "timeout_seconds": 180
+  },
+  "checks": [
+    {
+      "script": "scripts/scnn_r34_cpu_reference.py",
+      "args": [
+        "--dataset",
+        "tusimple"
+      ],
+      "dataset": "tusimple",
+      "runtime": "legacy",
+      "python": "tools/reference_envs/lanedet/python.exe",
+      "before": {
+        "physical_available_mib": 3100,
+        "commit_available_mib": 3476,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\tools\\reference_envs\\lanedet\\python.exe",
+        "D:\\DBALD-CVPR2026-Reproduction\\scripts\\scnn_r34_cpu_reference.py",
+        "--dataset",
+        "tusimple",
+        "--output",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\cross_version\\validation_0.json"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 13.5,
+      "peak_rss_mib": 285.84375,
+      "peak_private_mib": 390.875,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\cross_version\\check_0.log",
+      "after": {
+        "physical_available_mib": 2761,
+        "commit_available_mib": 3163,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "script": "scripts/scnn_r34_cpu_reference.py",
+      "args": [
+        "--dataset",
+        "tusimple"
+      ],
+      "dataset": "tusimple",
+      "runtime": "modern",
+      "before": {
+        "physical_available_mib": 2800,
+        "commit_available_mib": 3163,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "D:\\DBALD-CVPR2026-Reproduction\\scripts\\scnn_r34_cpu_reference.py",
+        "--dataset",
+        "tusimple",
+        "--output",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\cross_version\\validation_1.json"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 20.95300000000134,
+      "peak_rss_mib": 686.7109375,
+      "peak_private_mib": 1124.80859375,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\cross_version\\check_1.log",
+      "after": {
+        "physical_available_mib": 2383,
+        "commit_available_mib": 2746,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "script": "scripts/scnn_r34_cpu_reference.py",
+      "args": [
+        "--dataset",
+        "culane"
+      ],
+      "dataset": "culane",
+      "runtime": "legacy",
+      "python": "tools/reference_envs/lanedet/python.exe",
+      "before": {
+        "physical_available_mib": 2383,
+        "commit_available_mib": 2746,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\tools\\reference_envs\\lanedet\\python.exe",
+        "D:\\DBALD-CVPR2026-Reproduction\\scripts\\scnn_r34_cpu_reference.py",
+        "--dataset",
+        "culane",
+        "--output",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\cross_version\\validation_2.json"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 8.765999999995984,
+      "peak_rss_mib": 283.375,
+      "peak_private_mib": 388.48828125,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\cross_version\\check_2.log",
+      "after": {
+        "physical_available_mib": 3169,
+        "commit_available_mib": 3859,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "script": "scripts/scnn_r34_cpu_reference.py",
+      "args": [
+        "--dataset",
+        "culane"
+      ],
+      "dataset": "culane",
+      "runtime": "modern",
+      "before": {
+        "physical_available_mib": 3168,
+        "commit_available_mib": 3859,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "D:\\DBALD-CVPR2026-Reproduction\\scripts\\scnn_r34_cpu_reference.py",
+        "--dataset",
+        "culane",
+        "--output",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\cross_version\\validation_3.json"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 32.53100000000268,
+      "peak_rss_mib": 686.578125,
+      "peak_private_mib": 1126.390625,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\cross_version\\check_3.log",
+      "after": {
+        "physical_available_mib": 2957,
+        "commit_available_mib": 3704,
+        "commit_limit_mib": 25876
+      }
+    }
+  ]
+}

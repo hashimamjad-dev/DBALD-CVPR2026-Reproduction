@@ -2,10 +2,29 @@
   "source": "https://arxiv.org/html/2508.15778v2#A3",
   "source_version": "2508.15778v2, 25 March 2026, Appendix C",
   "required_backbone": "resnet34",
-  "models": ["LaneATT", "ADNet", "SCNN", "RESA"],
+  "models": [
+    "LaneATT",
+    "ADNet",
+    "SCNN",
+    "RESA"
+  ],
   "culane_test_count": 34680,
   "tusimple_test_count": 2782,
   "exact_author_checkpoint_hashes": null,
   "culane_point_sampling_and_matching": null,
-  "note": "Appendix specifies the unified backbone; matching it alone does not establish checkpoint or metric equivalence."
+  "note": "Appendix specifies the unified backbone; matching it alone does not establish checkpoint or metric equivalence.",
+  "acc_protocol_audit": {
+    "definition": "ratio of correct lane points to total lane points, with a 20-pixel correctness condition",
+    "source_section": "CVPR paper Section 5.1; extended manuscript Section 5.1",
+    "official_culane_f1_matches_definition": false,
+    "candidate_point_protocol_author_verified": false,
+    "unresolved": [
+      "CULane sampling/conversion",
+      "lane matching and duplicate handling",
+      "error geometry / angle adjustment",
+      "boundary at exactly 20 pixels",
+      "runtime and excess-prediction conventions"
+    ],
+    "verification_date": "2026-11-06"
+  }
 }

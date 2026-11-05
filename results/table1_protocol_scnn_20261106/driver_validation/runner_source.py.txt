@@ -1,0 +1,107 @@
+"""Run one CPU pytest case per fresh process with memory, time and thread bounds."""
+import argparse
+import ctypes
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import time
+
+import psutil
+
+ROOT=Path(__file__).resolve().parents[1]
+
+
+def memory_snapshot():
+    result=dict(physical_available_mib=psutil.virtual_memory().available//1024**2)
+    if os.name=='nt':
+        class Status(ctypes.Structure):
+            _fields_=[('length',ctypes.c_ulong),('load',ctypes.c_ulong)]+[(n,ctypes.c_ulonglong) for n in
+                ('total_phys','avail_phys','total_commit','avail_commit','total_virtual','avail_virtual','extended')]
+        value=Status();value.length=ctypes.sizeof(value)
+        if ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(value)):
+            result.update(commit_available_mib=value.avail_commit//1024**2,commit_limit_mib=value.total_commit//1024**2)
+    return result
+
+
+def classify(code):
+    if code==0:return 'PASSED'
+    if code & 0xffffffff==0xc0000005:return 'NATIVE_ACCESS_VIOLATION'
+    return 'FAILED'
+
+
+def run_child(command,log,env,max_mib,timeout):
+    start=time.monotonic();peak_rss=peak_private=0;reason=None
+    with Path(log).open('w',encoding='utf-8') as stream:
+        child=subprocess.Popen(command,cwd=ROOT,env=env,stdout=stream,stderr=subprocess.STDOUT)
+        monitored=psutil.Process(child.pid)
+        try:
+            while child.poll() is None:
+                try:
+                    # Windows venv python.exe can be a small redirector whose
+                    # actual interpreter is a child. Budget the entire tree.
+                    processes=[monitored,*monitored.children(recursive=True)]
+                    infos=[]
+                    for process in processes:
+                        try:infos.append(process.memory_info())
+                        except psutil.NoSuchProcess:pass
+                    peak_rss=max(peak_rss,sum(i.rss for i in infos))
+                    peak_private=max(peak_private,sum(getattr(i,'private',i.rss) for i in infos))
+                except psutil.NoSuchProcess:pass
+                if max(peak_rss,peak_private)>max_mib*1024**2:reason='MEMORY_BUDGET_EXCEEDED'
+                if time.monotonic()-start>timeout:reason='TIMEOUT'
+                if reason:
+                    for process in reversed(monitored.children(recursive=True)):
+                        try:process.terminate()
+                        except psutil.NoSuchProcess:pass
+                    child.terminate();child.wait(timeout=10);break
+                time.sleep(.1)
+        finally:
+            if child.poll() is None:
+                for process in reversed(monitored.children(recursive=True)):
+                    try:process.kill()
+                    except psutil.NoSuchProcess:pass
+                child.kill();child.wait()
+    return dict(status=reason or classify(child.returncode),returncode=child.returncode,
+                seconds=time.monotonic()-start,peak_rss_mib=peak_rss/1024**2,
+                peak_private_mib=peak_private/1024**2,log=str(log))
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    p.add_argument('--spec',required=True);p.add_argument('--output',required=True)
+    p.add_argument('--max-process-mib',type=int,default=2048)
+    p.add_argument('--min-available-mib',type=int,default=2048)
+    p.add_argument('--timeout',type=int,default=180)
+    a=p.parse_args();out=Path(a.output).resolve()
+    if not out.is_relative_to(ROOT/'results') or out.exists():raise ValueError('Use a new results directory')
+    if min(a.max_process_mib,a.min_available_mib,a.timeout)<=0:raise ValueError('Bounds must be positive')
+    spec=json.loads(Path(a.spec).read_text());out.mkdir(parents=True)
+    report=dict(scope='isolated CPU validation; no GPU allocation or training',python=sys.version,
+                source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                spec_sha256=hashlib.sha256(Path(a.spec).read_bytes()).hexdigest(),
+                bounds=dict(max_process_mib=a.max_process_mib,min_available_mib=a.min_available_mib,timeout_seconds=a.timeout),checks=[])
+    env=os.environ.copy()
+    env.update(CUDA_VISIBLE_DEVICES='',OMP_NUM_THREADS='1',MKL_NUM_THREADS='1',OPENBLAS_NUM_THREADS='1',NUMEXPR_NUM_THREADS='1')
+    bootstrap="import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))"
+    for index,case in enumerate(spec['checks']):
+        node=case['nodeid'];backend=case.get('mkldnn','on')
+        if not node.startswith('tests/') or '..' in node or backend not in ('on','off'):raise ValueError('Invalid CPU check')
+        before=memory_snapshot();row=dict(case,before=before)
+        if min(before.values())<a.min_available_mib:
+            row['status']='DEFERRED_INSUFFICIENT_MEMORY'
+        else:
+            command=[sys.executable,'-c',bootstrap,backend,node,'-q','--basetemp',str(out/f'test_tmp_{index}'),'--junitxml',str(out/f'tests_{index}.xml')]
+            row.update(command=command)
+            env['SCNN_VALIDATION_OUTPUT']=str(out/f'validation_{index}.json')
+            row.update(run_child(command,out/f'check_{index}.log',env,a.max_process_mib,a.timeout))
+        row['after']=memory_snapshot();report['checks'].append(row)
+        (out/'receipt.json').write_text(json.dumps(report,indent=2)+'\n')
+        print(json.dumps(row),flush=True)
+        if row['status']!='PASSED':break
+    return 0 if len(report['checks'])==len(spec['checks']) and all(r['status']=='PASSED' for r in report['checks']) else 1
+
+
+if __name__=='__main__':raise SystemExit(main())

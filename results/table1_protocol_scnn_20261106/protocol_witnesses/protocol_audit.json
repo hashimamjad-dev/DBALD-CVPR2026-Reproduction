@@ -1,0 +1,95 @@
+{
+  "scope": "SYNTHETIC PROTOCOL WITNESSES; NEVER TABLE 1 MEASUREMENTS",
+  "real_benchmark_images": 0,
+  "candidate_protocol": {
+    "id": "culane_annotation_vertices_linear_assignment_v1",
+    "threshold_px": 20,
+    "comparison": "strict_less_than",
+    "sampling": "annotation_vertices",
+    "interpolation": "linear_no_extrapolation",
+    "matching": "one_to_one_max_correct_points",
+    "aggregation": "pooled_points",
+    "runtime_gate": false,
+    "extra_prediction_penalty": false,
+    "author_verified": false,
+    "table1_comparable": false
+  },
+  "offset_witnesses": [
+    {
+      "offset_px": 0,
+      "candidate_correct": 2,
+      "candidate_total": 2,
+      "candidate_point_acc_percent": 100.0,
+      "official_lane_f1_percent": 100.0,
+      "native_counts": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    {
+      "offset_px": 19,
+      "candidate_correct": 2,
+      "candidate_total": 2,
+      "candidate_point_acc_percent": 100.0,
+      "official_lane_f1_percent": 0.0,
+      "native_counts": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "offset_px": 20,
+      "candidate_correct": 0,
+      "candidate_total": 2,
+      "candidate_point_acc_percent": 0.0,
+      "official_lane_f1_percent": 0.0,
+      "native_counts": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    },
+    {
+      "offset_px": 21,
+      "candidate_correct": 0,
+      "candidate_total": 2,
+      "candidate_point_acc_percent": 0.0,
+      "official_lane_f1_percent": 0.0,
+      "native_counts": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 1
+      }
+    }
+  ],
+  "matching_witness": {
+    "candidate_one_to_one_percent": 50.0,
+    "official_tusimple_best_per_gt_percent": 100.0
+  },
+  "metric_identity": "CULane lane F1 is not the stated point ACC",
+  "paper_literal_definition": "Ratio of correct lane points to total lane points with a 20-pixel condition",
+  "established": [
+    "point-based definition differs from lane-level F1",
+    "candidate uses pooled point counts"
+  ],
+  "unresolved": [
+    "CULane sampling grid / annotation conversion",
+    "lane matching and duplicate handling",
+    "horizontal versus distance/angle-adjusted error",
+    "exact boundary rule at 20 pixels",
+    "runtime and excess-prediction rules"
+  ],
+  "paper_equivalence_verified": false,
+  "sources": [
+    "https://arxiv.org/html/2508.15778v2#S5.SS1",
+    "https://github.com/TuSimple/tusimple-benchmark/blob/master/evaluate/lane.py",
+    "https://github.com/XingangPan/SCNN/tree/master/tools/lane_evaluation"
+  ],
+  "source_sha256": {
+    "src\\lane_repro\\culane_point_acc.py": "fed6dcbc3246e2f19ee1c1ef075024b8be66cef8bb38c03f435aedb7ff770b18",
+    "src\\lane_repro\\culane_official.py": "2eef64671a2a6357e53cd21651398b6cdf4d616f6aef79ece318a2ba1d935e6b",
+    "third_party\\tusimple-benchmark\\evaluate\\lane.py": "02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2"
+  }
+}

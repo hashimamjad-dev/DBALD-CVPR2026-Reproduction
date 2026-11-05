@@ -6,6 +6,22 @@ docs/distillation_v2_timing_protocol.md text eol=lf
 
 # Preserve reviewed PR7 evidence bytes: receipt hashes include line endings.
 # Keep the new replay manifests, source hashes and numerical receipts stable.
+src/lane_repro/scnn_autodrive.py text eol=lf
+scripts/run_isolated_cpu_checks.py text eol=lf
+scripts/scnn_r34_cpu_reference.py text eol=lf
+scripts/compare_scnn_r34_cpu.py text eol=lf
+scripts/audit_culane_protocol.py text eol=lf
+scripts/fetch_scnn_r34.py text eol=lf
+scripts/table1_readiness.py text eol=lf
+scripts/benchmark.py text eol=lf
+scripts/benchmark_culane.py -text whitespace=cr-at-eol
+configs/cpu_*checks.json text eol=lf
+configs/scnn_r34_autodrive.json text eol=lf
+results/table1_protocol_scnn_20261106/** -text whitespace=cr-at-eol
+results/table1_protocol_scnn_20261106/final_sanity/tests.xml whitespace=-blank-at-eol,cr-at-eol
+results/table1_protocol_scnn_20261106/driver_evidence/culane/lanes/** whitespace=-blank-at-eol,cr-at-eol
+results/table1_protocol_scnn_20261106/driver_evidence/culane/official.txt whitespace=-blank-at-eof,cr-at-eol
+results/table1_protocol_scnn_20261106/protocol_witnesses/*.official.txt whitespace=-blank-at-eof,cr-at-eol
 configs/table1_clean_replay.json text eol=lf
 configs/table1_clean_full_replay.json text eol=lf
 configs/table1_unified.json text eol=lf

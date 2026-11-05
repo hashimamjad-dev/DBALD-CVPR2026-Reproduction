@@ -58,7 +58,7 @@ def completion_rows(records):
                 source_drift='; '.join(sorted({p for r in supported for p in r.get('source_drift',[])})),
                 reason='Independent pretrained checkpoints/training; exact author equivalence unverified'+
                        ('; paper-compatible CULane point scoring unresolved' if dataset=='CULane' else '')+
-                       ('; trained SCNN ResNet-34 checkpoint unavailable' if model=='SCNN' and not matched else '')))
+                       ('; full-test SCNN ResNet-34 measurement unavailable in this evidence set' if model=='SCNN' and not matched else '')))
     return rows
 
 

@@ -45,8 +45,18 @@ def main():
     p.add_argument('--root',default='datasets/raw/tusimple_test'); p.add_argument('--labels',default='datasets/raw/tusimple_test/labels.jsonl')
     p.add_argument('--output',required=True); p.add_argument('--benign',action='store_true'); p.add_argument('--expected-count',type=int,default=2782)
     p.add_argument('--backbone',choices=['resnet18','resnet34'],default='resnet18')
+    p.add_argument('--scnn-implementation',choices=['lanedet','autodrive'],default='lanedet')
+    p.add_argument('--cpu-threads',type=int,default=4)
     args=p.parse_args(); os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG',':4096:8')
-    torch.set_num_threads(4); torch.manual_seed(0); np.random.seed(0); random.seed(0)
+    if not 1<=args.cpu_threads<=8:raise ValueError('Use one to eight CPU threads')
+    autodrive=args.scnn_implementation=='autodrive'
+    if autodrive:
+        if args.model!='SCNN' or args.backbone!='resnet34':raise ValueError('AutoDrive option requires SCNN ResNet-34')
+        from lane_repro.scnn_autodrive import AutoDriveSCNNAdapter, config_values
+        source_config,_=config_values('tusimple')
+        if args.config and Path(args.config).resolve()!=source_config.resolve():raise ValueError('Use the reviewed upstream AutoDrive config')
+        args.config=str(source_config)
+    torch.set_num_threads(args.cpu_threads); torch.manual_seed(0); np.random.seed(0); random.seed(0)
     torch.backends.cudnn.benchmark=False; torch.backends.cudnn.deterministic=True
     torch.backends.cuda.matmul.allow_tf32=False; torch.backends.cudnn.allow_tf32=False
     out=Path(args.output).resolve()
@@ -62,6 +72,8 @@ def main():
         count=len(samples),transformations=names,seed=0,device=args.device,torch=torch.__version__,
         source_sha256={str(f.relative_to(ROOT)):digest(f) for f in [Path(__file__).resolve(),*sorted((ROOT/'src/lane_repro').glob('*.py'))]})
     if args.model=='LaneATT': spec['anchor_order_sha256']=digest(ROOT/'configs/laneatt_anchor_order.json')
+    if autodrive:spec['implementation']='voldemortX/pytorch-auto-drive'
+    spec['cpu_threads']=args.cpu_threads
     specpath=out/'run_config.json'
     if specpath.exists() and json.loads(specpath.read_text())!=spec: raise ValueError('Configuration changed; use a new output directory')
     specpath.write_text(json.dumps(spec,indent=2))
@@ -78,11 +90,14 @@ def main():
             if key in records: raise ValueError('Duplicate prediction')
             records[key]=r; good.append(line)
         if len(good)!=len(lines): predpath.write_text('\n'.join(good)+'\n')
-    if args.model=='LaneATT': model=LaneATTAdapter(args.checkpoint,device=args.device,backbone=args.backbone)
+    if autodrive:model=AutoDriveSCNNAdapter(args.checkpoint,'tusimple',args.device)
+    elif args.model=='LaneATT': model=LaneATTAdapter(args.checkpoint,device=args.device,backbone=args.backbone)
     elif args.model=='ADNet': model=ADNetAdapter(args.checkpoint,device=args.device,backbone=args.backbone)
     else: model=SegmentationAdapter(args.model,args.checkpoint,args.config,args.device)
     (out/'model_provenance.json').write_text(json.dumps(model.provenance(),indent=2))
-    official=official_tusimple(); model.predict(samples[0].read())
+    official=official_tusimple()
+    if autodrive:model.predict_points(samples[0].read())
+    else:model.predict(samples[0].read())
     summaries=[]; started=time.time()
     with predpath.open('a') as log,(out/'hardware.jsonl').open('a') as hwlog:
         for name in names:
@@ -98,8 +113,10 @@ def main():
                 image=transform(sample.read(),name)
                 if args.device.startswith('cuda'): torch.cuda.synchronize(); torch.cuda.reset_peak_memory_stats()
                 start=time.perf_counter()
-                xs=sample_predictions(model.predict(image),sample.h_samples,sample.width,sample.height)
-                pred=[[int(x) if x>=0 else -2 for x in lane] for lane in xs]
+                if autodrive:pred=model.predict_tusimple(image,sample.h_samples)
+                else:
+                    xs=sample_predictions(model.predict(image),sample.h_samples,sample.width,sample.height)
+                    pred=[[int(x) if x>=0 else -2 for x in lane] for lane in xs]
                 if args.device.startswith('cuda'): torch.cuda.synchronize()
                 elapsed=(time.perf_counter()-start)*1000
                 acc,fp,fn=official.bench(pred,sample.lanes,sample.h_samples,elapsed)

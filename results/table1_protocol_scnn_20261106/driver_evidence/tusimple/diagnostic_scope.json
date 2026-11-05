@@ -1,0 +1,13 @@
+{
+  "scope": "ONE CLEAN IMAGE CPU INTEGRATION; NOT TABLE 1 OR FULL-TEST ACCURACY",
+  "source_test_output": "results\\table1_protocol_scnn_20261106\\driver_validation\\test_tmp_0\\test_existing_benchmark_driver0\\smoke",
+  "artifact_sha256": {
+    "driver_evidence\\tusimple\\completed.json": "6bec546eec95edb81275ed0733432068156b8f4f071e051c948e74d50694f007",
+    "driver_evidence\\tusimple\\hardware.jsonl": "65ba498ebeda2d335b7dfef0c2e3dc38b3532e9bc814227406c27fae7e45d564",
+    "driver_evidence\\tusimple\\model_provenance.json": "9f63d65e5a2f021ec277230bc2314eaad56bf83a5fde7aed5d1c3ab055c02078",
+    "driver_evidence\\tusimple\\predictions.jsonl": "de27bbf7388a2dfc95af80906fe7ec5cc32b4296ef4f03b89f5e83adfd97f9fa",
+    "driver_evidence\\tusimple\\run_config.json": "a698f44d1efdf993fef6dee29413d961820c8fc1e91e8b4d7bc9e64c9a63c8fb",
+    "driver_evidence\\tusimple\\summary.csv": "c597d6f089458571015b0334ac0356cc27027eb567538578c1ea5dce98d38514",
+    "driver_evidence\\tusimple\\summary.json": "f9928fee2ff48872d78a7f61b72ae1c6dc6ca714e86d9a8327c504a717bbc406"
+  }
+}

@@ -54,3 +54,5 @@ results/test_tmp*/
 /results/pr7_merge_20261105/test_tmp/
 # Preserve validation reports without tracking disposable test fixtures.
 /results/table1_clean_20261106/test_tmp*/
+# Isolated CPU check fixtures are disposable; numerical receipts remain tracked.
+/results/table1_protocol_scnn_20261106/**/test_tmp*/
