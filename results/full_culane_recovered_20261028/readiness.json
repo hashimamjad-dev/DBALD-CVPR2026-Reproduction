@@ -1,0 +1,180 @@
+{
+  "expected": 34680,
+  "ready": 34680,
+  "blocked": false,
+  "commands": [
+    [
+      "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+      "D:\\DBALD-CVPR2026-Reproduction\\scripts\\benchmark_culane.py",
+      "--model",
+      "LaneATT",
+      "--backbone",
+      "resnet34",
+      "--checkpoint",
+      "models\\checkpoints\\laneatt_official\\experiments\\laneatt_r34_culane\\models\\model_0015.pt",
+      "--expected-count",
+      "34680",
+      "--output",
+      "D:\\DBALD-CVPR2026-Reproduction\\results\\full_culane_recovered_20261028\\laneatt"
+    ],
+    [
+      "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+      "D:\\DBALD-CVPR2026-Reproduction\\scripts\\benchmark_culane.py",
+      "--model",
+      "ADNet",
+      "--backbone",
+      "resnet34",
+      "--checkpoint",
+      "models\\checkpoints\\adnet_culane_res34.pth",
+      "--expected-count",
+      "34680",
+      "--output",
+      "D:\\DBALD-CVPR2026-Reproduction\\results\\full_culane_recovered_20261028\\adnet",
+      "--config",
+      "D:\\DBALD-CVPR2026-Reproduction\\third_party\\ADNet\\configs\\adnet\\culane\\resnet34_culane.py"
+    ],
+    [
+      "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+      "D:\\DBALD-CVPR2026-Reproduction\\scripts\\benchmark_culane.py",
+      "--model",
+      "SCNN",
+      "--backbone",
+      "resnet50",
+      "--checkpoint",
+      "models\\checkpoints\\ssd\\zhengtu\\releasev2\\scnn_r50_culane\\scnn_r50_culane.pth",
+      "--expected-count",
+      "34680",
+      "--output",
+      "D:\\DBALD-CVPR2026-Reproduction\\results\\full_culane_recovered_20261028\\scnn",
+      "--config",
+      "third_party/lanedet/configs/scnn/resnet50_culane.py"
+    ],
+    [
+      "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+      "D:\\DBALD-CVPR2026-Reproduction\\scripts\\benchmark_culane.py",
+      "--model",
+      "RESA",
+      "--backbone",
+      "resnet34",
+      "--checkpoint",
+      "models\\checkpoints\\ssd\\zhengtu\\releasev2\\resa_r34_culane\\resa_r34_culane.pth",
+      "--expected-count",
+      "34680",
+      "--output",
+      "D:\\DBALD-CVPR2026-Reproduction\\results\\full_culane_recovered_20261028\\resa",
+      "--config",
+      "third_party/lanedet/configs/resa/resa34_culane.py"
+    ]
+  ],
+  "metric": "Official CULane IoU/F1; NOT Table 1 ACC",
+  "lineage": [
+    {
+      "model": "LaneATT",
+      "checkpoint": "models\\checkpoints\\laneatt_official\\experiments\\laneatt_r34_culane\\models\\model_0015.pt",
+      "backbone": "resnet34",
+      "required_backbone": "resnet34",
+      "backbone_matches_paper": true,
+      "exact_checkpoint_equivalence": false
+    },
+    {
+      "model": "ADNet",
+      "checkpoint": "models\\checkpoints\\adnet_culane_res34.pth",
+      "backbone": "resnet34",
+      "required_backbone": "resnet34",
+      "backbone_matches_paper": true,
+      "exact_checkpoint_equivalence": false
+    },
+    {
+      "model": "SCNN",
+      "checkpoint": "models\\checkpoints\\ssd\\zhengtu\\releasev2\\scnn_r50_culane\\scnn_r50_culane.pth",
+      "backbone": "resnet50",
+      "required_backbone": "resnet34",
+      "backbone_matches_paper": false,
+      "exact_checkpoint_equivalence": false
+    },
+    {
+      "model": "RESA",
+      "checkpoint": "models\\checkpoints\\ssd\\zhengtu\\releasev2\\resa_r34_culane\\resa_r34_culane.pth",
+      "backbone": "resnet34",
+      "required_backbone": "resnet34",
+      "backbone_matches_paper": true,
+      "exact_checkpoint_equivalence": false
+    }
+  ],
+  "executions": [
+    {
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "D:\\DBALD-CVPR2026-Reproduction\\scripts\\benchmark_culane.py",
+        "--model",
+        "LaneATT",
+        "--backbone",
+        "resnet34",
+        "--checkpoint",
+        "models\\checkpoints\\laneatt_official\\experiments\\laneatt_r34_culane\\models\\model_0015.pt",
+        "--expected-count",
+        "34680",
+        "--output",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\full_culane_recovered_20261028\\laneatt"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "D:\\DBALD-CVPR2026-Reproduction\\scripts\\benchmark_culane.py",
+        "--model",
+        "ADNet",
+        "--backbone",
+        "resnet34",
+        "--checkpoint",
+        "models\\checkpoints\\adnet_culane_res34.pth",
+        "--expected-count",
+        "34680",
+        "--output",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\full_culane_recovered_20261028\\adnet",
+        "--config",
+        "D:\\DBALD-CVPR2026-Reproduction\\third_party\\ADNet\\configs\\adnet\\culane\\resnet34_culane.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "D:\\DBALD-CVPR2026-Reproduction\\scripts\\benchmark_culane.py",
+        "--model",
+        "SCNN",
+        "--backbone",
+        "resnet50",
+        "--checkpoint",
+        "models\\checkpoints\\ssd\\zhengtu\\releasev2\\scnn_r50_culane\\scnn_r50_culane.pth",
+        "--expected-count",
+        "34680",
+        "--output",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\full_culane_recovered_20261028\\scnn",
+        "--config",
+        "third_party/lanedet/configs/scnn/resnet50_culane.py"
+      ],
+      "returncode": 0
+    },
+    {
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "D:\\DBALD-CVPR2026-Reproduction\\scripts\\benchmark_culane.py",
+        "--model",
+        "RESA",
+        "--backbone",
+        "resnet34",
+        "--checkpoint",
+        "models\\checkpoints\\ssd\\zhengtu\\releasev2\\resa_r34_culane\\resa_r34_culane.pth",
+        "--expected-count",
+        "34680",
+        "--output",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\full_culane_recovered_20261028\\resa",
+        "--config",
+        "third_party/lanedet/configs/resa/resa34_culane.py"
+      ],
+      "returncode": 0
+    }
+  ]
+}

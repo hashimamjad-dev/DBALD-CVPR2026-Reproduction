@@ -1,0 +1,1 @@
+{"verified": [{"model": "LaneATT", "dataset": "TuSimple", "images": 2782, "evidence": "run", "metric": "official TuSimple ACC", "value_percent": 90, "checkpoint_sha256": "f16d05ec6b29248d2c61adb1e9263f78e4f7bace1b955014a2d17872cfe4064d", "summary_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"}]}

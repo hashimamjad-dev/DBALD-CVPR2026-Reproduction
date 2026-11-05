@@ -1,0 +1,18 @@
+ADNet cpu 1/16
+ADNet cpu 2/16
+ADNet cpu 3/16
+ADNet cpu 4/16
+ADNet cpu 5/16
+ADNet cpu 6/16
+ADNet cpu 7/16
+ADNet cpu 8/16
+ADNet cpu 9/16
+ADNet cpu 10/16
+ADNet cpu 11/16
+ADNet cpu 12/16
+ADNet cpu 13/16
+ADNet cpu 14/16
+ADNet cpu 15/16
+ADNet cpu 16/16
+D:\DBALD-CVPR2026-Reproduction\tools\reference_envs\adnet\lib\site-packages\mmcv\__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(

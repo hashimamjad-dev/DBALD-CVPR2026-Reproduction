@@ -1,0 +1,21 @@
+{
+  "torch": "2.7.1+cu128",
+  "input": "identical saved legacy backbone tensor",
+  "input_sha256": "ce9d2c98c307c603dcb94929a5b294907903218e439eab9494c1f5ec7f15d0b9",
+  "checkpoint_sha256": "6eaf98565acf2cb1528ce54447623f593883b1ef9556406d1270b16d9aaa7a15",
+  "comparisons": [
+    {
+      "mkldnn": true,
+      "max_abs": 19.770591735839844,
+      "mean_abs": 1.519065260887146,
+      "allclose_1e_4": false
+    },
+    {
+      "mkldnn": false,
+      "max_abs": 19.770591735839844,
+      "mean_abs": 1.519065260887146,
+      "allclose_1e_4": false
+    }
+  ],
+  "limitation": "One saved sample; isolates aggregator only, not full-test parity"
+}

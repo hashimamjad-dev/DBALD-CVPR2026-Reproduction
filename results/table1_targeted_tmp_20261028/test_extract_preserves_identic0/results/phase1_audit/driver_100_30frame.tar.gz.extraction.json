@@ -1,0 +1,8 @@
+{
+  "archive": "driver_100_30frame.tar.gz",
+  "sha256": "36aacdcb70b4ed33b7caec63a59081df64b7a2e6f370e6a716ab32b74ac7458d",
+  "added": 1,
+  "existing_identical": 1,
+  "archive_retained": true,
+  "no_existing_file_overwritten": true
+}

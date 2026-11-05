@@ -1,0 +1,33 @@
+{
+  "finding": "Recorded benchmark hashes match current content either exactly (RESA) or after CRLF-to-LF normalization (LaneATT, ADNet, SCNN). Original hashes are retained.",
+  "records": [
+    {
+      "model": "laneatt",
+      "path": "scripts/benchmark_culane.py",
+      "recorded_sha256": "3dcf4a458655c82eb77c049cb375847fb4faa388055e164e3c58eb5036f863d5",
+      "current_sha256": "cdaa8e808177071f45c99c76fecbbfccc74d220fbbb2d6ad7fd3aacc5d975355",
+      "lf_sha256": "3dcf4a458655c82eb77c049cb375847fb4faa388055e164e3c58eb5036f863d5"
+    },
+    {
+      "model": "adnet",
+      "path": "scripts/benchmark_culane.py",
+      "recorded_sha256": "3dcf4a458655c82eb77c049cb375847fb4faa388055e164e3c58eb5036f863d5",
+      "current_sha256": "cdaa8e808177071f45c99c76fecbbfccc74d220fbbb2d6ad7fd3aacc5d975355",
+      "lf_sha256": "3dcf4a458655c82eb77c049cb375847fb4faa388055e164e3c58eb5036f863d5"
+    },
+    {
+      "model": "scnn",
+      "path": "scripts/benchmark_culane.py",
+      "recorded_sha256": "3dcf4a458655c82eb77c049cb375847fb4faa388055e164e3c58eb5036f863d5",
+      "current_sha256": "cdaa8e808177071f45c99c76fecbbfccc74d220fbbb2d6ad7fd3aacc5d975355",
+      "lf_sha256": "3dcf4a458655c82eb77c049cb375847fb4faa388055e164e3c58eb5036f863d5"
+    },
+    {
+      "model": "resa",
+      "path": "scripts/benchmark_culane.py",
+      "recorded_sha256": "cdaa8e808177071f45c99c76fecbbfccc74d220fbbb2d6ad7fd3aacc5d975355",
+      "current_sha256": "cdaa8e808177071f45c99c76fecbbfccc74d220fbbb2d6ad7fd3aacc5d975355",
+      "lf_sha256": "3dcf4a458655c82eb77c049cb375847fb4faa388055e164e3c58eb5036f863d5"
+    }
+  ]
+}

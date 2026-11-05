@@ -1,0 +1,18 @@
+D:\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\mmcv\__init__.py:20: UserWarning: On January 1, 2023, MMCV will release v2.0.0, in which it will remove components related to the training process and add a data transformation module. In addition, it will rename the package names mmcv to mmcv-lite and mmcv-full to mmcv. See https://github.com/open-mmlab/mmcv/blob/master/docs/en/compatibility.md for more details.
+  warnings.warn(
+ADNet cuda 1/16
+ADNet cuda 2/16
+ADNet cuda 3/16
+ADNet cuda 4/16
+ADNet cuda 5/16
+ADNet cuda 6/16
+ADNet cuda 7/16
+ADNet cuda 8/16
+ADNet cuda 9/16
+ADNet cuda 10/16
+ADNet cuda 11/16
+ADNet cuda 12/16
+ADNet cuda 13/16
+ADNet cuda 14/16
+ADNet cuda 15/16
+ADNet cuda 16/16

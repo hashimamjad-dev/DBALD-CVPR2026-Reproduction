@@ -1,0 +1,6 @@
+file: D:\DBALD-CVPR2026-Reproduction\results\distillation\v1\culane_teacher20_100.txt
+tp: 15 fp: 6 fn: 9
+precision: 0.714286
+recall: 0.625
+Fmeasure: 0.666667
+

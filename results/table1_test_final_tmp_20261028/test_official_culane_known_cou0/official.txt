@@ -1,0 +1,6 @@
+file: D:\DBALD-CVPR2026-Reproduction\results\table1_test_final_tmp_20261028\test_official_culane_known_cou0\official.txt
+tp: 1 fp: 1 fn: 1
+precision: 0.5
+recall: 0.5
+Fmeasure: 0.5
+

@@ -1,0 +1,6 @@
+file: D:\DBALD-CVPR2026-Reproduction\results\culane_independent_remaining\culane_resa.official.txt
+tp: 78161 fp: 23050 fn: 26725
+precision: 0.772258
+recall: 0.7452
+Fmeasure: 0.758488
+

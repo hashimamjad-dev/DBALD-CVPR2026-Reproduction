@@ -1,0 +1,25 @@
+[
+  {
+    "model": "LaneATT",
+    "backbone": "resnet34",
+    "dataset": "TuSimple",
+    "split": "test",
+    "transformation": "clean",
+    "images": 16,
+    "metric": "official TuSimple ACC; actual 200ms runtime gate",
+    "acc_percent": 0.0,
+    "ungated_acc_percent": 95.30319940476191,
+    "fp": 0.0,
+    "fn": 1.0,
+    "median_ms": 475.2745000005234,
+    "p95_ms": 512.6530499996989,
+    "runtime_failures": 16,
+    "peak_cuda_allocated_bytes": 0,
+    "device": "cpu",
+    "seed": 0,
+    "asr": null,
+    "table1_comparable": false,
+    "scope": "subset",
+    "checkpoint_sha256": "ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795"
+  }
+]
