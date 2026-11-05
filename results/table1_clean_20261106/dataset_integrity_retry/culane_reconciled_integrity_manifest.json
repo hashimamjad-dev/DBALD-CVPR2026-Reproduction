@@ -1,0 +1,17 @@
+{
+  "dataset": "CULane",
+  "split": "test",
+  "expected": 34680,
+  "verified": 34680,
+  "failures": 0,
+  "full_test": true,
+  "retried": 52,
+  "original_receipt": {
+    "path": "results\\table1_clean_20261106\\dataset_integrity\\culane_integrity.jsonl",
+    "sha256": "a11643615b38e730127461d6f83ddaedd9adf6f410028d6a1256decaef5d7425"
+  },
+  "retry_receipt_sha256": "89a3ac0080a121951b139fea246e51682fcb1ea60f214b71cad2503b5a9a41cf",
+  "combined_records_sha256": "3281856df756e917a3c51c611896242c45ac6b20311531b1e396393d1c799ee6",
+  "validator_sha256": "d211481dbc3b33d00b0fba3a5289b5a16564e26029cc6eb3136deb08503b8a82",
+  "note": "Original full receipt plus explicit retry replacements; original errors are retained, not overwritten"
+}

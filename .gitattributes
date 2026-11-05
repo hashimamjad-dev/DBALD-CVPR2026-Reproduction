@@ -5,6 +5,15 @@ docs/distillation_v2_protocol.md text eol=lf
 docs/distillation_v2_timing_protocol.md text eol=lf
 
 # Preserve reviewed PR7 evidence bytes: receipt hashes include line endings.
+# Keep the new replay manifests, source hashes and numerical receipts stable.
+configs/table1_clean_replay.json text eol=lf
+configs/table1_clean_full_replay.json text eol=lf
+configs/table1_unified.json text eol=lf
+scripts/replay_clean_table1.py text eol=lf
+scripts/validate_clean_inference.py text eol=lf
+scripts/validate_culane_data.py text eol=lf
+results/table1_clean_20261106/** -text whitespace=cr-at-eol
+results/table1_clean_20261106/tests_pre.xml -text whitespace=-blank-at-eol,cr-at-eol
 results/culane_driver100_validated.json -text whitespace=cr-at-eol
 results/culane_full_gate_20261028/readiness.json -text whitespace=cr-at-eol
 results/culane_point_protocol_diagnostic.json -text whitespace=cr-at-eol

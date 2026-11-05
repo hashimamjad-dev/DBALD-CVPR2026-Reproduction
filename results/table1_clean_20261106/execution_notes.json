@@ -1,0 +1,13 @@
+{
+  "training_started": false,
+  "gpu_checks_completed_before_approval_instruction": true,
+  "gpu_checks": "one image per model/dataset; eight pairs; no further GPU work after user instruction",
+  "initial_cpu_tests": "temporary parent directory missing; XML preserved",
+  "uncapped_cpu_retry": "Windows native convolution access violation; resolved by serial one-thread test execution",
+  "gpu_runtime_startup": "WinError 1455: paging file too small while loading cufft64_11.dll; no system settings changed",
+  "initial_smoke": "float-vs-integer submission comparison corrected by matching existing benchmark serialization; initial source and receipt preserved",
+  "new_full_inference_runs": 0,
+  "new_training_runs": 0,
+  "broad_cpu_suite_retry": "Native access violation during SCNN R34 test while other CPU validation jobs ran; attempt interrupted; 77-test earlier one-thread run passed",
+  "full_raw_replay": "Interrupted at CULane phase to avoid redundant expensive rescoring and reduce memory pressure; prior independently verified CULane receipts reused"
+}

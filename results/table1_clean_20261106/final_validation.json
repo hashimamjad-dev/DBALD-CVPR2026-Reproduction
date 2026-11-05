@@ -1,0 +1,31 @@
+{
+  "tests": {
+    "tests_implementation.xml": {
+      "tests": 37,
+      "failures": 0,
+      "skipped": 0
+    },
+    "tests_singlethread.xml": {
+      "tests": 77,
+      "failures": 0,
+      "skipped": 0
+    },
+    "tests_final_light.xml": {
+      "tests": 68,
+      "failures": 0,
+      "skipped": 0
+    },
+    "tests_final_isolated.xml": {
+      "tests": 4,
+      "failures": 0,
+      "skipped": 0
+    }
+  },
+  "full_culane_integrity_verified": true,
+  "remaining_integrity_failures": 0,
+  "new_full_inference_runs": 0,
+  "new_training_runs": 0,
+  "new_poisoned_model_evaluations": 0,
+  "gpu_work_after_user_approval_instruction": false,
+  "reference_and_original_experiment_evidence_unmodified": true
+}

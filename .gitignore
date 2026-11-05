@@ -52,3 +52,5 @@ results/**/*.part
 results/test_tmp*/
 # Local fixtures from the PR7 merge check; reviewed reports are tracked separately.
 /results/pr7_merge_20261105/test_tmp/
+# Preserve validation reports without tracking disposable test fixtures.
+/results/table1_clean_20261106/test_tmp*/

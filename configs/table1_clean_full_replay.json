@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "id": "clean_adnet_resnet18",
+      "model": "ADNet",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test\\adnet",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl"
+    },
+    {
+      "id": "clean_resa_resnet18",
+      "model": "RESA",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test\\resa",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl"
+    },
+    {
+      "id": "clean_scnn_resnet18",
+      "model": "SCNN",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test\\scnn",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl"
+    },
+    {
+      "id": "clean_adnet_resnet34",
+      "model": "ADNet",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test_r34\\adnet",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl"
+    },
+    {
+      "id": "clean_resa_resnet34",
+      "model": "RESA",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test_r34\\resa",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl"
+    },
+    {
+      "id": "clean_laneatt_resnet34",
+      "model": "LaneATT",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test_r34_torch16_order\\laneatt",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl"
+    },
+    {
+      "id": "clean_laneatt_resnet18",
+      "model": "LaneATT",
+      "dataset": "TuSimple",
+      "metric": "benign_acc",
+      "evidence": "results\\overnight\\full_test_torch16_order\\laneatt",
+      "annotations": "datasets/raw/tusimple_test/labels.jsonl"
+    },
+    {
+      "id": "culane_laneatt",
+      "model": "LaneATT",
+      "dataset": "CULane",
+      "metric": "benign_acc",
+      "evidence": "results/full_culane_recovered_20261028/laneatt",
+      "annotations": "datasets/raw/culane/list/test.txt",
+      "data_root": "datasets/raw/culane"
+    },
+    {
+      "id": "culane_adnet",
+      "model": "ADNet",
+      "dataset": "CULane",
+      "metric": "benign_acc",
+      "evidence": "results/full_culane_recovered_20261028/adnet",
+      "annotations": "datasets/raw/culane/list/test.txt",
+      "data_root": "datasets/raw/culane"
+    },
+    {
+      "id": "culane_scnn",
+      "model": "SCNN",
+      "dataset": "CULane",
+      "metric": "benign_acc",
+      "evidence": "results/full_culane_recovered_20261028/scnn",
+      "annotations": "datasets/raw/culane/list/test.txt",
+      "data_root": "datasets/raw/culane"
+    },
+    {
+      "id": "culane_resa",
+      "model": "RESA",
+      "dataset": "CULane",
+      "metric": "benign_acc",
+      "evidence": "results/full_culane_recovered_20261028/resa",
+      "annotations": "datasets/raw/culane/list/test.txt",
+      "data_root": "datasets/raw/culane"
+    }
+  ]
+}
