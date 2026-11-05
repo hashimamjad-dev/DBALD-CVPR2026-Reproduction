@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "reference_sha256": "052cbbc97cf3d5823d465e1fa200b1dc7aac270bf6472dd58c8d5acb679bf683",
+  "manifest_sha256": "d63900c2489d2aed4f635d0a788ece02081a58bee39154f642ea05f645576c50",
+  "verified": [],
+  "rejected": [
+    {
+      "id": "invalid",
+      "error": "Unsupported evidence metric"
+    }
+  ],
+  "phase1_complete": false
+}

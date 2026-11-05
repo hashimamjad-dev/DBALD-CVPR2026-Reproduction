@@ -55,3 +55,20 @@ def test_call_passes_prompt_and_settings_through():
     assert trigger.pipe.last_call['prompt']=='Add a small traffic cone'
     assert trigger.pipe.last_call['steps']==10
     assert trigger.pipe.last_call['mask'].sum()>0
+
+def test_compositing_preserves_outside_pixels_even_when_pipeline_edits_entire_crop():
+    from PIL import Image
+    from types import SimpleNamespace
+
+    class DriftingPipe:
+        def __call__(self, prompt, **kwargs):
+            return SimpleNamespace(images=[Image.fromarray(np.full((64, 64, 3), 255, np.uint8))])
+
+    trigger = make_trigger(edit_window=64)
+    trigger.pipe = DriftingPipe()
+    image = np.full((100, 100, 3), 17, np.uint8)
+    result = trigger(image, 40, 40, 10, 'fixture', seed=0)
+    outside = np.ones((100, 100), dtype=bool)
+    outside[40:50, 40:50] = False
+    assert np.array_equal(result[outside], image[outside])
+    assert np.all(result[40:50, 40:50] == 255)

@@ -1,0 +1,19 @@
+Collecting mmcv==1.7.0
+  Downloading mmcv-1.7.0.tar.gz (593 kB)
+Collecting six==1.16.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Requirement already satisfied: addict in d:\dbald-cvpr2026-reproduction\tools\reference_envs\adnet\lib\site-packages (from mmcv==1.7.0) (2.4.0)
+Requirement already satisfied: numpy in d:\dbald-cvpr2026-reproduction\tools\reference_envs\adnet\lib\site-packages (from mmcv==1.7.0) (1.23.4)
+Collecting packaging
+  Downloading packaging-26.2-py3-none-any.whl (100 kB)
+Requirement already satisfied: Pillow in d:\dbald-cvpr2026-reproduction\tools\reference_envs\adnet\lib\site-packages (from mmcv==1.7.0) (9.2.0)
+Collecting pyyaml
+  Using cached PyYAML-6.0.3-cp38-cp38-win_amd64.whl (160 kB)
+Requirement already satisfied: yapf in d:\dbald-cvpr2026-reproduction\tools\reference_envs\adnet\lib\site-packages (from mmcv==1.7.0) (0.32.0)
+Collecting regex
+  Using cached regex-2024.11.6-cp38-cp38-win_amd64.whl (274 kB)
+Using legacy 'setup.py install' for mmcv, since package 'wheel' is not installed.
+Installing collected packages: regex, pyyaml, packaging, six, mmcv
+    Running setup.py install for mmcv: started
+    Running setup.py install for mmcv: finished with status 'done'
+Successfully installed mmcv-1.7.0 packaging-26.2 pyyaml-6.0.3 regex-2024.11.6 six-1.16.0

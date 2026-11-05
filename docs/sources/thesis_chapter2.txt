@@ -1,0 +1,510 @@
+PDF PAGE 9
+Chapter 2
+Literature Review
+The increasing use of deep learning in autonomous vehicles (AVs) has improved perception
+and decision-making, but it has also introduced security vulnerabilities into safety-critical
+driving systems. This chapter reviews the literature in a sequence that moves from the
+broad security of autonomous driving to the specific problem addressed in this thesis. It
+first discusses lane diversion and its security challenges, then examines backdoor attacks
+targeting lane diversion models, with particular attention to naturalistic and diffusion-
+based data poisoning. It next reviews backdoor attacks affecting other autonomous-
+driving tasks and vision-language or foundation models, followed by physical and system-
+level security threats and existing defence and detection approaches. Finally, the chapter
+synthesizes these findings to identify the research gap and summarize the studies most
+relevant to developing an efficient, task-specific diffusion model for naturalistic backdoor
+poisoning in lane diversion systems [?,?,?].
+2.1 Security of Deep Learning in Autonomous Driv-
+ing
+Among these components, lane diversion is particularly important because its outputs
+can directly influence path planning and steering decisions. In benchmark datasets like
+TuSimple and CULane, deep-learning approaches for lane diversion have made significant
+progress, yet good performance on benchmarks doesn’t guarantee performance in real-
+world driving situations. Sato and Chen [?] performed a detailed analysis of physical-
+world adversarial attacks against lane diversion models and demonstrated that standard
+metrics of lane diversion might be inadequate for evaluating a model’s robustness in
+an end-to-end autonomous driving context. Their findings showed that the results of
+a model that is performing well in conventional evaluation can be sensitive when the
+model’s prediction is applied to the actual vehicle control.
+Recently, MohajerAnsari et al. [?] showed that by applying naturally occurring neg-
+5
+
+PDF PAGE 10
+ative shadows, it is possible to create lane-like patterns that fool lane diversion systems,
+but are not easily noticeable to the human eye. The same is true for the work of Jing
+et al. [?], which showed that well-designed physical lane markings can fool lane diversion
+systems and lead to inappropriate steering actions in a real car. These studies have shown
+that lane diversion is a performance and a major security issue. However, they primar-
+ily examine physical or inference-time vulnerabilities rather than training-time backdoor
+poisoning using naturalistic, diffusion-generated samples.
+2.2 Physical and Adversarial Vulnerabilities in Lane
+Diversion
+Backdoor attacks are a particularly important threat because they compromise a model
+during the training stage rather than requiring an attacker to manipulate every inference
+input. A typical backdoor attack involves the attacker changing a small proportion of the
+training data by inserting a trigger and associating the triggered sample with a malicious
+target behaviour. The result is that the model will perform normally if fed a clean input,
+but if there is a trigger in the input, it will generate an attacker-controlled output. There
+are four categories of back-door attacks in general surveys of back-door learning: based
+on triggers, poisoning methods, target task, and attack stage [?,?,?,?,?,?].
+The first papers that explicitly focused on the problem of lane diversion showed that
+lane detection models can also be poisoned during training time. A physical-world back-
+door attack, BadLANE, was proposed by Zhang et al. [?] specifically for lane diversion.
+BadLANE’s digital backdoor trigger is not of a fixed shape, position, and viewpoint that
+digital triggers are usually required to have, but rather it is an amorphous trigger pattern
+that can mimic mud or pollution on the surface of a road or camera lens. The approach
+also incorporates some meta-learning to tune the triggers to different environmental con-
+ditions like weather and lighting. The effectiveness of the proposed attack was shown
+under different conditions by performing experiments on various lane diversion models in
+digital and physical environments.
+For the lane diversion attack, Liao et al. [?] introduced DBALD, a stealthy data poi-
+soning method in the naturalistic setting. The aim of DBALD is to produce poisoned
+samples that look realistic with the appearance and semantics of the original driving
+scene. The method uses diffusion-based image editing together with heatmap-guided
+trigger placement and losses designed to preserve both lane information and the sur-
+rounding environment. The resulting poisoned samples should be hard for humans to
+detect without reducing the probability of a successful attack while maintaining a high
+attack success rate and clean performance.
+DBALD is a significant advance in backdoor lane-diversion research that moves be-
+6
+
+PDF PAGE 11
+yond the easily visible and obvious poisoning methods to the naturalistic, visually stealthy
+ones. But its trigger generation is based on a general-purpose diffusion backbone, called
+UltraEdit. Although lane-aware and environment-aware guidance is incorporated into the
+framework, the diffusion model is still not specifically designed for autonomous driving
+scenes or the limited operation of inserting a small trigger into a driving image. This en-
+courages research into exploring a more efficient task-based diffusion model. Collectively,
+these lane-diversion backdoor studies establish attack feasibility, but they do not evaluate
+whether task-specific diffusion distillation can reduce naturalistic trigger-generation cost
+while retaining attack effectiveness.
+2.3 Naturalistic and Diffusion-Based Data Poisoning
+The purpose of naturalistic data poisoning is to hide the nature of a trigger by ensuring
+that the poisoned training samples appear like the samples in their natural environment.
+Naturalistic triggers are more like a familiar object or element of the environment that
+might be seen during driving and are different from conventional square patches or ar-
+tificial patterns. BadLANE has shown that lane diversion systems can be effectively
+triggered by physical patterns in the form of mud [?]. Building on this, DBALD went in
+a new direction with diffusion-based image editing to produce naturalistic triggers that
+retain the visual attributes of the original image [?].
+Diffusion models can be used for high-quality image generation and editing. The
+drawback of general-purpose diffusion models is that they are costly due to the fact that
+generally multiple denoising steps are needed in order to generate an image. Conventional
+trigger-generation approaches are reported to be more expensive than DBALD by a fac-
+tor of the number of images per generation according to DBALD’s authors, and they
+believe that there is a potential direction of research to improve the cost-effectiveness
+of DBALD: a distilled diffusion model tailored for the specific task [?]. This observa-
+tion is relevant to the current research. In contrast to a common diffusion model for
+all trigger-generation operations, a Task-Specific Model could potentially learn the spe-
+cific transformation needed for the naturalistic poisoning of autonomous-driving images.
+The Task-Specific Model would focus on a narrow task and may generate realistic poison
+samples by conducting fewer denoising steps. The cited naturalistic and diffusion-based
+lane-diversion work motivates this efficiency question, but does not establish the perfor-
+mance of a distilled, lane-diversion-specific generator.
+7
+
+PDF PAGE 12
+2.4 Trajectory Prediction, 3D Perception, and Trig-
+ger Placement
+The backdoor approach has also been expanded to other components of autonomous
+driving. The threat is shown in these studies not to be limited to the problem of lane
+diversion and has the potential to impact prediction, decision-making, 3D perception,
+and multimodal systems.
+Pourkeshavarz et al. [?] advanced an attack on trajectory prediction models that
+was more naturalistic. They employ a method of doing training-time poisoning with
+naturalistic samples generated by changing the trajectory of an attacking vehicle and
+transforming the scene. The attack is intended to be effective even if there is no deep
+knowledge about the victim model and was tested on several trajectory prediction mod-
+els and datasets. The analysis in this study shows how a stealthy attack could impact
+the prediction phase of the autonomous vehicle pipeline, directly impacting the motion
+planning phase. Chen et al. [?] proposed a temporal-logic-based backdoor attack for
+end-to-end autonomous driving (E2E AD) via offline reinforcement learning (RL) agents.
+Their method is rather than using a traditional image patch to trigger, they use the tra-
+jectory of one or more other cars. Temporal logic specifications are employed to precisely
+specify trigger behaviours, and the addition of negative training samples increases stealth-
+iness. Trajectory-based triggers have been shown to result in malicious driving actions
+in experiments with several offline reinforcement learning agents. Although these stud-
+ies demonstrate backdoor risks in prediction and decision-making, they do not address
+efficient diffusion-based generation of poisoned images for lane-diversion models.
+Backdoor attacks have also been explored with regard to 3D perception. One of
+the first works studying backdoor attacks on LiDAR object detection in autonomous
+driving, Zhang et al. [?] presented. They poison a small amount of samples in the
+point cloud and trigger with physically realizable objects. They also proposed a stealthy
+poisoning method, where the injected points are hidden in the fake vehicle point clusters.
+The work demonstrates that training-time backdoors can have an impact on perception
+models beyond images, such as point-cloud models. Guo et al. [?] presented a 6DoF pose
+estimation backdoor attack, 6DAttack. The idea is to make use of object pose information
+for the creation of inconspicuous triggers for 3D perception systems. This study also
+shows that backdoor attacks are increasingly moving from 2D image classification to
+more complex spatial perception tasks.
+Jo and Cho [?] studied how the location of the trigger in a backdoor attack against
+a deep learning object detection system affects its performance. They proposed a Back-
+door Trigger Position Search Algorithm which seeks trigger positions rather than fixed
+positions that are considered as triggers. Their findings show that the location of trig-
+gers can significantly impact on the success of the attack. Although their method is not
+8
+
+PDF PAGE 13
+specifically designed to create lane diversion, the spatial nature of a trigger is relevant
+to the current research; moreover, it is important to create samples that are effective in
+lane diversion.
+2.5 Vision-Language and Foundation Models
+Large multimodal and foundation models have been developed quickly, making autonomous
+systems’ attack surface even larger. The vision-language models (VLMs) integrate visual
+data and language-based reasoning, and are being studied extensively for autonomous
+driving use cases. Multimodal nature adds other potential hidden triggers.
+The work of Ni et al. [?] showed that autonomous driving systems that rely on vision-
+language models can exhibit unsafe behaviour in the presence of physical backdoor trig-
+gers. They found that physical objects in the surrounding environment of the car can
+trigger malicious behavior, but still provide normal driving functions in the absence of the
+trigger. Liu et al. [?] proposed a natural reflection backdoor attack on the autonomous
+driving VLM. The method is not an artificial patch, but rather natural reflections within
+the environment used as hidden triggers. The type of trigger where there is a reflection
+is especially challenging to detect because reflections are very common in real driving
+scenarios and thus may not be alarming to human viewers.
+Zhong et al. [?] presented a stealthy semantic backdoor attack against VLMs. They
+take a different approach from direct visual cues and make use of the semantic informa-
+tion in other modalities. The attacks show that such a model can be attacked even if
+there is no apparent visual input trigger. Wang et al. [?] also introduced a multimodal
+backdoor attack for autonomous driving VLMs by using naturalistic graffiti synthesized
+by diffusion-based image inpainting and a cross-lingual text trigger. In their experiments
+on DriveVLM, they showed that normal performance in clean tasks can be maintained
+even when naturalistic visual triggers are added to the multimodal backdoor attack.
+This work is important to the current research as it further illustrates the feasibility of
+diffusion-based image generation as a way to produce naturalistic backdoor triggers.
+Other foundation models, not just VLMs, have been subject to backdoor attacks.
+Zhang et al. [?] conducted a study on attacks to prompt-based video segmentation foun-
+dation models. They have shown it is possible to embed hidden triggers in prompt and
+video inputs to influence segmentation outcomes. In combination, the studies suggest
+that backdoor attacks have evolved in line with the modern foundation models and are
+not limited to traditional convolutional neural networks. A recent example of the growing
+pace of the development of large-scale vision-language foundation models is the model
+Qwen3-VL [?]. While the technical report is not a study of a backdoor attack, the growing
+capability and deployment of such multimodal architectures highlight the need to assess
+the security of such systems before their use in safety-critical autonomous driving appli-
+9
+
+PDF PAGE 14
+cations. However, these cited works primarily concern VLMs or other foundation-model
+settings and do not evaluate efficient naturalistic poisoning of lane-diversion models.
+2.6 Sensor-Fusion, Localization, and Mapping At-
+tacks
+There are multiple system and physical attacks that are possible against autonomous driv-
+ing systems, apart from the training-time backdoor attacks. These studies are relevant
+since they have shown the impact of perception errors on downstream vehicle behaviour.
+Tehrani et al. [?] proposed a taxonomy of system-level attacks to autonomous vehicles
+deep learning models. They looked at a vast amount of research and classified attacks
+based on the attacked component, the attack mechanism, the threat model, and the
+propagation of model-level errors to system-level failures. Jing et al. [?] studied physical
+attacks on lane diversion and showed that with proper road marking design, false lane
+structures can be generated, leading a real vehicle to steer in the wrong direction. Sato
+and Chen [?] also demonstrated that the evaluation of lane diversion robustness needs
+to be performed in realistic physical environments, not just by conventional benchmark
+measures.
+In the study by MohajerAnsari et al. [?], the investigators examined negative shad-
+ows as hidden physical attacks towards lane diversion systems. They found that this
+is enough: They can make artificial lane-like shadow patterns using the manipulation
+of sunlight, thus showing that the diversion of the lanes can be influenced by natural-
+looking environmental changes. Other autonomous vehicle perception components have
+also proven to be vulnerable. Proposed by Ma et al. [?], ControlLoc is an adversarial
+patch that consists of a physical patch that can be placed in the environment to influence
+camera-based perception and object tracking. The attack was assessed in real-world vehi-
+cle experiments, demonstrating that attack propagation from the perception level to the
+vehicle level could be performed. However, in the context of LiDAR-based perception,
+Sato et al. [?] examined the realism of LiDAR spoofing attacks at high speed and long
+range, complementing previous attacks which were mostly conducted in a controlled envi-
+ronment. Jin et al. [?] proposed PhantomLiDAR, which uses electromagnetic interference
+to control the LiDAR measurements through cross-modality signal injection. In Shadow
+Hack [?] Kobayashi et al. introduced a technique that uses shadows and materials that
+are hard for LiDAR to accurately measure.
+Multi-sensor systems are also susceptible to attacks. Zhu et al. [?] explored the ma-
+licious attacks on LiDAR-camera-radar systems. Their findings show that sensor fusion
+is not a direct solution for guaranteeing security, as simultaneous manipulation of the
+inputs of different sensors can still impact the final perception output. Zhang et al. [?]
+10
+
+PDF PAGE 15
+investigated data fabrication attacks on collaborative vehicular perception. In such a
+system, vehicles share perception data with other vehicles, thereby establishing a further
+trust boundary. The authors demonstrated that adversarial cars can manipulate percep-
+tion data and affect the actions of other cars. Other attack surfaces have emerged in
+localization and mapping. Zhang et al. [?] analyzed the vulnerabilities of multi-sensor-
+fusion localization and showed that both physical attacks and GPS attacks can affect the
+localization accuracy. Lou et al. [?] have investigated the exploitation of online HD map
+construction and demonstrated that structural weaknesses in the map prediction process
+can be exploited via physical interference and camera-based attacks. Taken together,
+these studies address physical, sensor, collaborative-perception, or localization threats;
+they do not investigate the computational efficiency of diffusion-based training-time trig-
+ger generation for lane diversion.
+2.7 Defences Against Attacks on Autonomous-Driving
+Models
+While many studies have suggested new backdoor attacks, only a few studies have been
+dedicated to reliable detection and defence. The current defenses can be classified into
+data-level, model-level, trigger reverse engineering, input-level, and robustness-based de-
+fenses.
+Li et al. [?] and Jin et al. [?] offer comprehensive surveys of backdoor detection
+and defense methods. Hanif et al. [?] have updated the taxonomy for trigger construc-
+tion, poisoning strategies, model-level attacks, computer-vision backdoors, and defense
+techniques. Abbasi et al. [?] and Jin et al. [?] have updated the taxonomy of trigger
+construction, poisoning strategies, model-level attacks, computer-vision backdoors, and
+defense techniques. More specifically, Zhao et al. [?] studied the data poisoning attacks
+against deep learning and classified the attacks based on their goal, attack method, and
+target scenarios. The proposed work in this thesis is relevant to the present research,
+as it examines a training-time poisoning process and tries to efficiently generate realistic
+poisoned samples.
+Kim et. al. [?] introduced an adversarial patch-feature energy method for defending
+against physical adversarial attacks in object detection systems. This work shows the
+benefits of defending features at the level of physical perturbations, but it isn’t specifi-
+cally tailored for efficient generation of training-time naturalistic poison samples. Liu et
+al. [?] studied quantized delta-weight methods for maintaining safety in model adapta-
+tion. While not a backdoor way to generate triggers, their work shows how the concept
+of efficiency and safety extends to modifying and adapting deep learning models in gen-
+eral. In the physical autonomous vehicle attack, Liu et al. [?] proposed a defense scheme
+11
+
+PDF PAGE 16
+using motion planning to defend against adversarial object-based attacks. Similarly,
+Zhang et al. [?] proposed a real-time defense against object-based LiDAR attacks. These
+methods are useful as they show that defensive mechanisms can act at various stages of
+the autonomous vehicles pipeline. But they primarily focus on inference-time physical
+attacks, not the computational task of creating naturalistic poisoned training samples.
+Accordingly, the reviewed defence and model-adaptation studies do not directly resolve
+the specific generation-efficiency problem considered in this thesis.
+2.8 Comparative Summary of the Reviewed Studies
+The reviewed state-of-the-art approaches address backdoor threats in autonomous-driving
+systems through different attack strategies, trigger-generation methods, and defence
+mechanisms. Lane-diversion-focused studies, such as BadLANE and DBALD, demon-
+strate how poisoned training samples can induce targeted changes in lane predictions,
+while naturalistic and diffusion-based approaches aim to make triggers more visually
+plausible and less conspicuous. Other studies investigate backdoors in trajectory pre-
+diction, 3D perception, vision-language models, and sensor-fusion systems, illustrating
+that the threat extends beyond lane-related tasks. Existing defences attempt to identify
+or mitigate poisoned data and compromised models, but their effectiveness depends on
+the attack setting, trigger characteristics, and model architecture. Compared with these
+approaches, the central opportunity identified in this thesis is to improve the efficiency
+of naturalistic trigger generation specifically for lane-diversion scenarios. In particular,
+a task-specific distilled diffusion model could reduce the computational cost and infer-
+ence steps associated with general-purpose diffusion-based generation while seeking to
+preserve trigger realism and attack effectiveness. Thus, the reviewed studies establish the
+feasibility and diversity of backdoor attacks in autonomous driving, while also motivating
+further investigation into efficient, driving-scene-oriented trigger generation.
+BadLANE and DBALD are the most directly related studies to the present the-
+sis. BadLANE demonstrates physical-world lane-diversion backdoor poisoning using
+road- or lens-like contamination triggers, whereas DBALD advances naturalistic poi-
+soning through diffusion-based image editing and lane-aware trigger placement. DBALD
+is therefore the closest baseline for this work. Its use of a general-purpose diffusion
+backbone motivates investigating whether a task-specific distilled generator can reduce
+trigger-generation cost while retaining visual realism and attack effectiveness. This effi-
+ciency improvement is a research objective of the present thesis, not an established result
+of the reviewed studies.
+Overall, the reviewed literature establishes that autonomous driving models can be
+compromised through training-time poisoning, physical triggers, semantic triggers, and
+multimodal manipulation. Recent naturalistic approaches such as DBALD have substan-
+12
+
+PDF PAGE 17
+Table 2.1: Comparison of Existing Attack, Detection, and Defence Studies Relevant to Autonomous Driving and Naturalistic Backdoor
+Poisoning
+Ref. Methodology Strength Limitation Relevance to This Thesis
+[?,?,?] Physical attacks;
+robustness evaluation
+Reveal lane-diversion
+vulnerabilities in realistic
+settings
+Inference-time attacks; no
+diffusion-based poisoning
+Motivates lane-diversion security
+research
+[?,?,?] Trajectory and
+reinforcement-learning
+backdoor attacks
+Behaviour-based, non-patch
+triggers
+Not focused on image-based
+lane-diversion poisoning
+Shows backdoor risks across
+driving tasks
+[?] Temporal backdoor attack Considers attack behaviour
+over time
+Not focused on image-based
+lane-diversion poisoning
+Adds temporal-attack context
+[?,?,?] LiDAR and 3D perception
+backdoor attacks
+3D triggers; pose and
+trigger-position strategies
+No task-specific diffusion for lane
+diversion
+Informs trigger design and
+evaluation
+[?] 3D perception backdoor
+attack
+Studies attacks on 3D
+perception
+No task-specific diffusion for lane
+diversion
+Adds 3D-perception security
+context
+[?,?,?] Physical and
+reflection-based backdoors
+Naturalistic and physical
+trigger designs
+Primarily address other model or
+task settings
+Highlights trigger realism and
+stealthiness
+[?,?,?] Naturalistic, semantic,
+and vision-language
+backdoors
+Diverse, naturalistic,
+cross-modal triggers
+Primarily target vision-language
+models
+Highlights trigger realism and
+stealthiness
+[?] Multimodal backdoor
+attack
+Examines multimodal threat
+patterns
+Not a lane-diversion poisoning
+efficiency study
+Provides multimodal security
+context
+[?,?,?] Video-segmentation and
+vision-language
+foundation models
+Examines prompt- and
+video-based model security
+No lane-diversion poisoning
+efficiency study
+Provides foundation-model security
+context
+[?,?,?] Physical, sensor-fusion,
+and LiDAR attacks
+Real-world and cross-sensor
+threat analysis
+Focuses on physical or sensor-level
+threats
+Broadens autonomous-driving
+security context
+[?,?,?] LiDAR attacks and
+defences
+Studies sensor-level
+vulnerabilities and mitigation
+Does not develop lane-diversion
+trigger generation
+Adds sensor-security and defence
+context
+[?,?,?] Collaborative-perception,
+mapping, and localization
+attacks
+Identifies pipeline-wide attack
+surfaces
+No task-specific diffusion trigger
+generation
+Defines broader AV security scope
+[?,?] Attack taxonomy and
+motion-planning security
+Summarizes broader AV
+attack surfaces
+No task-specific diffusion trigger
+generation
+Supports the broader security
+motivation
+[?,?] Adversarial defence and
+safe model adaptation
+Robustness and
+safety-oriented methods
+No naturalistic backdoor sample
+generation
+Context for robustness and
+efficiency
+[?,?,?] Backdoor and
+data-poisoning surveys
+Taxonomies of attacks,
+triggers, and defences
+Broad reviews; no task-specific
+generator evaluation
+Supports background and
+research-gap analysis
+[?,?,?] Backdoor and poisoning
+studies
+Discusses attack strategies and
+threat models
+No task-specific lane-diversion
+generator evaluation
+Supports background and
+research-gap analysis
+[?] Backdoor-related study Contributes to the broader
+backdoor literature
+Not focused on naturalistic
+lane-diversion trigger generation
+Provides additional background
+[?,?] Physical and
+diffusion-based backdoor
+poisoning
+Realistic triggers; lane-aware
+trigger placement
+General-purpose diffusion
+backbone; high generation cost
+Motivates task-specific diffusion
+distillation
+13
+
+PDF PAGE 18
+tially improved trigger realism and stealthiness through diffusion-based image editing.
+However, the use of general-purpose diffusion models remains computationally expen-
+sive, and a task-specific distilled approach for efficient naturalistic poisoning of lane di-
+version systems has not yet been systematically investigated. This gap forms the primary
+motivation for the research presented in this thesis.
+2.9 Research Gap
+Although recent studies have demonstrated the feasibility of backdoor attacks against
+lane diversion systems, existing approaches still face challenges in generating naturalistic
+and computationally efficient poisoned samples. Diffusion-based methods can produce
+realistic triggers, but relying on general-purpose, high-capacity diffusion models may
+introduce substantial generation time and computational overhead. These models are
+not necessarily optimized for the visual characteristics and constraints of driving scenes.
+Therefore, a research gap remains in developing a task-specific diffusion approach that can
+generate realistic lane-diversion triggers with reduced computational cost while preserving
+the effectiveness and stealthiness of the backdoor attack.
+2.10 Problem Statement
+The problem addressed in this thesis is the computational expense of generating natural-
+istic poisoned samples for backdoor attacks on lane diversion models. Existing diffusion-
+based approaches may require considerable inference time and computational resources
+when using general-purpose diffusion models to create driving-scene triggers. This over-
+head can limit the practical scalability of poisoning experiments. The research problem is
+therefore to reduce the computational cost and generation time of diffusion-based trigger
+creation without substantially compromising the visual realism of the generated samples
+or the effectiveness of the resulting backdoor attack.
+2.11 Proposed Solution
+To address this problem, this thesis proposes a task-specific distilled diffusion model for
+generating naturalistic triggers in driving scenes for backdoor poisoning of lane diversion
+models. The proposed approach aims to adapt the generation process to the visual
+characteristics of autonomous-driving environments and reduce the number of diffusion
+inference steps required to produce poisoned samples. By distilling knowledge from a
+pre-trained general-purpose diffusion model into a more efficient model, the approach
+seeks to reduce trigger-generation time and computational overhead while maintaining
+14
+
+PDF PAGE 19
+the realism of the generated triggers and the effectiveness and stealthiness of the attack.
+The proposed method will be evaluated using relevant lane-diversion datasets and models,
+with comparisons against existing diffusion-based approaches.
+2.12 Summary of the Reviewed Studies
+The reviewed state-of-the-art approaches address backdoor threats in autonomous-driving
+systems through different attack strategies, trigger-generation methods, and defence
+mechanisms. Lane-diversion-focused studies, such as BadLANE and DBALD, demon-
+strate how poisoned training samples can induce targeted changes in lane predictions,
+while naturalistic and diffusion-based approaches aim to make triggers more visually
+plausible and less conspicuous. Other studies investigate backdoors in trajectory pre-
+diction, 3D perception, vision-language models, and sensor-fusion systems, illustrating
+that the threat extends beyond lane-related tasks. Existing defences attempt to identify
+or mitigate poisoned data and compromised models, but their effectiveness depends on
+the attack setting, trigger characteristics, and model architecture. Compared with these
+approaches, the central opportunity identified in this thesis is to improve the efficiency
+of naturalistic trigger generation specifically for lane-diversion scenarios. In particular,
+a task-specific distilled diffusion model could reduce the computational cost and infer-
+ence steps associated with general-purpose diffusion-based generation while seeking to
+preserve trigger realism and attack effectiveness. Thus, the reviewed studies establish the
+feasibility and diversity of backdoor attacks in autonomous driving, while also motivating
+further investigation into efficient, driving-scene-oriented trigger generation.
+15

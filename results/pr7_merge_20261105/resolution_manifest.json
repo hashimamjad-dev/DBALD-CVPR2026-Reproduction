@@ -1,0 +1,407 @@
+{
+  "milestone": "1e181a58280a1a63acd807503770b14b52a5baeb",
+  "main": "bf613bcec61762109f7c5446f070cc205bb002be",
+  "config_review": "schema_version and all fields of seven records are identical",
+  "train_integrity_review": "identical multiset of records; retain milestone order",
+  "conflicts": [
+    {
+      "path": "configs/table1_evidence.json",
+      "milestone_sha256": "c717a0b20f52cd07dd74a668a3856f71fe359e595af3ccca2057bf886d580ce3",
+      "main_sha256": "f8dd075848b23f3a14a4bd7b1198f6b448b47932ab508de615e4ba9016d6c86e",
+      "line_endings_only": true,
+      "resolution": "milestone bytes; content identical"
+    },
+    {
+      "path": "docs/CULane_Metric_Milestone.md",
+      "milestone_sha256": "136bbc9b2955bef4c64eadd195a9efa29d5615754b25d80c171903c0bcc5aa07",
+      "main_sha256": "4351b77b8c92e9effe5d085437d26235d562d959276206a7a24e5da58056da46",
+      "line_endings_only": true,
+      "resolution": "milestone bytes; content identical"
+    },
+    {
+      "path": "docs/SCNN_Parity_Fix.md",
+      "milestone_sha256": "d2d975e2428adf7f14f55671f0815b57755fbf0380df54a7ecc40d932e6d0bda",
+      "main_sha256": "6ab592e1aac4ea27acc7eddbf905a3fce6baf172231452a2c3024d11fc718aa1",
+      "line_endings_only": true,
+      "resolution": "milestone bytes; content identical"
+    },
+    {
+      "path": "docs/Table1_Evaluator.md",
+      "milestone_sha256": "f1aff78dfbd62b83a765f4712a5f428d3b23a8e6505dceb5043a6a9841ce4bf6",
+      "main_sha256": "2c27a0a9c36c7c97e40ef5f2c82c739d6c3786c40cf007d6db23a3eb7272f57d",
+      "line_endings_only": false,
+      "resolution": "milestone canonical; both originals archived"
+    },
+    {
+      "path": "docs/distillation_methodology.md",
+      "milestone_sha256": "87e650e26c08108940bfcc5494ac9ed3335968898f8a2f320d49989703c4c71a",
+      "main_sha256": "a22dc6c784a021feff274c9086bc4ad1e56f5cf2bace1977ef639ee51ce50d5e",
+      "line_endings_only": false,
+      "resolution": "milestone canonical; both originals archived"
+    },
+    {
+      "path": "docs/distillation_report.md",
+      "milestone_sha256": "1a6862bc6ed2ed6072ca414c5bfdead3005035cac78118ef96aeb6b3795a389d",
+      "main_sha256": "689fc8e45c7e7d99ff2bd1d232af79a939c5729f1fcd2f97714d8348464eca5d",
+      "line_endings_only": false,
+      "resolution": "milestone canonical; both originals archived"
+    },
+    {
+      "path": "results/culane_driver100_validated.json",
+      "milestone_sha256": "f6e24df9110cdb3cbc6ab93ab55e6b0d5f18a974423780b5aebf6fd89ad6a181",
+      "main_sha256": "11eb59ac13969f093975c45c260f64953c46fe729be71bb7dcc434f29b2f40eb",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/culane_full_gate_20261028/readiness.json",
+      "milestone_sha256": "d47e39bbfdea681cf4a16f0f27e150808d6d726d7a4ff76f69266fec4f6df002",
+      "main_sha256": "d56195c672c242b81a6fb47efd4bb958b816233497157acb1a96883bf16b9ffd",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/culane_point_protocol_diagnostic.json",
+      "milestone_sha256": "bb429f76c376000b9e84f8cea8938c56f6e4ee3cbf4b29fd7eebf253ed28544b",
+      "main_sha256": "558a22e712786ba08b2f9ac5a425cf16f3aff6f6d9356a890b9d5462fefee32f",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/culane_recovered_truncated_image.json",
+      "milestone_sha256": "f21fca3c464dae63d2cbf7d41840f2fc9cc7c3bbc758f43b2c437d5fceeb178a",
+      "main_sha256": "58f34c285d8649b1a34d4f5140396b480ed18316962c414a8d7b00ac013b18da",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/full_culane_recovered_20261028/README.md",
+      "milestone_sha256": "6c3159ec7dd71c187555a8d0f63de92d709c017c4a2a750df7c1a614d2b4ee47",
+      "main_sha256": "afe68d0f652015135d8285d800b4f7e008323ec5a0cfa0b380f8187b9c15024a",
+      "line_endings_only": false,
+      "resolution": "milestone canonical; both originals archived"
+    },
+    {
+      "path": "results/phase1_audit/Table1_Comparison.md",
+      "milestone_sha256": "4aa3db6c1e64ca1e0a062eb1448a23cf4f334e5fda486e11120a979b7f2912c5",
+      "main_sha256": "d86b175322a735febf63f8b41d54317e58fb2e9cd9c4be536680b6f0a45b67bb",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/clean_rescore.json",
+      "milestone_sha256": "2575582c7f8b6072bd2fbd573d55be1293a7eeb5c4511b4e3a7f13e06e928e5f",
+      "main_sha256": "b159dc92ee5b627cb920756f7aa08de895af15799175bd5cbfc5f07ea66e0f69",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/culane_readiness.json",
+      "milestone_sha256": "767634f59ca3177997017854f8868a60563970686a5e39a362570c64c8fa5504",
+      "main_sha256": "8e074ffd9fa735c2ed8d2e4b157d1b3b2f97148b4b9f46ad9c7207d6ebaaf155",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/culane_readiness_before_download.json",
+      "milestone_sha256": "2bc3794eb761a5e0b632c65d1f14cd5d1845674b338ab96e303f7b28a86f48a9",
+      "main_sha256": "050853a6d4d5914160f43ac51b12b7a37eacff27aab409cea5ad8b80a74412a4",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_adnet_official.txt",
+      "milestone_sha256": "92fe866cdb0e2f6684cbcc79f59a01c3d053d65031260602fd0a60f6c7e0ebfb",
+      "main_sha256": "23536c276bd378f606054c51ec12f306d91b9c6004b6bc0ed95e2f6d0b8d7ec8",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_r34_adnet_official.txt",
+      "milestone_sha256": "26e3ac06e6822efbff84366fd9dd26c273f4afac907968696ca34453548076af",
+      "main_sha256": "fa422b7f96d6104cf90645f0fba81f8bd3fe7119d4195ccf294ff097d77e7bd6",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_r34_resa_official.txt",
+      "milestone_sha256": "85b726276689ece31c99148fbab2e544770972b1217a0527e406a2107c4472cb",
+      "main_sha256": "6c44c56cf734fceb704c0bf7dd93d73150eb24091e35d2ae6d0aef577facaf4b",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_r34_scnn_official.txt",
+      "milestone_sha256": "8c394291bbe8607637f25e5df014a91b67d657569d20906959013fa6df5114b7",
+      "main_sha256": "3354d5121c278e4233aa4c78104a7b4b0dda22852981214b7fc0aa5c4b04bb15",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_torch16_order_laneatt_official.txt",
+      "milestone_sha256": "4f235bcc2fb32d029ef306fb05064189950376f6361910528611718be6a981f9",
+      "main_sha256": "e2d1cd2190153a9cf93a5cb7c62b6b1837afc4ad1991658157d27490e9f0051e",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/driver_100_30frame.tar.gz.extraction.json",
+      "milestone_sha256": "105bb8cc7c9a51eba681ca6042e0ccba13d53570dba7dc3f1640d6b7d76cafd7",
+      "main_sha256": "134c24fdbf20df4c580ed0895cd9b22b8f1d8477878d932d1a20876e884be398",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/driver_193_90frame.tar.gz.extraction.json",
+      "milestone_sha256": "4de5204d0680d56c835da7c3b186fe857684d917f0338a222ec29d37324f3118",
+      "main_sha256": "a697936c45b5863fd90861f88e9390823e3f409494d2438fa83172071013b56c",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/fresh_clean_verification.json",
+      "milestone_sha256": "e054885cda6412523f813de39d3327e4cfcb494a9f81f1f9ef344974f93284bc",
+      "main_sha256": "e0b4c76a6243990bb4370fc0eb1a93e6dc0860fca975e29d53f4dd997b81f1ad",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/completed.json",
+      "milestone_sha256": "cf82f29e2e9141e224911c565da9a48b1e2925c3ebc27bd6ed4dfe2ad5f990b3",
+      "main_sha256": "d6d272d04b426adabc519cfef7f51f2823bcbb233ba6dda3c04995aaf23ba7fe",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/model_provenance.json",
+      "milestone_sha256": "227ccb956c6036f90eaa1beaf76b8e1c6ae4c5be9ecb2c17a432aec4915cdf6c",
+      "main_sha256": "ab499781856ffd035e780a24e30383f832874d12730599b8c0dbc691196b6b1b",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/run_config.json",
+      "milestone_sha256": "637313bd26d7c2d2d27fcedf384fc6615215f37595039ddc3c68bc4db21332a6",
+      "main_sha256": "40e8e567fe7ca7c8a5b0a372e2f66d5a4843f75efe812d0124a807426174e045",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/summary.csv",
+      "milestone_sha256": "da4f9f6de82297c27d7739105bf135bb3769f20f0358e2d0ef31f3fc8073deed",
+      "main_sha256": "f459ee803469baad3e2d72ba92949928ae7f796ecb413a51ccc6900ce5b5b43b",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/summary.json",
+      "milestone_sha256": "4174d5cc730182008fd2ab83492c64cd393eeca94b53d3e7a2f2252141558aab",
+      "main_sha256": "b12bdc3ab821e792baee467750993ac83a9deb8672c42d34a6d567dbb9463284",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/table1_status.csv",
+      "milestone_sha256": "3d8341fae8db7ec3dd8518b5fe6251ffa811dd1be441c95e36f561b17ca11a1e",
+      "main_sha256": "aa58baa7699b6a13ad91fbe081cf602dce0796cec11862cc31d9b9b241ac1ecc",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/table1_status.md",
+      "milestone_sha256": "e3da327ee8d9a1fbf6c08045ea1fe554c9cac3a5ef6a655ca6b9a6a383e6f510",
+      "main_sha256": "0d107c8e8059e8aa774bea6125d910766e0cf421469054f8d99ae076c84664d7",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/phase1_audit/tests.xml",
+      "milestone_sha256": "3c7e82ec60d218a99dd6706e82b0e0d754531707ee22b693df5d650d33be361e",
+      "main_sha256": "0b6f76fd2bb6637ace698d8ff8ec0d311322e1bad09cfd80df304bf1a5799dd8",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_fresh_stage_comparison.json",
+      "milestone_sha256": "0886379647d6e1139608a0183f81ba5ef84bf229447575b10bb45319659d8ded",
+      "main_sha256": "71ccdbfe180475679c023e23f5b2ca9b6890fe678e03ea6c99e15a558e4f8c7e",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_layout_legacy_20261028.json",
+      "milestone_sha256": "bac2ab87e1c8ed692b017580f3a50f2699fe762fe61a998d21dbc1187e6b019a",
+      "main_sha256": "37ee05cd9b1064044ae28d1fe00682eff385ba797f58ad5edf2a2d2cd348537b",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_layout_modern_20261028.json",
+      "milestone_sha256": "4a6c0bb80619cfa1130ed828ca30370d3408f2c4082fe5c6fbf05ecb6d61cb08",
+      "main_sha256": "ab4bffc98734d437c77a3cf2966cdd447e6749949523f68432808181d7887b10",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_oracle_legacy.json",
+      "milestone_sha256": "abf7cc017b8de7a1b1448a06c1706afa5c9e49e2984689b5d0fdeb54727423a9",
+      "main_sha256": "9c4c54887e1ba530040ca088373eb0dc874aa425fa9bf4019aa7fb883c6547ce",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_oracle_legacy_single.json",
+      "milestone_sha256": "4e243504d8dba7c344e184f54260b5d7cae9baa2d2e5a5cdebf4b49b176975d8",
+      "main_sha256": "8881688c023fe571a51f61dd341b4e25ae936ea5540004811bbbf01cfe9559a3",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_oracle_modern.json",
+      "milestone_sha256": "a191234887b025e928d097106e7c97545acb2c7b3191fa8ad6f1ff4ee53ffdd9",
+      "main_sha256": "384c1cb64bbc4b64240bf991394105db220344e9927be4d730260a48d45f2492",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_parity_status_20261028.json",
+      "milestone_sha256": "df2fb6819432e35f22f538a75da1a68709ba6b9ed35f73442ab7df5ef2534c29",
+      "main_sha256": "8a51d4130a1812f6b23d92885ac6d71ff45e2adf69d4f5122ffc9bd89aed960d",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_single_thread_parity/comparison.json",
+      "milestone_sha256": "7068a246ac0dd01274e65fe9f597b64d2e6775278af06f9658f8153adb359ab5",
+      "main_sha256": "db1047a5f382c13a177c6b8718bb2e31a8d6bc95e602d9b9e8860d1477315810",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_single_thread_parity/reference.json",
+      "milestone_sha256": "f538f9cb8f070e3bc75c594bec270bfd97d5bb217b2abab2442aee70fb215e39",
+      "main_sha256": "ff7ec4cab80233e547318e7520ae5ddd23af9bfd8642ad34e0b6d613c5822328",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/scnn_single_thread_parity/summary.json",
+      "milestone_sha256": "bd7ff87a708f3c2de647de84c2e4070422664e3eec76123552037d172eaf6e31",
+      "main_sha256": "37392898c3d0d1b453c2c605e550b7d965df0f5fb6b085b050d0252489f869f8",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/table1_culane_milestone/table1.csv",
+      "milestone_sha256": "2125e46fbadfa390b0b103eb83fa154fbd43f4bb0375884d3a47036eee77dd86",
+      "main_sha256": "666ab0a3f64e10627cebfebfc5c61511330f9a2434108cdffbea18da7901a092",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/table1_culane_milestone/table1.md",
+      "milestone_sha256": "c955c9c8eddd909af49334cdbc256643293d83b8909a91960df7de98c6ecdd04",
+      "main_sha256": "c9bd427c7b7b2bf331fd277c62787b2e03f677187299f4c6423600a6ecac4181",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/table1_culane_milestone/verification.json",
+      "milestone_sha256": "5c37bae1bfdf9a8e14f95d193d65655cb8145d6b4aef5b4104e68a5243915907",
+      "main_sha256": "cddf88b4645d3e2c7bd115c91e1d25684bae1794f61792ff5d0fbd28178341a3",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/table1_release_20261028/table1.csv",
+      "milestone_sha256": "2125e46fbadfa390b0b103eb83fa154fbd43f4bb0375884d3a47036eee77dd86",
+      "main_sha256": "666ab0a3f64e10627cebfebfc5c61511330f9a2434108cdffbea18da7901a092",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/table1_release_20261028/table1.md",
+      "milestone_sha256": "c955c9c8eddd909af49334cdbc256643293d83b8909a91960df7de98c6ecdd04",
+      "main_sha256": "c9bd427c7b7b2bf331fd277c62787b2e03f677187299f4c6423600a6ecac4181",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/table1_release_20261028/verification.json",
+      "milestone_sha256": "5c37bae1bfdf9a8e14f95d193d65655cb8145d6b4aef5b4104e68a5243915907",
+      "main_sha256": "cddf88b4645d3e2c7bd115c91e1d25684bae1794f61792ff5d0fbd28178341a3",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/table1_tests_20261028.xml",
+      "milestone_sha256": "8212237e1f79059733f9d031ebe47772ae9797d11f54f5f90bc0304fc27f9052",
+      "main_sha256": "c247f65bc3c811079040c5ba38d5fc0ddc6b69679908e1b494543ff69377edc9",
+      "line_endings_only": true,
+      "resolution": "main original bytes: same scientific content, CRLF matches existing pinned verification receipts; milestone original archived"
+    },
+    {
+      "path": "results/tusimple_train_integrity.jsonl",
+      "milestone_sha256": "48e7ec51852d687663d0d5cbcc4ac2bcdd800b7270e7a04a7e7f9df4525a5836",
+      "main_sha256": "758933635d934b8cb4850a21fbe560cea079064adb9e189abed849ef9cba26b2",
+      "line_endings_only": false,
+      "resolution": "milestone canonical; both originals archived"
+    },
+    {
+      "path": "scripts/evaluate_table1.py",
+      "milestone_sha256": "1b0de9a59455bddf0cdbbf0e4906613746cd476f1b39c456ce23770232d91b34",
+      "main_sha256": "b098a70e7f5c9c3e1052896a740f44f2263206ef6e7bf3ad71199a06abb5901f",
+      "line_endings_only": false,
+      "resolution": "milestone canonical; both originals archived"
+    },
+    {
+      "path": "scripts/fetch_culane_ranges.py",
+      "milestone_sha256": "d45fa0329139e324f4464dcd24ba73fca577f1e50f74430742bc6cfcf8bdd942",
+      "main_sha256": "a0c35d3059499e0922898d2b729c88b74c66a4e4f0ed85c5e1725600310caa8a",
+      "line_endings_only": true,
+      "resolution": "milestone bytes; content identical"
+    },
+    {
+      "path": "scripts/probe_scnn_aggregator.py",
+      "milestone_sha256": "c7f21a8b51e77f3d4f883f34d6cdf2c4b62bd58bb8b153bbc2a1a93e7e4c9225",
+      "main_sha256": "92f1e885a4ca1843d495876e557c8be61e90176b381476950f390020de983960",
+      "line_endings_only": true,
+      "resolution": "milestone bytes; content identical"
+    },
+    {
+      "path": "scripts/render_table1.py",
+      "milestone_sha256": "eb22b94df6c2ae67f61c6ac68e04c978368033ccf2394dd157f398ba5fe36b6e",
+      "main_sha256": "3abcd5ddbb23a828bb5e7fb78890e643e7eee73e07eda73d7c33b31c1378f0ed",
+      "line_endings_only": false,
+      "resolution": "milestone canonical; both originals archived"
+    },
+    {
+      "path": "src/lane_repro/laneatt_heatmap.py",
+      "milestone_sha256": "168763a07266c62eafd0dad598a83e08234f5c4b9048bbf09dc1f29c1d64aab0",
+      "main_sha256": "fb54bbc1726f75f71b92d939d153e85f77f6b2b84158f2c05d2ca6801efc740c",
+      "line_endings_only": false,
+      "resolution": "milestone canonical; both originals archived"
+    },
+    {
+      "path": "src/lane_repro/trigger_placement.py",
+      "milestone_sha256": "d739bad0569adce84b066990c26c545e937416fdc487e622dd675db1b7ee54d5",
+      "main_sha256": "4320fadec467a7542b6a48c405b2b3958ca7ae297602a64dc3b186d7f8fcd1ee",
+      "line_endings_only": false,
+      "resolution": "main placement functions; separate milestone checker retained"
+    },
+    {
+      "path": "src/lane_repro/ultraedit_trigger.py",
+      "milestone_sha256": "2594ba03a8557bdfa4487986304f1a3f4ccd1fcd03f6ba9d17d85cc2d792bc00",
+      "main_sha256": "c4489f0c1d23ff36db451864acc334fd2f2c6f6a945caf1928e163106cf97763",
+      "line_endings_only": false,
+      "resolution": "milestone canonical; both originals archived"
+    },
+    {
+      "path": "tests/test_culane_recovery.py",
+      "milestone_sha256": "36465bb6afc7b524cd6e11e72d09612ca87d98474d085aeec2b42a35319d7f98",
+      "main_sha256": "9772f12a7437259a607b08807da43998121827facb37f07f3b43e6d64268b557",
+      "line_endings_only": true,
+      "resolution": "milestone bytes; content identical"
+    }
+  ]
+}

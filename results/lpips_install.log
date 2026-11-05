@@ -1,0 +1,5 @@
+Collecting lpips==0.1.4
+  Downloading lpips-0.1.4-py3-none-any.whl.metadata (10 kB)
+Downloading lpips-0.1.4-py3-none-any.whl (53 kB)
+Installing collected packages: lpips
+Successfully installed lpips-0.1.4

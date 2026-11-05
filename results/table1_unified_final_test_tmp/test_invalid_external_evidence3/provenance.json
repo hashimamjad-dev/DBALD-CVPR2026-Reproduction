@@ -1,0 +1,1 @@
+{"model": "LaneATT", "dataset": "TuSimple", "metric": "loa_asr", "method": "DBALD", "experiment_id": "fixture_series", "protocol": "tusimple_official_runtime_v1", "checkpoint_sha256": "incorrect", "config_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a", "evaluation_input": "supplied_scenario", "lane_slot_semantics": "stable_correspondence"}

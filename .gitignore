@@ -50,3 +50,5 @@ results/**/*.part
 /docs/sources/thesis*
 **/Thesis.pdf
 results/test_tmp*/
+# Local fixtures from the PR7 merge check; reviewed reports are tracked separately.
+/results/pr7_merge_20261105/test_tmp/

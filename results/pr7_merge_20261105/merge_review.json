@@ -1,0 +1,657 @@
+{
+  "no_deleted_paths_vs_either_parent": true,
+  "conflict_markers": [],
+  "table1_tests_passed": 34,
+  "archive_sha256": "d8487fa88b70d7f6113d3af44c8c108d3e2a13ad3a79aff7a6e9532600126436",
+  "staged_file_review": [
+    {
+      "path": ".gitattributes",
+      "status": "M",
+      "content_matches_ignoring_eol": []
+    },
+    {
+      "path": ".gitignore",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "README.md",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "docs/PUBLICATION_PROVENANCE.md",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "docs/poisoning_pipeline_status.md",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "docs/sources.md",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/culane_driver100_validated.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/culane_full_gate_20261028/readiness.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/culane_point_protocol_diagnostic.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/culane_recovered_truncated_image.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/dataset_subset.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/distillation/v1/raw_comparison_gallery.png",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/distillation/v1/texture_comparison_gallery.png",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/distillation/v1/validation_curve.png",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/distillation/v2/figures/evaluation_TuSimple_0.png",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/distillation/v2/figures/validation_CULane_0.png",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/distillation/v2/figures/validation_TuSimple_0.png",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/laneatt_assets.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/measured/laneatt_cpu_independent/provenance.json",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/measured/laneatt_cpu_independent/summary.csv",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/measured/laneatt_cpu_independent/summary.json",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/measured/laneatt_cpu_independent_full/provenance.json",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/measured/laneatt_cpu_independent_full/summary.csv",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/measured/laneatt_cpu_independent_full/summary.json",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/Table1_Comparison.md",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/clean_rescore.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/culane_readiness.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/culane_readiness_before_download.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_adnet_official.txt",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_r34_adnet_official.txt",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_r34_resa_official.txt",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_r34_scnn_official.txt",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/culane_smoke_torch16_order_laneatt_official.txt",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/driver_100_30frame.tar.gz.extraction.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/driver_193_90frame.tar.gz.extraction.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/fresh_clean_verification.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/completed.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/model_provenance.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/run_config.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/summary.csv",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/laneatt_full_cuda_verified/summary.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/table1_status.csv",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/table1_status.md",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/phase1_audit/tests.xml",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_fresh_stage_comparison.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_layout_legacy_20261028.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_layout_modern_20261028.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_oracle_legacy.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_oracle_legacy_single.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_oracle_modern.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_parity_status_20261028.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_single_thread_parity/comparison.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_single_thread_parity/reference.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/scnn_single_thread_parity/summary.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/table1_culane_milestone/table1.csv",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/table1_culane_milestone/table1.md",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/table1_culane_milestone/verification.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/table1_release_20261028/table1.csv",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/table1_release_20261028/table1.md",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/table1_release_20261028/verification.json",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/table1_tests_20261028.xml",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "HEAD",
+        "origin/main"
+      ]
+    },
+    {
+      "path": "results/tusimple_full_integrity.jsonl",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/build_results_table.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/fetch_laneatt_official.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/fetch_tusimple_subset.py",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/laneatt_train_feasibility.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/mix_poisoned_dataset.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/sanity_poisoned_training.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/speedup_ladder.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/v3_cache.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/v3_timing.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "scripts/v3_train.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "src/lane_repro/laneatt_heatmap.py",
+      "status": "M",
+      "content_matches_ignoring_eol": []
+    },
+    {
+      "path": "src/lane_repro/trigger_placement.py",
+      "status": "M",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_build_poisoned_dataset.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_crop_geometry.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_distill_v3.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_label_attacks.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_lane_metrics.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_laneatt_heatmap.py",
+      "status": "A",
+      "content_matches_ignoring_eol": []
+    },
+    {
+      "path": "tests/test_mix_poisoned_dataset.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_poison_pipeline.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_results_table.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_sanity_poisoned_training.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_stealthiness.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_training_budget.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_trigger_placement.py",
+      "status": "A",
+      "content_matches_ignoring_eol": [
+        "origin/main"
+      ]
+    },
+    {
+      "path": "tests/test_ultraedit_trigger.py",
+      "status": "A",
+      "content_matches_ignoring_eol": []
+    }
+  ]
+}

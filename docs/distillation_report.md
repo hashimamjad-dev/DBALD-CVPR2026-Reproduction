@@ -4,7 +4,7 @@
 
 ## Scientific question and scope
 
-The project investigates efficient task-specific diffusion distillation in the published DBALD security context. No unpublished source text is distributed.
+The thesis Chapter 2 motivates an efficient task-specific generator in the context of naturalistic backdoor data poisoning. This experiment measures a bounded component: whether a compact student can approximate ordinary road-restoration outputs from a general-purpose diffusion teacher with fewer steps and lower computational cost. It does not implement poisoning or test attack effectiveness. DBALD remains the security reference, with published ACC/ASR kept separate from local clean-model and editing measurements. No Chapter 3 was requested or used.
 
 ## Independent method
 

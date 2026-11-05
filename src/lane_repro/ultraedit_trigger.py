@@ -16,6 +16,16 @@ UltraEdit's native resolution is 512x512 (per its own usage examples). This modu
 window around the trigger (not the whole, much larger, TuSimple/CULane frame) and reuses
 crop_geometry.paste (the same compositing helper poison_pipeline.py and the SD1.5 distillation code
 already share) to put the edited window back into the full image.
+
+Mask-composited paste-back (fixed): the SD3 InstructPix2Pix pipeline conditions on the whole crop
+through the UNet even with mask_img supplied, and is not guaranteed to leave pixels outside the mask
+byte-for-byte unchanged (this is exactly the artifact the paper's own L_lane/L_env losses exist to
+suppress -- see Figure 4 of the paper, "vanilla masked diffusion"). Since those losses are not
+implemented here, __call__ explicitly composites: only pixels inside the trigger mask are taken from
+the model's output; everything else in the window is copied verbatim from the original crop before
+pasting back. Without this, any outside-mask drift from the pipeline silently leaks into the
+"poisoned" image, contaminating the clean-vs-poisoned ACC comparison with noise unrelated to the
+trigger itself.
 """
 import numpy as np
 from PIL import Image
@@ -45,7 +55,9 @@ class UltraEditTrigger:
         trigger_placement/poison_pipeline), NOT the edit window -- a larger context window around it
         is what actually gets sent to UltraEdit, matching its 512x512-native resolution, and only the
         trigger footprint within that window is masked (white=edit, matching the README's mask_img
-        convention). Returns the full image with that window's edited result pasted back in."""
+        convention). Returns the full image with that window's edited result pasted back in, with
+        everything outside the trigger footprint forced identical to the original crop (see module
+        docstring: the pipeline itself does not guarantee this)."""
         height,width=image.shape[:2]
         window=min(self.edit_window,height,width)
         wy0=max(0,min(y0+size//2-window//2,height-window))
@@ -62,7 +74,9 @@ class UltraEditTrigger:
             image_guidance_scale=self.image_guidance_scale,guidance_scale=self.guidance_scale,
             generator=generator).images[0]
         edited=np.asarray(edited.resize((window,window)))
-        return paste(image,edited,wy0,wx0)
+        mask_bool=mask[...,None]>0
+        composed=np.where(mask_bool,edited,crop).astype(np.uint8)
+        return paste(image,composed,wy0,wx0)
 
 def feasibility_check(checkpoint=CHECKPOINT,device='cuda',drop_t5=True,cpu_offload=False):
     """Loads the model and runs one tiny edit; reports peak VRAM and elapsed time. Run this before

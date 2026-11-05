@@ -1,0 +1,1 @@
+{"verified": [{"status": "VERIFIED", "dataset": "CULane", "images": 34680, "evidence": "D:\\DBALD-CVPR2026-Reproduction\\results\\culane_full_results_regression_tmp\\test_candidate_cannot_claim_pa0\\run", "metric_definition": "Official F1"}]}

@@ -11,6 +11,29 @@ THIRD_PARTY=ROOT/'third_party/LaneATT/lib/models/laneatt.py'
 HAVE_LANEATT=CHECKPOINT.exists() and THIRD_PARTY.exists() and importlib.util.find_spec('torchvision')
 needs_laneatt=pytest.mark.skipif(not HAVE_LANEATT,reason='LaneATT checkpoint/third_party/torchvision not set up on this machine')
 
+@pytest.mark.parametrize('kind', ['no_match', 'differentiable', 'detached', 'invalid_scalar'])
+def test_attention_fallback_only_accepts_no_match_scalar_zero(kind):
+    from types import SimpleNamespace
+
+    class Model:
+        def __call__(self, x):
+            return x
+
+        def loss(self, proposals, targets, **kwargs):
+            loss = {'no_match': 0., 'differentiable': proposals.sum(),
+                    'detached': torch.tensor(1.), 'invalid_scalar': 1.}[kind]
+            return loss, {'cls_loss': loss, 'reg_loss': loss}
+
+    adapter = SimpleNamespace(max_lanes=2, model=Model(),
+                              preprocess=lambda rgb: torch.zeros(1, 3, 8, 8))
+    image = np.zeros((8, 8, 3), dtype=np.uint8)
+    if kind in ('detached', 'invalid_scalar'):
+        with pytest.raises(ValueError, match='differentiable'):
+            laneatt_attention_map(adapter, image, [], 'LDA')
+    else:
+        attention = laneatt_attention_map(adapter, image, [], 'LDA')
+        assert np.all(attention == (0. if kind == 'no_match' else 3.))
+
 def test_build_target_shape_and_default_invalid_sentinel():
     t=build_target([],100,100,max_lanes=5,s=10)
     assert t.shape==(5,15) and (t[:,:2]==torch.tensor([1.,0.])).all() and (t[:,2:]==-1e5).all()

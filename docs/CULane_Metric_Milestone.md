@@ -35,4 +35,3 @@ The existing requests downloader was resumed, then stopped after no contiguous p
 ## Remaining original Table 1 requirements
 
 Phase 1 scientifically complete: **NO**. Exact CULane ACC needs author-confirmed sampling, lane matching, boundary and aggregation conventions. Four full CULane baselines are missing. Clean checkpoints remain traceable upstream models, not established as the exact DBALD models. Forty poisoned-model ACC, 100 scenario ASR and 40 derived averages remain unmeasured. The new candidate metric cannot fill these cells, and the diagnostic subset is never substituted for full evaluation. No paused distillation work was modified.
-

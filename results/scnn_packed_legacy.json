@@ -1,0 +1,43 @@
+{
+  "torch": "1.8.0+cpu",
+  "input": "identical saved legacy backbone tensor",
+  "input_sha256": "ce9d2c98c307c603dcb94929a5b294907903218e439eab9494c1f5ec7f15d0b9",
+  "checkpoint_sha256": "6eaf98565acf2cb1528ce54447623f593883b1ef9556406d1270b16d9aaa7a15",
+  "weights_sha256": {
+    "conv_d.weight": "2146a07e799af6f36dd3b1d9c030991c42386fb78fa9d1b08c4b84c6d07d64b7",
+    "conv_u.weight": "26ea7b12cb740f659d198f1771973ca77bfaf16aa33372f1f6742c74b5b08e7a",
+    "conv_r.weight": "19cae22f6875bd76b65a8bcea0c8f19e87dbbe17bc47e72cabc6ae0fbebf45ee",
+    "conv_l.weight": "ca513cee7b70606f5a6a2d8f965a31d1f1b665b4e82cd990929fca06da046127"
+  },
+  "comparisons": [
+    {
+      "mkldnn": true,
+      "layout": "contiguous",
+      "max_abs": 3.2586917877197266,
+      "mean_abs": 0.12170550972223282,
+      "allclose_1e_4": false
+    },
+    {
+      "mkldnn": true,
+      "layout": "channels_last",
+      "max_abs": 3.2586917877197266,
+      "mean_abs": 0.12170550972223282,
+      "allclose_1e_4": false
+    },
+    {
+      "mkldnn": false,
+      "layout": "contiguous",
+      "max_abs": 3.2586917877197266,
+      "mean_abs": 0.12170550972223282,
+      "allclose_1e_4": false
+    },
+    {
+      "mkldnn": false,
+      "layout": "channels_last",
+      "max_abs": 3.2586917877197266,
+      "mean_abs": 0.12170550972223282,
+      "allclose_1e_4": false
+    }
+  ],
+  "limitation": "One saved sample; isolates aggregator only, not full-test parity"
+}

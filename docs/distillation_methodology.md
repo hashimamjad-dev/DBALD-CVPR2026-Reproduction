@@ -4,7 +4,7 @@
 
 The existing project has executable LaneATT, ADNet, SCNN and RESA adapters, full clean TuSimple public-checkpoint evaluations, a preserved DBALD Table 1 reference, incomplete CULane downloads, and one ordinary diffusion demonstration. It did not have a trained distilled student or a teacher/student experiment. The original-version reference environments and LaneATT anchor-order correction are preserved. Existing benchmark results are reused, not rerun as new evidence.
 
-The project investigates efficient task-specific diffusion distillation in the published DBALD security context. No unpublished source text is distributed.
+The provided thesis Chapter 2, especially 2.9–2.11 (printed pages 14–15), motivates reducing the cost of naturalistic backdoor sample generation through task-specific diffusion distillation. Its references contain unresolved `[?]` markers, so technical choices are independently sourced. No Chapter 3 was requested, inferred or used.
 
 DBALD supplies the training-time backdoor threat model and published LDA/LRA/LOA results. The implemented experiment isolates a permissible component question: can a compact student reproduce ordinary road-restoration edits from a general-purpose diffusion teacher more cheaply while preserving lane geometry? It does not establish preservation of attack effectiveness or stealth. No poison-label changes, compromised detector training, trigger-position optimization, detector-gradient objectives or targeted lane manipulation are implemented.
 
