@@ -80,11 +80,13 @@ def laneatt_attention_map(adapter,rgb,lanes_xy,attack,cls_loss_weight=10.):
     proposals_list=adapter.model(x)
     _,parts=adapter.model.loss(proposals_list,[target.to(x.device)],cls_loss_weight=cls_loss_weight)
     loss=parts['cls_loss'] if attack=='LDA' else parts['reg_loss']
-    if not torch.is_tensor(loss) or not loss.requires_grad:
+    if not torch.is_tensor(loss) and isinstance(loss, (int, float)) and loss == 0:
         # No valid matched proposals for this frame (LaneATT's loss() returns a bare
         # 0.0 float rather than a tensor when there's nothing to backprop through).
         # Fall back to a uniform attention map for just this image rather than crash.
         attention=np.zeros((x.shape[-2],x.shape[-1]),dtype=np.float32)
     else:
+        if not torch.is_tensor(loss) or not loss.requires_grad:
+            raise ValueError('LaneATT loss must remain differentiable unless it is the no-match scalar zero')
         attention=gradient_attention_map(x,loss)[0].detach().cpu().numpy()
     return cv2.resize(attention,(width,height),interpolation=cv2.INTER_LINEAR)

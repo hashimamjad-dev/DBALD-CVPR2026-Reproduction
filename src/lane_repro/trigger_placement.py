@@ -1,71 +1,53 @@
-"""One-off sanity check for ultraedit_trigger.UltraEditTrigger's mask compositing.
+"""Optimal trigger position selection, per DBALD Section 4.2 (paper PDF p.4) and the CVPR supplement Table 4.
 
-Run this once on your GPU machine, on ONE real image, before trusting any batch poisoning run.
-It checks the thing the mask-compositing fix is supposed to guarantee: every pixel outside the
-40x40 trigger footprint is bit-for-bit identical between the clean and poisoned image. If this
-fails, the compositing fix did not get applied correctly -- stop and fix it before poisoning a
-real dataset.
-
-Usage (from the project's .venv, on the GPU-enabled machine):
-    python check_trigger_compositing.py --image path/to/one/tusimple/frame.jpg --y0 400 --x0 300
-
-Writes a diff heatmap PNG next to the script so you can eyeball exactly where (if anywhere) pixels
-changed outside the trigger box.
+Three steps, each a separate pure function: (1) candidate windows constrained to a road-region mask,
+analogous to the paper's SAM2 segmentation + sliding window; (2) a gradient-based attention map
+M_grad(i,j) = sum_k |dL/dx_(i,j,k)|, generic over any differentiable model/loss; (3) picking the
+candidate with the highest aggregate attention. This module only decides *where* a trigger window
+goes — it does not synthesize trigger pixels, write any poisoned image, or train a detector.
 """
-import argparse
-import numpy as np
-import cv2
+import torch
 
+def sliding_window_candidates(mask,size,stride):
+    """mask: 2D array-like, truthy where road-region editing is allowed (the paper's SAM2 output).
+    Returns every (y0,x0) top-left corner of a size x size window that lies fully inside the image
+    and whose entire footprint is within the mask (the paper's road-region constraint)."""
+    if size<1 or stride<1: raise ValueError('size and stride must be positive')
+    height,width=len(mask),len(mask[0]) if len(mask) else 0
+    if height<size or width<size: raise ValueError('mask smaller than the trigger window')
+    candidates=[]
+    for y0 in range(0,height-size+1,stride):
+        for x0 in range(0,width-size+1,stride):
+            if all(mask[y][x] for y in range(y0,y0+size) for x in range(x0,x0+size)):
+                candidates.append((y0,x0))
+    return candidates
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--image", required=True, help="Path to a real road-scene image (RGB).")
-    ap.add_argument("--y0", type=int, required=True, help="Trigger top-left y (pick a spot on the road).")
-    ap.add_argument("--x0", type=int, required=True, help="Trigger top-left x.")
-    ap.add_argument("--size", type=int, default=40)
-    ap.add_argument("--prompt", default=None, help="Defaults to MUD_PROMPT.")
-    ap.add_argument("--out", default="trigger_diff.png")
-    args = ap.parse_args()
+def gradient_attention_map(x,loss):
+    """M_grad for one input: sum of |dL/dx| over the channel dimension of an NCHW tensor x that was
+    part of loss's computation graph. Returns a (N,H,W) tensor. Generic over any model/loss: the
+    paper assigns the loss per Table 4 (focal/CE for LDA, L1/GLIoU/BCE for LOA/LRA) depending on the
+    victim architecture; that choice is the caller's, made before this function is invoked."""
+    if not x.requires_grad: raise ValueError('x must require grad (part of the loss graph)')
+    gradient,=torch.autograd.grad(loss,x,retain_graph=True)
+    return gradient.abs().sum(dim=1)
 
-    from ultraedit_trigger import UltraEditTrigger, MUD_PROMPT, feasibility_check
+def select_optimal_window(attention_map,candidates,size,aggregate='sum'):
+    """attention_map: 2D array-like (H,W), e.g. one sample of gradient_attention_map's output.
+    candidates: list of (y0,x0) from sliding_window_candidates. Returns (best_window, scored) where
+    scored is every candidate's (window, score), sorted by score descending (ties broken by the
+    original candidate order, i.e. a stable sort). Since every candidate shares the same window
+    size, 'sum' and 'mean' always rank candidates identically here (mean = sum / size**2 for all);
+    aggregate only changes the reported score's scale, kept for readability in results/logs."""
+    if not candidates: raise ValueError('No candidate windows to select from')
+    if aggregate not in ('sum','mean'): raise ValueError('aggregate must be sum or mean')
+    scores=[]
+    for y0,x0 in candidates:
+        values=[attention_map[y][x] for y in range(y0,y0+size) for x in range(x0,x0+size)]
+        scores.append(sum(values)/len(values) if aggregate=='mean' else sum(values))
+    order=sorted(range(len(candidates)),key=lambda i:-float(scores[i]))
+    scored=[(candidates[i],float(scores[i])) for i in order]
+    return scored[0][0],scored
 
-    print("Running feasibility_check() first (loads model, times one tiny edit)...")
-    info = feasibility_check()
-    print(info)
-
-    image_bgr = cv2.imread(args.image)
-    if image_bgr is None:
-        raise SystemExit(f"Could not read image: {args.image}")
-    image = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
-
-    trigger = UltraEditTrigger()
-    prompt = args.prompt or MUD_PROMPT
-    poisoned = trigger(image, args.y0, args.x0, args.size, prompt, seed=0)
-
-    diff = np.abs(image.astype(int) - poisoned.astype(int)).sum(axis=-1)  # (H, W)
-
-    mask = np.zeros(diff.shape, np.uint8)
-    mask[args.y0 : args.y0 + args.size, args.x0 : args.x0 + args.size] = 255
-
-    outside_diff = diff[mask == 0]
-    inside_diff = diff[mask == 255]
-
-    print(f"Max pixel diff OUTSIDE trigger box: {outside_diff.max()} (must be 0, or you have a bug)")
-    print(f"Mean pixel diff INSIDE trigger box:  {inside_diff.mean():.2f} (should be > 0, trigger should visibly differ)")
-    print(f"Nonzero-diff pixel count outside box: {(outside_diff > 0).sum()} / {outside_diff.size}")
-
-    heat = cv2.applyColorMap((np.clip(diff, 0, 255)).astype(np.uint8), cv2.COLORMAP_JET)
-    cv2.rectangle(heat, (args.x0, args.y0), (args.x0 + args.size, args.y0 + args.size), (255, 255, 255), 1)
-    cv2.imwrite(args.out, heat)
-    print(f"Diff heatmap written to {args.out} (white box = trigger footprint)")
-
-    if outside_diff.max() > 0:
-        raise SystemExit(
-            "FAIL: pixels outside the trigger footprint changed. "
-            "Compositing fix is not working as expected -- do not run a full poisoning batch yet."
-        )
-    print("PASS: everything outside the trigger footprint is pixel-identical.")
-
-
-if __name__ == "__main__":
-    main()
+def optimal_trigger_position(mask,attention_map,size,stride,aggregate='sum'):
+    """Convenience: candidate generation plus selection in one call. Returns (best_window, scored)."""
+    return select_optimal_window(attention_map,sliding_window_candidates(mask,size,stride),size,aggregate)
