@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="26" time="75.307" timestamp="2026-11-06T06:33:36.647897+05:00" hostname="DESKTOP-NU3DNPD"><testcase classname="tests.test_table1_cached_render" name="test_cached_render_exports_all_cells_without_scorer" time="0.007"><failure message="ValueError: Use a results output directory outside immutable reference">tmp_path = WindowsPath('D:/DBALD-CVPR2026-Reproduction/tmp/kaggle-regression/test_cached_render_exports_all0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001EA31151940&gt;
+
+    def test_cached_render_exports_all_cells_without_scorer(tmp_path,monkeypatch):
+        source=tmp_path/'cache.json'; source.write_text(json.dumps({'verified':[]}))
+        output=tmp_path/'rendered'
+        monkeypatch.setattr(sys,'argv',['render_table1','--output',str(output),'--evidence',str(source)])
+        monkeypatch.setattr(render_table1,'official_tusimple',lambda: pytest.fail('Must not re-score cached evidence'))
+&gt;       render_table1.main()
+
+tests\test_table1_cached_render.py:15: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def main():
+        parser=argparse.ArgumentParser(description=__doc__)
+        parser.add_argument('--output',default='results/phase1_audit')
+        parser.add_argument('--evidence',default='results/phase1_audit/clean_rescore.json')
+        parser.add_argument('--additional-evidence',action='append',default=[])
+        args=parser.parse_args()
+        out = (ROOT/args.output).resolve()
+        if not out.is_relative_to(ROOT/'results') or out.is_relative_to(ROOT/'results/reference'):
+&gt;           raise ValueError('Use a results output directory outside immutable reference')
+E           ValueError: Use a results output directory outside immutable reference
+
+scripts\render_table1.py:68: ValueError</failure></testcase><testcase classname="tests.test_table1_cached_render" name="test_subset_cannot_enter_full_culane_evidence" time="0.005"><failure message="AssertionError: Regex pattern did not match.&#10; Regex: 'full CULane'&#10; Input: 'Use a results output directory outside immutable reference'">tmp_path = WindowsPath('D:/DBALD-CVPR2026-Reproduction/tmp/kaggle-regression/test_subset_cannot_enter_full_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001EA7F986930&gt;
+
+    def test_subset_cannot_enter_full_culane_evidence(tmp_path,monkeypatch):
+        source=tmp_path/'cache.json'; source.write_text(json.dumps({'verified':[]}))
+        extra=tmp_path/'extra.json'; extra.write_text(json.dumps({'verified':[dict(status='VERIFIED',dataset='CULane',images=16)]}))
+        monkeypatch.setattr(sys,'argv',['render_table1','--output',str(tmp_path/'rendered'),'--evidence',str(source),'--additional-evidence',str(extra)])
+&gt;       with pytest.raises(ValueError,match='full CULane'): render_table1.main()
+                                                            ^^^^^^^^^^^^^^^^^^^^
+
+tests\test_table1_cached_render.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def main():
+        parser=argparse.ArgumentParser(description=__doc__)
+        parser.add_argument('--output',default='results/phase1_audit')
+        parser.add_argument('--evidence',default='results/phase1_audit/clean_rescore.json')
+        parser.add_argument('--additional-evidence',action='append',default=[])
+        args=parser.parse_args()
+        out = (ROOT/args.output).resolve()
+        if not out.is_relative_to(ROOT/'results') or out.is_relative_to(ROOT/'results/reference'):
+&gt;           raise ValueError('Use a results output directory outside immutable reference')
+E           ValueError: Use a results output directory outside immutable reference
+
+scripts\render_table1.py:68: ValueError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/DBALD-CVPR2026-Reproduction/tmp/kaggle-regression/test_subset_cannot_enter_full_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001EA7F986930&gt;
+
+    def test_subset_cannot_enter_full_culane_evidence(tmp_path,monkeypatch):
+        source=tmp_path/'cache.json'; source.write_text(json.dumps({'verified':[]}))
+        extra=tmp_path/'extra.json'; extra.write_text(json.dumps({'verified':[dict(status='VERIFIED',dataset='CULane',images=16)]}))
+        monkeypatch.setattr(sys,'argv',['render_table1','--output',str(tmp_path/'rendered'),'--evidence',str(source),'--additional-evidence',str(extra)])
+&gt;       with pytest.raises(ValueError,match='full CULane'): render_table1.main()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'full CULane'
+E        Input: 'Use a results output directory outside immutable reference'
+
+tests\test_table1_cached_render.py:25: AssertionError</failure></testcase><testcase classname="tests.test_table1_cached_render" name="test_candidate_cannot_claim_paper_equivalence" time="0.005"><failure message="AssertionError: Regex pattern did not match.&#10; Regex: 'equivalence claim'&#10; Input: 'Use a results output directory outside immutable reference'">tmp_path = WindowsPath('D:/DBALD-CVPR2026-Reproduction/tmp/kaggle-regression/test_candidate_cannot_claim_pa0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001EA7F987B90&gt;
+
+    def test_candidate_cannot_claim_paper_equivalence(tmp_path,monkeypatch):
+        source=tmp_path/'cache.json'; source.write_text(json.dumps({'verified':[]}))
+        folder=tmp_path/'run'; folder.mkdir()
+        (folder/'run_config.json').write_text(json.dumps({'backbone':'resnet34'}))
+        (folder/'point_acc_candidate.json').write_text(json.dumps(dict(images=34680,full_test=True,total=100,correct=50,
+            candidate_acc_percent=50,protocol={'table1_comparable':True})))
+        extra=tmp_path/'extra.json'
+        extra.write_text(json.dumps({'verified':[dict(status='VERIFIED',dataset='CULane',images=34680,
+            evidence=str(folder),metric_definition='Official F1')]}))
+        monkeypatch.setattr(sys,'argv',['render_table1','--output',str(tmp_path/'rendered'),'--evidence',str(source),'--additional-evidence',str(extra)])
+&gt;       with pytest.raises(ValueError,match='equivalence claim'): render_table1.main()
+                                                                  ^^^^^^^^^^^^^^^^^^^^
+
+tests\test_table1_cached_render.py:38: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def main():
+        parser=argparse.ArgumentParser(description=__doc__)
+        parser.add_argument('--output',default='results/phase1_audit')
+        parser.add_argument('--evidence',default='results/phase1_audit/clean_rescore.json')
+        parser.add_argument('--additional-evidence',action='append',default=[])
+        args=parser.parse_args()
+        out = (ROOT/args.output).resolve()
+        if not out.is_relative_to(ROOT/'results') or out.is_relative_to(ROOT/'results/reference'):
+&gt;           raise ValueError('Use a results output directory outside immutable reference')
+E           ValueError: Use a results output directory outside immutable reference
+
+scripts\render_table1.py:68: ValueError
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('D:/DBALD-CVPR2026-Reproduction/tmp/kaggle-regression/test_candidate_cannot_claim_pa0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001EA7F987B90&gt;
+
+    def test_candidate_cannot_claim_paper_equivalence(tmp_path,monkeypatch):
+        source=tmp_path/'cache.json'; source.write_text(json.dumps({'verified':[]}))
+        folder=tmp_path/'run'; folder.mkdir()
+        (folder/'run_config.json').write_text(json.dumps({'backbone':'resnet34'}))
+        (folder/'point_acc_candidate.json').write_text(json.dumps(dict(images=34680,full_test=True,total=100,correct=50,
+            candidate_acc_percent=50,protocol={'table1_comparable':True})))
+        extra=tmp_path/'extra.json'
+        extra.write_text(json.dumps({'verified':[dict(status='VERIFIED',dataset='CULane',images=34680,
+            evidence=str(folder),metric_definition='Official F1')]}))
+        monkeypatch.setattr(sys,'argv',['render_table1','--output',str(tmp_path/'rendered'),'--evidence',str(source),'--additional-evidence',str(extra)])
+&gt;       with pytest.raises(ValueError,match='equivalence claim'): render_table1.main()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: Regex pattern did not match.
+E        Regex: 'equivalence claim'
+E        Input: 'Use a results output directory outside immutable reference'
+
+tests\test_table1_cached_render.py:38: AssertionError</failure></testcase><testcase classname="tests.test_table1_evidence_import" name="test_official_static_predictions[benign_acc]" time="13.107" /><testcase classname="tests.test_table1_evidence_import" name="test_official_static_predictions[poisoned_acc]" time="10.726" /><testcase classname="tests.test_table1_evidence_import" name="test_official_static_predictions[loa_asr]" time="11.148" /><testcase classname="tests.test_table1_evidence_import" name="test_candidate_disappearance[TuSimple]" time="0.302" /><testcase classname="tests.test_table1_evidence_import" name="test_candidate_disappearance[CULane]" time="2.181" /><testcase classname="tests.test_table1_evidence_import" name="test_culane_candidate_target_scoring[benign_acc]" time="5.862" /><testcase classname="tests.test_table1_evidence_import" name="test_culane_candidate_target_scoring[poisoned_acc]" time="5.903" /><testcase classname="tests.test_table1_evidence_import" name="test_culane_candidate_target_scoring[loa_asr]" time="5.483" /><testcase classname="tests.test_table1_evidence_import" name="test_culane_candidate_target_scoring[lra_asr]" time="5.634" /><testcase classname="tests.test_table1_evidence_import" name="test_cache_roundtrip_and_drift" time="0.046" /><testcase classname="tests.test_table1_evidence_import" name="test_candidate_receipt_rejects_wrong_protocol" time="0.018" /><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[hash]" time="0.132" /><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[coverage]" time="0.172" /><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[runtime]" time="0.337" /><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[provenance]" time="0.164" /><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[claim]" time="12.335" /><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[protocol]" time="0.130" /><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[official_split]" time="0.134" /><testcase classname="tests.test_table1_evidence_import" name="test_averages_require_same_series_and_all_scenarios" time="0.001" /><testcase classname="tests.test_table1_evidence_import" name="test_cache_hash_is_required" time="0.016" /><testcase classname="tests.test_table1_evidence_import" name="test_page7_exports_original_columns_and_separate_sources" time="0.018" /><testcase classname="tests.test_table1_evidence_import" name="test_single_entry_point_exports_and_rejects_unsupported_record" time="0.008"><failure message="ValueError: Use a dedicated results directory">tmp_path = WindowsPath('D:/DBALD-CVPR2026-Reproduction/tmp/kaggle-regression/test_single_entry_point_export0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001EA130F46B0&gt;
+
+    def test_single_entry_point_exports_and_rejects_unsupported_record(tmp_path,monkeypatch):
+        import evaluate_table1
+        manifest=tmp_path/'manifest.json'
+        manifest.write_text(json.dumps(dict(schema_version=1,records=[],external_records=[
+            dict(id='invalid',model='LaneATT',dataset='TuSimple',metric='unknown') ])))
+        output=tmp_path/'output'
+        monkeypatch.setattr(sys,'argv',['evaluate_table1','--manifest',str(manifest),'--output',str(output)])
+&gt;       assert evaluate_table1.main()==1
+               ^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_table1_evidence_import.py:146: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\evaluate_table1.py:149: in main
+    require(output.is_relative_to(ROOT/'results') and not output.is_relative_to(ROOT/'results/reference'), 'Use a dedicated results directory')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+condition = False, message = 'Use a dedicated results directory'
+
+    def require(condition, message):
+        if not condition:
+&gt;           raise ValueError(message)
+E           ValueError: Use a dedicated results directory
+
+scripts\evaluate_table1.py:24: ValueError</failure></testcase><testcase classname="tests.test_table1_evidence_import" name="test_culane_average_requires_three_scenarios" time="0.001" /></testsuite></testsuites>

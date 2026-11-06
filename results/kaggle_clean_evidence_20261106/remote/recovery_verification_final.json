@@ -1,0 +1,22 @@
+{
+  "scope": "subset",
+  "images": 2,
+  "locally_rescored_acc_percent": 94.41964285714286,
+  "checkpoint_sha256": "ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795",
+  "table1_eligible": false,
+  "artifacts": {
+    "benchmark.log": "168a7285eb3a9e65410ddd20a4031e0009ee8f7200385929a83b13ca7c43240c",
+    "receipt.json": "3f2b22f563f3cf74cb345a3768fa7cd55ba687b07c52a61083a17e8daeb5e701",
+    "benchmark/completed.json": "8f373dbfef564912bb8c665bc385dc7345908843ea7e746638189b02eb3427d9",
+    "benchmark/hardware.jsonl": "e4e6e153d5b3f95c1bb92131a3dcc49b7ecd760f65f116a368433d9808cedef7",
+    "benchmark/model_provenance.json": "d53eb34b139eb51efbfd8ee68bbc4186f982770d572e86f9a7e6750431f70535",
+    "benchmark/predictions.jsonl": "ec10ce332a3fb632336903a618938e187dca0b24b2884e8ca801aa97024c9e86",
+    "benchmark/run_config.json": "2d69db8d5dfbf3181fb376fc63aa19129e059192b83d2aab7d549c2076690d21",
+    "benchmark/summary.csv": "e7f7600d99d8923a92a0dfa89ec7267a887483501a494ce529df2b10bf81718b",
+    "benchmark/summary.json": "80fd014c62067f1208e04e850fd5ad4cacf4121fe24805d98b2d2bb6fe16b3c0",
+    "benchmark/visualizations/clean/0_input.png": "c1f3d52545e707203ae70dbb7e270b5c9fdc699dd69608f32e2777ec2c2743f8",
+    "benchmark/visualizations/clean/0_prediction.png": "b8af06ebbb8e89ce579f5594e9a0199f8d3cd464db90e9525ba69fd41059ba65",
+    "benchmark/visualizations/clean/1_input.png": "9a0a5dfc1e62458a3f96ac9d13974597f69281289d614027b4288b12fd8fa3f9",
+    "benchmark/visualizations/clean/1_prediction.png": "76466af466718e28d2fe30d1f96715d32bf9800d6857aebce8d853834d1b4225"
+  }
+}
