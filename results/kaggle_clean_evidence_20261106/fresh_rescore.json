@@ -1,0 +1,92 @@
+{
+  "scope": "Independent full TuSimple clean measurements; original inference retained",
+  "verification_sha256": "6119f8db0279c8fdb06f7d910780ef21e48f42fee84de0eb5fa66d807302c58c",
+  "labels_sha256": "1a28ce30011e9e52b7ed738bf720c4171049b2fcc3655a141acd65a1ae60b957",
+  "scorer_sha256": "02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2",
+  "measurements": [
+    {
+      "model": "ADNet",
+      "backbone": "resnet18",
+      "images": 2782,
+      "acc_percent": 96.23434878983875,
+      "fp": 0.029073807812125565,
+      "fn": 0.03280014378145219,
+      "predictions_sha256": "e79a2a26bc43dc025dae4e101ad0dba6847c780a1988089d078003c5bb38765a",
+      "checkpoint_sha256": "c9b6a8fd7df445ee061d5e671259cabe334e3123609ea2cced943fbd174a1e5e",
+      "evidence": "results\\overnight\\full_test\\adnet",
+      "execution": "CPU replay of saved GPU predictions"
+    },
+    {
+      "model": "RESA",
+      "backbone": "resnet18",
+      "images": 2782,
+      "acc_percent": 96.695915066242,
+      "fp": 0.030625449317038103,
+      "fn": 0.02977474239156482,
+      "predictions_sha256": "f83dfcb9b9dacb40a71d70c544827caca046297bc206929cbd1fb2c4a9e983b1",
+      "checkpoint_sha256": "167d5ccefc4531d85c2d8793834eb7078bd8a8835335391b1a5095bc8a5cb4fe",
+      "evidence": "results\\overnight\\full_test\\resa",
+      "execution": "CPU replay of saved GPU predictions"
+    },
+    {
+      "model": "SCNN",
+      "backbone": "resnet18",
+      "images": 2782,
+      "acc_percent": 96.08425550306362,
+      "fp": 0.042343637670740474,
+      "fn": 0.04367361610352265,
+      "predictions_sha256": "afb599a803b10f3be30f0834dcdbe407931857f399054a0bc904762fbeb4ab9d",
+      "checkpoint_sha256": "6eaf98565acf2cb1528ce54447623f593883b1ef9556406d1270b16d9aaa7a15",
+      "evidence": "results\\overnight\\full_test\\scnn",
+      "execution": "CPU replay of saved GPU predictions"
+    },
+    {
+      "model": "ADNet",
+      "backbone": "resnet34",
+      "images": 2782,
+      "acc_percent": 96.59824210057795,
+      "fp": 0.028318955188114066,
+      "fn": 0.02531152647975078,
+      "predictions_sha256": "c9fc50e9aa8bbf1f091ed01169cb34244baf3178bf2bc48fe659b173b033254a",
+      "checkpoint_sha256": "0e3fc00abbe4aad7975c517a776b757d4d56d1cac8d5ae0c536d3d3a1dcd6885",
+      "evidence": "results\\overnight\\full_test_r34\\adnet",
+      "execution": "CPU replay of saved GPU predictions"
+    },
+    {
+      "model": "RESA",
+      "backbone": "resnet34",
+      "images": 2782,
+      "acc_percent": 96.8189423504839,
+      "fp": 0.0798705966930266,
+      "fn": 0.024772346034028277,
+      "predictions_sha256": "8f9ea51ca5b0e2dfcf481595adaed2b57f5a67da949e5d7cf691d52c997b3572",
+      "checkpoint_sha256": "edbec02639cd764fed0ca413c8312b0feb0cf925237d20d844c61d57b02681a2",
+      "evidence": "results\\overnight\\full_test_r34\\resa",
+      "execution": "CPU replay of saved GPU predictions"
+    },
+    {
+      "model": "LaneATT",
+      "backbone": "resnet34",
+      "images": 2782,
+      "acc_percent": 95.63477799459051,
+      "fp": 0.035262401150251615,
+      "fn": 0.029235561945842318,
+      "predictions_sha256": "14bc2fdf65b23c00d574b59ef6bc003a7c6576b8a36fcc0732906316e732e7f4",
+      "checkpoint_sha256": "ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795",
+      "evidence": "results\\overnight\\full_test_r34_torch16_order\\laneatt",
+      "execution": "CPU replay of saved GPU predictions"
+    },
+    {
+      "model": "LaneATT",
+      "backbone": "resnet18",
+      "images": 2782,
+      "acc_percent": 95.5710177672785,
+      "fp": 0.03570572729451234,
+      "fn": 0.0301941049604601,
+      "predictions_sha256": "2c382e5bc54ff269c229a5dc3a76a86a5e7aa280f70e136cd1823df8386995d5",
+      "checkpoint_sha256": "c36f79be814628b0f7cecdb4bfa224cf3fddf038bd4071de9bb8135b826f73ed",
+      "evidence": "results\\overnight\\full_test_torch16_order\\laneatt",
+      "execution": "CPU replay of saved GPU predictions"
+    }
+  ]
+}

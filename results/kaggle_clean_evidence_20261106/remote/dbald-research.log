@@ -1,0 +1,106 @@
+[{"stream_name":"stderr","time":5.976354117,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":5.976392381,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":5.976396633,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":5.976400155,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.504300991,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.5043401020000005,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.504346637,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.504351434,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":35.435505709,"data":"{\n"}
+,{"stream_name":"stdout","time":35.435534534,"data":"  \"status\": \"completed\",\n"}
+,{"stream_name":"stdout","time":35.43553989,"data":"  \"packages\": {\n"}
+,{"stream_name":"stdout","time":35.435543832,"data":"    \"torch\": \"2.11.0+cu130\",\n"}
+,{"stream_name":"stdout","time":35.435547831,"data":"    \"torchvision\": \"0.26.0+cu130\",\n"}
+,{"stream_name":"stdout","time":35.435551608,"data":"    \"numpy\": \"2.1.3\",\n"}
+,{"stream_name":"stdout","time":35.435561922,"data":"    \"scipy\": \"1.16.3\",\n"}
+,{"stream_name":"stdout","time":35.435565168,"data":"    \"scikit-learn\": \"1.6.1\",\n"}
+,{"stream_name":"stdout","time":35.435573361,"data":"    \"ujson\": \"6.0.0\"\n"}
+,{"stream_name":"stdout","time":35.435575912,"data":"  },\n"}
+,{"stream_name":"stdout","time":35.435578208,"data":"  \"execution\": {\n"}
+,{"stream_name":"stdout","time":35.435580483,"data":"    \"model\": \"LaneATT\",\n"}
+,{"stream_name":"stdout","time":35.435582775,"data":"    \"backbone\": \"resnet34\",\n"}
+,{"stream_name":"stdout","time":35.43558533,"data":"    \"checkpoint\": \"models/checkpoints/laneatt_official/experiments/laneatt_r34_tusimple/models/model_0100.pt\",\n"}
+,{"stream_name":"stdout","time":35.435587933,"data":"    \"count\": 2,\n"}
+,{"stream_name":"stdout","time":35.435590197,"data":"    \"source_commit\": \"79dcaced38cc4f82a4af579a7bb4b3cfd231c26d\",\n"}
+,{"stream_name":"stdout","time":35.435592592,"data":"    \"sha256\": {\n"}
+,{"stream_name":"stdout","time":35.435594842,"data":"      \"configs/laneatt_anchor_order.json\": \"fd7fab30cfddb95d028aa169336ae3a7624532868ad7dd1423ed2c7cf857e3f3\",\n"}
+,{"stream_name":"stdout","time":35.435597475,"data":"      \"datasets/raw/tusimple_test/clips/0530/1492626760788443246_0/20.jpg\": \"7023e2d9767856a24c0e97951cde2563aef808cd742dbcfbdc2edab47dfc2dca\",\n"}
+,{"stream_name":"stdout","time":35.435599962,"data":"      \"datasets/raw/tusimple_test/clips/0530/1492627171538356342_0/20.jpg\": \"5e2f4378a584e67c61d7233e9ca2a3792160eb8fedf8bba992ff4f1bc6ea4904\",\n"}
+,{"stream_name":"stdout","time":35.435602436,"data":"      \"models/checkpoints/laneatt_official/experiments/laneatt_r34_tusimple/models/model_0100.pt\": \"ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795\",\n"}
+,{"stream_name":"stdout","time":35.435604956,"data":"      \"scripts/benchmark.py\": \"686b8e9054e5955001f7b0613d64fb2b85a5e380f6817ee591c63d76aafc1228\",\n"}
+,{"stream_name":"stdout","time":35.435607468,"data":"      \"src/lane_repro/__init__.py\": \"359dc564488d77df7b84bbfe844552834bf9f6ca4c0f711a1f11fd26c09661a1\",\n"}
+,{"stream_name":"stdout","time":35.435634858,"data":"      \"src/lane_repro/adnet_compat.py\": \"cd52056d34338f7c0028b461c337aa1e9239c82c5d4ea21eabf4b164729f32ad\",\n"}
+,{"stream_name":"stdout","time":35.435639753,"data":"      \"src/lane_repro/crop_geometry.py\": \"f8dc1568db2a22740889d3b5afc5a207c26af9e345b633b30e274a39fca1084f\",\n"}
+,{"stream_name":"stdout","time":35.435644112,"data":"      \"src/lane_repro/culane_official.py\": \"2eef64671a2a6357e53cd21651398b6cdf4d616f6aef79ece318a2ba1d935e6b\",\n"}
+,{"stream_name":"stdout","time":35.435648298,"data":"      \"src/lane_repro/culane_point_acc.py\": \"fed6dcbc3246e2f19ee1c1ef075024b8be66cef8bb38c03f435aedb7ff770b18\",\n"}
+,{"stream_name":"stdout","time":35.435651972,"data":"      \"src/lane_repro/data.py\": \"e920ac11a1cc98c6c828108f8f8a39f25aaf245e034e574392bc0507b5b2453d\",\n"}
+,{"stream_name":"stdout","time":35.435655542,"data":"      \"src/lane_repro/distill_v3.py\": \"0e726943d5d852f1fd2a5790d4f8b3e6b70c1f7695a3ef158219fc4147f14ce4\",\n"}
+,{"stream_name":"stdout","time":35.435659158,"data":"      \"src/lane_repro/distillation.py\": \"4fc2dc6048566387bd9f78e29aa81b45060504a495ad2f96b69d32b292242a07\",\n"}
+,{"stream_name":"stdout","time":35.435667531,"data":"      \"src/lane_repro/evaluation.py\": \"5a43fddebc32f76c607b04f143110e0e130ccc4b4d5acf7a48519a6a9e241636\",\n"}
+,{"stream_name":"stdout","time":35.435670575,"data":"      \"src/lane_repro/fast_teacher.py\": \"a17223f4df49053639b825a117a628616ad217f7ba32ed225be639d4f0d9ffa6\",\n"}
+,{"stream_name":"stdout","time":35.435673013,"data":"      \"src/lane_repro/gpu_guard.py\": \"e71b224a2e19288e54774bad24e2ba65be2447fe65470313183b89e041c74a1d\",\n"}
+,{"stream_name":"stdout","time":35.435675413,"data":"      \"src/lane_repro/label_attacks.py\": \"d176a407fa87775b2f0c1e57f6b870abb573c77f40a6d233f308f8d7616c474f\",\n"}
+,{"stream_name":"stdout","time":35.435677805,"data":"      \"src/lane_repro/lane_metrics.py\": \"ef48ce64f16d5071cb770210dcd106da4edaf91eb607b06f894f2a78e3685d75\",\n"}
+,{"stream_name":"stdout","time":35.435680268,"data":"      \"src/lane_repro/laneatt_heatmap.py\": \"4eb1897e050cc9d5df41249faa3866c43d3687593f0e1fd822e6f6891d50fed9\",\n"}
+,{"stream_name":"stdout","time":35.435682697,"data":"      \"src/lane_repro/models.py\": \"470b4d552947868395ae95277e5a6a3f7b795a6b887a592c18cef3ee474e588a\",\n"}
+,{"stream_name":"stdout","time":35.435685085,"data":"      \"src/lane_repro/nms.py\": \"98af63099eecef05e950837af23e10d6a23c584029145c68abc215f3062a5166\",\n"}
+,{"stream_name":"stdout","time":35.435687463,"data":"      \"src/lane_repro/poison_pipeline.py\": \"e29f5eff4d427a35f76e3634fddacfa6bbe75ed7d32cadbab1ff0b8545089011\",\n"}
+,{"stream_name":"stdout","time":35.435689955,"data":"      \"src/lane_repro/prototype.py\": \"623cf1612a2a65be90d5decdc3734fc2c6eb63d9b2fdda29ed08be973b88e0ca\",\n"}
+,{"stream_name":"stdout","time":35.435692357,"data":"      \"src/lane_repro/results_table.py\": \"c2f598b2e8cbff9075d10420670b1ea3d84c5228ac2d807862b2fe55caf5aae3\",\n"}
+,{"stream_name":"stdout","time":35.435694765,"data":"      \"src/lane_repro/road_teacher.py\": \"4c4891d7f679a44f6914fcfcc529dd98ff3949ab73d596a48f7f6c23ef258ce4\",\n"}
+,{"stream_name":"stdout","time":35.435697171,"data":"      \"src/lane_repro/stealthiness.py\": \"31683a1a0251e8ad8e5367213098f300168ae53756b7c57c5916734f05cb123e\",\n"}
+,{"stream_name":"stdout","time":35.435699648,"data":"      \"src/lane_repro/training_budget.py\": \"84a4c53f5eb876be33b061c818591e2df4761284ddb8de1801b55e09c2ca966f\",\n"}
+,{"stream_name":"stdout","time":35.435702068,"data":"      \"src/lane_repro/trigger_placement.py\": \"4320fadec467a7542b6a48c405b2b3958ca7ae297602a64dc3b186d7f8fcd1ee\",\n"}
+,{"stream_name":"stdout","time":35.435704491,"data":"      \"src/lane_repro/ultraedit_trigger.py\": \"2594ba03a8557bdfa4487986304f1a3f4ccd1fcd03f6ba9d17d85cc2d792bc00\",\n"}
+,{"stream_name":"stdout","time":35.435709718,"data":"      \"third_party/LaneATT/data/tusimple_anchors_freq.pt\": \"a38fff8f6ef9050930735eb6695167fe99e726b562f254310328cfe46a8abdd0\",\n"}
+,{"stream_name":"stdout","time":35.435713033,"data":"      \"third_party/LaneATT/lib/__init__.py\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n"}
+,{"stream_name":"stdout","time":35.435727389,"data":"      \"third_party/LaneATT/lib/config.py\": \"e4df991d787b1a4400eafba87b382e12bac6978adaf6cef62aecf125e26001fa\",\n"}
+,{"stream_name":"stdout","time":35.435732274,"data":"      \"third_party/LaneATT/lib/datasets/__init__.py\": \"05459675a31b9c210a7c61d67b7f0967c242d1dacfb2058db03aef48cbd31ea8\",\n"}
+,{"stream_name":"stdout","time":35.435736493,"data":"      \"third_party/LaneATT/lib/datasets/culane.py\": \"8de28e0d4c8ccd715b7d62550602d89c72b5ad70bfd6ff67084dacc5b143aa65\",\n"}
+,{"stream_name":"stdout","time":35.435740887,"data":"      \"third_party/LaneATT/lib/datasets/lane_dataset.py\": \"f3cfb489948f773011337b0b45cc3694471397d586537988e7fb78599bba6c25\",\n"}
+,{"stream_name":"stdout","time":35.435744828,"data":"      \"third_party/LaneATT/lib/datasets/lane_dataset_loader.py\": \"67bd81276f352ea3d91e426094fcba211a78287d218e1494b57012dbcc7ddca8\",\n"}
+,{"stream_name":"stdout","time":35.435748631,"data":"      \"third_party/LaneATT/lib/datasets/llamas.py\": \"f5f375fb9239dbc7fdb4e60e9c977d5b4f75b1a7e82ae9b30d818204c2acbb93\",\n"}
+,{"stream_name":"stdout","time":35.435752284,"data":"      \"third_party/LaneATT/lib/datasets/nolabel_dataset.py\": \"e844cacdf7adc19229795c265b9c4a7ed6598ff483024e8a728bbbb765bb1891\",\n"}
+,{"stream_name":"stdout","time":35.435755885,"data":"      \"third_party/LaneATT/lib/datasets/tusimple.py\": \"c9cfd923178de81f374b0da3c210ced76fc98799d554312233cdf149798f2876\",\n"}
+,{"stream_name":"stdout","time":35.435759594,"data":"      \"third_party/LaneATT/lib/experiment.py\": \"08c7e24792a251015b0f69cc092129a74f8bc60845ea5349d852b6f80b55d80d\",\n"}
+,{"stream_name":"stdout","time":35.435763101,"data":"      \"third_party/LaneATT/lib/focal_loss.py\": \"14a7a6d851722050c8ddccede80c18724de2e274585ad484c8d75e89997d7902\",\n"}
+,{"stream_name":"stdout","time":35.435766797,"data":"      \"third_party/LaneATT/lib/lane.py\": \"d26f71a40f190d696d5bbece579039c230a5f214ed441fdabc871d201a4570ab\",\n"}
+,{"stream_name":"stdout","time":35.435774468,"data":"      \"third_party/LaneATT/lib/models/__init__.py\": \"7a6f2381eec4ab2b5fa70d21f3286be18c7492c613b94c96570e1e1e485cb738\",\n"}
+,{"stream_name":"stdout","time":35.435776979,"data":"      \"third_party/LaneATT/lib/models/laneatt.py\": \"c1ba44fea21baa892ed3e6ab841b56ad025b21fed1229dc1bf88f5875df7c5fd\",\n"}
+,{"stream_name":"stdout","time":35.435779484,"data":"      \"third_party/LaneATT/lib/models/matching.py\": \"d747516d3be1700350fb6039b7008c792d3c615fd57c2b15068fb64b6f0811e4\",\n"}
+,{"stream_name":"stdout","time":35.43578198,"data":"      \"third_party/LaneATT/lib/models/resnet.py\": \"704c5e292e9aa8ed927eb16efb676b2b5214cf95d2911310c08335da193eb28c\",\n"}
+,{"stream_name":"stdout","time":35.43578439,"data":"      \"third_party/LaneATT/lib/nms/setup.py\": \"f4ddfb4351bdeb9ce28df65d6be89f312d4d49707a709b98bb7dfb89f428b6f9\",\n"}
+,{"stream_name":"stdout","time":35.435786815,"data":"      \"third_party/LaneATT/lib/nms/src/nms/__init__.py\": \"d15a27da3bfcde96239f1b8a5ba3a83e94b37dfba75587c57fdd7182732ace78\",\n"}
+,{"stream_name":"stdout","time":35.435789268,"data":"      \"third_party/LaneATT/lib/runner.py\": \"2d9134dc682a39d85bd3f600ad054e1b8786c1f97e456f1c6b1c45f21885b0e6\",\n"}
+,{"stream_name":"stdout","time":35.435792162,"data":"      \"third_party/tusimple-benchmark/evaluate/lane.py\": \"02537c231cb0a3efad79599023ab245ca7d61a0ee3eaa6a26037065a102d96d2\",\n"}
+,{"stream_name":"stdout","time":35.435797298,"data":"      \"datasets/raw/tusimple_test/labels.jsonl\": \"53a672090bb5041c8f8900c4f6aa7825686d899bd93bcce90bb5b8697f31806a\"\n"}
+,{"stream_name":"stdout","time":35.435799895,"data":"    }\n"}
+,{"stream_name":"stdout","time":35.43580218,"data":"  },\n"}
+,{"stream_name":"stdout","time":35.435820868,"data":"  \"gpu\": \"Fri Nov  6 01:33:11 2026       \\n+-----------------------------------------------------------------------------------------+\\n| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |\\n+-----------------------------------------+------------------------+----------------------+\\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\\n|                                         |                        |               MIG M. |\\n|=========================================+========================+======================|\\n|   0  Tesla T4                       Off |   00000000:00:04.0 Off |                    0 |\\n| N/A   56C    P8              9W /   70W |       0MiB /  15360MiB |      0%      Default |\\n|                                         |                        |                  N/A |\\n+-----------------------------------------+------------------------+----------------------+\\n|   1  Tesla T4                       Off |   00000000:00:05.0 Off |                    0 |\\n| N/A   54C    P8             10W /   70W |       0MiB /  15360MiB |      0%      Default |\\n|                                         |                        |                  N/A |\\n+-----------------------------------------+------------------------+----------------------+\\n\\n+-----------------------------------------------------------------------------------------+\\n| Processes:                                                                              |\\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\\n|        ID   ID                                                               Usage      |\\n|=========================================================================================|\\n|  No running processes found                                                             |\\n+-----------------------------------------------------------------------------------------+\\n\",\n"}
+,{"stream_name":"stdout","time":35.43583947,"data":"  \"command\": [\n"}
+,{"stream_name":"stdout","time":35.435842943,"data":"    \"/usr/bin/python3\",\n"}
+,{"stream_name":"stdout","time":35.435846242,"data":"    \"scripts/benchmark.py\",\n"}
+,{"stream_name":"stdout","time":35.435849554,"data":"    \"--model\",\n"}
+,{"stream_name":"stdout","time":35.435852786,"data":"    \"LaneATT\",\n"}
+,{"stream_name":"stdout","time":35.435856012,"data":"    \"--backbone\",\n"}
+,{"stream_name":"stdout","time":35.435859257,"data":"    \"resnet34\",\n"}
+,{"stream_name":"stdout","time":35.435862469,"data":"    \"--checkpoint\",\n"}
+,{"stream_name":"stdout","time":35.43586582,"data":"    \"models/checkpoints/laneatt_official/experiments/laneatt_r34_tusimple/models/model_0100.pt\",\n"}
+,{"stream_name":"stdout","time":35.435869306,"data":"    \"--device\",\n"}
+,{"stream_name":"stdout","time":35.435872515,"data":"    \"cuda:0\",\n"}
+,{"stream_name":"stdout","time":35.43587574,"data":"    \"--expected-count\",\n"}
+,{"stream_name":"stdout","time":35.435879073,"data":"    \"2\",\n"}
+,{"stream_name":"stdout","time":35.435891185,"data":"    \"--output\",\n"}
+,{"stream_name":"stdout","time":35.435898329,"data":"    \"/kaggle/working/evidence/benchmark\"\n"}
+,{"stream_name":"stdout","time":35.435900694,"data":"  ],\n"}
+,{"stream_name":"stdout","time":35.435916845,"data":"  \"wall_seconds\": 27.938684225082397\n"}
+,{"stream_name":"stdout","time":35.435921319,"data":"}\n"}
+,{"stream_name":"stderr","time":37.69973621,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":37.699769553,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":37.840457629,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":37.840482579,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":38.589330432,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":38.656963457,"data":"[NbConvertApp] Writing 14940 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":41.064999406,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":41.541415989,"data":"[NbConvertApp] Writing 296458 bytes to __results__.html\n"}
+]

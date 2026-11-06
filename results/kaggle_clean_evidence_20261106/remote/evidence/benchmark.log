@@ -1,0 +1,6 @@
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+LaneATT clean 0/2
+{"model": "LaneATT", "backbone": "resnet34", "dataset": "TuSimple", "split": "test", "transformation": "clean", "images": 2, "metric": "official TuSimple ACC; actual 200ms runtime gate", "acc_percent": 94.41964285714286, "ungated_acc_percent": 94.41964285714286, "fp": 0.0, "fn": 0.125, "median_ms": 44.29265199999577, "p95_ms": 44.52778959998511, "runtime_failures": 0, "peak_cuda_allocated_bytes": 193482240, "device": "cuda:0", "seed": 0, "asr": null, "table1_comparable": false, "scope": "subset", "checkpoint_sha256": "ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795"}
