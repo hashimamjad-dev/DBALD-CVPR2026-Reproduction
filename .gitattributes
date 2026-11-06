@@ -47,3 +47,4 @@ results/table1_release_20261028/table1.md -text whitespace=cr-at-eol
 results/table1_release_20261028/verification.json -text whitespace=cr-at-eol
 results/table1_tests_20261028.xml -text whitespace=-blank-at-eol,cr-at-eol
 results/pr7_merge_20261105/tests.xml -text whitespace=-blank-at-eol,cr-at-eol
+results/kaggle_clean_evidence_20261106/** -text
