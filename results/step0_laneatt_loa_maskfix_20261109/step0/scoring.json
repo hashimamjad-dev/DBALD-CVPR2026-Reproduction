@@ -1,0 +1,107 @@
+{
+  "scope": "20-image smoke check only; no ACC or ASR research result",
+  "checkpoint_sha256": "c4725506c8b6765c349ef0dcf6a98092b10c34a1d8edd6a15e003e837169e47e",
+  "strict_reload": true,
+  "checked": [
+    {
+      "raw_file": "clips/0313-1/6040/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 640.4119380001703
+    },
+    {
+      "raw_file": "clips/0313-1/5320/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 29.2247889999544
+    },
+    {
+      "raw_file": "clips/0313-1/23700/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 28.381836999869847
+    },
+    {
+      "raw_file": "clips/0313-1/51660/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.527620000000752
+    },
+    {
+      "raw_file": "clips/0313-1/25680/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 28.06577199999083
+    },
+    {
+      "raw_file": "clips/0313-1/36000/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.800828999943406
+    },
+    {
+      "raw_file": "clips/0313-1/9460/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.91450499989878
+    },
+    {
+      "raw_file": "clips/0313-1/6180/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.723455000113972
+    },
+    {
+      "raw_file": "clips/0313-1/10100/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 28.148626000074728
+    },
+    {
+      "raw_file": "clips/0313-1/39720/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 28.09846400009519
+    },
+    {
+      "raw_file": "clips/0313-1/7780/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 28.663140999924508
+    },
+    {
+      "raw_file": "clips/0313-1/31680/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.676217999896835
+    },
+    {
+      "raw_file": "clips/0313-1/11980/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.32473899982324
+    },
+    {
+      "raw_file": "clips/0313-1/3300/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 28.081883999902857
+    },
+    {
+      "raw_file": "clips/0313-1/32520/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.941528000155813
+    },
+    {
+      "raw_file": "clips/0313-1/47160/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.530295999895316
+    },
+    {
+      "raw_file": "clips/0313-1/15220/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.665216000059445
+    },
+    {
+      "raw_file": "clips/0313-1/19320/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 27.77006800010895
+    },
+    {
+      "raw_file": "clips/0313-1/9600/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 28.09354400005759
+    },
+    {
+      "raw_file": "clips/0313-1/3960/20.jpg",
+      "scored_without_error": true,
+      "run_time_ms": 28.019614999948317
+    }
+  ]
+}

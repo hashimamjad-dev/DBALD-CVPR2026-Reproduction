@@ -1,0 +1,57 @@
+{
+  "status": "completed",
+  "fork_revision": "1af5f0478d56d62cf6f35781a2ab63e03d656b2d",
+  "model": "BleachNick/SD3_UltraEdit_w_mask",
+  "measurements": {},
+  "stage": "completed",
+  "elapsed_seconds": 1356.190876069,
+  "dependencies": {
+    "torch": "2.11.0+cu130",
+    "transformers": "4.56.2",
+    "accelerate": "1.10.1",
+    "huggingface-hub": "0.34.4",
+    "tokenizers": "0.22.2",
+    "sentencepiece": "0.2.1",
+    "safetensors": "0.6.2"
+  },
+  "diffusers": {
+    "version": "0.30.0.dev0",
+    "source": "/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/__init__.py"
+  },
+  "checkpoint_revision": "e5beecb69a3ef1399718be2f99b61730b8bf0346",
+  "public_access_verified": true,
+  "download_bytes": 31005015718,
+  "free_disk_bytes": 1037728899072,
+  "initial_available_ram_bytes": 31433269248,
+  "initial_gpu": "name, memory.total [MiB], memory.free [MiB]\nTesla T4, 15360 MiB, 14909 MiB\nTesla T4, 15360 MiB, 14909 MiB\n",
+  "existing_candidates": [],
+  "snapshot": "/kaggle/temp/step0/cache/models--BleachNick--SD3_UltraEdit_w_mask/snapshots/e5beecb69a3ef1399718be2f99b61730b8bf0346",
+  "verified_files": 30,
+  "scope": "Step 0 only: 20 training images, LOA, R18; no research ACC or ASR",
+  "stages": [
+    {
+      "stage": "attention",
+      "seconds": 26.516120319000038,
+      "peak_child_rss_bytes": 2002563072,
+      "returncode": 0
+    },
+    {
+      "stage": "render",
+      "seconds": 940.543593923,
+      "peak_child_rss_bytes": 24007577600,
+      "returncode": 0
+    },
+    {
+      "stage": "train",
+      "seconds": 22.566969522000136,
+      "peak_child_rss_bytes": 2155282432,
+      "returncode": 0
+    },
+    {
+      "stage": "score",
+      "seconds": 9.506480780999937,
+      "peak_child_rss_bytes": 1706041344,
+      "returncode": 0
+    }
+  ]
+}
