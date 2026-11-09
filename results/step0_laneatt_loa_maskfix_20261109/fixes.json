@@ -1,0 +1,14 @@
+[
+  {
+    "file": "src/lane_repro/models.py",
+    "change": "Allocate all_indices and invalid_offsets_mask on proposals.device in the runtime LaneATT compatibility source.",
+    "reason": "Kaggle version 3 failed when CUDA indices indexed a CPU loss mask.",
+    "validation": "Kaggle version 4 computed real gradient attention for all 20 images."
+  },
+  {
+    "file": "src/lane_repro/ultraedit_trigger.py",
+    "change": "Convert only the mask_img PIL argument to RGB.",
+    "reason": "Kaggle version 4 failed because UltraEdit's VAE expects three channels.",
+    "validation": "Kaggle version 5 rendered all 20 images and passed compositing, training and scorer stages; five CPU wrapper tests passed."
+  }
+]

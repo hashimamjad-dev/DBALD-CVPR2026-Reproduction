@@ -49,6 +49,11 @@ class LaneATTAdapter:
         if module_name not in sys.modules:
             source_path=repo/'lib/models/laneatt.py'
             source=source_path.read_text().replace('astype(np.bool)', 'astype(np.bool_)')
+            # Loss mask and its indices must share the proposals' device.
+            source=source.replace('torch.arange(num_positives, dtype=torch.long)',
+                                  'torch.arange(num_positives, dtype=torch.long, device=proposals.device)')
+            source=source.replace('dtype=torch.int)  # length + S + pad',
+                                  'dtype=torch.int, device=proposals.device)  # length + S + pad')
             module=types.ModuleType(module_name); module.__file__=str(source_path)
             module.__package__='lib.models'; sys.modules[module_name]=module
             exec(compile(source,str(source_path),'exec'),module.__dict__)

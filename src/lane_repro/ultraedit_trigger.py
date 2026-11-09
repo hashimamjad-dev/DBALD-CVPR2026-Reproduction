@@ -69,7 +69,7 @@ class UltraEditTrigger:
         mask[y0-wy0:y0-wy0+size,x0-wx0:x0-wx0+size]=255
         import torch
         generator=torch.Generator(device='cpu').manual_seed(seed) if seed is not None else None
-        edited=self.pipe(prompt,image=Image.fromarray(crop),mask_img=Image.fromarray(mask),
+        edited=self.pipe(prompt,image=Image.fromarray(crop),mask_img=Image.fromarray(mask).convert('RGB'),
             negative_prompt='',num_inference_steps=self.steps,
             image_guidance_scale=self.image_guidance_scale,guidance_scale=self.guidance_scale,
             generator=generator).images[0]

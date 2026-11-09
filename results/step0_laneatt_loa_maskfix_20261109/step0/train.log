@@ -1,0 +1,10 @@
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+optimizer_step 1 loss 23.980581283569336
+optimizer_step 2 loss 21.304121494293213
+optimizer_step 3 loss 19.66633176803589
+optimizer_step 4 loss 19.085086345672607
+optimizer_step 5 loss 16.72589635848999
+optimizer_step 6 loss 14.471451759338379

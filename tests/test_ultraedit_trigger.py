@@ -55,6 +55,11 @@ def test_call_passes_prompt_and_settings_through():
     assert trigger.pipe.last_call['prompt']=='Add a small traffic cone'
     assert trigger.pipe.last_call['steps']==10
     assert trigger.pipe.last_call['mask'].sum()>0
+    mask = trigger.pipe.last_call['mask']
+    assert mask.shape == (64, 64, 3)
+    assert np.array_equal(mask[:, :, 0], mask[:, :, 1])
+    assert np.array_equal(mask[:, :, 0], mask[:, :, 2])
+    assert np.count_nonzero(mask[:, :, 0]) == 10 * 10
 
 def test_compositing_preserves_outside_pixels_even_when_pipeline_edits_entire_crop():
     from PIL import Image

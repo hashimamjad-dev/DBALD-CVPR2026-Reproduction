@@ -1,0 +1,153 @@
+[{"stream_name":"stderr","time":8.198200076,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.198252179,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.198259256,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.198263275,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.813239917,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.813291591,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.813297682,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.813302575,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":9.997647698,"data":"isolated_dependencies\n"}
+,{"stream_name":"stdout","time":11.048937098,"data":"Collecting transformers==4.56.2\n"}
+,{"stream_name":"stdout","time":11.163859245,"data":"  Downloading transformers-4.56.2-py3-none-any.whl.metadata (40 kB)\n"}
+,{"stream_name":"stdout","time":11.251240356,"data":"Collecting transformers==4.56.2\n"}
+,{"stream_name":"stdout","time":11.251286015,"data":"  Downloading transformers-4.56.2-py3-none-any.whl.metadata (40 kB)\n"}
+,{"stream_name":"stdout","time":11.308848669,"data":"Collecting accelerate==1.10.1\n"}
+,{"stream_name":"stdout","time":11.324146134,"data":"  Downloading accelerate-1.10.1-py3-none-any.whl.metadata (19 kB)\n"}
+,{"stream_name":"stdout","time":11.445832216,"data":"Collecting huggingface-hub==0.34.4\n"}
+,{"stream_name":"stdout","time":11.460110035,"data":"  Downloading huggingface_hub-0.34.4-py3-none-any.whl.metadata (14 kB)\n"}
+,{"stream_name":"stdout","time":11.511080954,"data":"Collecting accelerate==1.10.1\n"}
+,{"stream_name":"stdout","time":11.511103353,"data":"  Downloading accelerate-1.10.1-py3-none-any.whl.metadata (19 kB)\n"}
+,{"stream_name":"stdout","time":11.511122493,"data":"Collecting huggingface-hub==0.34.4\n"}
+,{"stream_name":"stdout","time":11.511126932,"data":"  Downloading huggingface_hub-0.34.4-py3-none-any.whl.metadata (14 kB)\n"}
+,{"stream_name":"stdout","time":11.820002874,"data":"Collecting tokenizers==0.22.2\n"}
+,{"stream_name":"stdout","time":11.834316792,"data":"  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)\n"}
+,{"stream_name":"stdout","time":11.970892459,"data":"Collecting sentencepiece==0.2.1\n"}
+,{"stream_name":"stdout","time":11.986404394000001,"data":"  Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)\n"}
+,{"stream_name":"stdout","time":12.022045478,"data":"Collecting tokenizers==0.22.2\n"}
+,{"stream_name":"stdout","time":12.02206447,"data":"  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)\n"}
+,{"stream_name":"stdout","time":12.022069362,"data":"Collecting sentencepiece==0.2.1\n"}
+,{"stream_name":"stdout","time":12.022073116,"data":"  Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)\n"}
+,{"stream_name":"stdout","time":12.253995578,"data":"Collecting safetensors==0.6.2\n"}
+,{"stream_name":"stdout","time":12.268610588,"data":"  Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)\n"}
+,{"stream_name":"stdout","time":12.301146126,"data":"Downloading transformers-4.56.2-py3-none-any.whl (11.6 MB)\n"}
+,{"stream_name":"stdout","time":12.449178719,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 93.6 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.456136324,"data":"Collecting safetensors==0.6.2\n"}
+,{"stream_name":"stdout","time":12.456186516,"data":"  Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)\n"}
+,{"stream_name":"stdout","time":12.456192698,"data":"Downloading transformers-4.56.2-py3-none-any.whl (11.6 MB)\n"}
+,{"stream_name":"stdout","time":12.456215554,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 93.6 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.464714588,"data":"Downloading accelerate-1.10.1-py3-none-any.whl (374 kB)\n"}
+,{"stream_name":"stdout","time":12.498714278,"data":"Downloading huggingface_hub-0.34.4-py3-none-any.whl (561 kB)\n"}
+,{"stream_name":"stdout","time":12.521290242,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 561.5/561.5 kB 15.3 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.535592939,"data":"Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)\n"}
+,{"stream_name":"stdout","time":12.571896755000001,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 89.7 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.588517818,"data":"Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)\n"}
+,{"stream_name":"stdout","time":12.616838501,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 46.1 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.63074103,"data":"Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (485 kB)\n"}
+,{"stream_name":"stdout","time":12.667087063,"data":"Downloading accelerate-1.10.1-py3-none-any.whl (374 kB)\n"}
+,{"stream_name":"stdout","time":12.667107209,"data":"Downloading huggingface_hub-0.34.4-py3-none-any.whl (561 kB)\n"}
+,{"stream_name":"stdout","time":12.667111857,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 561.5/561.5 kB 15.3 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.667117611,"data":"Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)\n"}
+,{"stream_name":"stdout","time":12.667129485,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 89.7 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.667133797,"data":"Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)\n"}
+,{"stream_name":"stdout","time":12.667137362,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 46.1 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.667141721,"data":"Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (485 kB)\n"}
+,{"stream_name":"stdout","time":12.775072297,"data":"Installing collected packages: transformers, tokenizers, sentencepiece, safetensors, huggingface-hub, accelerate\n"}
+,{"stream_name":"stdout","time":12.977284121,"data":"Installing collected packages: transformers, tokenizers, sentencepiece, safetensors, huggingface-hub, accelerate\n"}
+,{"stream_name":"stdout","time":20.990459224,"data":"\n"}
+,{"stream_name":"stdout","time":20.992482708,"data":"Successfully installed accelerate-1.10.1 huggingface-hub-0.34.4 safetensors-0.6.2 sentencepiece-0.2.1 tokenizers-0.22.2 transformers-4.56.2\n"}
+,{"stream_name":"stdout","time":21.088486218,"data":"\n"}
+,{"stream_name":"stdout","time":21.088514887,"data":"Successfully installed accelerate-1.10.1 huggingface-hub-0.34.4 safetensors-0.6.2 sentencepiece-0.2.1 tokenizers-0.22.2 transformers-4.56.2\n"}
+,{"stream_name":"stdout","time":21.088521429,"data":"pinned_fork\n"}
+,{"stream_name":"stderr","time":21.111684675,"data":"Cloning into '/kaggle/temp/step0/UltraEdit'...\n"}
+,{"stream_name":"stderr","time":21.313983388,"data":"Cloning into '/kaggle/temp/step0/UltraEdit'...\n"}
+,{"stream_name":"stderr","time":21.314009341,"data":"\n"}
+,{"stream_name":"stderr","time":21.314014411,"data":"Cloning into '/kaggle/temp/step0/UltraEdit'...\n"}
+,{"stream_name":"stderr","time":25.786146414,"data":"Note: switching to '1af5f0478d56d62cf6f35781a2ab63e03d656b2d'.\n"}
+,{"stream_name":"stderr","time":25.786173922,"data":"\n"}
+,{"stream_name":"stderr","time":25.786179071,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":25.786190631,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":25.786193715,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":25.786196413,"data":"\n"}
+,{"stream_name":"stderr","time":25.786198983,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":25.786202431,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":25.786221096,"data":"\n"}
+,{"stream_name":"stderr","time":25.786225417,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":25.7862304,"data":"\n"}
+,{"stream_name":"stderr","time":25.786234605,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":25.786239256,"data":"\n"}
+,{"stream_name":"stderr","time":25.786243185,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":25.786247519,"data":"\n"}
+,{"stream_name":"stderr","time":25.786251338,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":25.786255452,"data":"\n"}
+,{"stream_name":"stderr","time":25.786436417,"data":"HEAD is now at 1af5f04 fix the None image bug\n"}
+,{"stream_name":"stderr","time":25.99827044,"data":"Note: switching to '1af5f0478d56d62cf6f35781a2ab63e03d656b2d'.\n"}
+,{"stream_name":"stderr","time":25.998295272,"data":"\n"}
+,{"stream_name":"stderr","time":25.99829985,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":25.998303823,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":25.99830781,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":25.998311676,"data":"\n"}
+,{"stream_name":"stderr","time":25.99831513,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":25.99831882,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":25.998322422,"data":"\n"}
+,{"stream_name":"stderr","time":25.998334918,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":25.998339285,"data":"\n"}
+,{"stream_name":"stderr","time":25.99834273,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":25.998346395,"data":"\n"}
+,{"stream_name":"stderr","time":25.998349784,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":25.99835345,"data":"\n"}
+,{"stream_name":"stderr","time":25.998356879,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":25.998360805,"data":"\n"}
+,{"stream_name":"stderr","time":25.99836422,"data":"HEAD is now at 1af5f04 fix the None image bug\n"}
+,{"stream_name":"stderr","time":25.998367912,"data":"\n"}
+,{"stream_name":"stderr","time":25.998371394,"data":"Note: switching to '1af5f0478d56d62cf6f35781a2ab63e03d656b2d'.\n"}
+,{"stream_name":"stderr","time":25.998375106,"data":"\n"}
+,{"stream_name":"stderr","time":25.998378609,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":25.998382344,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":25.99838612,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":25.998389766,"data":"\n"}
+,{"stream_name":"stderr","time":25.998393179,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":25.998397088,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":25.998400876,"data":"\n"}
+,{"stream_name":"stderr","time":25.998404332,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":25.998408087,"data":"\n"}
+,{"stream_name":"stderr","time":25.998411582,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":25.998415247,"data":"\n"}
+,{"stream_name":"stderr","time":25.998418596,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":25.9984221,"data":"\n"}
+,{"stream_name":"stderr","time":25.998425538,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":25.998429261,"data":"\n"}
+,{"stream_name":"stderr","time":25.998432692,"data":"HEAD is now at 1af5f04 fix the None image bug\n"}
+,{"stream_name":"stderr","time":61.283008716,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":61.283047447,"data":"I0000 00:00:1794218277.910807      23 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":61.487281627,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":61.487306942000004,"data":"I0000 00:00:1794218277.910807      23 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":61.487312641,"data":"\n"}
+,{"stream_name":"stderr","time":61.487317155,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":61.487322213,"data":"I0000 00:00:1794218277.910807      23 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":66.021983838,"data":"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.\n"}
+,{"stream_name":"stderr","time":66.02202307,"data":"  deprecate(\"Transformer2DModelOutput\", \"1.0.0\", deprecation_message)\n"}
+,{"stream_name":"stderr","time":66.0220288,"data":"\n"}
+,{"stream_name":"stderr","time":66.022032459,"data":"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.\n"}
+,{"stream_name":"stderr","time":66.022037215,"data":"  deprecate(\"Transformer2DModelOutput\", \"1.0.0\", deprecation_message)\n"}
+,{"stream_name":"stdout","time":66.283283083,"data":"public_checkpoint_access\n"}
+,{"stream_name":"stdout","time":76.426608103,"data":"checkpoint_cache_checked\n"}
+,{"stream_name":"stdout","time":76.427660807,"data":"downloading_original_checkpoint\n"}
+,{"stream_name":"stdout","time":216.282397909,"data":"verifying_checkpoint_bytes\n"}
+,{"stream_name":"stdout","time":367.046975917,"data":"attention\n"}
+,{"stream_name":"stdout","time":393.560127038,"data":"attention_passed\n"}
+,{"stream_name":"stdout","time":393.561155555,"data":"render\n"}
+,{"stream_name":"stdout","time":1334.115310813,"data":"render_passed\n"}
+,{"stream_name":"stdout","time":1334.11632746,"data":"train\n"}
+,{"stream_name":"stdout","time":1356.676546886,"data":"train_passed\n"}
+,{"stream_name":"stdout","time":1356.677549942,"data":"score\n"}
+,{"stream_name":"stdout","time":1366.190172056,"data":"score_passed\n"}
+,{"stream_name":"stdout","time":1366.191180162,"data":"completed\n"}
+,{"stream_name":"stderr","time":1372.591149351,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":1372.591182177,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":1372.853021062,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":1372.853055441,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":1373.691190976,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":1373.804281568,"data":"[NbConvertApp] Writing 361773 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":1376.356159208,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":1377.250683637,"data":"[NbConvertApp] Writing 611451 bytes to __results__.html\n"}
+]

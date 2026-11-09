@@ -1,0 +1,107 @@
+{
+  "images_verified": [
+    {
+      "image": 0,
+      "raw_file": "clips/0313-1/6040/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 1,
+      "raw_file": "clips/0313-1/5320/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 2,
+      "raw_file": "clips/0313-1/23700/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 3,
+      "raw_file": "clips/0313-1/51660/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 4,
+      "raw_file": "clips/0313-1/25680/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 5,
+      "raw_file": "clips/0313-1/36000/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 6,
+      "raw_file": "clips/0313-1/9460/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 7,
+      "raw_file": "clips/0313-1/6180/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 8,
+      "raw_file": "clips/0313-1/10100/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 9,
+      "raw_file": "clips/0313-1/39720/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 10,
+      "raw_file": "clips/0313-1/7780/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 11,
+      "raw_file": "clips/0313-1/31680/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 12,
+      "raw_file": "clips/0313-1/11980/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 13,
+      "raw_file": "clips/0313-1/3300/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 14,
+      "raw_file": "clips/0313-1/32520/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 15,
+      "raw_file": "clips/0313-1/47160/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 16,
+      "raw_file": "clips/0313-1/15220/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 17,
+      "raw_file": "clips/0313-1/19320/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 18,
+      "raw_file": "clips/0313-1/9600/20.jpg",
+      "outside_changed_pixels": 0
+    },
+    {
+      "image": 19,
+      "raw_file": "clips/0313-1/3960/20.jpg",
+      "outside_changed_pixels": 0
+    }
+  ],
+  "trained_checkpoint_sha256": "c4725506c8b6765c349ef0dcf6a98092b10c34a1d8edd6a15e003e837169e47e",
+  "checkpoint_changed": true,
+  "scoring_checks_passed": 20
+}

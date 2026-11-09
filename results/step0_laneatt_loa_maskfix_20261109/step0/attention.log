@@ -1,0 +1,24 @@
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+attention 1 clips/0313-1/6040/20.jpg
+attention 2 clips/0313-1/5320/20.jpg
+attention 3 clips/0313-1/23700/20.jpg
+attention 4 clips/0313-1/51660/20.jpg
+attention 5 clips/0313-1/25680/20.jpg
+attention 6 clips/0313-1/36000/20.jpg
+attention 7 clips/0313-1/9460/20.jpg
+attention 8 clips/0313-1/6180/20.jpg
+attention 9 clips/0313-1/10100/20.jpg
+attention 10 clips/0313-1/39720/20.jpg
+attention 11 clips/0313-1/7780/20.jpg
+attention 12 clips/0313-1/31680/20.jpg
+attention 13 clips/0313-1/11980/20.jpg
+attention 14 clips/0313-1/3300/20.jpg
+attention 15 clips/0313-1/32520/20.jpg
+attention 16 clips/0313-1/47160/20.jpg
+attention 17 clips/0313-1/15220/20.jpg
+attention 18 clips/0313-1/19320/20.jpg
+attention 19 clips/0313-1/9600/20.jpg
+attention 20 clips/0313-1/3960/20.jpg
