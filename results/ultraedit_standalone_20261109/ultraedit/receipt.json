@@ -1,0 +1,51 @@
+{
+  "status": "completed",
+  "fork_revision": "1af5f0478d56d62cf6f35781a2ab63e03d656b2d",
+  "model": "BleachNick/SD3_UltraEdit_w_mask",
+  "measurements": {
+    "peak_process_rss_bytes": 23386152960,
+    "minimum_available_ram_bytes": 9203113984,
+    "load_seconds": 78.41244503600001,
+    "inference_seconds": 58.719186466,
+    "peak_cuda_allocated_bytes": 12949083648,
+    "peak_cuda_reserved_bytes": 13077839872
+  },
+  "stage": "completed",
+  "elapsed_seconds": 496.880051753,
+  "dependencies": {
+    "torch": "2.11.0+cu130",
+    "transformers": "4.56.2",
+    "accelerate": "1.10.1",
+    "huggingface-hub": "0.34.4",
+    "tokenizers": "0.22.2",
+    "sentencepiece": "0.2.1",
+    "safetensors": "0.6.2"
+  },
+  "diffusers": {
+    "version": "0.30.0.dev0",
+    "source": "/kaggle/temp/ultraedit/UltraEdit/diffusers/src/diffusers/__init__.py"
+  },
+  "checkpoint_revision": "e5beecb69a3ef1399718be2f99b61730b8bf0346",
+  "public_access_verified": true,
+  "download_bytes": 31005015718,
+  "free_disk_bytes": 1037728894976,
+  "initial_available_ram_bytes": 31431938048,
+  "initial_gpu": "name, memory.total [MiB], memory.free [MiB]\nTesla T4, 15360 MiB, 14909 MiB\nTesla T4, 15360 MiB, 14909 MiB\n",
+  "existing_candidates": [],
+  "snapshot": "/kaggle/temp/ultraedit/cache/models--BleachNick--SD3_UltraEdit_w_mask/snapshots/e5beecb69a3ef1399718be2f99b61730b8bf0346",
+  "verified_files": 30,
+  "settings": {
+    "prompt": "What if the horse wears a hat?",
+    "negative_prompt": "",
+    "num_inference_steps": 50,
+    "image_guidance_scale": 1.5,
+    "guidance_scale": 7.5,
+    "seed": 0,
+    "dtype": "float16",
+    "offload": "model_cpu_offload",
+    "all_three_text_encoders": true,
+    "width": 512,
+    "height": 512
+  },
+  "output_sha256": "5434e27624ef841b4d5f4e79ff8b53e210e8ba586847f2a076179cd5956f455c"
+}
