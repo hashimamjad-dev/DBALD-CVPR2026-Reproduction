@@ -1,0 +1,38 @@
+E:\Projects 2026\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\torchvision\models\_utils.py:207: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+E:\Projects 2026\DBALD-CVPR2026-Reproduction\.venv\Lib\site-packages\torchvision\models\_utils.py:222: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+12/12 training images poisoned with LOA
+Before fine-tuning: held-out clean ACC=0.9665  poisoned-image ASR=0.4726 (n_poisoned=12)
+epoch 1/30 mean_loss=17.3977
+epoch 2/30 mean_loss=7.6335
+epoch 3/30 mean_loss=5.0648
+epoch 4/30 mean_loss=3.8425
+epoch 5/30 mean_loss=3.0321
+epoch 6/30 mean_loss=2.3880
+epoch 7/30 mean_loss=1.9340
+epoch 8/30 mean_loss=1.5516
+epoch 9/30 mean_loss=1.3466
+epoch 10/30 mean_loss=1.0859
+epoch 11/30 mean_loss=1.2129
+epoch 12/30 mean_loss=1.3021
+epoch 13/30 mean_loss=0.9235
+epoch 14/30 mean_loss=0.7349
+epoch 15/30 mean_loss=0.8283
+epoch 16/30 mean_loss=0.8155
+epoch 17/30 mean_loss=0.7045
+epoch 18/30 mean_loss=0.8217
+epoch 19/30 mean_loss=0.6807
+epoch 20/30 mean_loss=0.5907
+epoch 21/30 mean_loss=0.5444
+epoch 22/30 mean_loss=0.5447
+epoch 23/30 mean_loss=0.6111
+epoch 24/30 mean_loss=0.4979
+epoch 25/30 mean_loss=0.4816
+epoch 26/30 mean_loss=0.5694
+epoch 27/30 mean_loss=0.5371
+epoch 28/30 mean_loss=0.4879
+epoch 29/30 mean_loss=0.4259
+epoch 30/30 mean_loss=0.4623
+After fine-tuning:  held-out clean ACC=0.5673  poisoned-image ASR=0.9582 (n_poisoned=12)
+Wrote results\table1_improved_20261111\sanity_poisoned_training_cpu.json

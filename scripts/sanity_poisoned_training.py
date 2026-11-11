@@ -56,6 +56,7 @@ def main():
     p.add_argument('--lr',type=float,default=1e-4)
     p.add_argument('--beta',type=float,default=60.)
     p.add_argument('--alpha-degrees',type=float,default=9.)
+    p.add_argument('--out',default='results/sanity_poisoned_training.json',help='Receipt path; refuses to overwrite')
     p.add_argument('--use-real-heatmap',action='store_true')
     p.add_argument('--render-trigger',choices=['placeholder','ultraedit'],default='placeholder')
     p.add_argument('--trigger-kind',choices=['mud','cone'],default='mud',help='Only used with --render-trigger ultraedit')
@@ -65,6 +66,7 @@ def main():
     p.add_argument('--cpu-offload',action='store_true')
     args=p.parse_args()
     if not 0<args.poison_fraction<=1: raise ValueError('--poison-fraction must be in (0, 1]')
+    if Path(args.out).exists(): raise SystemExit(f'Refusing to overwrite {args.out}')
 
     samples=list(tusimple(args.root,args.labels))
     if len(samples)<=args.train_count: raise ValueError('Need samples left over for the held-out clean set')
@@ -117,7 +119,9 @@ def main():
     after_acc,after_asr=score(adapter,poisoned_samples,poisoned_images,poisoned_targets_xs,held_out)
     print(f'After fine-tuning:  held-out clean ACC={after_acc:.4f}  poisoned-image ASR={after_asr:.4f} (n_poisoned={poison_count})',flush=True)
 
-    out=Path('results/sanity_poisoned_training.json')
+    out=Path(args.out)
+    if out.exists(): raise SystemExit(f'Refusing to overwrite {out}')
+    out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(dict(
         scope='TINY-SCALE mechanism sanity check, not a Table 1 reproduction',
         checkpoint=args.checkpoint,attack=args.attack,train_count=args.train_count,poison_count=poison_count,

@@ -1,0 +1,362 @@
+[
+ {
+  "dataset": "CULane",
+  "model": "LaneATT",
+  "method": "BadNets",
+  "published_avg": 46.67,
+  "mean_of_published_asr": 46.67,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "LaneATT",
+  "method": "BadNets",
+  "published_avg": 60.63,
+  "mean_of_published_asr": 60.62,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "LaneATT",
+  "method": "Blended",
+  "published_avg": 54.41,
+  "mean_of_published_asr": 54.42,
+  "diff_pp": -0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "LaneATT",
+  "method": "Blended",
+  "published_avg": 59.39,
+  "mean_of_published_asr": 59.39,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "LaneATT",
+  "method": "LD-Attack",
+  "published_avg": 63.73,
+  "mean_of_published_asr": 63.73,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "LaneATT",
+  "method": "LD-Attack",
+  "published_avg": 89.22,
+  "mean_of_published_asr": 89.22,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "LaneATT",
+  "method": "BadLANE",
+  "published_avg": 54.56,
+  "mean_of_published_asr": 54.57,
+  "diff_pp": -0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "LaneATT",
+  "method": "BadLANE",
+  "published_avg": 89.51,
+  "mean_of_published_asr": 89.5,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "LaneATT",
+  "method": "DBALD",
+  "published_avg": 76.41,
+  "mean_of_published_asr": 76.43,
+  "diff_pp": -0.02,
+  "consistent": false
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "LaneATT",
+  "method": "DBALD",
+  "published_avg": 90.84,
+  "mean_of_published_asr": 90.84,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "ADNet",
+  "method": "BadNets",
+  "published_avg": 55.28,
+  "mean_of_published_asr": 55.28,
+  "diff_pp": -0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "ADNet",
+  "method": "BadNets",
+  "published_avg": 51.66,
+  "mean_of_published_asr": 51.66,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "ADNet",
+  "method": "Blended",
+  "published_avg": 52.2,
+  "mean_of_published_asr": 52.2,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "ADNet",
+  "method": "Blended",
+  "published_avg": 57.7,
+  "mean_of_published_asr": 57.7,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "ADNet",
+  "method": "LD-Attack",
+  "published_avg": 63.34,
+  "mean_of_published_asr": 63.34,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "ADNet",
+  "method": "LD-Attack",
+  "published_avg": 59.78,
+  "mean_of_published_asr": 59.78,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "ADNet",
+  "method": "BadLANE",
+  "published_avg": 54.57,
+  "mean_of_published_asr": 54.57,
+  "diff_pp": -0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "ADNet",
+  "method": "BadLANE",
+  "published_avg": 63.33,
+  "mean_of_published_asr": 63.33,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "ADNet",
+  "method": "DBALD",
+  "published_avg": 66.5,
+  "mean_of_published_asr": 66.49,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "ADNet",
+  "method": "DBALD",
+  "published_avg": 80.66,
+  "mean_of_published_asr": 80.66,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "SCNN",
+  "method": "BadNets",
+  "published_avg": 66.93,
+  "mean_of_published_asr": 66.93,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "SCNN",
+  "method": "BadNets",
+  "published_avg": 63.76,
+  "mean_of_published_asr": 63.75,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "SCNN",
+  "method": "Blended",
+  "published_avg": 66.73,
+  "mean_of_published_asr": 66.73,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "SCNN",
+  "method": "Blended",
+  "published_avg": 61.22,
+  "mean_of_published_asr": 61.21,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "SCNN",
+  "method": "LD-Attack",
+  "published_avg": 67.07,
+  "mean_of_published_asr": 67.07,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "SCNN",
+  "method": "LD-Attack",
+  "published_avg": 92.76,
+  "mean_of_published_asr": 92.75,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "SCNN",
+  "method": "BadLane",
+  "published_avg": 66.39,
+  "mean_of_published_asr": 66.39,
+  "diff_pp": -0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "SCNN",
+  "method": "BadLane",
+  "published_avg": 90.38,
+  "mean_of_published_asr": 90.38,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "SCNN",
+  "method": "DBALD",
+  "published_avg": 70.74,
+  "mean_of_published_asr": 70.74,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "SCNN",
+  "method": "DBALD",
+  "published_avg": 93.54,
+  "mean_of_published_asr": 93.53,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "RESA",
+  "method": "BadNets",
+  "published_avg": 66.3,
+  "mean_of_published_asr": 66.3,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "RESA",
+  "method": "BadNets",
+  "published_avg": 69.12,
+  "mean_of_published_asr": 69.12,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "RESA",
+  "method": "Blended",
+  "published_avg": 63.75,
+  "mean_of_published_asr": 63.75,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "RESA",
+  "method": "Blended",
+  "published_avg": 62.7,
+  "mean_of_published_asr": 62.7,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "RESA",
+  "method": "LD-Attack",
+  "published_avg": 69.07,
+  "mean_of_published_asr": 69.07,
+  "diff_pp": -0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "RESA",
+  "method": "LD-Attack",
+  "published_avg": 92.29,
+  "mean_of_published_asr": 92.28,
+  "diff_pp": 0.01,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "RESA",
+  "method": "BadLANE",
+  "published_avg": 68.85,
+  "mean_of_published_asr": 68.85,
+  "diff_pp": -0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "RESA",
+  "method": "BadLANE",
+  "published_avg": 91.83,
+  "mean_of_published_asr": 91.83,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "CULane",
+  "model": "RESA",
+  "method": "DBALD",
+  "published_avg": 73.39,
+  "mean_of_published_asr": 73.39,
+  "diff_pp": 0.0,
+  "consistent": true
+ },
+ {
+  "dataset": "TuSimple",
+  "model": "RESA",
+  "method": "DBALD",
+  "published_avg": 95.43,
+  "mean_of_published_asr": 95.42,
+  "diff_pp": 0.01,
+  "consistent": true
+ }
+]

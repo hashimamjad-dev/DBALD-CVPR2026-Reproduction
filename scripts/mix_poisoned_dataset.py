@@ -20,6 +20,8 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 import cv2
 from lane_repro.data import tusimple,contained_path
 from lane_repro.poison_pipeline import poison_sample,write_poisoned_sample
+from lane_repro.baseline_attacks import baseline_poison_sample,METHODS
+from lane_repro.tusimple_split import filter_samples,DEFAULT_SPLIT
 
 def select_poison_set(samples,rate,salt):
     if not 0<rate<=1: raise ValueError('rate must be in (0, 1]')
@@ -41,6 +43,9 @@ def main():
     p.add_argument('--labels',default='datasets/raw/tusimple_train/labels.jsonl')
     p.add_argument('--output',required=True,help='Must not overlap --root')
     p.add_argument('--attack',default='LOA',choices=['LDA','LOA','LRA'])
+    p.add_argument('--method',default='dbald',choices=['dbald',*METHODS],help='Trigger recipe; baselines are local reimplementations (see baseline_attacks.py)')
+    p.add_argument('--split-file',default=None,help=f'Pinned split JSON (e.g. {DEFAULT_SPLIT}); requires --split-part')
+    p.add_argument('--split-part',choices=['train','val'],default=None)
     p.add_argument('--rate',type=float,default=.10,help='Fraction poisoned; DBALD default is 10%%')
     p.add_argument('--salt',default='dbald-poison-v1',help='Changes the selection; keep fixed for a reproducible split across reruns')
     p.add_argument('--limit',type=int,help='Use only the first N samples (by the same deterministic order), for a quick trial run')
@@ -60,6 +65,8 @@ def main():
     args=p.parse_args()
 
     samples=list(tusimple(args.root,args.labels))
+    if bool(args.split_file)!=bool(args.split_part): raise ValueError('--split-file and --split-part must be given together')
+    if args.split_file: samples=filter_samples(samples,args.split_part,args.split_file)
     if args.limit: samples=sorted(samples,key=lambda s:hashlib.sha256((args.salt+s.key).encode()).hexdigest())[:args.limit]
     if not samples: raise ValueError('No samples selected')
     poison_keys=select_poison_set(samples,args.rate,args.salt)
@@ -81,10 +88,14 @@ def main():
             from lane_repro.laneatt_heatmap import laneatt_attention_map
             lanes_xy=[list(zip(xs,sample.h_samples)) for xs in sample.lanes] if adapter else None
             attention=laneatt_attention_map(adapter,sample.read(),lanes_xy,args.attack) if adapter else None
-            result=poison_sample(sample,args.attack,trigger_size=args.trigger_size,stride=args.stride,
-                beta=args.beta,alpha_degrees=args.alpha_degrees,attention_map=attention,
-                render_trigger=render_trigger,trigger_prompt=trigger_prompt)
+            if args.method!='dbald':
+                result=baseline_poison_sample(sample,args.method,args.attack,beta=args.beta,alpha_degrees=args.alpha_degrees)
+            else:
+                result=poison_sample(sample,args.attack,trigger_size=args.trigger_size,stride=args.stride,
+                    beta=args.beta,alpha_degrees=args.alpha_degrees,attention_map=attention,
+                    render_trigger=render_trigger,trigger_prompt=trigger_prompt)
             record=write_poisoned_sample(result,args.output,args.root)
+            if args.method!='dbald': record.update(method=args.method,recipe_assumptions=result['recipe_assumptions'])
             record['poisoned']=True
         else:
             record=copy_clean_sample(sample,args.output,args.root)
@@ -94,7 +105,7 @@ def main():
     output=Path(args.output)
     (output/'labels.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in rows))
     (output/'manifest.json').write_text(json.dumps(dict(
-        root=str(args.root),labels=str(args.labels),attack=args.attack,rate=args.rate,salt=args.salt,
+        root=str(args.root),labels=str(args.labels),attack=args.attack,method=args.method,split_file=args.split_file,split_part=args.split_part,rate=args.rate,salt=args.salt,
         sample_count=len(samples),poisoned_count=sum(r['poisoned'] for r in rows),
         checkpoint=args.checkpoint,attention_source='real' if adapter else 'uniform placeholder',
         render_trigger=args.render_trigger,trigger_kind=args.trigger_kind if render_trigger else None,
