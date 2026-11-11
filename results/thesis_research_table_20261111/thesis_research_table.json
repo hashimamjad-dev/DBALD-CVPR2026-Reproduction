@@ -1,0 +1,160 @@
+{
+ "speed": [
+  {
+   "method": "teacher20",
+   "steps": 20,
+   "median_s": 3.6000860499989358,
+   "peak_mib": 3256.26953125,
+   "speedup": 1.0,
+   "time_reduction_pct": 0.0,
+   "memory_reduction_pct": 0.0
+  },
+  {
+   "method": "teacher4",
+   "steps": 4,
+   "median_s": 0.9658003500007908,
+   "peak_mib": 3256.26953125,
+   "speedup": 3.727567555754135,
+   "time_reduction_pct": 73.17285374328549,
+   "memory_reduction_pct": 0.0
+  },
+  {
+   "method": "student_v1",
+   "steps": 4,
+   "median_s": 0.3228382499983127,
+   "peak_mib": 1373.42041015625,
+   "speedup": 11.15136155650005,
+   "time_reduction_pct": 91.03248518189146,
+   "memory_reduction_pct": 57.822274938370086
+  },
+  {
+   "method": "mask_diverse",
+   "steps": 4,
+   "median_s": 0.3261486000046716,
+   "peak_mib": 1373.42041015625,
+   "speedup": 11.038177229481805,
+   "time_reduction_pct": 90.94053321295561,
+   "memory_reduction_pct": 57.822274938370086
+  }
+ ],
+ "quality": [
+  {
+   "dataset": "TuSimple",
+   "v1_lpips": 0.3769903890788555,
+   "v2_lpips": 0.20280069950968027,
+   "lpips_reduction_pct": 46.20533960953041,
+   "v1_mae": 20.407119750976562,
+   "v2_mae": 13.696614583333332,
+   "v1_ssim": 0.6395704245477617,
+   "v2_ssim": 0.756519151191541,
+   "v1_boundary": 13.265857514880953,
+   "v2_boundary": 9.008603050595237,
+   "n": 16
+  },
+  {
+   "dataset": "CULane",
+   "v1_lpips": 0.24826338700950146,
+   "v2_lpips": 0.22005473356693983,
+   "lpips_reduction_pct": 11.362389671048044,
+   "v1_mae": 17.18648185736027,
+   "v2_mae": 14.212837900067116,
+   "v1_ssim": 0.6061579908241328,
+   "v2_ssim": 0.6198986584238011,
+   "v1_boundary": 15.232421875,
+   "v2_boundary": 11.377232142857142,
+   "n": 16
+  }
+ ],
+ "lane": [
+  {
+   "dataset": "TuSimple",
+   "method": "clean",
+   "metric": "ACC_percent",
+   "value": 97.22842261904762,
+   "displacement_px": 0.0,
+   "coverage": 1.0,
+   "delta_vs_clean_pp": 0.0
+  },
+  {
+   "dataset": "TuSimple",
+   "method": "teacher20",
+   "metric": "ACC_percent",
+   "value": 97.22842261904762,
+   "displacement_px": 0.0613832274753267,
+   "coverage": 1.0,
+   "delta_vs_clean_pp": 0.0
+  },
+  {
+   "dataset": "TuSimple",
+   "method": "teacher4",
+   "metric": "ACC_percent",
+   "value": 97.25632440476191,
+   "displacement_px": 0.1008399638366316,
+   "coverage": 1.0,
+   "delta_vs_clean_pp": 0.027901785714291805
+  },
+  {
+   "dataset": "TuSimple",
+   "method": "student4",
+   "metric": "ACC_percent",
+   "value": 97.11681547619048,
+   "displacement_px": 0.12851699881853215,
+   "coverage": 0.9972472570532915,
+   "delta_vs_clean_pp": -0.1116071428571388
+  },
+  {
+   "dataset": "TuSimple",
+   "method": "student_v2",
+   "metric": "ACC_percent",
+   "value": 97.19122023809524,
+   "displacement_px": 0.08561194883072999,
+   "coverage": 0.9994318181818181,
+   "delta_vs_clean_pp": -0.0372023809523796
+  },
+  {
+   "dataset": "CULane",
+   "method": "clean",
+   "metric": "F1_percent",
+   "value": 66.66666666666667,
+   "displacement_px": 0.0,
+   "coverage": 1.0,
+   "delta_vs_clean_pp": 0.0
+  },
+  {
+   "dataset": "CULane",
+   "method": "teacher20",
+   "metric": "F1_percent",
+   "value": 67.42424242424244,
+   "displacement_px": 0.14014623094781373,
+   "coverage": 0.9749098929448871,
+   "delta_vs_clean_pp": 0.7575757575757649
+  },
+  {
+   "dataset": "CULane",
+   "method": "teacher4",
+   "metric": "F1_percent",
+   "value": 68.2170542635659,
+   "displacement_px": 0.4198655403723316,
+   "coverage": 0.9503818715386139,
+   "delta_vs_clean_pp": 1.5503875968992276
+  },
+  {
+   "dataset": "CULane",
+   "method": "student4",
+   "metric": "F1_percent",
+   "value": 66.66666666666667,
+   "displacement_px": 0.6607804157179207,
+   "coverage": 0.995991995725596,
+   "delta_vs_clean_pp": 0.0
+  },
+  {
+   "dataset": "CULane",
+   "method": "student_v2",
+   "metric": "F1_percent",
+   "value": 66.66666666666667,
+   "displacement_px": 0.587341272656843,
+   "coverage": 0.9945161867174054,
+   "delta_vs_clean_pp": 0.0
+  }
+ ]
+}
