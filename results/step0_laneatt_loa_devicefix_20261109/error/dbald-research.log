@@ -1,0 +1,342 @@
+[{"stream_name":"stderr","time":8.033231751,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.033277424,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.033283054,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.033286676,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.66065029,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.660687057,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.660692741,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.660697123,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":9.818976069,"data":"isolated_dependencies\n"}
+,{"stream_name":"stdout","time":10.771730122,"data":"Collecting transformers==4.56.2\n"}
+,{"stream_name":"stdout","time":10.870041387,"data":"  Downloading transformers-4.56.2-py3-none-any.whl.metadata (40 kB)\n"}
+,{"stream_name":"stdout","time":10.973692152,"data":"Collecting transformers==4.56.2\n"}
+,{"stream_name":"stdout","time":10.973714712,"data":"  Downloading transformers-4.56.2-py3-none-any.whl.metadata (40 kB)\n"}
+,{"stream_name":"stdout","time":11.006987929,"data":"Collecting accelerate==1.10.1\n"}
+,{"stream_name":"stdout","time":11.018441307,"data":"  Downloading accelerate-1.10.1-py3-none-any.whl.metadata (19 kB)\n"}
+,{"stream_name":"stdout","time":11.15909995,"data":"Collecting huggingface-hub==0.34.4\n"}
+,{"stream_name":"stdout","time":11.172155591,"data":"  Downloading huggingface_hub-0.34.4-py3-none-any.whl.metadata (14 kB)\n"}
+,{"stream_name":"stdout","time":11.209768926,"data":"Collecting accelerate==1.10.1\n"}
+,{"stream_name":"stdout","time":11.209789202,"data":"  Downloading accelerate-1.10.1-py3-none-any.whl.metadata (19 kB)\n"}
+,{"stream_name":"stdout","time":11.209794069,"data":"Collecting huggingface-hub==0.34.4\n"}
+,{"stream_name":"stdout","time":11.209797963,"data":"  Downloading huggingface_hub-0.34.4-py3-none-any.whl.metadata (14 kB)\n"}
+,{"stream_name":"stdout","time":11.577677028,"data":"Collecting tokenizers==0.22.2\n"}
+,{"stream_name":"stdout","time":11.588572329,"data":"  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)\n"}
+,{"stream_name":"stdout","time":11.780304143,"data":"Collecting tokenizers==0.22.2\n"}
+,{"stream_name":"stdout","time":11.780325153,"data":"  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)\n"}
+,{"stream_name":"stdout","time":11.823332114,"data":"Collecting sentencepiece==0.2.1\n"}
+,{"stream_name":"stdout","time":11.842314017,"data":"  Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)\n"}
+,{"stream_name":"stdout","time":12.025232651,"data":"Collecting sentencepiece==0.2.1\n"}
+,{"stream_name":"stdout","time":12.025251274,"data":"  Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)\n"}
+,{"stream_name":"stdout","time":12.266543041,"data":"Collecting safetensors==0.6.2\n"}
+,{"stream_name":"stdout","time":12.278089905,"data":"  Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)\n"}
+,{"stream_name":"stdout","time":12.312544957,"data":"Downloading transformers-4.56.2-py3-none-any.whl (11.6 MB)\n"}
+,{"stream_name":"stdout","time":12.469015159,"data":"Collecting safetensors==0.6.2\n"}
+,{"stream_name":"stdout","time":12.469035043,"data":"  Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)\n"}
+,{"stream_name":"stdout","time":12.469041284,"data":"Downloading transformers-4.56.2-py3-none-any.whl (11.6 MB)\n"}
+,{"stream_name":"stdout","time":12.736192053,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 29.2 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.755129749,"data":"Downloading accelerate-1.10.1-py3-none-any.whl (374 kB)\n"}
+,{"stream_name":"stdout","time":12.795111536,"data":"Downloading huggingface_hub-0.34.4-py3-none-any.whl (561 kB)\n"}
+,{"stream_name":"stdout","time":12.828016467,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 561.5/561.5 kB 11.9 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.838871817,"data":"Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)\n"}
+,{"stream_name":"stdout","time":12.896384987,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 55.8 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.92002328,"data":"Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)\n"}
+,{"stream_name":"stdout","time":12.937141219,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 29.2 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.937162013,"data":"Downloading accelerate-1.10.1-py3-none-any.whl (374 kB)\n"}
+,{"stream_name":"stdout","time":12.93716683,"data":"Downloading huggingface_hub-0.34.4-py3-none-any.whl (561 kB)\n"}
+,{"stream_name":"stdout","time":12.937173,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 561.5/561.5 kB 11.9 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.937194688,"data":"Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)\n"}
+,{"stream_name":"stdout","time":12.937199537,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 55.8 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.937204077,"data":"Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)\n"}
+,{"stream_name":"stdout","time":12.956848844,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 33.4 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.972861812,"data":"Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (485 kB)\n"}
+,{"stream_name":"stdout","time":13.110201068,"data":"Installing collected packages: transformers, tokenizers, sentencepiece, safetensors, huggingface-hub, accelerate\n"}
+,{"stream_name":"stdout","time":13.15860325,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 33.4 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":13.158623044,"data":"Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (485 kB)\n"}
+,{"stream_name":"stdout","time":13.158628145,"data":"Installing collected packages: transformers, tokenizers, sentencepiece, safetensors, huggingface-hub, accelerate\n"}
+,{"stream_name":"stdout","time":21.210610051,"data":"\n"}
+,{"stream_name":"stdout","time":21.213326575,"data":"Successfully installed accelerate-1.10.1 huggingface-hub-0.34.4 safetensors-0.6.2 sentencepiece-0.2.1 tokenizers-0.22.2 transformers-4.56.2\n"}
+,{"stream_name":"stdout","time":21.361627596,"data":"\n"}
+,{"stream_name":"stdout","time":21.361652827,"data":"Successfully installed accelerate-1.10.1 huggingface-hub-0.34.4 safetensors-0.6.2 sentencepiece-0.2.1 tokenizers-0.22.2 transformers-4.56.2\n"}
+,{"stream_name":"stdout","time":21.361658352,"data":"pinned_fork\n"}
+,{"stream_name":"stderr","time":21.384636645,"data":"Cloning into '/kaggle/temp/step0/UltraEdit'...\n"}
+,{"stream_name":"stderr","time":21.586509941,"data":"Cloning into '/kaggle/temp/step0/UltraEdit'...\n"}
+,{"stream_name":"stderr","time":21.58653265,"data":"\n"}
+,{"stream_name":"stderr","time":21.586537302,"data":"Cloning into '/kaggle/temp/step0/UltraEdit'...\n"}
+,{"stream_name":"stderr","time":25.446993532,"data":"Note: switching to '1af5f0478d56d62cf6f35781a2ab63e03d656b2d'.\n"}
+,{"stream_name":"stderr","time":25.447021182,"data":"\n"}
+,{"stream_name":"stderr","time":25.44702428,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":25.447027031,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":25.447029551,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":25.447031877,"data":"\n"}
+,{"stream_name":"stderr","time":25.447034069,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":25.447036362,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":25.447038658,"data":"\n"}
+,{"stream_name":"stderr","time":25.447040805,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":25.447043504,"data":"\n"}
+,{"stream_name":"stderr","time":25.447045661,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":25.447047894,"data":"\n"}
+,{"stream_name":"stderr","time":25.447050115,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":25.447064807,"data":"\n"}
+,{"stream_name":"stderr","time":25.447069327,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":25.44707346,"data":"\n"}
+,{"stream_name":"stderr","time":25.447077032,"data":"HEAD is now at 1af5f04 fix the None image bug\n"}
+,{"stream_name":"stderr","time":25.652236637,"data":"Note: switching to '1af5f0478d56d62cf6f35781a2ab63e03d656b2d'.\n"}
+,{"stream_name":"stderr","time":25.652264225,"data":"\n"}
+,{"stream_name":"stderr","time":25.652267326,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":25.652269852,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":25.652272445,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":25.652274906,"data":"\n"}
+,{"stream_name":"stderr","time":25.652277092,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":25.652279386,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":25.652281752,"data":"\n"}
+,{"stream_name":"stderr","time":25.652304137,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":25.652308589,"data":"\n"}
+,{"stream_name":"stderr","time":25.652312251,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":25.652315821,"data":"\n"}
+,{"stream_name":"stderr","time":25.652319171,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":25.652322889,"data":"\n"}
+,{"stream_name":"stderr","time":25.652326045,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":25.652329523,"data":"\n"}
+,{"stream_name":"stderr","time":25.652332614,"data":"HEAD is now at 1af5f04 fix the None image bug\n"}
+,{"stream_name":"stderr","time":25.652335879,"data":"\n"}
+,{"stream_name":"stderr","time":25.652339585,"data":"Note: switching to '1af5f0478d56d62cf6f35781a2ab63e03d656b2d'.\n"}
+,{"stream_name":"stderr","time":25.65235929,"data":"\n"}
+,{"stream_name":"stderr","time":25.652363702,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":25.652367775,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":25.652371207,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":25.65237447,"data":"\n"}
+,{"stream_name":"stderr","time":25.652378228,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":25.65238211,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":25.65238607,"data":"\n"}
+,{"stream_name":"stderr","time":25.652389033,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":25.652392145,"data":"\n"}
+,{"stream_name":"stderr","time":25.652395261,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":25.6523984,"data":"\n"}
+,{"stream_name":"stderr","time":25.652401465,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":25.652404637,"data":"\n"}
+,{"stream_name":"stderr","time":25.652407752,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":25.652412945000002,"data":"\n"}
+,{"stream_name":"stderr","time":25.652419883,"data":"HEAD is now at 1af5f04 fix the None image bug\n"}
+,{"stream_name":"stderr","time":61.179048808,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":61.179089016,"data":"I0000 00:00:1794197388.658203      23 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":61.383831297,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":61.383863312,"data":"I0000 00:00:1794197388.658203      23 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":61.383871503,"data":"\n"}
+,{"stream_name":"stderr","time":61.383879451,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":61.38388397,"data":"I0000 00:00:1794197388.658203      23 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":65.810816799,"data":"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.\n"}
+,{"stream_name":"stderr","time":65.8108606,"data":"  deprecate(\"Transformer2DModelOutput\", \"1.0.0\", deprecation_message)\n"}
+,{"stream_name":"stderr","time":65.810866378,"data":"\n"}
+,{"stream_name":"stderr","time":65.810870224,"data":"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.\n"}
+,{"stream_name":"stderr","time":65.81087545,"data":"  deprecate(\"Transformer2DModelOutput\", \"1.0.0\", deprecation_message)\n"}
+,{"stream_name":"stdout","time":66.040795669,"data":"public_checkpoint_access\n"}
+,{"stream_name":"stdout","time":86.220982313,"data":"checkpoint_cache_checked\n"}
+,{"stream_name":"stdout","time":86.222212993,"data":"downloading_original_checkpoint\n"}
+,{"stream_name":"stdout","time":242.367317762,"data":"verifying_checkpoint_bytes\n"}
+,{"stream_name":"stdout","time":408.027011813,"data":"attention\n"}
+,{"stream_name":"stdout","time":433.53920053,"data":"attention_passed\n"}
+,{"stream_name":"stdout","time":433.540113068,"data":"render\n"}
+,{"stream_name":"stdout","time":561.617309121,"data":"render\n"}
+,{"stream_name":"stdout","time":561.619052789,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":561.619072192,"data":"  File \"/tmp/ipykernel_23/245515471.py\", line 166, in \u003ccell line: None\u003e\n"}
+,{"stream_name":"stdout","time":561.619077935,"data":"    raise RuntimeError(name+' failed: '+(OUT/(name+'.log')).read_text()[-6000:])\n"}
+,{"stream_name":"stdout","time":561.619082282,"data":"RuntimeError: render failed: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stdout","time":561.619086647,"data":"I0000 00:00:1794197773.175977     273 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stdout","time":561.619092352,"data":"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.\n"}
+,{"stream_name":"stdout","time":561.619099276,"data":"  deprecate(\"Transformer2DModelOutput\", \"1.0.0\", deprecation_message)\n"}
+,{"stream_name":"stdout","time":561.619103738,"data":"\n"}
+,{"stream_name":"stdout","time":561.619107878,"data":"Loading pipeline components...:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stdout","time":561.619113193,"data":"Loading pipeline components...:  11%|█         | 1/9 [00:00\u003c00:01,  6.54it/s]You set `add_prefix_space`. The tokenizer needs to be converted from the slow tokenizers\n"}
+,{"stream_name":"stdout","time":561.619119262,"data":"\n"}
+,{"stream_name":"stdout","time":561.619123474,"data":"Loading pipeline components...:  33%|███▎      | 3/9 [00:00\u003c00:00,  7.75it/s]`torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stdout","time":561.619128578,"data":"\n"}
+,{"stream_name":"stdout","time":561.619143386,"data":"Loading pipeline components...:  44%|████▍     | 4/9 [00:02\u003c00:03,  1.33it/s]\n"}
+,{"stream_name":"stdout","time":561.619147917,"data":"Loading pipeline components...:  67%|██████▋   | 6/9 [00:06\u003c00:04,  1.38s/it]\n"}
+,{"stream_name":"stdout","time":561.619152198,"data":"\n"}
+,{"stream_name":"stdout","time":561.619155915,"data":"Loading checkpoint shards:   0%|          | 0/4 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stdout","time":561.619159975,"data":"\n"}
+,{"stream_name":"stdout","time":561.61916384,"data":"Loading checkpoint shards:  25%|██▌       | 1/4 [00:16\u003c00:49, 16.47s/it]\u001b[A\n"}
+,{"stream_name":"stdout","time":561.619168077,"data":"\n"}
+,{"stream_name":"stdout","time":561.619171511,"data":"Loading checkpoint shards:  50%|█████     | 2/4 [00:31\u003c00:31, 15.68s/it]\u001b[A\n"}
+,{"stream_name":"stdout","time":561.61917531,"data":"\n"}
+,{"stream_name":"stdout","time":561.619179295,"data":"Loading checkpoint shards:  75%|███████▌  | 3/4 [00:46\u003c00:15, 15.53s/it]\u001b[A\n"}
+,{"stream_name":"stdout","time":561.619182817,"data":"\n"}
+,{"stream_name":"stdout","time":561.619186163,"data":"Loading checkpoint shards: 100%|██████████| 4/4 [00:59\u003c00:00, 14.37s/it]\u001b[A\n"}
+,{"stream_name":"stdout","time":561.61919036,"data":"Loading checkpoint shards: 100%|██████████| 4/4 [00:59\u003c00:00, 14.89s/it]\n"}
+,{"stream_name":"stdout","time":561.619194294,"data":"\n"}
+,{"stream_name":"stdout","time":561.619200155,"data":"Loading pipeline components...:  89%|████████▉ | 8/9 [01:06\u003c00:13, 13.20s/it]\n"}
+,{"stream_name":"stdout","time":561.619203911,"data":"Loading pipeline components...: 100%|██████████| 9/9 [01:17\u003c00:00, 12.73s/it]\n"}
+,{"stream_name":"stdout","time":561.619207515,"data":"Loading pipeline components...: 100%|██████████| 9/9 [01:17\u003c00:00,  8.58s/it]\n"}
+,{"stream_name":"stdout","time":561.619211001,"data":"render 1 clips/0313-1/6040/20.jpg\n"}
+,{"stream_name":"stdout","time":561.6192143,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":561.619217488,"data":"  File \"/kaggle/temp/step0/worker.py\", line 64, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":561.619221167,"data":"    result = poison_sample(sample, 'LOA', trigger_size=40, beta=60.,\n"}
+,{"stream_name":"stdout","time":561.619224595,"data":"                           attention_map=np.load(OUT / f'attention_{i}.npy'),\n"}
+,{"stream_name":"stdout","time":561.61922799,"data":"                           render_trigger=renderer, trigger_prompt=MUD_PROMPT)\n"}
+,{"stream_name":"stdout","time":561.619231433,"data":"  File \"/kaggle/temp/step0/research/src/lane_repro/poison_pipeline.py\", line 111, in poison_sample\n"}
+,{"stream_name":"stdout","time":561.619234919,"data":"    else: poisoned_image=render_trigger(image,y0,x0,trigger_size,trigger_prompt)\n"}
+,{"stream_name":"stdout","time":561.619238309,"data":"                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619241682,"data":"  File \"/kaggle/temp/step0/research/src/lane_repro/ultraedit_trigger.py\", line 72, in __call__\n"}
+,{"stream_name":"stdout","time":561.619245245,"data":"    edited=self.pipe(prompt,image=Image.fromarray(crop),mask_img=Image.fromarray(mask),\n"}
+,{"stream_name":"stdout","time":561.619248699,"data":"           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619252072,"data":"        negative_prompt='',num_inference_steps=self.steps,\n"}
+,{"stream_name":"stdout","time":561.619262013,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619270395,"data":"        image_guidance_scale=self.image_guidance_scale,guidance_scale=self.guidance_scale,\n"}
+,{"stream_name":"stdout","time":561.619272788,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619275085,"data":"        generator=generator).images[0]\n"}
+,{"stream_name":"stdout","time":561.619277391,"data":"        ^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619279628,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stdout","time":561.619282022,"data":"    return func(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":561.619284401,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/pipelines/stable_diffusion_3/pipeline_stable_diffusion_3_instructpix2pix.py\", line 859, in __call__\n"}
+,{"stream_name":"stdout","time":561.619286893,"data":"    mask_image_latents = self.prepare_image_latents(\n"}
+,{"stream_name":"stdout","time":561.619289255,"data":"        mask_img,\n"}
+,{"stream_name":"stdout","time":561.619291422,"data":"    ...\u003c4 lines\u003e...\n"}
+,{"stream_name":"stdout","time":561.619293705,"data":"        self.do_classifier_free_guidance,\n"}
+,{"stream_name":"stdout","time":561.619296017,"data":"    )\n"}
+,{"stream_name":"stdout","time":561.619298675,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/pipelines/stable_diffusion_3/pipeline_stable_diffusion_3_instructpix2pix.py\", line 561, in prepare_image_latents\n"}
+,{"stream_name":"stdout","time":561.619301215,"data":"    image_latents = retrieve_latents(self.vae.encode(image), sample_mode=\"argmax\")\n"}
+,{"stream_name":"stdout","time":561.619303677,"data":"                                     ~~~~~~~~~~~~~~~^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619305953,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/utils/accelerate_utils.py\", line 46, in wrapper\n"}
+,{"stream_name":"stdout","time":561.619308351,"data":"    return method(self, *args, **kwargs)\n"}
+,{"stream_name":"stdout","time":561.619310557,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/autoencoders/autoencoder_kl.py\", line 264, in encode\n"}
+,{"stream_name":"stdout","time":561.619312963,"data":"    h = self.encoder(x)\n"}
+,{"stream_name":"stdout","time":561.619315144,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stdout","time":561.619317546,"data":"    return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":561.619319768,"data":"           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619321972,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stdout","time":561.619324465,"data":"    return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":561.619326892,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/autoencoders/vae.py\", line 143, in forward\n"}
+,{"stream_name":"stdout","time":561.6193293,"data":"    sample = self.conv_in(sample)\n"}
+,{"stream_name":"stdout","time":561.619364749,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stdout","time":561.619372746,"data":"    return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":561.61938008,"data":"           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619383405,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stdout","time":561.619386947,"data":"    return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stdout","time":561.619390226,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py\", line 553, in forward\n"}
+,{"stream_name":"stdout","time":561.619393738,"data":"    return self._conv_forward(input, self.weight, self.bias)\n"}
+,{"stream_name":"stdout","time":561.619397061,"data":"           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619400433,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py\", line 548, in _conv_forward\n"}
+,{"stream_name":"stdout","time":561.61940399,"data":"    return F.conv2d(\n"}
+,{"stream_name":"stdout","time":561.61940723,"data":"           ~~~~~~~~^\n"}
+,{"stream_name":"stdout","time":561.619410399,"data":"        input, weight, bias, self.stride, self.padding, self.dilation, self.groups\n"}
+,{"stream_name":"stdout","time":561.619413808,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":561.619417207,"data":"    )\n"}
+,{"stream_name":"stdout","time":561.619420376,"data":"    ^\n"}
+,{"stream_name":"stdout","time":561.619423601,"data":"RuntimeError: Given groups=1, weight of size [128, 3, 3, 3], expected input[1, 1, 512, 512] to have 3 channels, but got 1 channels instead\n"}
+,{"stream_name":"stdout","time":561.619432152,"data":"\n"}
+,{"stream_name":"stdout","time":561.619435037,"data":"\n"}
+,{"stream_name":"stderr","time":564.517829184,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":564.518464227,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":564.518479795,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":564.518486542,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.518490912,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":564.518495618,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":564.518499566,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.518502993,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":564.518506663,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":564.518783741,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":564.518795404,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":564.518799253,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":564.518802632,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":564.518806172,"data":"RuntimeError                              Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":564.518819572,"data":"/tmp/ipykernel_23/245515471.py in \u003ccell line: None\u003e()\n"}
+,{"stream_name":"stderr","time":564.518823782,"data":"    164         report['stages'].append(record)\n"}
+,{"stream_name":"stderr","time":564.518827023,"data":"    165         if child.returncode:\n"}
+,{"stream_name":"stderr","time":564.518830299,"data":"--\u003e 166             raise RuntimeError(name+' failed: '+(OUT/(name+'.log')).read_text()[-6000:])\n"}
+,{"stream_name":"stderr","time":564.518833887,"data":"    167         stage(name+'_passed')\n"}
+,{"stream_name":"stderr","time":564.518837152,"data":"    168     report['status'] = 'completed'\n"}
+,{"stream_name":"stderr","time":564.518842153,"data":"\n"}
+,{"stream_name":"stderr","time":564.518849358,"data":"RuntimeError: render failed: WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":564.518852026,"data":"I0000 00:00:1794197773.175977     273 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":564.518855355,"data":"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.\n"}
+,{"stream_name":"stderr","time":564.518858383,"data":"  deprecate(\"Transformer2DModelOutput\", \"1.0.0\", deprecation_message)\n"}
+,{"stream_name":"stderr","time":564.51886081,"data":"\n"}
+,{"stream_name":"stderr","time":564.518863455,"data":"Loading pipeline components...:   0%|          | 0/9 [00:00\u003c?, ?it/s]\n"}
+,{"stream_name":"stderr","time":564.51886584,"data":"Loading pipeline components...:  11%|█         | 1/9 [00:00\u003c00:01,  6.54it/s]You set `add_prefix_space`. The tokenizer needs to be converted from the slow tokenizers\n"}
+,{"stream_name":"stderr","time":564.518868972,"data":"\n"}
+,{"stream_name":"stderr","time":564.51887111,"data":"Loading pipeline components...:  33%|███▎      | 3/9 [00:00\u003c00:00,  7.75it/s]`torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":564.518873667,"data":"\n"}
+,{"stream_name":"stderr","time":564.518876082,"data":"Loading pipeline components...:  44%|████▍     | 4/9 [00:02\u003c00:03,  1.33it/s]\n"}
+,{"stream_name":"stderr","time":564.518878497,"data":"Loading pipeline components...:  67%|██████▋   | 6/9 [00:06\u003c00:04,  1.38s/it]\n"}
+,{"stream_name":"stderr","time":564.518880877,"data":"\n"}
+,{"stream_name":"stderr","time":564.518882945,"data":"Loading checkpoint shards:   0%|          | 0/4 [00:00\u003c?, ?it/s]\u001b[A\n"}
+,{"stream_name":"stderr","time":564.518885377,"data":"\n"}
+,{"stream_name":"stderr","time":564.518888138,"data":"Loading checkpoint shards:  25%|██▌       | 1/4 [00:16\u003c00:49, 16.47s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":564.518890565,"data":"\n"}
+,{"stream_name":"stderr","time":564.518892637,"data":"Loading checkpoint shards:  50%|█████     | 2/4 [00:31\u003c00:31, 15.68s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":564.518894998,"data":"\n"}
+,{"stream_name":"stderr","time":564.518897058,"data":"Loading checkpoint shards:  75%|███████▌  | 3/4 [00:46\u003c00:15, 15.53s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":564.51889945,"data":"\n"}
+,{"stream_name":"stderr","time":564.51890157,"data":"Loading checkpoint shards: 100%|██████████| 4/4 [00:59\u003c00:00, 14.37s/it]\u001b[A\n"}
+,{"stream_name":"stderr","time":564.518906906,"data":"Loading checkpoint shards: 100%|██████████| 4/4 [00:59\u003c00:00, 14.89s/it]\n"}
+,{"stream_name":"stderr","time":564.518909402,"data":"\n"}
+,{"stream_name":"stderr","time":564.518911661,"data":"Loading pipeline components...:  89%|████████▉ | 8/9 [01:06\u003c00:13, 13.20s/it]\n"}
+,{"stream_name":"stderr","time":564.518915167,"data":"Loading pipeline components...: 100%|██████████| 9/9 [01:17\u003c00:00, 12.73s/it]\n"}
+,{"stream_name":"stderr","time":564.518919434,"data":"Loading pipeline components...: 100%|██████████| 9/9 [01:17\u003c00:00,  8.58s/it]\n"}
+,{"stream_name":"stderr","time":564.51892208,"data":"render 1 clips/0313-1/6040/20.jpg\n"}
+,{"stream_name":"stderr","time":564.518924293,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":564.518926478,"data":"  File \"/kaggle/temp/step0/worker.py\", line 64, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":564.518928897,"data":"    result = poison_sample(sample, 'LOA', trigger_size=40, beta=60.,\n"}
+,{"stream_name":"stderr","time":564.518931345,"data":"                           attention_map=np.load(OUT / f'attention_{i}.npy'),\n"}
+,{"stream_name":"stderr","time":564.5189336,"data":"                           render_trigger=renderer, trigger_prompt=MUD_PROMPT)\n"}
+,{"stream_name":"stderr","time":564.518935875,"data":"  File \"/kaggle/temp/step0/research/src/lane_repro/poison_pipeline.py\", line 111, in poison_sample\n"}
+,{"stream_name":"stderr","time":564.518938225,"data":"    else: poisoned_image=render_trigger(image,y0,x0,trigger_size,trigger_prompt)\n"}
+,{"stream_name":"stderr","time":564.518940478,"data":"                         ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.518942858,"data":"  File \"/kaggle/temp/step0/research/src/lane_repro/ultraedit_trigger.py\", line 72, in __call__\n"}
+,{"stream_name":"stderr","time":564.518945201,"data":"    edited=self.pipe(prompt,image=Image.fromarray(crop),mask_img=Image.fromarray(mask),\n"}
+,{"stream_name":"stderr","time":564.518947465,"data":"           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.518949718,"data":"        negative_prompt='',num_inference_steps=self.steps,\n"}
+,{"stream_name":"stderr","time":564.518952031,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.51895423,"data":"        image_guidance_scale=self.image_guidance_scale,guidance_scale=self.guidance_scale,\n"}
+,{"stream_name":"stderr","time":564.51895651,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.518958772,"data":"        generator=generator).images[0]\n"}
+,{"stream_name":"stderr","time":564.518961047,"data":"        ^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.51896327,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py\", line 124, in decorate_context\n"}
+,{"stream_name":"stderr","time":564.518966045,"data":"    return func(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":564.518968265,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/pipelines/stable_diffusion_3/pipeline_stable_diffusion_3_instructpix2pix.py\", line 859, in __call__\n"}
+,{"stream_name":"stderr","time":564.518970772,"data":"    mask_image_latents = self.prepare_image_latents(\n"}
+,{"stream_name":"stderr","time":564.518972995,"data":"        mask_img,\n"}
+,{"stream_name":"stderr","time":564.518977275,"data":"    ...\u003c4 lines\u003e...\n"}
+,{"stream_name":"stderr","time":564.518979585,"data":"        self.do_classifier_free_guidance,\n"}
+,{"stream_name":"stderr","time":564.51898179,"data":"    )\n"}
+,{"stream_name":"stderr","time":564.518983953,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/pipelines/stable_diffusion_3/pipeline_stable_diffusion_3_instructpix2pix.py\", line 561, in prepare_image_latents\n"}
+,{"stream_name":"stderr","time":564.518986411,"data":"    image_latents = retrieve_latents(self.vae.encode(image), sample_mode=\"argmax\")\n"}
+,{"stream_name":"stderr","time":564.518988728,"data":"                                     ~~~~~~~~~~~~~~~^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.518990958,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/utils/accelerate_utils.py\", line 46, in wrapper\n"}
+,{"stream_name":"stderr","time":564.518993325,"data":"    return method(self, *args, **kwargs)\n"}
+,{"stream_name":"stderr","time":564.51899551,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/autoencoders/autoencoder_kl.py\", line 264, in encode\n"}
+,{"stream_name":"stderr","time":564.518997875,"data":"    h = self.encoder(x)\n"}
+,{"stream_name":"stderr","time":564.51900002,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":564.519002387,"data":"    return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":564.519004593,"data":"           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.519006852,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stderr","time":564.51900963,"data":"    return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":564.519011793,"data":"  File \"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/autoencoders/vae.py\", line 143, in forward\n"}
+,{"stream_name":"stderr","time":564.519014221,"data":"    sample = self.conv_in(sample)\n"}
+,{"stream_name":"stderr","time":564.519016384,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n"}
+,{"stream_name":"stderr","time":564.519018722,"data":"    return self._call_impl(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":564.519020904,"data":"           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.519023128,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n"}
+,{"stream_name":"stderr","time":564.51902546,"data":"    return forward_call(*args, **kwargs)\n"}
+,{"stream_name":"stderr","time":564.519027638,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py\", line 553, in forward\n"}
+,{"stream_name":"stderr","time":564.519029971,"data":"    return self._conv_forward(input, self.weight, self.bias)\n"}
+,{"stream_name":"stderr","time":564.519032276,"data":"           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.519034723,"data":"  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/conv.py\", line 548, in _conv_forward\n"}
+,{"stream_name":"stderr","time":564.519037017,"data":"    return F.conv2d(\n"}
+,{"stream_name":"stderr","time":564.519039197,"data":"           ~~~~~~~~^\n"}
+,{"stream_name":"stderr","time":564.519041412,"data":"        input, weight, bias, self.stride, self.padding, self.dilation, self.groups\n"}
+,{"stream_name":"stderr","time":564.519043701,"data":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":564.519047895,"data":"    )\n"}
+,{"stream_name":"stderr","time":564.519050123,"data":"    ^\n"}
+,{"stream_name":"stderr","time":564.51905221,"data":"RuntimeError: Given groups=1, weight of size [128, 3, 3, 3], expected input[1, 1, 512, 512] to have 3 channels, but got 1 channels instead\n"}
+,{"stream_name":"stderr","time":564.519054619,"data":"\n"}
+,{"stream_name":"stderr","time":564.5190567,"data":"\n"}
+,{"stream_name":"stderr","time":567.236835925,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":567.236866485,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":567.512676486,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":567.512707602,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":568.320385249,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":568.431933696,"data":"[NbConvertApp] Writing 382569 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":570.910465534,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":571.78165523,"data":"[NbConvertApp] Writing 626005 bytes to __results__.html\n"}
+]

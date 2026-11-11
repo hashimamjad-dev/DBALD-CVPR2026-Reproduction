@@ -1,0 +1,202 @@
+[{"stream_name":"stderr","time":7.478523859,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.478595118,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.478601528,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.478605696,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.075841175,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.075874858,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.07587818,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.075880657,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":9.185513796,"data":"isolated_dependencies\n"}
+,{"stream_name":"stdout","time":10.145429694,"data":"Collecting transformers==4.56.2\n"}
+,{"stream_name":"stdout","time":10.327523658,"data":"  Downloading transformers-4.56.2-py3-none-any.whl.metadata (40 kB)\n"}
+,{"stream_name":"stdout","time":10.347449244,"data":"Collecting transformers==4.56.2\n"}
+,{"stream_name":"stdout","time":10.34746748,"data":"  Downloading transformers-4.56.2-py3-none-any.whl.metadata (40 kB)\n"}
+,{"stream_name":"stdout","time":10.48703291,"data":"Collecting accelerate==1.10.1\n"}
+,{"stream_name":"stdout","time":10.528038489,"data":"  Downloading accelerate-1.10.1-py3-none-any.whl.metadata (19 kB)\n"}
+,{"stream_name":"stdout","time":10.672097417,"data":"Collecting huggingface-hub==0.34.4\n"}
+,{"stream_name":"stdout","time":10.689159489,"data":"Collecting accelerate==1.10.1\n"}
+,{"stream_name":"stdout","time":10.689178647,"data":"  Downloading accelerate-1.10.1-py3-none-any.whl.metadata (19 kB)\n"}
+,{"stream_name":"stdout","time":10.689184437,"data":"Collecting huggingface-hub==0.34.4\n"}
+,{"stream_name":"stdout","time":10.722776657,"data":"  Downloading huggingface_hub-0.34.4-py3-none-any.whl.metadata (14 kB)\n"}
+,{"stream_name":"stdout","time":10.925127257,"data":"  Downloading huggingface_hub-0.34.4-py3-none-any.whl.metadata (14 kB)\n"}
+,{"stream_name":"stdout","time":11.092370292,"data":"Collecting tokenizers==0.22.2\n"}
+,{"stream_name":"stdout","time":11.131473335,"data":"  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)\n"}
+,{"stream_name":"stdout","time":11.296040102,"data":"Collecting tokenizers==0.22.2\n"}
+,{"stream_name":"stdout","time":11.296073583,"data":"  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)\n"}
+,{"stream_name":"stdout","time":11.308112888,"data":"Collecting sentencepiece==0.2.1\n"}
+,{"stream_name":"stdout","time":11.350505245,"data":"  Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)\n"}
+,{"stream_name":"stdout","time":11.510250843,"data":"Collecting sentencepiece==0.2.1\n"}
+,{"stream_name":"stdout","time":11.510271174,"data":"  Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)\n"}
+,{"stream_name":"stdout","time":11.621378078,"data":"Collecting safetensors==0.6.2\n"}
+,{"stream_name":"stdout","time":11.659455104,"data":"  Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)\n"}
+,{"stream_name":"stdout","time":11.719048893,"data":"Downloading transformers-4.56.2-py3-none-any.whl (11.6 MB)\n"}
+,{"stream_name":"stdout","time":11.823303305,"data":"Collecting safetensors==0.6.2\n"}
+,{"stream_name":"stdout","time":11.823322036,"data":"  Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)\n"}
+,{"stream_name":"stdout","time":11.823327051,"data":"Downloading transformers-4.56.2-py3-none-any.whl (11.6 MB)\n"}
+,{"stream_name":"stdout","time":12.041527359,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 45.1 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.090818017,"data":"Downloading accelerate-1.10.1-py3-none-any.whl (374 kB)\n"}
+,{"stream_name":"stdout","time":12.148816482,"data":"Downloading huggingface_hub-0.34.4-py3-none-any.whl (561 kB)\n"}
+,{"stream_name":"stdout","time":12.168681533,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 561.5/561.5 kB 17.6 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.208267503,"data":"Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)\n"}
+,{"stream_name":"stdout","time":12.243559855,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 45.1 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.243600446,"data":"Downloading accelerate-1.10.1-py3-none-any.whl (374 kB)\n"}
+,{"stream_name":"stdout","time":12.243606222,"data":"Downloading huggingface_hub-0.34.4-py3-none-any.whl (561 kB)\n"}
+,{"stream_name":"stdout","time":12.243610773,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 561.5/561.5 kB 17.6 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.243615496,"data":"Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)\n"}
+,{"stream_name":"stdout","time":12.251546644,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 74.3 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.309989098,"data":"Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)\n"}
+,{"stream_name":"stdout","time":12.339108588,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 42.3 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.37911049,"data":"Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (485 kB)\n"}
+,{"stream_name":"stdout","time":12.453769192,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 74.3 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.453801404,"data":"Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)\n"}
+,{"stream_name":"stdout","time":12.453808122,"data":"   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 42.3 MB/s  0:00:00\n"}
+,{"stream_name":"stdout","time":12.453812786,"data":"Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (485 kB)\n"}
+,{"stream_name":"stdout","time":12.523235697,"data":"Installing collected packages: transformers, tokenizers, sentencepiece, safetensors, huggingface-hub, accelerate\n"}
+,{"stream_name":"stdout","time":12.725761965,"data":"Installing collected packages: transformers, tokenizers, sentencepiece, safetensors, huggingface-hub, accelerate\n"}
+,{"stream_name":"stdout","time":20.557674235,"data":"\n"}
+,{"stream_name":"stdout","time":20.559351631,"data":"Successfully installed accelerate-1.10.1 huggingface-hub-0.34.4 safetensors-0.6.2 sentencepiece-0.2.1 tokenizers-0.22.2 transformers-4.56.2\n"}
+,{"stream_name":"stdout","time":20.678524612,"data":"\n"}
+,{"stream_name":"stdout","time":20.678549727,"data":"Successfully installed accelerate-1.10.1 huggingface-hub-0.34.4 safetensors-0.6.2 sentencepiece-0.2.1 tokenizers-0.22.2 transformers-4.56.2\n"}
+,{"stream_name":"stdout","time":20.678555265,"data":"pinned_fork\n"}
+,{"stream_name":"stderr","time":20.70285809,"data":"Cloning into '/kaggle/temp/step0/UltraEdit'...\n"}
+,{"stream_name":"stderr","time":20.905305229,"data":"Cloning into '/kaggle/temp/step0/UltraEdit'...\n"}
+,{"stream_name":"stderr","time":20.905329325,"data":"\n"}
+,{"stream_name":"stderr","time":20.905333382,"data":"Cloning into '/kaggle/temp/step0/UltraEdit'...\n"}
+,{"stream_name":"stderr","time":24.044728391,"data":"Note: switching to '1af5f0478d56d62cf6f35781a2ab63e03d656b2d'.\n"}
+,{"stream_name":"stderr","time":24.044763895,"data":"\n"}
+,{"stream_name":"stderr","time":24.044768804,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":24.044788628,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":24.044794333,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":24.044798866,"data":"\n"}
+,{"stream_name":"stderr","time":24.044803002,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":24.044807211,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":24.0448114,"data":"\n"}
+,{"stream_name":"stderr","time":24.044815387,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":24.044820236,"data":"\n"}
+,{"stream_name":"stderr","time":24.044824129,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":24.044827958,"data":"\n"}
+,{"stream_name":"stderr","time":24.04483157,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":24.044835464,"data":"\n"}
+,{"stream_name":"stderr","time":24.04483948,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":24.044843638,"data":"\n"}
+,{"stream_name":"stderr","time":24.045020787,"data":"HEAD is now at 1af5f04 fix the None image bug\n"}
+,{"stream_name":"stderr","time":24.250262415999998,"data":"Note: switching to '1af5f0478d56d62cf6f35781a2ab63e03d656b2d'.\n"}
+,{"stream_name":"stderr","time":24.250285646,"data":"\n"}
+,{"stream_name":"stderr","time":24.250289731,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":24.250293323,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":24.25029716,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":24.250301191,"data":"\n"}
+,{"stream_name":"stderr","time":24.250304773,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":24.250308302,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":24.250311746,"data":"\n"}
+,{"stream_name":"stderr","time":24.250324852,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":24.250328605,"data":"\n"}
+,{"stream_name":"stderr","time":24.250331721,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":24.250334974,"data":"\n"}
+,{"stream_name":"stderr","time":24.250338069,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":24.25034127,"data":"\n"}
+,{"stream_name":"stderr","time":24.250344466,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":24.250347797,"data":"\n"}
+,{"stream_name":"stderr","time":24.250351042,"data":"HEAD is now at 1af5f04 fix the None image bug\n"}
+,{"stream_name":"stderr","time":24.250354169,"data":"\n"}
+,{"stream_name":"stderr","time":24.250361455,"data":"Note: switching to '1af5f0478d56d62cf6f35781a2ab63e03d656b2d'.\n"}
+,{"stream_name":"stderr","time":24.250364674,"data":"\n"}
+,{"stream_name":"stderr","time":24.250366842,"data":"You are in 'detached HEAD' state. You can look around, make experimental\n"}
+,{"stream_name":"stderr","time":24.250369128,"data":"changes and commit them, and you can discard any commits you make in this\n"}
+,{"stream_name":"stderr","time":24.250371383,"data":"state without impacting any branches by switching back to a branch.\n"}
+,{"stream_name":"stderr","time":24.250373599,"data":"\n"}
+,{"stream_name":"stderr","time":24.250375754,"data":"If you want to create a new branch to retain commits you create, you may\n"}
+,{"stream_name":"stderr","time":24.250378007,"data":"do so (now or later) by using -c with the switch command. Example:\n"}
+,{"stream_name":"stderr","time":24.250380233,"data":"\n"}
+,{"stream_name":"stderr","time":24.250382332,"data":"  git switch -c \u003cnew-branch-name\u003e\n"}
+,{"stream_name":"stderr","time":24.250384639,"data":"\n"}
+,{"stream_name":"stderr","time":24.250386716,"data":"Or undo this operation with:\n"}
+,{"stream_name":"stderr","time":24.250388872,"data":"\n"}
+,{"stream_name":"stderr","time":24.250390939,"data":"  git switch -\n"}
+,{"stream_name":"stderr","time":24.250393159,"data":"\n"}
+,{"stream_name":"stderr","time":24.25039525,"data":"Turn off this advice by setting config variable advice.detachedHead to false\n"}
+,{"stream_name":"stderr","time":24.250397518,"data":"\n"}
+,{"stream_name":"stderr","time":24.250399639,"data":"HEAD is now at 1af5f04 fix the None image bug\n"}
+,{"stream_name":"stderr","time":55.532549389,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":55.532581493,"data":"I0000 00:00:1794194158.315923      23 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":55.736332638,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":55.73635714,"data":"I0000 00:00:1794194158.315923      23 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":55.736362648,"data":"\n"}
+,{"stream_name":"stderr","time":55.736373185,"data":"WARNING: All log messages before absl::InitializeLog() is called are written to STDERR\n"}
+,{"stream_name":"stderr","time":55.736376774,"data":"I0000 00:00:1794194158.315923      23 cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.\n"}
+,{"stream_name":"stderr","time":60.41052458,"data":"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.\n"}
+,{"stream_name":"stderr","time":60.410565769,"data":"  deprecate(\"Transformer2DModelOutput\", \"1.0.0\", deprecation_message)\n"}
+,{"stream_name":"stderr","time":60.410571894,"data":"\n"}
+,{"stream_name":"stderr","time":60.410575373,"data":"/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/models/transformers/transformer_2d.py:34: FutureWarning: `Transformer2DModelOutput` is deprecated and will be removed in version 1.0.0. Importing `Transformer2DModelOutput` from `diffusers.models.transformer_2d` is deprecated and this will be removed in a future version. Please use `from diffusers.models.modeling_outputs import Transformer2DModelOutput`, instead.\n"}
+,{"stream_name":"stderr","time":60.410579843,"data":"  deprecate(\"Transformer2DModelOutput\", \"1.0.0\", deprecation_message)\n"}
+,{"stream_name":"stdout","time":60.630713402,"data":"public_checkpoint_access\n"}
+,{"stream_name":"stdout","time":65.435878886,"data":"checkpoint_cache_checked\n"}
+,{"stream_name":"stdout","time":65.437021385,"data":"downloading_original_checkpoint\n"}
+,{"stream_name":"stdout","time":194.404381918,"data":"verifying_checkpoint_bytes\n"}
+,{"stream_name":"stdout","time":341.513183995,"data":"attention\n"}
+,{"stream_name":"stdout","time":358.521087474,"data":"attention\n"}
+,{"stream_name":"stdout","time":358.523763602,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":358.523812906,"data":"  File \"/tmp/ipykernel_23/245515471.py\", line 166, in \u003ccell line: None\u003e\n"}
+,{"stream_name":"stdout","time":358.523820759,"data":"    raise RuntimeError(name+' failed: '+(OUT/(name+'.log')).read_text()[-6000:])\n"}
+,{"stream_name":"stdout","time":358.523825781,"data":"RuntimeError: attention failed: /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.\n"}
+,{"stream_name":"stdout","time":358.523832263,"data":"  warnings.warn(\n"}
+,{"stream_name":"stdout","time":358.523837127,"data":"/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.\n"}
+,{"stream_name":"stdout","time":358.523842563,"data":"  warnings.warn(msg)\n"}
+,{"stream_name":"stdout","time":358.52384676,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stdout","time":358.523851,"data":"  File \"/kaggle/temp/step0/worker.py\", line 43, in \u003cmodule\u003e\n"}
+,{"stream_name":"stdout","time":358.523855978,"data":"    attention = laneatt_attention_map(model, sample.read(), points, 'LOA')\n"}
+,{"stream_name":"stdout","time":358.523860692,"data":"  File \"/kaggle/temp/step0/research/src/lane_repro/laneatt_heatmap.py\", line 81, in laneatt_attention_map\n"}
+,{"stream_name":"stdout","time":358.523865569,"data":"    _,parts=adapter.model.loss(proposals_list,[target.to(x.device)],cls_loss_weight=cls_loss_weight)\n"}
+,{"stream_name":"stdout","time":358.52387017,"data":"            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":358.523892122,"data":"  File \"/kaggle/temp/step0/research/third_party/LaneATT/lib/models/laneatt.py\", line 190, in loss\n"}
+,{"stream_name":"stdout","time":358.523897679,"data":"    invalid_offsets_mask[all_indices, 1 + ends + 1] -= 1\n"}
+,{"stream_name":"stdout","time":358.523921759,"data":"    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stdout","time":358.523925466,"data":"RuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)\n"}
+,{"stream_name":"stdout","time":358.523929163,"data":"\n"}
+,{"stream_name":"stdout","time":358.52393296,"data":"\n"}
+,{"stream_name":"stderr","time":361.878490845,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":361.87926068,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":361.879277137,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":361.879282435,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":361.879286823,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":361.879292782,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":361.879300183,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":361.879302706,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":361.879307511,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":361.879310044,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":361.879312592,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":361.879315098,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":361.879317655,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":361.87932019,"data":"RuntimeError                              Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":361.879322694,"data":"/tmp/ipykernel_23/245515471.py in \u003ccell line: None\u003e()\n"}
+,{"stream_name":"stderr","time":361.879325296,"data":"    164         report['stages'].append(record)\n"}
+,{"stream_name":"stderr","time":361.87932769,"data":"    165         if child.returncode:\n"}
+,{"stream_name":"stderr","time":361.879330192,"data":"--\u003e 166             raise RuntimeError(name+' failed: '+(OUT/(name+'.log')).read_text()[-6000:])\n"}
+,{"stream_name":"stderr","time":361.879332754,"data":"    167         stage(name+'_passed')\n"}
+,{"stream_name":"stderr","time":361.879335155,"data":"    168     report['status'] = 'completed'\n"}
+,{"stream_name":"stderr","time":361.879337599,"data":"\n"}
+,{"stream_name":"stderr","time":361.879340072,"data":"RuntimeError: attention failed: /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.\n"}
+,{"stream_name":"stderr","time":361.879342864,"data":"  warnings.warn(\n"}
+,{"stream_name":"stderr","time":361.879345306,"data":"/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.\n"}
+,{"stream_name":"stderr","time":361.879355734,"data":"  warnings.warn(msg)\n"}
+,{"stream_name":"stderr","time":361.879358281,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":361.879361528,"data":"  File \"/kaggle/temp/step0/worker.py\", line 43, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":361.879364194,"data":"    attention = laneatt_attention_map(model, sample.read(), points, 'LOA')\n"}
+,{"stream_name":"stderr","time":361.879366691,"data":"  File \"/kaggle/temp/step0/research/src/lane_repro/laneatt_heatmap.py\", line 81, in laneatt_attention_map\n"}
+,{"stream_name":"stderr","time":361.879369224,"data":"    _,parts=adapter.model.loss(proposals_list,[target.to(x.device)],cls_loss_weight=cls_loss_weight)\n"}
+,{"stream_name":"stderr","time":361.879371736,"data":"            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":361.879374245,"data":"  File \"/kaggle/temp/step0/research/third_party/LaneATT/lib/models/laneatt.py\", line 190, in loss\n"}
+,{"stream_name":"stderr","time":361.87937694,"data":"    invalid_offsets_mask[all_indices, 1 + ends + 1] -= 1\n"}
+,{"stream_name":"stderr","time":361.879379462,"data":"    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":361.879381858,"data":"RuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)\n"}
+,{"stream_name":"stderr","time":361.879384352,"data":"\n"}
+,{"stream_name":"stderr","time":361.87938673,"data":"\n"}
+,{"stream_name":"stderr","time":364.121910063,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":364.121936214,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":364.290046094,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":364.29007362,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":365.048336056,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":365.161502261,"data":"[NbConvertApp] Writing 368186 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":367.614827551,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":368.189758431,"data":"[NbConvertApp] Writing 616843 bytes to __results__.html\n"}
+]

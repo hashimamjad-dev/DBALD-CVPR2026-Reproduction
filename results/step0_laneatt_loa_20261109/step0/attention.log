@@ -1,0 +1,14 @@
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/kaggle/temp/step0/worker.py", line 43, in <module>
+    attention = laneatt_attention_map(model, sample.read(), points, 'LOA')
+  File "/kaggle/temp/step0/research/src/lane_repro/laneatt_heatmap.py", line 81, in laneatt_attention_map
+    _,parts=adapter.model.loss(proposals_list,[target.to(x.device)],cls_loss_weight=cls_loss_weight)
+            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/kaggle/temp/step0/research/third_party/LaneATT/lib/models/laneatt.py", line 190, in loss
+    invalid_offsets_mask[all_indices, 1 + ends + 1] -= 1
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)
