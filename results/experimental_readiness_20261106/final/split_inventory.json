@@ -1,0 +1,36 @@
+{
+  "CULane/train": {
+    "listed": 88880,
+    "unique": 88880,
+    "images": 0,
+    "lane_annotations": 0,
+    "mask_rows": 88880,
+    "masks_present": 0
+  },
+  "CULane/val": {
+    "listed": 9675,
+    "unique": 9675,
+    "images": 0,
+    "lane_annotations": 0,
+    "mask_rows": 9675,
+    "masks_present": 0
+  },
+  "CULane/test": {
+    "listed": 34680,
+    "unique": 34680,
+    "images": 34680,
+    "lane_annotations": 34680
+  },
+  "TuSimple/train": {
+    "listed": 3626,
+    "unique": 3626,
+    "images": 3626,
+    "consistent_lane_lengths": 3626
+  },
+  "TuSimple/test": {
+    "listed": 2782,
+    "unique": 2782,
+    "images": 2782,
+    "consistent_lane_lengths": 2782
+  }
+}

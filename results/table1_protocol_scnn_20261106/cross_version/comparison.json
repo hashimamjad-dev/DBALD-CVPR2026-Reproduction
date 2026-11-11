@@ -1,0 +1,93 @@
+{
+  "scope": "ONE REAL CLEAN IMAGE PER DATASET; CPU runtime parity only, not full-test accuracy",
+  "protocol": {
+    "input_exact": true,
+    "logits_atol": 0.0001,
+    "logits_rtol": 0.0001,
+    "native_coordinates_exact": true
+  },
+  "source_sha256": "aa878049e8fda956e1cc2562abebc2a24b473e96da20ff55a1291dc035e2d99e",
+  "checks": [
+    {
+      "dataset": "tusimple",
+      "legacy_torch": "1.8.0+cpu",
+      "modern_torch": "2.7.1+cu128",
+      "checkpoint_sha256": "d8eccc17019a8a0d96c63897059f8a581eb2f60a60346e710f2e38034c359b6a",
+      "same_identity": true,
+      "preprocessed_input_identical": true,
+      "native_coordinates_identical": true,
+      "tensor_comparisons": {
+        "out": {
+          "shape": [
+            1,
+            7,
+            45,
+            80
+          ],
+          "max_absolute_difference": 1.52587890625e-05,
+          "passed": true
+        },
+        "lane": {
+          "shape": [
+            1,
+            6
+          ],
+          "max_absolute_difference": 1.9073486328125e-06,
+          "passed": true
+        }
+      },
+      "passed": true,
+      "receipts": [
+        {
+          "path": "results\\table1_protocol_scnn_20261106\\cross_version\\validation_0.json",
+          "sha256": "5d5fa56d0a890b143ff6adb3f36a4b924a3157c013bb9072d2e66013e4412b24"
+        },
+        {
+          "path": "results\\table1_protocol_scnn_20261106\\cross_version\\validation_1.json",
+          "sha256": "cb83e070a8217c07ee9a97357ce34c98ba91a112a98c1a91f35dc41b23132030"
+        }
+      ]
+    },
+    {
+      "dataset": "culane",
+      "legacy_torch": "1.8.0+cpu",
+      "modern_torch": "2.7.1+cu128",
+      "checkpoint_sha256": "0dc808f53c84b1164236c5ee18d76add5f50a7137d3a2e786489b980c057f3e6",
+      "same_identity": true,
+      "preprocessed_input_identical": true,
+      "native_coordinates_identical": true,
+      "tensor_comparisons": {
+        "out": {
+          "shape": [
+            1,
+            5,
+            36,
+            100
+          ],
+          "max_absolute_difference": 7.62939453125e-06,
+          "passed": true
+        },
+        "lane": {
+          "shape": [
+            1,
+            4
+          ],
+          "max_absolute_difference": 2.86102294921875e-06,
+          "passed": true
+        }
+      },
+      "passed": true,
+      "receipts": [
+        {
+          "path": "results\\table1_protocol_scnn_20261106\\cross_version\\validation_2.json",
+          "sha256": "e0837d9d0f66d3879ba6d4c2f961688443df5eb7391c1ce5704e2fa762f0f5f9"
+        },
+        {
+          "path": "results\\table1_protocol_scnn_20261106\\cross_version\\validation_3.json",
+          "sha256": "d275bd521ecca5d1a92e8b0f8c79bef7701c1cc9b8e8fdc89e8c1feec1718740"
+        }
+      ]
+    }
+  ],
+  "status": "PASSED"
+}

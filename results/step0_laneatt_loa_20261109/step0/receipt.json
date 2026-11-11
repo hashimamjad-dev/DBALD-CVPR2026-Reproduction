@@ -1,0 +1,40 @@
+{
+  "status": "failed",
+  "fork_revision": "1af5f0478d56d62cf6f35781a2ab63e03d656b2d",
+  "model": "BleachNick/SD3_UltraEdit_w_mask",
+  "measurements": {},
+  "stage": "attention",
+  "elapsed_seconds": 349.33679238499997,
+  "dependencies": {
+    "torch": "2.11.0+cu130",
+    "transformers": "4.56.2",
+    "accelerate": "1.10.1",
+    "huggingface-hub": "0.34.4",
+    "tokenizers": "0.22.2",
+    "sentencepiece": "0.2.1",
+    "safetensors": "0.6.2"
+  },
+  "diffusers": {
+    "version": "0.30.0.dev0",
+    "source": "/kaggle/temp/step0/UltraEdit/diffusers/src/diffusers/__init__.py"
+  },
+  "checkpoint_revision": "e5beecb69a3ef1399718be2f99b61730b8bf0346",
+  "public_access_verified": true,
+  "download_bytes": 31005015718,
+  "free_disk_bytes": 1037728894976,
+  "initial_available_ram_bytes": 31392636928,
+  "initial_gpu": "name, memory.total [MiB], memory.free [MiB]\nTesla T4, 15360 MiB, 14909 MiB\nTesla T4, 15360 MiB, 14909 MiB\n",
+  "existing_candidates": [],
+  "snapshot": "/kaggle/temp/step0/cache/models--BleachNick--SD3_UltraEdit_w_mask/snapshots/e5beecb69a3ef1399718be2f99b61730b8bf0346",
+  "verified_files": 30,
+  "scope": "Step 0 only: 20 training images, LOA, R18; no research ACC or ASR",
+  "stages": [
+    {
+      "stage": "attention",
+      "seconds": 17.00936752700011,
+      "peak_child_rss_bytes": 1751527424,
+      "returncode": 1
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"/tmp/ipykernel_23/245515471.py\", line 166, in <cell line: None>\n    raise RuntimeError(name+' failed: '+(OUT/(name+'.log')).read_text()[-6000:])\nRuntimeError: attention failed: /usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.\n  warnings.warn(\n/usr/local/lib/python3.13/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.\n  warnings.warn(msg)\nTraceback (most recent call last):\n  File \"/kaggle/temp/step0/worker.py\", line 43, in <module>\n    attention = laneatt_attention_map(model, sample.read(), points, 'LOA')\n  File \"/kaggle/temp/step0/research/src/lane_repro/laneatt_heatmap.py\", line 81, in laneatt_attention_map\n    _,parts=adapter.model.loss(proposals_list,[target.to(x.device)],cls_loss_weight=cls_loss_weight)\n            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/temp/step0/research/third_party/LaneATT/lib/models/laneatt.py\", line 190, in loss\n    invalid_offsets_mask[all_indices, 1 + ends + 1] -= 1\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: indices should be either on cpu or on the same device as the indexed tensor (cpu)\n\n"
+}

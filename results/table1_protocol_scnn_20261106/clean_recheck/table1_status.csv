@@ -1,0 +1,221 @@
+dataset,model,method,metric,published_percent,local_equivalent_percent,status,supporting_measurements,reason
+CULane,LaneATT,BadNets,benign_acc,75.01,,NOT COMPARABLE,culane_laneatt: 76.674040125%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,LaneATT,BadNets,poisoned_acc,72.79,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,BadNets,lda_asr,49.27,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,BadNets,lra_asr,43.37,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,BadNets,loa_asr,47.36,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,BadNets,avg_asr,46.67,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,BadNets,benign_acc,96.81,95.63477799459051,MEASURED INDEPENDENT BASELINE,clean_laneatt_resnet34: 95.634777995%; clean_laneatt_resnet18: 95.571017767%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,LaneATT,BadNets,poisoned_acc,95.53,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,BadNets,lda_asr,45.62,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,BadNets,loa_asr,75.63,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,BadNets,avg_asr,60.63,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,Blended,benign_acc,75.01,,NOT COMPARABLE,culane_laneatt: 76.674040125%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,LaneATT,Blended,poisoned_acc,73.15,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,Blended,lda_asr,57.14,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,Blended,lra_asr,59.07,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,Blended,loa_asr,47.04,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,Blended,avg_asr,54.41,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,Blended,benign_acc,96.81,95.63477799459051,MEASURED INDEPENDENT BASELINE,clean_laneatt_resnet34: 95.634777995%; clean_laneatt_resnet18: 95.571017767%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,LaneATT,Blended,poisoned_acc,96.27,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,Blended,lda_asr,46.31,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,Blended,loa_asr,72.47,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,Blended,avg_asr,59.39,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,LD-Attack,benign_acc,75.01,,NOT COMPARABLE,culane_laneatt: 76.674040125%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,LaneATT,LD-Attack,poisoned_acc,72.48,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,LD-Attack,lda_asr,71.24,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,LD-Attack,lra_asr,56.24,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,LD-Attack,loa_asr,63.71,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,LD-Attack,avg_asr,63.73,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,LD-Attack,benign_acc,96.81,95.63477799459051,MEASURED INDEPENDENT BASELINE,clean_laneatt_resnet34: 95.634777995%; clean_laneatt_resnet18: 95.571017767%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,LaneATT,LD-Attack,poisoned_acc,96.21,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,LD-Attack,lda_asr,88.17,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,LD-Attack,loa_asr,90.27,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,LD-Attack,avg_asr,89.22,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,BadLANE,benign_acc,75.01,,NOT COMPARABLE,culane_laneatt: 76.674040125%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,LaneATT,BadLANE,poisoned_acc,73.78,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,BadLANE,lda_asr,64.33,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,BadLANE,lra_asr,45.22,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,BadLANE,loa_asr,54.15,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,BadLANE,avg_asr,54.56,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,BadLANE,benign_acc,96.81,95.63477799459051,MEASURED INDEPENDENT BASELINE,clean_laneatt_resnet34: 95.634777995%; clean_laneatt_resnet18: 95.571017767%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,LaneATT,BadLANE,poisoned_acc,96.18,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,BadLANE,lda_asr,89.25,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,BadLANE,loa_asr,89.76,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,BadLANE,avg_asr,89.51,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,DBALD,benign_acc,75.01,,NOT COMPARABLE,culane_laneatt: 76.674040125%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,LaneATT,DBALD,poisoned_acc,74.2,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,DBALD,lda_asr,81.65,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,DBALD,lra_asr,73.45,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,DBALD,loa_asr,74.19,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,LaneATT,DBALD,avg_asr,76.41,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,DBALD,benign_acc,96.81,95.63477799459051,MEASURED INDEPENDENT BASELINE,clean_laneatt_resnet34: 95.634777995%; clean_laneatt_resnet18: 95.571017767%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,LaneATT,DBALD,poisoned_acc,95.72,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,DBALD,lda_asr,90.04,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,DBALD,loa_asr,91.63,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,LaneATT,DBALD,avg_asr,90.84,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadNets,benign_acc,85.51,,NOT COMPARABLE,culane_adnet: 78.964748154%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,ADNet,BadNets,poisoned_acc,79.6,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadNets,lda_asr,50.13,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadNets,lra_asr,54.33,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadNets,loa_asr,61.39,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadNets,avg_asr,55.28,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,BadNets,benign_acc,96.87,96.59824210057795,MEASURED INDEPENDENT BASELINE,clean_adnet_resnet18: 96.234348790%; clean_adnet_resnet34: 96.598242101%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,ADNet,BadNets,poisoned_acc,95.46,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,BadNets,lda_asr,50.34,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,BadNets,loa_asr,52.98,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,BadNets,avg_asr,51.66,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,Blended,benign_acc,85.51,,NOT COMPARABLE,culane_adnet: 78.964748154%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,ADNet,Blended,poisoned_acc,74.37,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,Blended,lda_asr,43.67,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,Blended,lra_asr,56.42,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,Blended,loa_asr,56.51,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,Blended,avg_asr,52.2,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,Blended,benign_acc,96.87,96.59824210057795,MEASURED INDEPENDENT BASELINE,clean_adnet_resnet18: 96.234348790%; clean_adnet_resnet34: 96.598242101%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,ADNet,Blended,poisoned_acc,95.1,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,Blended,lda_asr,56.27,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,Blended,loa_asr,59.12,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,Blended,avg_asr,57.7,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,LD-Attack,benign_acc,85.51,,NOT COMPARABLE,culane_adnet: 78.964748154%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,ADNet,LD-Attack,poisoned_acc,79.14,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,LD-Attack,lda_asr,59.47,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,LD-Attack,lra_asr,63.39,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,LD-Attack,loa_asr,67.15,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,LD-Attack,avg_asr,63.34,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,LD-Attack,benign_acc,96.87,96.59824210057795,MEASURED INDEPENDENT BASELINE,clean_adnet_resnet18: 96.234348790%; clean_adnet_resnet34: 96.598242101%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,ADNet,LD-Attack,poisoned_acc,96.35,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,LD-Attack,lda_asr,53.24,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,LD-Attack,loa_asr,66.32,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,LD-Attack,avg_asr,59.78,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadLANE,benign_acc,85.51,,NOT COMPARABLE,culane_adnet: 78.964748154%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,ADNet,BadLANE,poisoned_acc,85.46,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadLANE,lda_asr,36.61,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadLANE,lra_asr,61.16,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadLANE,loa_asr,65.95,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,BadLANE,avg_asr,54.57,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,BadLANE,benign_acc,96.87,96.59824210057795,MEASURED INDEPENDENT BASELINE,clean_adnet_resnet18: 96.234348790%; clean_adnet_resnet34: 96.598242101%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,ADNet,BadLANE,poisoned_acc,96.29,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,BadLANE,lda_asr,59.17,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,BadLANE,loa_asr,67.48,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,BadLANE,avg_asr,63.33,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,DBALD,benign_acc,85.51,,NOT COMPARABLE,culane_adnet: 78.964748154%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,ADNet,DBALD,poisoned_acc,82.37,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,DBALD,lda_asr,66.49,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,DBALD,lra_asr,64.82,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,DBALD,loa_asr,68.17,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,ADNet,DBALD,avg_asr,66.5,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,DBALD,benign_acc,96.87,96.59824210057795,MEASURED INDEPENDENT BASELINE,clean_adnet_resnet18: 96.234348790%; clean_adnet_resnet34: 96.598242101%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,ADNet,DBALD,poisoned_acc,96.61,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,DBALD,lda_asr,89.24,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,DBALD,loa_asr,72.07,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,ADNet,DBALD,avg_asr,80.66,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadNets,benign_acc,69.75,,NOT COMPARABLE,culane_scnn: 74.778514461%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,SCNN,BadNets,poisoned_acc,69.52,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadNets,lda_asr,74.39,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadNets,lra_asr,63.63,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadNets,loa_asr,62.76,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadNets,avg_asr,66.93,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,BadNets,benign_acc,93.78,,NOT COMPARABLE,clean_scnn_resnet18: 96.084255503%,Independent implementation; metric/backbone and training differences must be distinguished
+TuSimple,SCNN,BadNets,poisoned_acc,91.56,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,BadNets,lda_asr,64.72,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,BadNets,loa_asr,62.79,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,BadNets,avg_asr,63.76,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,Blended,benign_acc,69.75,,NOT COMPARABLE,culane_scnn: 74.778514461%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,SCNN,Blended,poisoned_acc,63.98,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,Blended,lda_asr,75.14,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,Blended,lra_asr,63.45,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,Blended,loa_asr,61.6,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,Blended,avg_asr,66.73,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,Blended,benign_acc,93.78,,NOT COMPARABLE,clean_scnn_resnet18: 96.084255503%,Independent implementation; metric/backbone and training differences must be distinguished
+TuSimple,SCNN,Blended,poisoned_acc,91.37,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,Blended,lda_asr,58.3,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,Blended,loa_asr,64.13,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,Blended,avg_asr,61.22,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,LD-Attack,benign_acc,69.75,,NOT COMPARABLE,culane_scnn: 74.778514461%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,SCNN,LD-Attack,poisoned_acc,64.38,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,LD-Attack,lda_asr,74.83,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,LD-Attack,lra_asr,62.21,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,LD-Attack,loa_asr,64.17,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,LD-Attack,avg_asr,67.07,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,LD-Attack,benign_acc,93.78,,NOT COMPARABLE,clean_scnn_resnet18: 96.084255503%,Independent implementation; metric/backbone and training differences must be distinguished
+TuSimple,SCNN,LD-Attack,poisoned_acc,92.23,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,LD-Attack,lda_asr,94.08,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,LD-Attack,loa_asr,91.43,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,LD-Attack,avg_asr,92.76,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadLane,benign_acc,69.75,,NOT COMPARABLE,culane_scnn: 74.778514461%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,SCNN,BadLane,poisoned_acc,67.57,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadLane,lda_asr,72.28,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadLane,lra_asr,63.96,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadLane,loa_asr,62.94,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,BadLane,avg_asr,66.39,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,BadLane,benign_acc,93.78,,NOT COMPARABLE,clean_scnn_resnet18: 96.084255503%,Independent implementation; metric/backbone and training differences must be distinguished
+TuSimple,SCNN,BadLane,poisoned_acc,90.89,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,BadLane,lda_asr,92.19,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,BadLane,loa_asr,88.57,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,BadLane,avg_asr,90.38,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,DBALD,benign_acc,69.75,,NOT COMPARABLE,culane_scnn: 74.778514461%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,SCNN,DBALD,poisoned_acc,68.75,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,DBALD,lda_asr,76.19,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,DBALD,lra_asr,67.34,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,DBALD,loa_asr,68.69,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,SCNN,DBALD,avg_asr,70.74,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,DBALD,benign_acc,93.78,,NOT COMPARABLE,clean_scnn_resnet18: 96.084255503%,Independent implementation; metric/backbone and training differences must be distinguished
+TuSimple,SCNN,DBALD,poisoned_acc,92.28,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,DBALD,lda_asr,95.78,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,DBALD,loa_asr,91.29,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,SCNN,DBALD,avg_asr,93.54,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadNets,benign_acc,78.98,,NOT COMPARABLE,culane_resa: 75.848750831%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,RESA,BadNets,poisoned_acc,76.68,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadNets,lda_asr,71.08,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadNets,lra_asr,58.68,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadNets,loa_asr,69.14,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadNets,avg_asr,66.3,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,BadNets,benign_acc,96.81,96.8189423504839,MEASURED INDEPENDENT BASELINE,clean_resa_resnet18: 96.695915066%; clean_resa_resnet34: 96.818942350%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,RESA,BadNets,poisoned_acc,96.63,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,BadNets,lda_asr,64.78,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,BadNets,loa_asr,73.46,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,BadNets,avg_asr,69.12,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,Blended,benign_acc,78.98,,NOT COMPARABLE,culane_resa: 75.848750831%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,RESA,Blended,poisoned_acc,75.87,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,Blended,lda_asr,73.85,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,Blended,lra_asr,59.64,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,Blended,loa_asr,57.76,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,Blended,avg_asr,63.75,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,Blended,benign_acc,96.81,96.8189423504839,MEASURED INDEPENDENT BASELINE,clean_resa_resnet18: 96.695915066%; clean_resa_resnet34: 96.818942350%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,RESA,Blended,poisoned_acc,96.65,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,Blended,lda_asr,68.11,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,Blended,loa_asr,57.28,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,Blended,avg_asr,62.7,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,LD-Attack,benign_acc,78.98,,NOT COMPARABLE,culane_resa: 75.848750831%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,RESA,LD-Attack,poisoned_acc,71.35,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,LD-Attack,lda_asr,73.26,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,LD-Attack,lra_asr,64.77,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,LD-Attack,loa_asr,69.18,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,LD-Attack,avg_asr,69.07,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,LD-Attack,benign_acc,96.81,96.8189423504839,MEASURED INDEPENDENT BASELINE,clean_resa_resnet18: 96.695915066%; clean_resa_resnet34: 96.818942350%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,RESA,LD-Attack,poisoned_acc,96.67,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,LD-Attack,lda_asr,92.53,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,LD-Attack,loa_asr,92.04,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,LD-Attack,avg_asr,92.29,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadLANE,benign_acc,78.98,,NOT COMPARABLE,culane_resa: 75.848750831%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,RESA,BadLANE,poisoned_acc,72.81,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadLANE,lda_asr,75.39,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadLANE,lra_asr,62.94,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadLANE,loa_asr,68.23,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,BadLANE,avg_asr,68.85,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,BadLANE,benign_acc,96.81,96.8189423504839,MEASURED INDEPENDENT BASELINE,clean_resa_resnet18: 96.695915066%; clean_resa_resnet34: 96.818942350%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,RESA,BadLANE,poisoned_acc,96.42,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,BadLANE,lda_asr,92.47,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,BadLANE,loa_asr,91.19,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,BadLANE,avg_asr,91.83,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,DBALD,benign_acc,78.98,,NOT COMPARABLE,culane_resa: 75.848750831%,Prior verified clean measurement; independent training/configuration; CULane F1 is not paper ACC
+CULane,RESA,DBALD,poisoned_acc,77.39,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,DBALD,lda_asr,78.15,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,DBALD,lra_asr,65.15,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,DBALD,loa_asr,76.86,,NOT MEASURED,,No independently verified equivalent measurement
+CULane,RESA,DBALD,avg_asr,73.39,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,DBALD,benign_acc,96.81,96.8189423504839,MEASURED INDEPENDENT BASELINE,clean_resa_resnet18: 96.695915066%; clean_resa_resnet34: 96.818942350%,"Full official TuSimple ACC, R34; independent checkpoint/training, not claimed identical experimental reproduction"
+TuSimple,RESA,DBALD,poisoned_acc,96.67,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,DBALD,lda_asr,96.57,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,DBALD,loa_asr,94.28,,NOT MEASURED,,No independently verified equivalent measurement
+TuSimple,RESA,DBALD,avg_asr,95.43,,NOT MEASURED,,No independently verified equivalent measurement

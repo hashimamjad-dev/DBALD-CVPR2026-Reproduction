@@ -187,7 +187,7 @@ def main():
         unsupported=['operational backdoor training or target generation',
                      'authentication of externally claimed training history',
                      'confirmed original-paper CULane ACC/ASR protocol',
-                     'trained SCNN ResNet-34 checkpoint'],
+                     'verified full-test SCNN ResNet-34 clean evaluation'],
         unresolved_cells=[r for r in rows if r['status']!='MEASURED INDEPENDENT BASELINE'])
     (output/'inventory.json').write_text(json.dumps(inventory,indent=2))
     with (output/'table1.csv').open('w', newline='', encoding='utf-8') as stream:

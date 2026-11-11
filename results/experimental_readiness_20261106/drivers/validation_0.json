@@ -1,0 +1,50 @@
+{
+  "scope": "one-image CPU driver integration; NOT Table 1 or full-test accuracy",
+  "summary": {
+    "model": "SCNN",
+    "backbone": "resnet34",
+    "dataset": "TuSimple",
+    "split": "test",
+    "transformation": "clean",
+    "images": 1,
+    "metric": "official TuSimple ACC; actual 200ms runtime gate",
+    "acc_percent": 0.0,
+    "ungated_acc_percent": 93.30357142857143,
+    "fp": 0.0,
+    "fn": 1.0,
+    "median_ms": 1985.6184000018402,
+    "p95_ms": 1985.6184000018402,
+    "runtime_failures": 1,
+    "peak_cuda_allocated_bytes": 0,
+    "device": "cpu",
+    "seed": 0,
+    "asr": null,
+    "table1_comparable": false,
+    "scope": "subset",
+    "checkpoint_sha256": "d8eccc17019a8a0d96c63897059f8a581eb2f60a60346e710f2e38034c359b6a"
+  },
+  "provenance": {
+    "architecture": "SCNN",
+    "backbone": "resnet34",
+    "dataset": "tusimple",
+    "implementation": "voldemortX/pytorch-auto-drive",
+    "implementation_commit": "137e63a9e6c3cd2cfeb15e101808478d7b25ddbd",
+    "checkpoint": "D:\\DBALD-CVPR2026-Reproduction\\models\\checkpoints\\scnn_r34_autodrive\\resnet34_scnn_tusimple_20210424.pt",
+    "checkpoint_sha256": "d8eccc17019a8a0d96c63897059f8a581eb2f60a60346e710f2e38034c359b6a",
+    "strict_state_dict": true,
+    "config": "third_party\\pytorch_auto_drive\\configs\\lane_detection\\scnn\\resnet34_tusimple.py",
+    "config_sha256": "aefcb091b6fd9a03129ca0a42ba79bc4271b99a19e356db3f6c20440d6b843df",
+    "source_files_sha256": {
+      "third_party\\pytorch_auto_drive\\utils\\models\\common_models\\plugins\\spatial_conv.py": "1c15d220d6bf71667a0e12bebf4029d9461cce690fa7d9544efd37cc406adac1",
+      "third_party\\pytorch_auto_drive\\utils\\lane_det_utils.py": "990cc40acbe21671cc032ddcf6af7c5a0c6b91fd00cfb68687ae87b8b9a85696",
+      "third_party\\pytorch_auto_drive\\utils\\models\\resnet.py": "af32485e3fa476bbbf7066fa79882c0c44529321200b10a3686b94efa2d94303"
+    },
+    "device": "cpu",
+    "preprocessing": "RGB PIL bilinear resize, ImageNet normalization; native upstream decoder",
+    "overrides": {
+      "backbone_pretrained": false,
+      "reason": "all lane checkpoint parameters loaded strictly"
+    },
+    "limitation": "Independent pretrained R34 baseline; original DBALD checkpoint/training equivalence unverified"
+  }
+}

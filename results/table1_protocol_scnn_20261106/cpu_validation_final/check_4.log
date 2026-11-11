@@ -1,0 +1,9 @@
+torch 2.7.1+cu128 threads 1 mkldnn True
+.                                                                        [100%]
+============================== warnings summary ===============================
+tests/test_scnn_autodrive.py::test_public_r34_strict_load_and_native_reference_parity[tusimple]
+  D:\DBALD-CVPR2026-Reproduction\third_party\pytorch_auto_drive\utils\models\segmentation\segmentation.py:45: SyntaxWarning: "is not" with 'str' literal. Did you mean "!="?
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+- generated xml file: D:\DBALD-CVPR2026-Reproduction\results\table1_protocol_scnn_20261106\cpu_validation_final\tests_4.xml -
+1 passed, 1 warning in 19.47s

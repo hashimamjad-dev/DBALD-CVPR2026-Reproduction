@@ -1,0 +1,63 @@
+{
+  "phase1_complete": false,
+  "accepted_clean_records_preserved": [
+    "clean_adnet_resnet18",
+    "clean_adnet_resnet34",
+    "clean_laneatt_resnet18",
+    "clean_laneatt_resnet34",
+    "clean_resa_resnet18",
+    "clean_resa_resnet34",
+    "clean_scnn_resnet18",
+    "culane_adnet",
+    "culane_laneatt",
+    "culane_resa",
+    "culane_scnn"
+  ],
+  "accepted_supporting_records_preserved": [
+    "cached_10_LaneATT",
+    "cached_11_LaneATT",
+    "cached_5_ADNet",
+    "cached_6_RESA",
+    "cached_7_SCNN",
+    "cached_8_ADNet",
+    "cached_9_RESA",
+    "candidate_ADNet",
+    "candidate_LaneATT",
+    "candidate_RESA",
+    "candidate_SCNN",
+    "culane_adnet",
+    "culane_laneatt",
+    "culane_resa",
+    "culane_scnn"
+  ],
+  "baseline_only_cells": 15,
+  "noncomparable_cells": 25,
+  "missing_cells": 180,
+  "culane_official_f1_matches_paper_acc": false,
+  "candidate_point_protocol_author_verified": false,
+  "scnn_r34_checkpoint_status": "VERIFIED: both public checkpoints strictly loaded on CPU",
+  "scnn_r34_native_decode_status": "VERIFIED: adapter/reference equality for one real image per dataset, MKLDNN on and off",
+  "scnn_r34_full_test_results": "MISSING: no new full-test R34 inference has been run",
+  "cpu_checks_passed": 8,
+  "cpu_driver_checks_passed": 2,
+  "cpu_peak_private_mib": 1178.453125,
+  "cpu_crash_root_cause": "Not proven; isolated cases passed for both backends. Prior commit/RAM exhaustion is evidenced; do not claim all native crashes are explained.",
+  "gpu_work_started": false,
+  "partial_items": [
+    "SCNN R34 full-clean evaluations pending",
+    "Documented tiny poisoned-training run has no numerical receipt in this checkout"
+  ],
+  "prerequisites": [
+    "Author-confirmed CULane point sampling/matching/error/boundary/runtime rules",
+    "Full clean SCNN R34 evaluation, with GPU approval before extensive GPU use",
+    "Exact author checkpoint and training equivalence",
+    "Verified complete method/scenario experimental receipts before any poisoned ACC or ASR cells can be filled"
+  ],
+  "receipt_sha256": {
+    "results\\table1_protocol_scnn_20261106\\clean_recheck\\verification.json": "97a620039d0f805490bf7e8126ea7827f1a962b6731a9bfec6e80de0b8bef421",
+    "results\\table1_protocol_scnn_20261106\\unified_recheck\\verification.json": "3c24bf764e3dd20c7cc0e51ba7fe0f4fe24b98d3711d13f2e09bd14807161afd",
+    "results\\table1_protocol_scnn_20261106\\protocol_witnesses\\protocol_audit.json": "0ef6094730c70f4b0f95fc97f37d439702231a2400e753dab9ed4de7279b637d",
+    "results\\table1_protocol_scnn_20261106\\cpu_validation_final\\receipt.json": "65a575d0187726ff0c91775b36e2d2079171c35d30007d30d6a19fe3f34f4cd8",
+    "results\\table1_protocol_scnn_20261106\\driver_validation\\receipt.json": "83c6be709afd07f1c9cab553a60e1cdb63e339ebb2ff24e4dec4493ff5ca4162"
+  }
+}

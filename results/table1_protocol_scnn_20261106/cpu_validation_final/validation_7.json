@@ -1,0 +1,222 @@
+{
+  "scope": "one clean image; adapter/reference parity, not full-test accuracy",
+  "raw_file": "driver_100_30frame/05251517_0433.MP4/00000.jpg",
+  "provenance": {
+    "architecture": "SCNN",
+    "backbone": "resnet34",
+    "dataset": "culane",
+    "implementation": "voldemortX/pytorch-auto-drive",
+    "implementation_commit": "137e63a9e6c3cd2cfeb15e101808478d7b25ddbd",
+    "checkpoint": "D:\\DBALD-CVPR2026-Reproduction\\models\\checkpoints\\scnn_r34_autodrive\\resnet34_scnn_culane_20210220.pt",
+    "checkpoint_sha256": "0dc808f53c84b1164236c5ee18d76add5f50a7137d3a2e786489b980c057f3e6",
+    "strict_state_dict": true,
+    "config": "third_party\\pytorch_auto_drive\\configs\\lane_detection\\scnn\\resnet34_culane.py",
+    "config_sha256": "06543abed520a02acac9510d4584efd12b07944c062354e9e55bda24b0dbe4e1",
+    "source_files_sha256": {
+      "third_party\\pytorch_auto_drive\\utils\\models\\common_models\\plugins\\spatial_conv.py": "1c15d220d6bf71667a0e12bebf4029d9461cce690fa7d9544efd37cc406adac1",
+      "third_party\\pytorch_auto_drive\\utils\\lane_det_utils.py": "990cc40acbe21671cc032ddcf6af7c5a0c6b91fd00cfb68687ae87b8b9a85696",
+      "third_party\\pytorch_auto_drive\\utils\\models\\resnet.py": "af32485e3fa476bbbf7066fa79882c0c44529321200b10a3686b94efa2d94303"
+    },
+    "device": "cpu",
+    "preprocessing": "RGB PIL bilinear resize, ImageNet normalization; native upstream decoder",
+    "overrides": {
+      "backbone_pretrained": false,
+      "reason": "all lane checkpoint parameters loaded strictly"
+    },
+    "limitation": "Independent pretrained R34 baseline; original DBALD checkpoint/training equivalence unverified"
+  },
+  "torch": "2.7.1+cu128",
+  "mkldnn": false,
+  "input_shape": [
+    1,
+    3,
+    288,
+    800
+  ],
+  "outputs": {
+    "out": [
+      1,
+      5,
+      36,
+      100
+    ],
+    "lane": [
+      1,
+      4
+    ]
+  },
+  "predictions": [
+    [
+      [
+        30.0,
+        569
+      ],
+      [
+        82.0,
+        549
+      ],
+      [
+        141.0,
+        529
+      ],
+      [
+        196.0,
+        509
+      ],
+      [
+        248.0,
+        489
+      ],
+      [
+        305.0,
+        469
+      ],
+      [
+        362.0,
+        449
+      ],
+      [
+        430.0,
+        429
+      ],
+      [
+        483.0,
+        409
+      ],
+      [
+        524.0,
+        389
+      ],
+      [
+        586.0,
+        369
+      ],
+      [
+        641.0,
+        349
+      ],
+      [
+        686.0,
+        329
+      ]
+    ],
+    [
+      [
+        463.0,
+        589
+      ],
+      [
+        483.0,
+        569
+      ],
+      [
+        504.0,
+        549
+      ],
+      [
+        524.0,
+        529
+      ],
+      [
+        545.0,
+        509
+      ],
+      [
+        565.0,
+        489
+      ],
+      [
+        586.0,
+        469
+      ],
+      [
+        606.0,
+        449
+      ],
+      [
+        627.0,
+        429
+      ],
+      [
+        645.0,
+        409
+      ],
+      [
+        666.0,
+        389
+      ],
+      [
+        688.0,
+        369
+      ],
+      [
+        709.0,
+        349
+      ],
+      [
+        727.0,
+        329
+      ]
+    ],
+    [
+      [
+        1531.0,
+        589
+      ],
+      [
+        1492.0,
+        569
+      ],
+      [
+        1435.0,
+        549
+      ],
+      [
+        1383.0,
+        529
+      ],
+      [
+        1332.0,
+        509
+      ],
+      [
+        1275.0,
+        489
+      ],
+      [
+        1213.0,
+        469
+      ],
+      [
+        1152.0,
+        449
+      ],
+      [
+        1090.0,
+        429
+      ],
+      [
+        1031.0,
+        409
+      ],
+      [
+        969.0,
+        389
+      ],
+      [
+        902.0,
+        369
+      ],
+      [
+        842.0,
+        349
+      ],
+      [
+        793.0,
+        329
+      ]
+    ]
+  ],
+  "preprocessing_identical": true,
+  "native_decode_identical": true
+}

@@ -1,0 +1,14 @@
+{
+  "dataset": "CULane",
+  "split": "test",
+  "expected": 52,
+  "verified": 52,
+  "failures": 0,
+  "full_test": false,
+  "retry_from": {
+    "path": "results\\table1_clean_20261106\\dataset_integrity\\culane_integrity.jsonl",
+    "sha256": "a11643615b38e730127461d6f83ddaedd9adf6f410028d6a1256decaef5d7425"
+  },
+  "validator_sha256": "d211481dbc3b33d00b0fba3a5289b5a16564e26029cc6eb3136deb08503b8a82",
+  "list_sha256": "1379dc42430b9e20087ac7caba0cf8ade2068da216ecce49a76c49d4a7f533ac"
+}

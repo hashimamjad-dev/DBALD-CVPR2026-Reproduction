@@ -5,3 +5,4 @@
 - Use separate local `milestone/...` branches; preserve them and all experimental evidence. Integrate tested work into local `hashim-dev` without discarding history.
 - Verify live remote state before publication. If CLI authentication fails, connected GitHub publication is permitted, but disclose local/remote ancestry differences. Never expose credentials or claim synchronization without verification.
 - Completion reports include local milestone SHA, remote hashim-dev SHA, tests, changed files, new measurements and remaining Table 1 gaps.
+- Ask the user before starting any work requiring extensive GPU usage, including GPU tests or experiments.

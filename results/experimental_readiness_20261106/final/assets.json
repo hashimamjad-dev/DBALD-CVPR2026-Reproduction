@@ -1,0 +1,281 @@
+{
+  "detectors": {
+    "ADNet/CULane": {
+      "weights": {
+        "models/checkpoints/adnet_culane_res34.pth": "31e0ed1c19d92e46f9d519ed39b81ef64cf4371cc936142d78942852cb0e99f4"
+      },
+      "identity_verified": true,
+      "evidence": [
+        "results/full_culane_recovered_20261028/adnet"
+      ]
+    },
+    "ADNet/TuSimple": {
+      "weights": {
+        "models/checkpoints/adnet_tusimple_res34.pth": "0e3fc00abbe4aad7975c517a776b757d4d56d1cac8d5ae0c536d3d3a1dcd6885"
+      },
+      "identity_verified": true,
+      "evidence": [
+        "results\\overnight\\full_test_r34\\adnet"
+      ]
+    },
+    "LaneATT/CULane": {
+      "weights": {
+        "models/checkpoints/laneatt_official/experiments/laneatt_r34_culane/models/model_0015.pt": "53027e11972431bee3a49172d3c8841f1b6a82cf44c90ff073caa32b8e740132"
+      },
+      "identity_verified": true,
+      "evidence": [
+        "results/full_culane_recovered_20261028/laneatt"
+      ]
+    },
+    "LaneATT/TuSimple": {
+      "weights": {
+        "models/checkpoints/laneatt_official/experiments/laneatt_r34_tusimple/models/model_0100.pt": "ab6f603c4a986f257efb44d416fc20254c0726b477cff98e577ea75227c8c795"
+      },
+      "identity_verified": true,
+      "evidence": [
+        "results\\overnight\\full_test_r34_torch16_order\\laneatt"
+      ]
+    },
+    "RESA/CULane": {
+      "weights": {
+        "models/checkpoints/ssd/zhengtu/releasev2/resa_r34_culane/resa_r34_culane.pth": "07de30f92d5da56e44f282258447af4126a6b425669c017e958fb0b16e3fee98"
+      },
+      "identity_verified": true,
+      "evidence": [
+        "results/full_culane_recovered_20261028/resa"
+      ]
+    },
+    "RESA/TuSimple": {
+      "weights": {
+        "models/checkpoints/ssd/zhengtu/releasev2/resa_r34_tusimple/resa_r34_tusimple.pth": "edbec02639cd764fed0ca413c8312b0feb0cf925237d20d844c61d57b02681a2"
+      },
+      "identity_verified": true,
+      "evidence": [
+        "results\\overnight\\full_test_r34\\resa"
+      ]
+    },
+    "SCNN/CULane": {
+      "weights": {
+        "models/checkpoints/scnn_r34_autodrive/resnet34_scnn_culane_20210220.pt": "0dc808f53c84b1164236c5ee18d76add5f50a7137d3a2e786489b980c057f3e6"
+      },
+      "identity_verified": true,
+      "evidence": []
+    },
+    "SCNN/TuSimple": {
+      "weights": {
+        "models/checkpoints/scnn_r34_autodrive/resnet34_scnn_tusimple_20210424.pt": "d8eccc17019a8a0d96c63897059f8a581eb2f60a60346e710f2e38034c359b6a"
+      },
+      "identity_verified": true,
+      "evidence": []
+    }
+  },
+  "implementations": [
+    "ADNet",
+    "LaneATT",
+    "SCNN",
+    "UltraEdit",
+    "lanedet",
+    "pytorch_auto_drive",
+    "resa",
+    "sam2",
+    "tusimple-benchmark"
+  ],
+  "dependency_files": [
+    "requirements-adnet-reference.txt",
+    "requirements-laneatt-legacy.txt",
+    "requirements-lanedet-reference.txt",
+    "requirements-lock-adnet-reference.txt",
+    "requirements-lock-cpu.txt",
+    "requirements-lock-cuda.txt",
+    "requirements-lock-laneatt-reference.txt",
+    "requirements-lock-lanedet-reference.txt",
+    "requirements-lock.txt",
+    "requirements-optional.txt",
+    "requirements.txt"
+  ],
+  "project_sources": [
+    "configs/cpu_scnn_checks.json",
+    "configs/cpu_scnn_cross_version_checks.json",
+    "configs/cpu_scnn_driver_checks.json",
+    "configs/cpu_table1_regression_checks.json",
+    "configs/culane_full_clean_evidence.json",
+    "configs/experiments.json",
+    "configs/laneatt_anchor_order.json",
+    "configs/overnight.json",
+    "configs/resnet34.json",
+    "configs/scnn_r34_autodrive.json",
+    "configs/scnn_r34_culane.py",
+    "configs/scnn_r34_tusimple.py",
+    "configs/table1_author_protocol.json",
+    "configs/table1_clean_full_replay.json",
+    "configs/table1_clean_replay.json",
+    "configs/table1_evidence.json",
+    "configs/table1_unified.json",
+    "scripts/audit_culane_protocol.py",
+    "scripts/audit_culane_readiness.py",
+    "scripts/audit_distillation_outputs.py",
+    "scripts/audit_environment.py",
+    "scripts/audit_experimental_readiness.py",
+    "scripts/audit_predictions.py",
+    "scripts/audit_table1.py",
+    "scripts/benchmark.py",
+    "scripts/benchmark_culane.py",
+    "scripts/build_culane_evaluator.py",
+    "scripts/build_deliverables.py",
+    "scripts/build_poisoned_dataset.py",
+    "scripts/build_research_comparison.py",
+    "scripts/build_results_table.py",
+    "scripts/check_laneatt_parity.py",
+    "scripts/check_trigger_compositing.py",
+    "scripts/compare_legacy_laneatt.py",
+    "scripts/compare_reference_models.py",
+    "scripts/compare_scnn_r34_cpu.py",
+    "scripts/diagnose_laneatt_order.py",
+    "scripts/diagnose_scnn_runtime.py",
+    "scripts/diffusion_demo.py",
+    "scripts/distill_road.py",
+    "scripts/evaluate.py",
+    "scripts/evaluate_edit_lanes.py",
+    "scripts/evaluate_table1.py",
+    "scripts/extract_culane_missing.py",
+    "scripts/extract_laneatt.py",
+    "scripts/fetch_assets.py",
+    "scripts/fetch_culane_ranges.py",
+    "scripts/fetch_culane_test.py",
+    "scripts/fetch_diffusion.py",
+    "scripts/fetch_laneatt_official.py",
+    "scripts/fetch_overnight_models.py",
+    "scripts/fetch_r34_models.py",
+    "scripts/fetch_scnn_r34.py",
+    "scripts/fetch_tusimple_full.py",
+    "scripts/fetch_tusimple_subset.py",
+    "scripts/fetch_tusimple_train.py",
+    "scripts/infer.py",
+    "scripts/laneatt_train_feasibility.py",
+    "scripts/legacy_laneatt_reference.py",
+    "scripts/mix_poisoned_dataset.py",
+    "scripts/prepare_distillation_data.py",
+    "scripts/prepare_research_publication.py",
+    "scripts/probe_scnn_aggregator.py",
+    "scripts/prototype_demo.py",
+    "scripts/render_table1.py",
+    "scripts/replay_clean_table1.py",
+    "scripts/report_distillation.py",
+    "scripts/run_culane_full.py",
+    "scripts/run_culane_suite.py",
+    "scripts/run_isolated_cpu_checks.py",
+    "scripts/run_suite.py",
+    "scripts/sanity_poisoned_training.py",
+    "scripts/scnn_r34_cpu_reference.py",
+    "scripts/score_culane_points.py",
+    "scripts/setup_reference_environment.py",
+    "scripts/speedup_ladder.py",
+    "scripts/table1_evidence.py",
+    "scripts/table1_readiness.py",
+    "scripts/transcribe_reference.py",
+    "scripts/v2_audit.py",
+    "scripts/v2_common.py",
+    "scripts/v2_evaluate.py",
+    "scripts/v2_gallery.py",
+    "scripts/v2_lanes.py",
+    "scripts/v2_prepare.py",
+    "scripts/v2_report.py",
+    "scripts/v2_train.py",
+    "scripts/v3_cache.py",
+    "scripts/v3_timing.py",
+    "scripts/v3_train.py",
+    "scripts/validate_clean_inference.py",
+    "scripts/validate_culane_data.py",
+    "scripts/validate_distillation_inputs.py",
+    "scripts/validate_models.py",
+    "src/lane_repro/__init__.py",
+    "src/lane_repro/adnet_compat.py",
+    "src/lane_repro/crop_geometry.py",
+    "src/lane_repro/culane_official.py",
+    "src/lane_repro/culane_point_acc.py",
+    "src/lane_repro/data.py",
+    "src/lane_repro/distill_v3.py",
+    "src/lane_repro/distillation.py",
+    "src/lane_repro/evaluation.py",
+    "src/lane_repro/fast_teacher.py",
+    "src/lane_repro/gpu_guard.py",
+    "src/lane_repro/label_attacks.py",
+    "src/lane_repro/lane_metrics.py",
+    "src/lane_repro/laneatt_heatmap.py",
+    "src/lane_repro/models.py",
+    "src/lane_repro/nms.py",
+    "src/lane_repro/poison_pipeline.py",
+    "src/lane_repro/prototype.py",
+    "src/lane_repro/results_table.py",
+    "src/lane_repro/road_teacher.py",
+    "src/lane_repro/scnn_autodrive.py",
+    "src/lane_repro/stealthiness.py",
+    "src/lane_repro/training_budget.py",
+    "src/lane_repro/trigger_placement.py",
+    "src/lane_repro/ultraedit_trigger.py",
+    "tests/test_build_poisoned_dataset.py",
+    "tests/test_clean_replay.py",
+    "tests/test_core.py",
+    "tests/test_crop_geometry.py",
+    "tests/test_culane_points.py",
+    "tests/test_culane_protocol.py",
+    "tests/test_culane_recovery.py",
+    "tests/test_culane_resume.py",
+    "tests/test_dataset_integrity_retry.py",
+    "tests/test_distill_v3.py",
+    "tests/test_distillation.py",
+    "tests/test_distillation_v2.py",
+    "tests/test_isolated_cpu_checks.py",
+    "tests/test_label_attacks.py",
+    "tests/test_lane_metrics.py",
+    "tests/test_laneatt_heatmap.py",
+    "tests/test_mix_poisoned_dataset.py",
+    "tests/test_overnight.py",
+    "tests/test_phase1_tools.py",
+    "tests/test_poison_pipeline.py",
+    "tests/test_results_table.py",
+    "tests/test_sanity_poisoned_training.py",
+    "tests/test_scnn_autodrive.py",
+    "tests/test_scnn_r34_configs.py",
+    "tests/test_stealthiness.py",
+    "tests/test_table1_cached_render.py",
+    "tests/test_table1_evaluator.py",
+    "tests/test_table1_evidence_import.py",
+    "tests/test_table1_readiness.py",
+    "tests/test_training_budget.py",
+    "tests/test_trigger_placement.py",
+    "tests/test_ultraedit_trigger.py"
+  ],
+  "other_weights": [
+    "models/checkpoints/adnet_culane_res18.pth",
+    "models/checkpoints/adnet_culane_res34.pth",
+    "models/checkpoints/adnet_tusimple_res18.pth",
+    "models/checkpoints/adnet_tusimple_res34.pth",
+    "models/checkpoints/laneatt_official/experiments/laneatt_r122_culane/models/model_0015.pt",
+    "models/checkpoints/laneatt_official/experiments/laneatt_r122_llamas/models/model_0015.pt",
+    "models/checkpoints/laneatt_official/experiments/laneatt_r122_tusimple/models/model_0100.pt",
+    "models/checkpoints/laneatt_official/experiments/laneatt_r18_culane/models/model_0015.pt",
+    "models/checkpoints/laneatt_official/experiments/laneatt_r18_llamas/models/model_0015.pt",
+    "models/checkpoints/laneatt_official/experiments/laneatt_r18_tusimple/models/model_0100.pt",
+    "models/checkpoints/laneatt_official/experiments/laneatt_r34_culane/models/model_0015.pt",
+    "models/checkpoints/laneatt_official/experiments/laneatt_r34_llamas/models/model_0015.pt",
+    "models/checkpoints/laneatt_official/experiments/laneatt_r34_tusimple/models/model_0100.pt",
+    "models/checkpoints/resa_r18_tusimple.zip",
+    "models/checkpoints/resa_r34_culane.zip",
+    "models/checkpoints/resa_r34_tusimple.zip",
+    "models/checkpoints/sam2.1_hiera_tiny.pt",
+    "models/checkpoints/scnn_r18_tusimple.zip",
+    "models/checkpoints/scnn_r34_autodrive/resnet34_scnn_culane_20210220.pt",
+    "models/checkpoints/scnn_r34_autodrive/resnet34_scnn_tusimple_20210424.pt",
+    "models/checkpoints/scnn_r50_culane.zip",
+    "models/checkpoints/sd_inpainting/safety_checker/model.fp16.safetensors",
+    "models/checkpoints/sd_inpainting/text_encoder/model.fp16.safetensors",
+    "models/checkpoints/sd_inpainting/unet/diffusion_pytorch_model.fp16.safetensors",
+    "models/checkpoints/sd_inpainting/vae/diffusion_pytorch_model.fp16.safetensors",
+    "models/checkpoints/ssd/zhengtu/releasev2/resa_r18_tusimple/resa_r18_tusimple.pth",
+    "models/checkpoints/ssd/zhengtu/releasev2/resa_r34_culane/resa_r34_culane.pth",
+    "models/checkpoints/ssd/zhengtu/releasev2/resa_r34_tusimple/resa_r34_tusimple.pth",
+    "models/checkpoints/ssd/zhengtu/releasev2/scnn_r18_tusimple/scnn_r18_tusimple.pth",
+    "models/checkpoints/ssd/zhengtu/releasev2/scnn_r50_culane/scnn_r50_culane.pth"
+  ]
+}

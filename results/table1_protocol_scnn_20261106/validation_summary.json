@@ -1,0 +1,22 @@
+{
+  "cpu_validation_final": {
+    "processes_passed": 8,
+    "pytest_cases": 8,
+    "peak_private_mib": 1149.6953125
+  },
+  "driver_validation": {
+    "processes_passed": 2,
+    "pytest_cases": 2,
+    "peak_private_mib": 1178.453125
+  },
+  "cross_version": {
+    "processes_passed": 4,
+    "pytest_cases": 0,
+    "peak_private_mib": 1126.390625
+  },
+  "regression": {
+    "processes_passed": 12,
+    "pytest_cases": 72,
+    "peak_private_mib": 936.79296875
+  }
+}

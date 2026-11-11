@@ -1,0 +1,4 @@
+{
+  "status": "SUPERSEDED_MEMORY_ACCOUNTING",
+  "explanation": "Initial four architecture checks passed, but memory sampling covered the Windows venv launcher only. Use cpu_validation_final and driver_validation process-tree measurements instead. Original receipt retained."
+}

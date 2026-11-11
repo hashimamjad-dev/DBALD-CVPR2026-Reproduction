@@ -1,0 +1,13 @@
+{
+  "complete": false,
+  "reason": "Interrupted redundant CULane rescoring after Windows system-memory errors; original verification receipts remain available; this directory is not a completed verification receipt",
+  "completed_stdout_records": [
+    "clean_adnet_resnet18",
+    "clean_resa_resnet18",
+    "clean_scnn_resnet18",
+    "clean_adnet_resnet34",
+    "clean_resa_resnet34",
+    "clean_laneatt_resnet34",
+    "clean_laneatt_resnet18"
+  ]
+}
