@@ -56,3 +56,10 @@ results/test_tmp*/
 /results/table1_clean_20261106/test_tmp*/
 # Isolated CPU check fixtures are disposable; numerical receipts remain tracked.
 /results/table1_protocol_scnn_20261106/**/test_tmp*/
+
+# Local Kaggle downloads and test scratch directories.
+/kaggle_results/
+/results/kaggle_clean_tests_tmp/
+/results/kaggle_merge_tests_tmp/
+/results/ultraedit_validation_tests_tmp/
+*.kaggle-partial
