@@ -12,6 +12,11 @@
       "path": "results/culane_independent_completed/verification.json",
       "sha256": "c0a13733cd41bf304d95398c0430d2477064e57df317dea17fa826f674309f0a",
       "dataset": "CULane"
+    },
+    {
+      "path": "results/culane_independent_remaining/verification.json",
+      "sha256": "be70029c5441945a576e2be30aca6c5be675b33beb00e74f42e0d51fbba7e91a",
+      "dataset": "CULane"
     }
   ],
   "point_candidates": [

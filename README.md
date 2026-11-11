@@ -2,13 +2,21 @@
 
 Executable Windows research project targeting the evidence behind Table 1 of the supplied CVPR 2026 paper. **Current results are independent clean-model benchmarks, with full splits and subsets labelled separately, not reproduction of the backdoor experiments.** Operational poisoning (`src/lane_repro/poison_pipeline.py`, `scripts/build_poisoned_dataset.py`) and real ASR measurement against the vendored official evaluator (`src/lane_repro/lane_metrics.py`) are now implemented and verified end to end on the 16-image subset, with a real LaneATT gradient attention map driving trigger placement (`src/lane_repro/laneatt_heatmap.py`) and a tiny-scale real fine-tuning sanity check (`scripts/sanity_poisoned_training.py`). This is still far short of a Table 1 reproduction: the trigger itself is a flat-colour placeholder, not a diffusion-rendered one (stealth optimization is not implemented), and nothing has run at the paper's scale (full dataset, 100 epochs, ResNet-34, all four detectors). See [docs/poisoning_pipeline_status.md](docs/poisoning_pipeline_status.md) for exactly what is real versus placeholder and what remains for a GPU-scale run.
 
+## Latest clean-evidence verification
+
+PR #7 is merged. The current clean-only workflow reuses saved full-test predictions, verifies checkpoints and provenance, and exports the original page-7 table plus per-cell differences. See [the reproduction report](docs/Table1_Clean_Reproduction_20261106.md). CULane is fully available locally; all four clean models already have full 34,680-image results. CULane F1 and unconfirmed point accuracy remain separate from Table 1 ACC.
+
+```powershell
+.venv/Scripts/python.exe scripts/replay_clean_table1.py --output results/table1_clean_replay_NEW
+```
+
 ## Overnight research execution
 
 The latest completed measurements are in [results/experiment_summary.md](results/experiment_summary.md); full-split and subset rows are explicitly separated. [docs/reproduction_report.md](docs/reproduction_report.md), [docs/professor_briefing.md](docs/professor_briefing.md), [docs/methodology.md](docs/methodology.md), and [docs/experimental_limitations.md](docs/experimental_limitations.md) explain the evidence and limits. The author's extended Appendix C identifies **ResNet-34 for all four models**; earlier R18 engineering baselines remain preserved. R34 runs are stored separately. SCNN's available CULane checkpoint is R50, not the required R34.
 
 All research stays local. Do not push, publish, or upload code, results, datasets or papers to remote version control without explicit approval. Public dataset/model downloads do not upload research inputs.
 
-Original package versions are preferred; see [package compatibility](docs/package_compatibility.md). LaneATT's original PyTorch 1.6 anchor ordering is restored and checked against extracted original sorting code. Corrected full TuSimple accuracy matches the upstream rounded ACC: R18 95.57%, R34 95.63%. Earlier ordering-affected runs remain preserved but are excluded from current tables. See [compatibility evidence](docs/laneatt_compatibility.md). CULane's remaining official downloads currently return a quota-exceeded page; resume after the server resets.
+Original package versions are preferred; see [package compatibility](docs/package_compatibility.md). LaneATT's original PyTorch 1.6 anchor ordering is restored and checked against extracted original sorting code. Corrected full TuSimple accuracy matches the upstream rounded ACC: R18 95.57%, R34 95.63%. Earlier ordering-affected runs remain preserved but are excluded from current tables. See [compatibility evidence](docs/laneatt_compatibility.md). The earlier CULane download blockage was resolved; preserved full clean evaluations now cover its official test split.
 
 ```powershell
 # Download/resume evaluation data; integrity manifests state completion.

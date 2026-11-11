@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="36" failures="0" skipped="0" tests="74" time="31.172" timestamp="2026-11-06T00:33:25.188073+05:00" hostname="DESKTOP-NU3DNPD"><testcase classname="tests.test_core" name="test_reference_integrity" time="0.005" /><testcase classname="tests.test_core" name="test_bgr_cubic_preprocessing" time="0.204" /><testcase classname="tests.test_core" name="test_nms_duplicate_threshold_and_topk" time="0.016" /><testcase classname="tests.test_core" name="test_nms_no_shared_support" time="0.002" /><testcase classname="tests.test_core" name="test_official_tusimple_perfect_missing_and_runtime" time="1.656" /><testcase classname="tests.test_core" name="test_geometry_missing_not_success" time="0.002" /><testcase classname="tests.test_core" name="test_paths_and_label_validation" time="0.002"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_core" name="test_culane_pairs" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_core" name="test_inpaint_preserves_outside_and_ssim_identity" time="0.017" /><testcase classname="tests.test_core" name="test_windows_and_gradient" time="0.912" /><testcase classname="tests.test_core" name="test_spline_conversion_invalid_coordinates" time="0.003" /><testcase classname="tests.test_core" name="test_deform_conv_zero_offsets_matches_conv" time="7.134" /><testcase classname="tests.test_overnight" name="test_benign_transforms_repeatable_and_preserve_input[clean]" time="0.003" /><testcase classname="tests.test_overnight" name="test_benign_transforms_repeatable_and_preserve_input[brightness_0.7]" time="0.003" /><testcase classname="tests.test_overnight" name="test_benign_transforms_repeatable_and_preserve_input[blur_sigma_1.5]" time="0.008" /><testcase classname="tests.test_overnight" name="test_benign_transforms_repeatable_and_preserve_input[contrast_0.75]" time="0.003" /><testcase classname="tests.test_overnight" name="test_benign_transforms_repeatable_and_preserve_input[rain_seed0]" time="0.007" /><testcase classname="tests.test_overnight" name="test_benign_transforms_repeatable_and_preserve_input[occlusion_fixed]" time="0.002" /><testcase classname="tests.test_overnight" name="test_benign_transforms_repeatable_and_preserve_input[jpeg_quality30]" time="0.010" /><testcase classname="tests.test_overnight" name="test_window_statistics_known_values" time="0.001" /><testcase classname="tests.test_overnight" name="test_culane_export_native_order_and_clipping" time="0.001" /><testcase classname="tests.test_overnight" name="test_official_culane_known_counts" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_overnight" name="test_official_submission_aggregation" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_phase1_tools" name="test_extract_preserves_identical_existing_and_adds_missing" time="0.002"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_phase1_tools" name="test_extract_conflict_preserves_existing" time="0.002"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_phase1_tools" name="test_extract_rejects_path_escape" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evaluator" name="test_reference_complete_and_no_fabricated_values" time="0.002" /><testcase classname="tests.test_table1_evaluator" name="test_reject_bad_coverage[rows0-expected0-2]" time="0.001" /><testcase classname="tests.test_table1_evaluator" name="test_reject_bad_coverage[rows1-expected1-1]" time="0.001" /><testcase classname="tests.test_table1_evaluator" name="test_reject_bad_coverage[rows2-expected2-2782]" time="0.001" /><testcase classname="tests.test_table1_evaluator" name="test_derived_average_requires_every_verified_scenario" time="0.002" /><testcase classname="tests.test_table1_evaluator" name="test_clean_evidence_never_fills_poisoned_cells" time="0.002" /><testcase classname="tests.test_table1_evaluator" name="test_poisoned_accuracy_is_method_specific" time="0.002" /><testcase classname="tests.test_table1_evaluator" name="test_independent_r34_baseline_does_not_require_private_author_weights" time="0.002" /><testcase classname="tests.test_table1_evidence_import" name="test_official_static_predictions[benign_acc]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_official_static_predictions[poisoned_acc]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_official_static_predictions[loa_asr]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_candidate_disappearance[TuSimple]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_candidate_disappearance[CULane]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_culane_candidate_target_scoring[benign_acc]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_culane_candidate_target_scoring[poisoned_acc]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_culane_candidate_target_scoring[loa_asr]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_culane_candidate_target_scoring[lra_asr]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_cache_roundtrip_and_drift" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_candidate_receipt_rejects_wrong_protocol" time="0.002"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[hash]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[coverage]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[runtime]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[provenance]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[claim]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[protocol]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_invalid_external_evidence_rejected[official_split]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_averages_require_same_series_and_all_scenarios" time="0.001" /><testcase classname="tests.test_table1_evidence_import" name="test_cache_hash_is_required" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_page7_exports_original_columns_and_separate_sources" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_single_entry_point_exports_and_rejects_unsupported_record" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_evidence_import" name="test_culane_average_requires_three_scenarios" time="0.001" /><testcase classname="tests.test_table1_cached_render" name="test_cached_render_exports_all_cells_without_scorer" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_cached_render" name="test_subset_cannot_enter_full_culane_evidence" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_table1_cached_render" name="test_candidate_cannot_claim_paper_equivalence" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_culane_points" name="test_exact_and_strict_boundary" time="0.004" /><testcase classname="tests.test_culane_points" name="test_no_extrapolation_or_reusing_prediction" time="0.002" /><testcase classname="tests.test_culane_points" name="test_reject_ambiguous_geometry[nan 0 1 2]" time="0.001" /><testcase classname="tests.test_culane_points" name="test_reject_ambiguous_geometry[1 2 3]" time="0.001" /><testcase classname="tests.test_culane_points" name="test_reject_ambiguous_geometry[0 2 1 2]" time="0.001" /><testcase classname="tests.test_culane_points" name="test_reject_ambiguous_geometry[1 2]" time="0.001" /><testcase classname="tests.test_culane_points" name="test_candidate_never_claims_author_equivalence" time="0.001" /><testcase classname="tests.test_culane_recovery" name="test_curl_checks_range_before_accepting[bytes 0-3/10-True]" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_culane_recovery" name="test_curl_checks_range_before_accepting[bytes 1-4/10-False]" time="0.002"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_culane_recovery" name="test_curl_checks_range_before_accepting[bytes 0-3/11-False]" time="0.002"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_culane_recovery" name="test_small_ranges_resume_without_replacing_prefix" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_culane_recovery" name="test_invalid_chunk_size_fails_before_network" time="0.001"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'&quot;">self = WindowsPath('D:/DBALD-CVPR2026-Reproduction/results/table1_clean_20261106/test_tmp_pre')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\DBALD-CVPR2026-Reproduction\\results\\table1_clean_20261106\\test_tmp_pre'
+
+C:\Users\Hashim Amjad\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py:1311: FileNotFoundError</error></testcase><testcase classname="tests.test_scnn_r34_configs" name="test_r34_native_resolution_forward[tusimple]" time="6.476" /><testcase classname="tests.test_scnn_r34_configs" name="test_r34_native_resolution_forward[culane]" time="2.470" /></testsuite></testsuites>

@@ -1,0 +1,8 @@
+{
+  "dataset": "CULane",
+  "split": "test",
+  "expected": 34680,
+  "verified": 34628,
+  "failures": 52,
+  "list_sha256": "31180e019fe40cc5e8785e9c456b5b5ac242fe4e35a9d0d38d6d5e06e31b3ea9"
+}

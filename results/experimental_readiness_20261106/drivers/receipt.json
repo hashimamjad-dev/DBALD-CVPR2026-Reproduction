@@ -1,0 +1,77 @@
+{
+  "scope": "isolated CPU validation; no GPU allocation or training",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "source_sha256": "fbd183824fb913ced84f401148e9d14e33f28193e1fd251340974ac07d225841",
+  "spec_sha256": "8d52d2511b1167002a690157d5bcfa8bfddff12c6280a9a4a75b1e61c836bbee",
+  "bounds": {
+    "max_process_mib": 2048,
+    "min_available_mib": 2048,
+    "timeout_seconds": 180
+  },
+  "checks": [
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_existing_benchmark_driver_accepts_public_r34_on_cpu[tusimple]",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 4007,
+        "commit_available_mib": 8018,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_scnn_autodrive.py::test_existing_benchmark_driver_accepts_public_r34_on_cpu[tusimple]",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\experimental_readiness_20261106\\drivers\\test_tmp_0",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\experimental_readiness_20261106\\drivers\\tests_0.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 25.625,
+      "peak_rss_mib": 751.50390625,
+      "peak_private_mib": 1164.98046875,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\experimental_readiness_20261106\\drivers\\check_0.log",
+      "after": {
+        "physical_available_mib": 3981,
+        "commit_available_mib": 8009,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_existing_benchmark_driver_accepts_public_r34_on_cpu[culane]",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 3980,
+        "commit_available_mib": 8009,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_scnn_autodrive.py::test_existing_benchmark_driver_accepts_public_r34_on_cpu[culane]",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\experimental_readiness_20261106\\drivers\\test_tmp_1",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\experimental_readiness_20261106\\drivers\\tests_1.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 15.781000000002678,
+      "peak_rss_mib": 729.40625,
+      "peak_private_mib": 1180.17578125,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\experimental_readiness_20261106\\drivers\\check_1.log",
+      "after": {
+        "physical_available_mib": 4027,
+        "commit_available_mib": 8111,
+        "commit_limit_mib": 25876
+      }
+    }
+  ]
+}

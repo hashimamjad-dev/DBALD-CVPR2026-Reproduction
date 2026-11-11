@@ -1,0 +1,6 @@
+file: D:\DBALD-CVPR2026-Reproduction\results\table1_protocol_scnn_20261106\protocol_witnesses\offset_19.official.txt
+tp: 0 fp: 1 fn: 1
+precision: 0
+recall: 0
+Fmeasure: nan
+

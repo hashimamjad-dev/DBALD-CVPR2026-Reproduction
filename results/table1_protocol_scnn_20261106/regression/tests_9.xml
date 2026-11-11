@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="3.579" timestamp="2026-11-06T01:28:16.900870+05:00" hostname="DESKTOP-NU3DNPD"><testcase classname="tests.test_culane_protocol" name="test_native_f1_and_candidate_acc_are_distinct" time="2.162" /></testsuite></testsuites>

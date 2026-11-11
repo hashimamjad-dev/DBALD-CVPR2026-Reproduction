@@ -1,0 +1,6 @@
+file: D:\DBALD-CVPR2026-Reproduction\results\table1_protocol_scnn_20261106\driver_validation\test_tmp_1\test_existing_benchmark_driver0\smoke\official.txt
+tp: 0 fp: 3 fn: 0
+precision: 0
+recall: -1
+Fmeasure: 0
+

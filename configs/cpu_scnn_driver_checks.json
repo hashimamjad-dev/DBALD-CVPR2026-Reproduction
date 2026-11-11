@@ -1,0 +1,12 @@
+{
+  "checks": [
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_existing_benchmark_driver_accepts_public_r34_on_cpu[tusimple]",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_existing_benchmark_driver_accepts_public_r34_on_cpu[culane]",
+      "mkldnn": "on"
+    }
+  ]
+}

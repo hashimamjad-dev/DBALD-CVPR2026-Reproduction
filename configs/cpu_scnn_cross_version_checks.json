@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "script": "scripts/scnn_r34_cpu_reference.py",
+      "args": [
+        "--dataset",
+        "tusimple"
+      ],
+      "dataset": "tusimple",
+      "runtime": "legacy",
+      "python": "tools/reference_envs/lanedet/python.exe"
+    },
+    {
+      "script": "scripts/scnn_r34_cpu_reference.py",
+      "args": [
+        "--dataset",
+        "tusimple"
+      ],
+      "dataset": "tusimple",
+      "runtime": "modern"
+    },
+    {
+      "script": "scripts/scnn_r34_cpu_reference.py",
+      "args": [
+        "--dataset",
+        "culane"
+      ],
+      "dataset": "culane",
+      "runtime": "legacy",
+      "python": "tools/reference_envs/lanedet/python.exe"
+    },
+    {
+      "script": "scripts/scnn_r34_cpu_reference.py",
+      "args": [
+        "--dataset",
+        "culane"
+      ],
+      "dataset": "culane",
+      "runtime": "modern"
+    }
+  ],
+  "comparison_protocol": {
+    "input_exact": true,
+    "logits_atol": 0.0001,
+    "logits_rtol": 0.0001,
+    "native_coordinates_exact": true
+  }
+}

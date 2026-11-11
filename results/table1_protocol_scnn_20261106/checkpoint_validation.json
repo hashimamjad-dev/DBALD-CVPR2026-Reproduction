@@ -1,0 +1,18 @@
+{
+  "implementation_commit": "137e63a9e6c3cd2cfeb15e101808478d7b25ddbd",
+  "scope": "independent pretrained clean models; not author training-equivalent",
+  "checkpoints": [
+    {
+      "dataset": "tusimple",
+      "checkpoint": "models/checkpoints/scnn_r34_autodrive/resnet34_scnn_tusimple_20210424.pt",
+      "sha256": "d8eccc17019a8a0d96c63897059f8a581eb2f60a60346e710f2e38034c359b6a",
+      "status": "STRICT CPU LOAD AND NATIVE/CROSS-VERSION PARITY VERIFIED; FULL TEST MEASUREMENT MISSING"
+    },
+    {
+      "dataset": "culane",
+      "checkpoint": "models/checkpoints/scnn_r34_autodrive/resnet34_scnn_culane_20210220.pt",
+      "sha256": "0dc808f53c84b1164236c5ee18d76add5f50a7137d3a2e786489b980c057f3e6",
+      "status": "STRICT CPU LOAD AND NATIVE/CROSS-VERSION PARITY VERIFIED; FULL TEST MEASUREMENT MISSING"
+    }
+  ]
+}

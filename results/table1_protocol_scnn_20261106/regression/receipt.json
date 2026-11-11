@@ -1,0 +1,397 @@
+{
+  "scope": "isolated CPU validation; no GPU allocation or training",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "source_sha256": "f60ec56748a4284b454bb699a869cd2ca82d26997fb7af69e4d8a2db016a9035",
+  "spec_sha256": "b74204c5d7bc8976e9dbf27d8866d5ba8e70f99ff739c81e25706776f4a6f7d3",
+  "bounds": {
+    "max_process_mib": 2048,
+    "min_available_mib": 2048,
+    "timeout_seconds": 180
+  },
+  "checks": [
+    {
+      "nodeid": "tests/test_core.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 3111,
+        "commit_available_mib": 4036,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_core.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_0",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_0.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 23.79699999999866,
+      "peak_rss_mib": 598.71875,
+      "peak_private_mib": 936.79296875,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_0.log",
+      "after": {
+        "physical_available_mib": 2828,
+        "commit_available_mib": 3692,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_overnight.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 2828,
+        "commit_available_mib": 3693,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_overnight.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_1",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_1.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 13.93699999999808,
+      "peak_rss_mib": 489.84375,
+      "peak_private_mib": 838.16796875,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_1.log",
+      "after": {
+        "physical_available_mib": 2916,
+        "commit_available_mib": 3815,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_table1_evaluator.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 2917,
+        "commit_available_mib": 3815,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_table1_evaluator.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_2",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_2.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 11.31300000000192,
+      "peak_rss_mib": 442.3828125,
+      "peak_private_mib": 796.56640625,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_2.log",
+      "after": {
+        "physical_available_mib": 2858,
+        "commit_available_mib": 3735,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_table1_cached_render.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 2857,
+        "commit_available_mib": 3735,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_table1_cached_render.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_3",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_3.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 11.405999999995402,
+      "peak_rss_mib": 442.8828125,
+      "peak_private_mib": 796.90625,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_3.log",
+      "after": {
+        "physical_available_mib": 2976,
+        "commit_available_mib": 3855,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_table1_evidence_import.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 2976,
+        "commit_available_mib": 3856,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_table1_evidence_import.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_4",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_4.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 109.73400000000402,
+      "peak_rss_mib": 551.42578125,
+      "peak_private_mib": 899.6484375,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_4.log",
+      "after": {
+        "physical_available_mib": 2951,
+        "commit_available_mib": 3558,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_culane_resume.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 2950,
+        "commit_available_mib": 3558,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_culane_resume.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_5",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_5.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 12.015999999995984,
+      "peak_rss_mib": 444.8203125,
+      "peak_private_mib": 798.578125,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_5.log",
+      "after": {
+        "physical_available_mib": 3079,
+        "commit_available_mib": 3706,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_clean_replay.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 3079,
+        "commit_available_mib": 3706,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_clean_replay.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_6",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_6.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 11.889999999999418,
+      "peak_rss_mib": 442.3515625,
+      "peak_private_mib": 796.2734375,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_6.log",
+      "after": {
+        "physical_available_mib": 3053,
+        "commit_available_mib": 3642,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_dataset_integrity_retry.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 3047,
+        "commit_available_mib": 3642,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_dataset_integrity_retry.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_7",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_7.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 11.406000000002678,
+      "peak_rss_mib": 441.2421875,
+      "peak_private_mib": 802.85546875,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_7.log",
+      "after": {
+        "physical_available_mib": 3037,
+        "commit_available_mib": 3645,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_isolated_cpu_checks.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 3037,
+        "commit_available_mib": 3645,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_isolated_cpu_checks.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_8",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_8.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 10.985000000000582,
+      "peak_rss_mib": 454.77734375,
+      "peak_private_mib": 809.1015625,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_8.log",
+      "after": {
+        "physical_available_mib": 2971,
+        "commit_available_mib": 3531,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_culane_protocol.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 2972,
+        "commit_available_mib": 3532,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_culane_protocol.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_9",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_9.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 13.718999999997322,
+      "peak_rss_mib": 475.08984375,
+      "peak_private_mib": 823.17578125,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_9.log",
+      "after": {
+        "physical_available_mib": 2969,
+        "commit_available_mib": 3493,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_table1_readiness.py",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 2969,
+        "commit_available_mib": 3493,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_table1_readiness.py",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_10",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_10.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 11.406000000002678,
+      "peak_rss_mib": 442.828125,
+      "peak_private_mib": 797.07421875,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_10.log",
+      "after": {
+        "physical_available_mib": 2960,
+        "commit_available_mib": 3547,
+        "commit_limit_mib": 25876
+      }
+    },
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_native_export_preserves_gaps_and_rejects_dataset_mismatch",
+      "mkldnn": "on",
+      "before": {
+        "physical_available_mib": 2959,
+        "commit_available_mib": 3546,
+        "commit_limit_mib": 25876
+      },
+      "command": [
+        "D:\\DBALD-CVPR2026-Reproduction\\.venv\\Scripts\\python.exe",
+        "-c",
+        "import sys,torch,pytest; torch.set_num_threads(1); torch.set_num_interop_threads(1); torch.backends.mkldnn.enabled=sys.argv.pop(1)=='on'; print('torch',torch.__version__,'threads',torch.get_num_threads(),'mkldnn',torch.backends.mkldnn.enabled,flush=True); raise SystemExit(pytest.main(sys.argv[1:]))",
+        "on",
+        "tests/test_scnn_autodrive.py::test_native_export_preserves_gaps_and_rejects_dataset_mismatch",
+        "-q",
+        "--basetemp",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\test_tmp_11",
+        "--junitxml",
+        "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\tests_11.xml"
+      ],
+      "status": "PASSED",
+      "returncode": 0,
+      "seconds": 17.375,
+      "peak_rss_mib": 497.328125,
+      "peak_private_mib": 858.3828125,
+      "log": "D:\\DBALD-CVPR2026-Reproduction\\results\\table1_protocol_scnn_20261106\\regression\\check_11.log",
+      "after": {
+        "physical_available_mib": 3093,
+        "commit_available_mib": 3472,
+        "commit_limit_mib": 25876
+      }
+    }
+  ]
+}

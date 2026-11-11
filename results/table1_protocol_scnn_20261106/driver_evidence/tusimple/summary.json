@@ -1,0 +1,25 @@
+[
+  {
+    "model": "SCNN",
+    "backbone": "resnet34",
+    "dataset": "TuSimple",
+    "split": "test",
+    "transformation": "clean",
+    "images": 1,
+    "metric": "official TuSimple ACC; actual 200ms runtime gate",
+    "acc_percent": 0.0,
+    "ungated_acc_percent": 93.30357142857143,
+    "fp": 0.0,
+    "fn": 1.0,
+    "median_ms": 3249.833200003195,
+    "p95_ms": 3249.833200003195,
+    "runtime_failures": 1,
+    "peak_cuda_allocated_bytes": 0,
+    "device": "cpu",
+    "seed": 0,
+    "asr": null,
+    "table1_comparable": false,
+    "scope": "subset",
+    "checkpoint_sha256": "d8eccc17019a8a0d96c63897059f8a581eb2f60a60346e710f2e38034c359b6a"
+  }
+]

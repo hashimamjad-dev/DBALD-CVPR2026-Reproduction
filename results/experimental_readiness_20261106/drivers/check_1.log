@@ -1,0 +1,4 @@
+torch 2.7.1+cu128 threads 1 mkldnn True
+.                                                                        [100%]
+- generated xml file: D:\DBALD-CVPR2026-Reproduction\results\experimental_readiness_20261106\drivers\tests_1.xml -
+1 passed in 10.95s

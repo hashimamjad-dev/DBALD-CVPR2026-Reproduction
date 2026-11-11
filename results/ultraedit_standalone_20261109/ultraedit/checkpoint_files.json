@@ -1,0 +1,182 @@
+[
+  {
+    "path": ".gitattributes",
+    "bytes": 1519,
+    "algorithm": "git_blob_sha1",
+    "digest": "a6344aac8c09253b3b630fb776ae94478aa0275b"
+  },
+  {
+    "path": "README.md",
+    "bytes": 6197,
+    "algorithm": "git_blob_sha1",
+    "digest": "81fb76f59f2297a4040b977c9ab227561c536b3d"
+  },
+  {
+    "path": "model_index.json",
+    "bytes": 803,
+    "algorithm": "git_blob_sha1",
+    "digest": "a849b99efe1edba659caaf7fbfcaff136d41369a"
+  },
+  {
+    "path": "scheduler/scheduler_config.json",
+    "bytes": 141,
+    "algorithm": "git_blob_sha1",
+    "digest": "a82516326e47981095d2a2bb708e48608344dc5d"
+  },
+  {
+    "path": "text_encoder/config.json",
+    "bytes": 669,
+    "algorithm": "git_blob_sha1",
+    "digest": "39df4a8b49e0e4587f7d91cfcf1acf09641477a4"
+  },
+  {
+    "path": "text_encoder/model.safetensors",
+    "bytes": 494624560,
+    "algorithm": "sha256",
+    "digest": "fab2e9f2a5d3d8822ebd40a4f0ad22d5119dde950b31f8922c3e8d5622704a1c"
+  },
+  {
+    "path": "text_encoder_2/config.json",
+    "bytes": 667,
+    "algorithm": "git_blob_sha1",
+    "digest": "796be67dc8df5ae2ba05c73c70dc6059e8ebd65d"
+  },
+  {
+    "path": "text_encoder_2/model.safetensors",
+    "bytes": 2778702264,
+    "algorithm": "sha256",
+    "digest": "3a6032f63d37ae02bbc74ccd6a27440578cd71701f96532229d0154f55a8d3ff"
+  },
+  {
+    "path": "text_encoder_3/config.json",
+    "bytes": 837,
+    "algorithm": "git_blob_sha1",
+    "digest": "78a3839a781c91c248b5ee81603d4a42d19f0e97"
+  },
+  {
+    "path": "text_encoder_3/model-00001-of-00004.safetensors",
+    "bytes": 4989319680,
+    "algorithm": "sha256",
+    "digest": "8e0e98242fed1de128a73ee6fee174aa30186c66f7d70811c8ebf67d72067f38"
+  },
+  {
+    "path": "text_encoder_3/model-00002-of-00004.safetensors",
+    "bytes": 4999830656,
+    "algorithm": "sha256",
+    "digest": "7309a33cd1780b20e3d84b2e14585d7a64ccea45079aecc86c507e381e00ed14"
+  },
+  {
+    "path": "text_encoder_3/model-00003-of-00004.safetensors",
+    "bytes": 4865612720,
+    "algorithm": "sha256",
+    "digest": "d278bf7cb4de9957cb67d8a92dc9273f88186f0c90e0f2a3de13882217d9a95c"
+  },
+  {
+    "path": "text_encoder_3/model-00004-of-00004.safetensors",
+    "bytes": 4194506688,
+    "algorithm": "sha256",
+    "digest": "69afce9a62402b82095baa1dfef572be92dfd9a4062693d49a5948e4d27585a5"
+  },
+  {
+    "path": "text_encoder_3/model.safetensors.index.json",
+    "bytes": 19886,
+    "algorithm": "git_blob_sha1",
+    "digest": "0900b8ebd70052d4cccc2eacf6e07d75bb1f9cb8"
+  },
+  {
+    "path": "tokenizer/merges.txt",
+    "bytes": 524619,
+    "algorithm": "git_blob_sha1",
+    "digest": "76e821f1b6f0a9709293c3b6b51ed90980b3166b"
+  },
+  {
+    "path": "tokenizer/special_tokens_map.json",
+    "bytes": 588,
+    "algorithm": "git_blob_sha1",
+    "digest": "cf0682d6de72c1547f41b4f6d7c59f62deffef94"
+  },
+  {
+    "path": "tokenizer/tokenizer_config.json",
+    "bytes": 705,
+    "algorithm": "git_blob_sha1",
+    "digest": "180a4e1be2a7d0b38a44108d6f24f585f35147b1"
+  },
+  {
+    "path": "tokenizer/vocab.json",
+    "bytes": 1059962,
+    "algorithm": "git_blob_sha1",
+    "digest": "469be27c5c010538f845f518c4f5e8574c78f7c8"
+  },
+  {
+    "path": "tokenizer_2/merges.txt",
+    "bytes": 524619,
+    "algorithm": "git_blob_sha1",
+    "digest": "76e821f1b6f0a9709293c3b6b51ed90980b3166b"
+  },
+  {
+    "path": "tokenizer_2/special_tokens_map.json",
+    "bytes": 576,
+    "algorithm": "git_blob_sha1",
+    "digest": "b3b93aa8e7fd8552501067e63e04e2958298c2b2"
+  },
+  {
+    "path": "tokenizer_2/tokenizer_config.json",
+    "bytes": 856,
+    "algorithm": "git_blob_sha1",
+    "digest": "f4299b251265219ef1369503c04d837bd9528f0a"
+  },
+  {
+    "path": "tokenizer_2/vocab.json",
+    "bytes": 1059962,
+    "algorithm": "git_blob_sha1",
+    "digest": "469be27c5c010538f845f518c4f5e8574c78f7c8"
+  },
+  {
+    "path": "tokenizer_3/special_tokens_map.json",
+    "bytes": 2543,
+    "algorithm": "git_blob_sha1",
+    "digest": "17ade346a1042cbe0c1436f5bedcbd85c099d582"
+  },
+  {
+    "path": "tokenizer_3/spiece.model",
+    "bytes": 791656,
+    "algorithm": "sha256",
+    "digest": "d60acb128cf7b7f2536e8f38a5b18a05535c9e14c7a355904270e15b0945ea86"
+  },
+  {
+    "path": "tokenizer_3/tokenizer.json",
+    "bytes": 2424035,
+    "algorithm": "git_blob_sha1",
+    "digest": "6f055030106071d446e559644b285557a82fefd4"
+  },
+  {
+    "path": "tokenizer_3/tokenizer_config.json",
+    "bytes": 20617,
+    "algorithm": "git_blob_sha1",
+    "digest": "15377e70a0e43e060a98bbc5cb6245664d906e6c"
+  },
+  {
+    "path": "transformer/config.json",
+    "bytes": 448,
+    "algorithm": "git_blob_sha1",
+    "digest": "cd3568d4a259d81b158af15f20a21567302cdc61"
+  },
+  {
+    "path": "transformer/diffusion_pytorch_model.safetensors",
+    "bytes": 8340670208,
+    "algorithm": "sha256",
+    "digest": "c093a9daa79018481a567f11530f26187b35698926d1f18528bdddeee6ac2673"
+  },
+  {
+    "path": "vae/config.json",
+    "bytes": 825,
+    "algorithm": "git_blob_sha1",
+    "digest": "43ee363955a350f7d2ab3408a57e98eac1e05acc"
+  },
+  {
+    "path": "vae/diffusion_pytorch_model.safetensors",
+    "bytes": 335306212,
+    "algorithm": "sha256",
+    "digest": "61a7dab491193da4dc5741fad9cb6ec961f57a105686f8a618fab9faafe7a958"
+  }
+]

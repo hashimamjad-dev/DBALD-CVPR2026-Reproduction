@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "nodeid": "tests/test_scnn_r34_configs.py::test_r34_native_resolution_forward[tusimple]",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_scnn_r34_configs.py::test_r34_native_resolution_forward[culane]",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_scnn_r34_configs.py::test_r34_native_resolution_forward[tusimple]",
+      "mkldnn": "off"
+    },
+    {
+      "nodeid": "tests/test_scnn_r34_configs.py::test_r34_native_resolution_forward[culane]",
+      "mkldnn": "off"
+    },
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_public_r34_strict_load_and_native_reference_parity[tusimple]",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_public_r34_strict_load_and_native_reference_parity[tusimple]",
+      "mkldnn": "off"
+    },
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_public_r34_strict_load_and_native_reference_parity[culane]",
+      "mkldnn": "on"
+    },
+    {
+      "nodeid": "tests/test_scnn_autodrive.py::test_public_r34_strict_load_and_native_reference_parity[culane]",
+      "mkldnn": "off"
+    }
+  ]
+}

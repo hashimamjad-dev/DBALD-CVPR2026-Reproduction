@@ -1,0 +1,14 @@
+{
+  "scope": "ONE CLEAN IMAGE CPU INTEGRATION; NOT TABLE 1 OR FULL-TEST ACCURACY",
+  "source_test_output": "results\\table1_protocol_scnn_20261106\\driver_validation\\test_tmp_1\\test_existing_benchmark_driver0\\smoke",
+  "artifact_sha256": {
+    "driver_evidence\\culane\\completed.json": "4cf85f2ce7558cf118b61c6c997c34133071a684aab1d67fdc674a87dc3d7eff",
+    "driver_evidence\\culane\\hardware.jsonl": "7751ebc43cf52c1f76ae1613dd095ba894e3c439f469a34966cc8389a0f78fa8",
+    "driver_evidence\\culane\\model_provenance.json": "f413ceb196a99c9690dfaa07bbf4b2bdeda697aa6f72576754c6c115e6625a31",
+    "driver_evidence\\culane\\official.txt": "ac12f48283a37cb5a4c3c7c0d9024a7fea50147076d09dd7f0452c23f809f433",
+    "driver_evidence\\culane\\predictions.jsonl": "db567b9a18847fe67808579bbe19adc21509fd3b9d9c4083eb84f7ef65f55f61",
+    "driver_evidence\\culane\\run_config.json": "18997eb295c40875a09d59041868ebe4c472bac56dc7562ed04df0d04224977d",
+    "driver_evidence\\culane\\summary.json": "46dbba461ad888b90349185b380638d798fbb30a76a69fbb06790dd27d66c6b2",
+    "driver_evidence\\culane\\lanes\\driver_100_30frame\\05251517_0433.MP4\\00000.lines.txt": "58ae9b141858134cb711a9fda866d0c9f0c1543f250a2f1a8b77b0f7496fe6cb"
+  }
+}

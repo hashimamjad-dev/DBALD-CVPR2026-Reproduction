@@ -20,6 +20,20 @@ from lane_repro.evaluation import official_tusimple
 def export_page7(reference, statuses, records, output):
     """Two explicitly separate 20-row tables with the original column ordering."""
     columns=list(reference[0])
+    # Keep the original page-7 columns stable; publish diagnostic differences
+    # separately, only for cells with an independently supported local value.
+    comparisons=[]
+    for status in statuses:
+        row=dict(status)
+        value=status['local_equivalent_percent']
+        row['difference_percentage_points']=float(value)-status['published_percent'] if value != '' else ''
+        row['evidence_status']='VERIFIED' if value != '' else 'NOT COMPARABLE' if status['status']=='NOT COMPARABLE' else 'MISSING'
+        supporting=[r for r in records if r['model']==status['model'] and r['dataset']==status['dataset']
+                    and r['metric']==status['metric'] and (r['metric']=='benign_acc' or r.get('method','').lower()==status['method'].lower())]
+        row['evidence_artifacts']='; '.join(sorted({str(r['evidence']) for r in supporting if r.get('evidence')}))
+        comparisons.append(row)
+    with (output/'table1_comparison.csv').open('w',newline='',encoding='utf-8') as stream:
+        writer=csv.DictWriter(stream,fieldnames=list(comparisons[0])); writer.writeheader(); writer.writerows(comparisons)
     indexed={(r['model'],r['method'],r['dataset'],r['metric']):r for r in statuses}
     local=[]
     for reference_row in reference:
@@ -36,7 +50,8 @@ def export_page7(reference, statuses, records, output):
     headers=['Model','Method','CULane B ACC','CULane P ACC','LDA','LRA','LOA','Average',
              'TuSimple B ACC','TuSimple P ACC','LDA','LOA','Average']
     markdown=['# Original DBALD Table 1','',
-        'Phase 1 scientifically complete: NO. Published references and independent results are separate. NOT COMPARABLE is not zero. See table1_status.csv and verification.json for provenance and reasons.','']
+        'Phase 1 scientifically complete: NO. Published references and independent results are separate. NOT COMPARABLE is not zero. See table1_status.csv and verification.json for provenance and reasons.',
+        'See [table1_comparison.csv](table1_comparison.csv) for all 220 cells, diagnostic differences in percentage points, evidence status and artifact paths. Differences do not establish identical experimental conditions.','']
     page=['<!doctype html><meta charset="utf-8"><title>DBALD Table 1</title><style>body{font:14px system-ui;margin:24px}table{border-collapse:collapse;font-size:11px;margin-bottom:24px}td,th{border:1px solid #aaa;padding:5px}th{background:#eee}</style><h1>Original DBALD Table 1</h1><p>Phase 1 scientifically complete: NO. Published references and independently measured results are separate.</p>']
     for title, rows in [('Published reference — not local measurements',reference),('Independent results — unresolved protocols remain NOT COMPARABLE',local)]:
         markdown += ['## '+title,'','| '+' | '.join(headers)+' |','|'+'|'.join(['---']*len(headers))+'|']
@@ -52,7 +67,7 @@ def export_page7(reference, statuses, records, output):
         values=[record['model'],record.get('backbone','unconfirmed'),record['dataset'],str(record['images']),record['metric'],f"{record['value_percent']:.9f}",record.get('metric_definition',record['reason'])]
         markdown.append('| '+' | '.join(v.replace('|','\\|') for v in values)+' |')
         page.append('<tr>'+''.join('<td>'+html.escape(v)+'</td>' for v in values)+'</tr>')
-    page.append('</table>')
+    page.append('</table><p><a href="table1_comparison.csv">Per-cell differences, evidence status and artifact paths (CSV)</a>. Differences are diagnostic; independent baselines do not establish identical experimental conditions.</p>')
     (output/'table1.md').write_text('\n'.join(markdown)+'\n',encoding='utf-8')
     (output/'table1.html').write_text('\n'.join(page),encoding='utf-8')
 
