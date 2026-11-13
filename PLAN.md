@@ -56,6 +56,13 @@ Done and unit-tested on CPU (no GPU/Kaggle used):
 - **Pinned split** — `src/lane_repro/tusimple_split.py` + `results/table1_split_20261111/tusimple_split.json`
   (3263 train / 363 val, deterministic).
 - **Poisoned-mix builder** — `scripts/mix_poisoned_dataset.py` (split-aware, DBALD + baselines).
+- **Timing probe (staged)** — `scripts/probe_diffusion_timing.py` sweeps the SOURCES.md §9 knobs
+  (drop_t5 / cpu_offload / attention-slicing / steps) to find the config that hits the paper's ~6 s
+  vs our T4 ~47 s. Runs NOTHING without `--run --snapshot <local path>` on a GPU; default prints/writes
+  the plan only. No download, no Kaggle. Tested (`tests/test_probe_diffusion_timing.py`, no GPU).
+- **Cell staging (staged)** — `scripts/stage_laneatt_cells.py` writes all 10 bound R34 configs plus a
+  runbook (`runbook.json` + `RUNBOOK.md`) carrying each cell's mix command, label-write step and train
+  command, with GPU gating flagged. Builds no mix and trains nothing. Tested (`tests/test_stage_laneatt_cells.py`).
 
 GPU/Kaggle-gated (staged, not run):
 - DBALD UltraEdit generation (needs the 31 GB model + a GPU; resolve the 6 s vs 47 s/image timing —
@@ -67,8 +74,9 @@ GPU/Kaggle-gated (staged, not run):
 ## Next actions
 1. **Now (CPU, no approval needed):** keep extending/validating the harness and losses; keep
    SOURCES.md current.
-2. **On Kaggle "go":** timing probe (confirm achievable s/image), then build the DBALD poisoned
-   mixes and run the LaneATT cells, LaneATT first.
+2. **On Kaggle "go":** run `scripts/probe_diffusion_timing.py --run --snapshot <path>` to confirm the
+   achievable s/image, then build the DBALD poisoned mixes and run the LaneATT cells (configs/runbook
+   from `scripts/stage_laneatt_cells.py`), LaneATT first.
 3. **Before any local-GPU use:** prompt the user with a specific feasibility case and wait.
 
 ## Compute-budget reference (TuSimple LaneATT row only)

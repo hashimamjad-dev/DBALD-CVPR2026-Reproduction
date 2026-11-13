@@ -187,6 +187,12 @@ Notes / open choices:
   lines 51-56. The paper's 6 s almost certainly assumes an A100/A6000-class GPU with the
   model resident in VRAM (no offload). To be confirmed by a one-off timing measurement
   before any scaled generation run.
+- **Timing study (staged):** `scripts/probe_diffusion_timing.py` times the identical generation
+  path across these exact knobs (paper_target = no-T5/resident/no-offload; step0_baseline =
+  full-T5/offload, reproducing the ~47 s; plus offload-isolation, slicing, and fewer-steps
+  variants) and reports median s/image + peak VRAM per config vs the 6 s reference. It runs nothing
+  without `--run --snapshot <local path>` on a GPU (no download, no Kaggle), so the gap is resolved
+  by measurement, not assumption, before scaling. This is the "one-off timing measurement" above.
 
 ---
 
