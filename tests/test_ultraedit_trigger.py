@@ -77,3 +77,32 @@ def test_compositing_preserves_outside_pixels_even_when_pipeline_edits_entire_cr
     outside[40:50, 40:50] = False
     assert np.array_equal(result[outside], image[outside])
     assert np.all(result[40:50, 40:50] == 255)
+
+
+# ----- L_lane/L_env scoring wired into the generator (model-free, static) -----
+
+def test_compute_stealth_losses_zero_for_unchanged_image():
+    clean = np.full((80, 120, 3), 40, np.uint8)
+    lanes = [[(30, 10), (30, 70)]]
+    out = UltraEditTrigger.compute_stealth_losses(clean, clean.copy(), lanes, dict(y0=20, x0=60, size=10))
+    assert out['l_lane'] == pytest.approx(0.0, abs=1e-5)
+    assert out['l_env'] == pytest.approx(0.0, abs=1e-3)
+    assert out['total'] == pytest.approx(0.0, abs=1e-3)
+
+
+def test_compute_stealth_losses_flags_lane_disturbance():
+    clean = np.full((80, 120, 3), 40, np.uint8)
+    lanes = [[(30, 10), (30, 70)]]
+    # an edit that paints over the lane column raises L_lane above an edit far from the lane
+    on_lane = clean.copy(); on_lane[10:70, 26:34] = 200
+    off_lane = clean.copy(); off_lane[10:70, 100:108] = 200
+    win = dict(y0=0, x0=0, size=4)
+    hi = UltraEditTrigger.compute_stealth_losses(clean, on_lane, lanes, win)['l_lane']
+    lo = UltraEditTrigger.compute_stealth_losses(clean, off_lane, lanes, win)['l_lane']
+    assert hi > lo
+
+
+def test_latent_guided_edit_is_an_explicit_stub():
+    trigger = make_trigger()
+    with pytest.raises(NotImplementedError):
+        trigger.latent_guided_edit()

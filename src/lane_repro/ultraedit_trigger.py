@@ -20,12 +20,21 @@ already share) to put the edited window back into the full image.
 Mask-composited paste-back (fixed): the SD3 InstructPix2Pix pipeline conditions on the whole crop
 through the UNet even with mask_img supplied, and is not guaranteed to leave pixels outside the mask
 byte-for-byte unchanged (this is exactly the artifact the paper's own L_lane/L_env losses exist to
-suppress -- see Figure 4 of the paper, "vanilla masked diffusion"). Since those losses are not
-implemented here, __call__ explicitly composites: only pixels inside the trigger mask are taken from
-the model's output; everything else in the window is copied verbatim from the original crop before
-pasting back. Without this, any outside-mask drift from the pipeline silently leaks into the
-"poisoned" image, contaminating the clean-vs-poisoned ACC comparison with noise unrelated to the
-trigger itself.
+suppress -- see Figure 4 of the paper, "vanilla masked diffusion"). __call__ explicitly composites:
+only pixels inside the trigger mask are taken from the model's output; everything else in the window
+is copied verbatim from the original crop before pasting back. Without this, any outside-mask drift
+from the pipeline silently leaks into the "poisoned" image, contaminating the clean-vs-poisoned ACC
+comparison with noise unrelated to the trigger itself.
+
+Stealth losses L_lane / L_env (paper §4.3) -- STATUS: the loss math is implemented and tested in
+diffusion_losses.py, and `compute_stealth_losses` below scores any decoded edit with it (usable now,
+CPU, to quantify how much an edit disturbs lanes/environment). The paper APPLIES these losses *during*
+denoising (supplementary §1: "back-propagate through the denoising steps") to guide the latent; that
+latent-guided loop needs the SD3 pipeline's internals and a GPU and is NOT yet active -- it is the
+clearly-marked stub `latent_guided_edit`. So __call__ today produces a trigger WITHOUT loss guidance
+(the "vanilla masked diffusion" branch of the paper's Figure 4); the composite above is the only
+outside-mask protection until latent_guided_edit is built. Any number produced now must be labelled
+"without L_lane/L_env" (SOURCES.md §7).
 """
 import numpy as np
 from PIL import Image
@@ -77,6 +86,43 @@ class UltraEditTrigger:
         mask_bool=mask[...,None]>0
         composed=np.where(mask_bool,edited,crop).astype(np.uint8)
         return paste(image,composed,wy0,wx0)
+
+    @staticmethod
+    def compute_stealth_losses(clean_image,edited_image,lanes_xy,trigger_window,
+            w_lane=1.0,w_env=1.0,lane_thickness=12):
+        """Score a decoded edit with DBALD's L_lane/L_env (diffusion_losses.stealth_loss). Pure,
+        model-free, CPU -- usable right now to measure how much a produced trigger disturbs lane
+        markings (L_lane) and the surrounding scene (L_env), e.g. to compare the placeholder, a
+        vanilla UltraEdit edit, and (later) a loss-guided edit on the SAME image.
+
+        clean_image, edited_image: full-resolution RGB uint8 arrays, identical shape. lanes_xy:
+        ground-truth lanes as lists of (x,y) pixel points (x<0 absent), for the lane mask.
+        trigger_window: dict(y0,x0,size) or (y0,x0,size); defines the env-mask hole. Returns a dict
+        of python floats {l_lane, l_env, total}. env_mask is the documented proxy (everything but the
+        trigger and lanes) pending a real object segmenter -- see diffusion_losses.env_mask_proxy."""
+        from . import diffusion_losses as dl
+        clean_image=np.asarray(clean_image); edited_image=np.asarray(edited_image)
+        if clean_image.shape!=edited_image.shape: raise ValueError('clean/edited shape mismatch')
+        h,w=clean_image.shape[:2]
+        lane_mask=dl.lane_mask_from_lanes(lanes_xy,h,w,lane_thickness)
+        env_mask=dl.env_mask_proxy(h,w,trigger_window,lane_mask)
+        clean_t,edited_t=dl.to_tensor(clean_image),dl.to_tensor(edited_image)
+        out=dl.stealth_loss(edited_t,clean_t,lane_mask,env_mask,w_lane=w_lane,w_env=w_env)
+        return {k:float(v) for k,v in out.items()}
+
+    def latent_guided_edit(self,*args,**kwargs):
+        """STUB (not yet active): the paper's loss-GUIDED generation, where L_lane/L_env are applied
+        during denoising and back-propagated through the diffusion steps (supplementary §1) to steer
+        the latent, rather than scored after the fact. Building it means intercepting the SD3
+        InstructPix2Pix pipeline's per-step latent (decoding to image space, computing
+        diffusion_losses.stealth_loss against the clean crop and its lane/env masks, and adding the
+        gradient to the noise prediction), which requires the pipeline internals and a GPU. Until then
+        use __call__ (vanilla masked diffusion) for generation and compute_stealth_losses to score it.
+        Raising rather than silently falling back, so no run mistakes this for the real guided path."""
+        raise NotImplementedError(
+            'latent_guided_edit is not implemented: L_lane/L_env are available as a post-hoc score '
+            '(compute_stealth_losses); guiding the latent through denoising needs the SD3 pipeline '
+            'internals and a GPU. Use __call__ for now and label results "without L_lane/L_env".')
 
 def feasibility_check(checkpoint=CHECKPOINT,device='cuda',drop_t5=True,cpu_offload=False):
     """Loads the model and runs one tiny edit; reports peak VRAM and elapsed time. Run this before
