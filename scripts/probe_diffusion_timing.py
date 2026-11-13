@@ -23,6 +23,7 @@ import json
 import platform
 import sys
 import time
+import traceback
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
@@ -72,7 +73,22 @@ def _time_one_config(cfg, snapshot, device, warmup, timed, trigger_size, mud_pro
     import torch
     from lane_repro.ultraedit_trigger import UltraEditTrigger
 
-    torch.cuda.reset_peak_memory_stats(0)
+    # Memory instrumentation must never be able to abort the measurement. On some torch builds a
+    # device-indexed reset_peak_memory_stats(0) raises "Invalid device argument" even though CUDA is
+    # fully functional (is_available / get_device_name succeed); use the current device and guard it.
+    def _reset_peak():
+        try:
+            torch.cuda.reset_peak_memory_stats()
+        except Exception:
+            pass
+
+    def _peak_mib():
+        try:
+            return round(torch.cuda.max_memory_allocated() / 2**20, 1)
+        except Exception:
+            return None
+
+    _reset_peak()
     load_start = time.perf_counter()
     trigger = UltraEditTrigger(checkpoint=snapshot, device=device, drop_t5=cfg['drop_t5'],
                                cpu_offload=cfg['cpu_offload'], edit_window=512, steps=cfg['steps'],
@@ -98,7 +114,7 @@ def _time_one_config(cfg, snapshot, device, warmup, timed, trigger_size, mud_pro
                 slicing=cfg['slicing'], steps=cfg['steps'], load_seconds=round(load_seconds, 2),
                 median_seconds=round(mid, 3), min_seconds=round(per_image[0], 3),
                 max_seconds=round(per_image[-1], 3),
-                peak_cuda_allocated_mib=round(torch.cuda.max_memory_allocated(0) / 2**20, 1),
+                peak_cuda_allocated_mib=_peak_mib(),
                 meets_paper_target=mid <= PAPER_TARGET_SECONDS * 1.5)  # within 1.5x of 6s
 
 
@@ -116,6 +132,7 @@ def run_sweep(snapshot, device, warmup, timed, trigger_size, only):
             results.append(_time_one_config(cfg, snapshot, device, warmup, timed, trigger_size, MUD_PROMPT))
         except Exception as exc:                                   # OOM etc: record, keep sweeping
             results.append(dict(name=cfg['name'], status='error', error=repr(exc),
+                                traceback=traceback.format_exc(),   # so any failure is self-diagnosing
                                 drop_t5=cfg['drop_t5'], cpu_offload=cfg['cpu_offload'],
                                 slicing=cfg['slicing'], steps=cfg['steps']))
             try:
