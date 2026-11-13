@@ -118,31 +118,69 @@ def _time_one_config(cfg, snapshot, device, warmup, timed, trigger_size, mud_pro
                 meets_paper_target=mid <= PAPER_TARGET_SECONDS * 1.5)  # within 1.5x of 6s
 
 
-def run_sweep(snapshot, device, warmup, timed, trigger_size, only):
+def _host_memory():
+    """Total/available host RAM if psutil is present (loading SD3 spikes host RAM; a host-RAM OOM is
+    what SIGKILLs a config). Best-effort; returns {} if unavailable."""
+    try:
+        import psutil
+        vm = psutil.virtual_memory()
+        return dict(total_gib=round(vm.total / 2**30, 2), available_gib=round(vm.available / 2**30, 2))
+    except Exception:
+        return {}
+
+
+def time_single_config(name, snapshot, device, warmup, timed, trigger_size):
+    """Time exactly ONE config in THIS process (used by the --single child). Isolating each config in
+    its own process means a host-RAM OOM kill (SIGKILL, uncatchable) ends only that config, and the
+    parent records it from the child's return code instead of losing the whole sweep."""
     import torch
     from lane_repro.ultraedit_trigger import MUD_PROMPT
     if not torch.cuda.is_available():
-        raise SystemExit('No CUDA device visible; the timing probe is a GPU measurement. Aborting '
-                         '(nothing was loaded).')
+        raise SystemExit('No CUDA device visible; the timing probe is a GPU measurement.')
+    cfg = next(c for c in CONFIGS if c['name'] == name)
+    return _time_one_config(cfg, snapshot, device, warmup, timed, trigger_size, MUD_PROMPT)
+
+
+def run_sweep(snapshot, device, warmup, timed, trigger_size, only):
+    """Orchestrate the sweep by launching one isolated child process per config. A child that is
+    SIGKILLed mid-load (host-RAM OOM) returns a negative code; we record it as 'oom_killed' and move
+    on, so configs that DO fit still yield real numbers."""
+    import subprocess
+    import tempfile
     configs = [c for c in CONFIGS if (only is None or c['name'] in only)]
     results = []
     for cfg in configs:
         print(f'[probe] timing config {cfg["name"]} ({cfg["note"]})', flush=True)
-        try:
-            results.append(_time_one_config(cfg, snapshot, device, warmup, timed, trigger_size, MUD_PROMPT))
-        except Exception as exc:                                   # OOM etc: record, keep sweeping
-            results.append(dict(name=cfg['name'], status='error', error=repr(exc),
-                                traceback=traceback.format_exc(),   # so any failure is self-diagnosing
-                                drop_t5=cfg['drop_t5'], cpu_offload=cfg['cpu_offload'],
-                                slicing=cfg['slicing'], steps=cfg['steps']))
-            try:
-                torch.cuda.empty_cache()
-            except Exception:
-                pass
-    gpu_name = torch.cuda.get_device_name(0)
-    return dict(probe='ultraedit_diffusion_timing', gpu=gpu_name, host=platform.node(),
-                paper_target_seconds=PAPER_TARGET_SECONDS, step0_measured_seconds=STEP0_MEASURED_SECONDS,
-                warmup_images=warmup, timed_images=timed, snapshot=str(snapshot), results=results)
+        tmp = Path(tempfile.gettempdir()) / f'probe_single_{cfg["name"]}.json'
+        if tmp.exists():
+            tmp.unlink()
+        child = subprocess.run([sys.executable, str(Path(__file__).resolve()), '--single', cfg['name'],
+                                '--snapshot', str(snapshot), '--device', device,
+                                '--warmup', str(warmup), '--timed', str(timed),
+                                '--trigger-size', str(trigger_size), '--output', str(tmp)])
+        knobs = {k: cfg[k] for k in ('drop_t5', 'cpu_offload', 'slicing', 'steps')}
+        if child.returncode == 0 and tmp.exists():
+            results.append(json.loads(tmp.read_text()))
+        elif child.returncode < 0:                                 # killed by a signal
+            sig = -child.returncode
+            results.append(dict(name=cfg['name'], status='oom_killed', signal=sig,
+                                note=(f'child killed by signal {sig} during model load — host-RAM OOM. '
+                                      f'This config does not fit this machine; others still ran.'),
+                                **knobs))
+        else:
+            results.append(dict(name=cfg['name'], status='error', returncode=child.returncode,
+                                note='child exited non-zero; see the kernel log for its traceback.',
+                                **knobs))
+    report = dict(probe='ultraedit_diffusion_timing', host=platform.node(),
+                  host_memory=_host_memory(),
+                  paper_target_seconds=PAPER_TARGET_SECONDS, step0_measured_seconds=STEP0_MEASURED_SECONDS,
+                  warmup_images=warmup, timed_images=timed, snapshot=str(snapshot), results=results)
+    try:
+        import torch
+        report['gpu'] = torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'none'
+    except Exception:
+        report['gpu'] = 'unknown'
+    return report
 
 
 def main(argv=None):
@@ -156,8 +194,25 @@ def main(argv=None):
     ap.add_argument('--timed', type=int, default=3, help='Measured images per config.')
     ap.add_argument('--trigger-size', type=int, default=40, help='Trigger footprint (px); 40 per the paper.')
     ap.add_argument('--only', nargs='*', help='Limit the sweep to these config names.')
+    ap.add_argument('--single', help='Internal: time exactly one config (name) in this process and '
+                    'write its result JSON. The sweep uses this to isolate each config.')
     ap.add_argument('--output', help='Where to write the JSON (plan if not --run, results if --run).')
     args = ap.parse_args(argv)
+
+    if args.single:                                                # isolated single-config child
+        if not args.snapshot:
+            raise SystemExit('--single requires --snapshot.')
+        try:
+            result = time_single_config(args.single, args.snapshot, args.device,
+                                        args.warmup, args.timed, args.trigger_size)
+        except Exception as exc:                                   # catchable failure (e.g. CUDA OOM)
+            result = dict(name=args.single, status='error', error=repr(exc),
+                          traceback=traceback.format_exc())
+        text = json.dumps(result, indent=2)
+        if args.output:
+            Path(args.output).write_text(text)
+        print(text)
+        return 0
 
     if not args.run:
         p = plan(warmup=args.warmup, timed=args.timed, snapshot=args.snapshot or '<LOCAL_ULTRAEDIT_SNAPSHOT>')

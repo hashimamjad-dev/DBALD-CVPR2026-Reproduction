@@ -54,3 +54,15 @@ def test_run_without_snapshot_refuses(monkeypatch):
     monkeypatch.setitem(sys.modules, 'torch', None)
     with pytest.raises(SystemExit):
         probe.main(['--run'])                                   # no --snapshot -> refuse, no load
+
+
+def test_single_without_snapshot_refuses(monkeypatch):
+    import pytest
+    monkeypatch.setitem(sys.modules, 'torch', None)
+    with pytest.raises(SystemExit):
+        probe.main(['--single', 'paper_target'])               # isolated child also needs a snapshot
+
+
+def test_every_config_name_is_unique():
+    names = [c['name'] for c in probe.CONFIGS]
+    assert len(names) == len(set(names))                        # --single / --only resolve by name
