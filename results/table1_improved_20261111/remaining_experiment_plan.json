@@ -1,0 +1,1609 @@
+{
+ "total_scenario_trainings": 100,
+ "assumptions": [
+  "P ACC aggregation across scenarios unspecified by the paper",
+  "baseline trigger recipes are local reimplementations (src/lane_repro/baseline_attacks.py)"
+ ],
+ "runs": [
+  {
+   "id": "tusimple_laneatt_badnets_lda",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "badnets",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method badnets --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_badnets_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_laneatt_badnets_loa",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "badnets",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method badnets --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_badnets_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_laneatt_blended_lda",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "blended",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method blended --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_blended_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_laneatt_blended_loa",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "blended",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method blended --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_blended_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_laneatt_ld_attack_lda",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "ld_attack",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method ld_attack --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_ld_attack_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_laneatt_ld_attack_loa",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "ld_attack",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method ld_attack --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_ld_attack_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_laneatt_badlane_lda",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "badlane",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method badlane --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_badlane_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_laneatt_badlane_loa",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "badlane",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method badlane --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_badlane_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_laneatt_dbald_lda",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "dbald",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method dbald --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_dbald_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_laneatt_dbald_loa",
+   "dataset": "TuSimple",
+   "model": "LaneATT",
+   "method": "dbald",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method dbald --rate 0.10 --output <NEW_DIR>/tusimple_laneatt_dbald_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_badnets_lda",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "badnets",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method badnets --rate 0.10 --output <NEW_DIR>/tusimple_adnet_badnets_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_badnets_loa",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "badnets",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method badnets --rate 0.10 --output <NEW_DIR>/tusimple_adnet_badnets_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_blended_lda",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "blended",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method blended --rate 0.10 --output <NEW_DIR>/tusimple_adnet_blended_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_blended_loa",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "blended",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method blended --rate 0.10 --output <NEW_DIR>/tusimple_adnet_blended_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_ld_attack_lda",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "ld_attack",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method ld_attack --rate 0.10 --output <NEW_DIR>/tusimple_adnet_ld_attack_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_ld_attack_loa",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "ld_attack",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method ld_attack --rate 0.10 --output <NEW_DIR>/tusimple_adnet_ld_attack_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_badlane_lda",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "badlane",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method badlane --rate 0.10 --output <NEW_DIR>/tusimple_adnet_badlane_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_badlane_loa",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "badlane",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method badlane --rate 0.10 --output <NEW_DIR>/tusimple_adnet_badlane_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_dbald_lda",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "dbald",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method dbald --rate 0.10 --output <NEW_DIR>/tusimple_adnet_dbald_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_adnet_dbald_loa",
+   "dataset": "TuSimple",
+   "model": "ADNet",
+   "method": "dbald",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method dbald --rate 0.10 --output <NEW_DIR>/tusimple_adnet_dbald_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_badnets_lda",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "badnets",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method badnets --rate 0.10 --output <NEW_DIR>/tusimple_scnn_badnets_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_badnets_loa",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "badnets",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method badnets --rate 0.10 --output <NEW_DIR>/tusimple_scnn_badnets_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_blended_lda",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "blended",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method blended --rate 0.10 --output <NEW_DIR>/tusimple_scnn_blended_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_blended_loa",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "blended",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method blended --rate 0.10 --output <NEW_DIR>/tusimple_scnn_blended_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_ld_attack_lda",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "ld_attack",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method ld_attack --rate 0.10 --output <NEW_DIR>/tusimple_scnn_ld_attack_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_ld_attack_loa",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "ld_attack",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method ld_attack --rate 0.10 --output <NEW_DIR>/tusimple_scnn_ld_attack_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_badlane_lda",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "badlane",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method badlane --rate 0.10 --output <NEW_DIR>/tusimple_scnn_badlane_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_badlane_loa",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "badlane",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method badlane --rate 0.10 --output <NEW_DIR>/tusimple_scnn_badlane_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_dbald_lda",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "dbald",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method dbald --rate 0.10 --output <NEW_DIR>/tusimple_scnn_dbald_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_scnn_dbald_loa",
+   "dataset": "TuSimple",
+   "model": "SCNN",
+   "method": "dbald",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method dbald --rate 0.10 --output <NEW_DIR>/tusimple_scnn_dbald_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_badnets_lda",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "badnets",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method badnets --rate 0.10 --output <NEW_DIR>/tusimple_resa_badnets_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_badnets_loa",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "badnets",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method badnets --rate 0.10 --output <NEW_DIR>/tusimple_resa_badnets_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_blended_lda",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "blended",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method blended --rate 0.10 --output <NEW_DIR>/tusimple_resa_blended_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_blended_loa",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "blended",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method blended --rate 0.10 --output <NEW_DIR>/tusimple_resa_blended_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_ld_attack_lda",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "ld_attack",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method ld_attack --rate 0.10 --output <NEW_DIR>/tusimple_resa_ld_attack_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_ld_attack_loa",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "ld_attack",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method ld_attack --rate 0.10 --output <NEW_DIR>/tusimple_resa_ld_attack_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_badlane_lda",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "badlane",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method badlane --rate 0.10 --output <NEW_DIR>/tusimple_resa_badlane_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_badlane_loa",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "badlane",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method badlane --rate 0.10 --output <NEW_DIR>/tusimple_resa_badlane_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_dbald_lda",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "dbald",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LDA --method dbald --rate 0.10 --output <NEW_DIR>/tusimple_resa_dbald_lda",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "tusimple_resa_dbald_loa",
+   "dataset": "TuSimple",
+   "model": "RESA",
+   "method": "dbald",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": "python scripts/mix_poisoned_dataset.py --root datasets/raw/tusimple_train --labels datasets/raw/tusimple_train/labels.jsonl --split-file results/table1_split_20261111/tusimple_split.json --split-part train --attack LOA --method dbald --rate 0.10 --output <NEW_DIR>/tusimple_resa_dbald_loa",
+   "cpu_step_blocker": null,
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_badnets_lda",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "badnets",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_badnets_lra",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "badnets",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_badnets_loa",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "badnets",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_blended_lda",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "blended",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_blended_lra",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "blended",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_blended_loa",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "blended",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_ld_attack_lda",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "ld_attack",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_ld_attack_lra",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "ld_attack",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_ld_attack_loa",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "ld_attack",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_badlane_lda",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "badlane",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_badlane_lra",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "badlane",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_badlane_loa",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "badlane",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_dbald_lda",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "dbald",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_dbald_lra",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "dbald",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_laneatt_dbald_loa",
+   "dataset": "CULane",
+   "model": "LaneATT",
+   "method": "dbald",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_badnets_lda",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "badnets",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_badnets_lra",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "badnets",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_badnets_loa",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "badnets",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_blended_lda",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "blended",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_blended_lra",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "blended",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_blended_loa",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "blended",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_ld_attack_lda",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "ld_attack",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_ld_attack_lra",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "ld_attack",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_ld_attack_loa",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "ld_attack",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_badlane_lda",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "badlane",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_badlane_lra",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "badlane",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_badlane_loa",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "badlane",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_dbald_lda",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "dbald",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_dbald_lra",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "dbald",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_adnet_dbald_loa",
+   "dataset": "CULane",
+   "model": "ADNet",
+   "method": "dbald",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_badnets_lda",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "badnets",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_badnets_lra",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "badnets",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_badnets_loa",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "badnets",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_blended_lda",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "blended",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_blended_lra",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "blended",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_blended_loa",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "blended",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_ld_attack_lda",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "ld_attack",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_ld_attack_lra",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "ld_attack",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_ld_attack_loa",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "ld_attack",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_badlane_lda",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "badlane",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_badlane_lra",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "badlane",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_badlane_loa",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "badlane",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_dbald_lda",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "dbald",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_dbald_lra",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "dbald",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_scnn_dbald_loa",
+   "dataset": "CULane",
+   "model": "SCNN",
+   "method": "dbald",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_badnets_lda",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "badnets",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_badnets_lra",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "badnets",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_badnets_loa",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "badnets",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_blended_lda",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "blended",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_blended_lra",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "blended",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_blended_loa",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "blended",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_ld_attack_lda",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "ld_attack",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_ld_attack_lra",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "ld_attack",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_ld_attack_loa",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "ld_attack",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_badlane_lda",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "badlane",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_badlane_lra",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "badlane",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_badlane_loa",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "badlane",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": null,
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_dbald_lda",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "dbald",
+   "attack": "LDA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_dbald_lra",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "dbald",
+   "attack": "LRA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  },
+  {
+   "id": "culane_resa_dbald_loa",
+   "dataset": "CULane",
+   "model": "RESA",
+   "method": "dbald",
+   "attack": "LOA",
+   "cpu_step_poisoned_set": null,
+   "cpu_step_blocker": "CULane train/val images, lists and masks are absent locally (Drive quota); poisoning pipeline is TuSimple-format only",
+   "dbald_trigger_blocker": "UltraEdit trigger render needs a GPU (placeholder trigger is not paper-faithful)",
+   "gpu_steps": [
+    "train poisoned R34 model (driver not yet verified)",
+    "full-test clean ACC + ASR inference",
+    "independent re-score -> receipt for scripts/assemble_table1.py"
+   ],
+   "approval_required_before_gpu": true
+  }
+ ]
+}

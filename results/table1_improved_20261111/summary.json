@@ -1,0 +1,48 @@
+{
+ "cells": 220,
+ "coverage": {
+  "CULane/LaneATT": {
+   "VERIFIED": 0,
+   "NOT_COMPARABLE": 5,
+   "MISSING": 25
+  },
+  "TuSimple/LaneATT": {
+   "VERIFIED": 5,
+   "NOT_COMPARABLE": 0,
+   "MISSING": 20
+  },
+  "CULane/ADNet": {
+   "VERIFIED": 0,
+   "NOT_COMPARABLE": 5,
+   "MISSING": 25
+  },
+  "TuSimple/ADNet": {
+   "VERIFIED": 5,
+   "NOT_COMPARABLE": 0,
+   "MISSING": 20
+  },
+  "CULane/SCNN": {
+   "VERIFIED": 0,
+   "NOT_COMPARABLE": 5,
+   "MISSING": 25
+  },
+  "TuSimple/SCNN": {
+   "VERIFIED": 0,
+   "NOT_COMPARABLE": 5,
+   "MISSING": 20
+  },
+  "CULane/RESA": {
+   "VERIFIED": 0,
+   "NOT_COMPARABLE": 5,
+   "MISSING": 25
+  },
+  "TuSimple/RESA": {
+   "VERIFIED": 5,
+   "NOT_COMPARABLE": 0,
+   "MISSING": 20
+  }
+ },
+ "receipts_accepted": 0,
+ "receipts_rejected": 0,
+ "inconsistent_published_averages": 1
+}

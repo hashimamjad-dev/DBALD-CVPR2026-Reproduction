@@ -127,3 +127,16 @@ operational backdoor poisoning. Published ASR remains a separate reference.
 - `docs/sources.md`: official sources, licenses and implementation differences.
 
 Do not compare the subset score directly with Table 1 as if the backbone, checkpoint, split and protocol were identical. CULane's official IoU/F1 and the paper's point ACC are different quantities. Full CULane evaluation and equivalent DBALD ASR experiments remain unverified.
+
+## Latest non-GPU Table 1 tooling (11 November 2026)
+
+The running index of all work and changes is [docs/MASTER_WORK_LOG.md](docs/MASTER_WORK_LOG.md); details are in [docs/Table1_Improved_Assembly_20261111.md](docs/Table1_Improved_Assembly_20261111.md). Table 1 coverage is unchanged: 15 verified cells, 25 non-comparable, 180 unmeasured attack-related cells.
+
+```powershell
+# Per-cell published vs local view; accepts only validated full-test receipts, derives averages only for complete series.
+.venv/Scripts/python.exe scripts/assemble_table1.py --output results/table1_improved_NEW
+# Poisoned training set on the pinned TuSimple split (3263 train); --method selects a trigger recipe.
+.venv/Scripts/python.exe scripts/mix_poisoned_dataset.py --split-file results/table1_split_20261111/tusimple_split.json --split-part train --method badnets --attack LOA --output <NEW_DIR>
+```
+
+Baseline trigger recipes (`src/lane_repro/baseline_attacks.py`) are local reimplementations from the paper's stated sizes, with their assumptions recorded per label record. Remaining experiments need GPU time and require approval first.
