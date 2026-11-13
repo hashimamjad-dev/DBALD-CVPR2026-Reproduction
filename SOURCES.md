@@ -82,7 +82,13 @@ step0 smoke run used R18 and is therefore a mechanism check, not a Table 1 confi
   (`poison_sample(beta=60., alpha_degrees=9.)`).
 - Baselines (explicit): BadNets 30×30 white square bottom-right; Blended fixed image at
   a fixed blend ratio; LD-Attack 900-px overlay on the adjacent lane near the boundary;
-  BadLane 900 px sampled from a 100×100 region. **(Not yet implemented in this repo.)**
+  BadLane 900 px sampled from a 100×100 region. Implemented in `src/lane_repro/baseline_attacks.py`
+  (reimplementations from the one-line paper descriptions, NOT the original authors' code — do not
+  call results "the original baselines"). Colours, Blended opacity (α=0.2) and pattern, and the
+  LD-Attack adjacency rule are unspecified by the paper and are local choices (each record carries
+  `recipe_assumptions`). **Known limitation:** LD-Attack's outward band is clipped when the chosen
+  lane sits near the image edge, so the 900-pixel budget is not always met (e.g. a lane at x≈1269 in
+  a 1280-wide frame yields ~225 px). This is a consequence of the local adjacency rule; flag it.
 
 ## 5. Training hyperparameters — UNSPECIFIED in paper; defaulted to official repos (ASSUMPTION)
 
@@ -183,6 +189,19 @@ Notes / open choices:
   before any scaled generation run.
 
 ---
+
+## 10. LaneATT training harness — how the pinned split is imposed (wiring choice)
+
+`src/lane_repro/laneatt_harness.py` binds each of the 10 TuSimple cells (5 methods × {LDA, LOA}) to
+a LaneATT ResNet-34 config without patching LaneATT. LaneATT's TuSimple loader maps split names to
+fixed annotation files; we therefore write our pinned split into those files inside each poisoned
+mix directory: **all 3,263 training frames → `label_data_0313.json`** (poisoned subset already
+relabelled), `label_data_0601.json` left empty, **363 validation frames → `label_data_0531.json`**,
+and set the train block to `split: train` so validation frames never enter training. The cosine
+`T_max` is recomputed from our train size / batch (3263 / 8). Backbone stays ResNet-34 (supp. §3);
+epochs default to the official R34 recipe (SOURCES.md §5). This is wiring only — no verified training
+driver has been run. The DBALD cell's poisoned mix additionally needs the UltraEdit render (GPU);
+baseline cells build on CPU. Plan emitter: `scripts/plan_laneatt_cells.py` (runs nothing).
 
 ### How to cite this file in the thesis/report
 "Where the paper specifies a value we used it (poisoning rate, trigger size, LOA/LRA
