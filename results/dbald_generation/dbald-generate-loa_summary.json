@@ -1,0 +1,28 @@
+{
+  "repo_commit": "31e3b784743276ed87ef58689d25fb499a8776b0",
+  "limit": 0,
+  "config": "paper_target",
+  "attacks": {
+    "LOA": {
+      "returncode": 0,
+      "seconds": 9346.1,
+      "manifest": {
+        "root": "/kaggle/input/datasets/hashimamjad03/full-run-bundle/full-run-bundle/datasets/raw/tusimple_train",
+        "labels": "/kaggle/input/datasets/hashimamjad03/full-run-bundle/full-run-bundle/datasets/raw/tusimple_train/labels.jsonl",
+        "attack": "LOA",
+        "method": "dbald",
+        "split_file": "/kaggle/temp/probe/dbald/results/table1_split_20261111/tusimple_split.json",
+        "split_part": "train",
+        "rate": 0.1,
+        "salt": "dbald-poison-v1",
+        "sample_count": 3263,
+        "poisoned_count": 326,
+        "checkpoint": "/kaggle/input/datasets/hashimamjad03/full-run-bundle/full-run-bundle/models/checkpoints/laneatt_r34_tusimple_model_0100.pt",
+        "attention_source": "real",
+        "render_trigger": "ultraedit",
+        "trigger_kind": "mud",
+        "placeholder_trigger": false
+      }
+    }
+  }
+}
